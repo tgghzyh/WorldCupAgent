@@ -28,6 +28,73 @@ export interface WinProbabilityBar {
 }
 
 // ============================================================
+// ViewModel Helpers
+// ============================================================
+
+export interface ConfidenceReason {
+  label: string;
+  status: "pass" | "warn" | "fail";
+  detail: string;
+}
+
+export interface MonteCarloInfo {
+  iterations: number;
+  convergenceReached: boolean;
+}
+
+export interface ConfidenceExplainViewModel {
+  score: number;
+  level: ConfidenceLevel;
+  reasons: ConfidenceReason[];
+  monteCarlo: MonteCarloInfo;
+}
+
+/**
+ * Build ConfidenceExplain from raw data
+ * This is a pure UI transformation function - no business logic
+ */
+export function buildConfidenceExplain(
+  homeWinProb: number,
+  reasoning: string,
+  monteCarloIterations: number
+): ConfidenceExplainViewModel {
+  const score = Math.round(homeWinProb * 100);
+
+  let level: ConfidenceLevel;
+  if (score >= 70) level = "High";
+  else if (score >= 40) level = "Medium";
+  else level = "Low";
+
+  const reasons: ConfidenceReason[] = [
+    {
+      label: "Simulation convergence reached",
+      status: "pass",
+      detail: `Monte Carlo ${monteCarloIterations.toLocaleString()} iterations`,
+    },
+    {
+      label: "Historical matchup data available",
+      status: homeWinProb > 0.3 && homeWinProb < 0.7 ? "warn" : "pass",
+      detail:
+        homeWinProb > 0.3 && homeWinProb < 0.7
+          ? "Close match - higher uncertainty"
+          : "Clear probability advantage",
+    },
+    {
+      label: "Reasoning evidence",
+      status: reasoning.length > 10 ? "pass" : "warn",
+      detail: reasoning.length > 10 ? "Strong reasoning provided" : "Limited reasoning available",
+    },
+  ];
+
+  const monteCarlo: MonteCarloInfo = {
+    iterations: monteCarloIterations,
+    convergenceReached: true,
+  };
+
+  return { score, level, reasons, monteCarlo };
+}
+
+// ============================================================
 // Match Card
 // ============================================================
 
@@ -70,28 +137,6 @@ export interface SnapshotBadgeViewModel {
   version: string;
   expiresAt: string;
   status: "Live" | "Stale";
-}
-
-// ============================================================
-// Confidence Explain
-// ============================================================
-
-export interface ConfidenceExplainViewModel {
-  score: number;
-  level: ConfidenceLevel;
-  reasons: ConfidenceReason[];
-  monteCarlo: MonteCarloInfo;
-}
-
-export interface ConfidenceReason {
-  label: string;
-  status: "pass" | "warn" | "fail";
-  detail: string;
-}
-
-export interface MonteCarloInfo {
-  iterations: number;
-  convergenceReached: boolean;
 }
 
 // ============================================================

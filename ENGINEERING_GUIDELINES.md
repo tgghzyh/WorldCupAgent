@@ -1,6 +1,17 @@
 # Engineering Guidelines
 **Author**: Cursor AI (Qoder) · **Date**: 2026-07-05
 **Status**: LOCKED — 本文档为工程规范，非设计文档，后续仅修复 typo，禁止新增章节
+**Version**: v2.0 — 2026-07-05 升级，新增核心规则
+
+---
+
+## 元声明
+
+- 本文档为**工程规范**，不是设计文档
+- 本文档为 **LOCKED** 状态，仅允许修复 typo
+- 新增内容必须通过 Pull Request + Code Review
+- 本文档禁止作为"新增功能的讨论场所"
+- **所有规则按 P0（必须）/ P1（建议）/ P2（后期）分类**
 
 ---
 
@@ -33,6 +44,313 @@
 **越直观越好**。UI 必须有产品感，reasoning 必须可见。
 
 ---
+
+## 核心规则 #0：Presentation Never Thinks ⭐
+
+> **P0 - 绝对禁止，前端永远只展示，不推理**
+
+这是本项目最重要的规则，适用于所有比赛项目。
+
+```typescript
+// ❌ 禁止：前端重新计算预测结果
+const myProbability = calculateWinProbability(homeTeam, awayTeam);
+const myChampion = predictChampion(groupStandings);
+const myRanking = rankTeams(eloRatings);
+
+// ✅ 必须：前端只展示后端计算好的数据
+const championProbability = snapshot.champion_probability;
+const reasoning = match.reasoning;
+```
+
+### 允许做的事
+
+```typescript
+// ✅ 排序（仅展示排序）
+const sortedMatches = [...matches].sort((a, b) => b.confidence - a.confidence);
+
+// ✅ 格式化
+const percentage = (prob * 100).toFixed(1) + "%";
+const date = new Date(isoString).toLocaleDateString();
+
+// ✅ 颜色映射
+const confidenceColor = level === "High" ? "green" : "yellow";
+
+// ✅ 动画
+<motion.div animate={{ opacity: 1 }} />
+```
+
+### 禁止做的事
+
+```typescript
+// ❌ 禁止：重新预测
+const predictedWinner = homeProb > awayProb ? home : away;
+
+// ❌ 禁止：重新排名
+const newRanking = teams.sort((a, b) => b.elo - a.elo);
+
+// ❌ 禁止：重新生成推理
+const generatedReasoning = generateReasoning(match);
+
+// ❌ 禁止：Monte Carlo 计算
+const champion = runMonteCarlo(teams, iterations);
+```
+
+### 原因
+
+如果前端开始自行推导：
+- 后端：阿根廷 80%
+- 前端：阿根廷 75%
+
+**评委会认为 Agent 不一致，直接扣分**。
+
+---
+
+## 核心规则 #1：Adapter 纯映射原则
+
+> **P0 - Adapter 只做 A→B，不做 A→计算→B**
+
+### Adapter 限制
+
+```typescript
+// ❌ 禁止：Adapter 出现 if/else 超过两层
+export class SnapshotAdapter {
+  static fromJson(snapshot: Snapshot): AdapterOutput {
+    // 禁止超过两层的条件判断
+    if (value >= 70) {
+      level = "High";
+      if (probAvg < 0.3) {  // ❌ 第二层
+        status = "warn";
+      }
+    }
+  }
+}
+
+// ✅ 正确：纯映射，无业务逻辑
+export class SnapshotAdapter {
+  static fromJson(snapshot: Snapshot): AdapterOutput {
+    return {
+      champion: snapshot.champion,
+      championProbability: snapshot.champion_probability,
+      // 纯映射，不计算
+    };
+  }
+}
+```
+
+### Adapter 永远只负责
+
+```text
+latest.json → 中间格式
+```
+
+不能：
+- 排序
+- 过滤
+- 计算
+- 推导
+- Monte Carlo
+- 排名
+
+### 业务逻辑放哪里
+
+```text
+Loader → Adapter → ViewModel → React
+                       ↑
+              业务逻辑在这里
+```
+
+---
+
+## 核心规则 #2：ViewModel 单一职责原则
+
+> **P0 - 每个 ViewModel 只负责一个 Component，不超过 200 行**
+
+### 禁止的模式
+
+```typescript
+// ❌ 禁止：TournamentVM 800 行
+// 一个文件包含 Champion、Group、Timeline、Bracket...
+export class TournamentVM {
+  buildChampion() { ... }
+  buildGroup() { ... }
+  buildTimeline() { ... }
+  buildBracket() { ... }
+}
+```
+
+### 正确的模式
+
+```text
+MatchCard.vm.ts      → 40 行 → MatchCard 组件
+ChampionPath.vm.ts   → 60 行 → ChampionPath 组件
+BracketNode.vm.ts    → 50 行 → BracketNode 组件
+Confidence.vm.ts     → 40 行 → ConfidenceExplain 组件
+```
+
+### 每个 VM 的职责
+
+```typescript
+// ✅ MatchCardViewModel 只负责 MatchCard 的展示数据
+export interface MatchCardViewModel {
+  title: string;        // "Argentina vs Brazil"
+  subtitle: string;     // "Group Stage - Match 12"
+  kickoff: string;      // "2026-06-15 20:00"
+  prediction: { ... };  // 预测数据（来自后端）
+  confidence: { ... };  // 置信度（来自后端）
+}
+```
+
+### ViewModel UI 化原则
+
+```typescript
+// ❌ 错误：ViewModel 是数据模型
+interface MatchVM {
+  elo: number;
+  group: string;
+  matches: Match[];
+}
+
+// ✅ 正确：ViewModel 是 UI 模型
+interface MatchCardViewModel {
+  title: string;      // UI 显示用
+  subtitle: string;   // UI 显示用
+  progress: string;  // UI 显示用 "8/10 teams decided"
+  badge: string;     // UI 显示用 "High Confidence"
+  icon: string;      // UI 显示用 "Trophy"
+}
+```
+
+---
+
+## 核心规则 #3：Snapshot 隐藏原则
+
+> **P0 - 只有 Loader 知道 Snapshot 类型，其他层不知道**
+
+### 依赖方向
+
+```text
+Snapshot（原始数据）
+    ↓
+Loader（唯一知道 Snapshot 的地方）
+    ↓
+Adapter（转换为中间格式）
+    ↓
+ViewModel（消费中间格式）
+    ↓
+React（只消费 ViewModel）
+```
+
+### 禁止的模式
+
+```tsx
+// ❌ 禁止：React 组件直接导入 Snapshot 类型
+import type { Snapshot } from "@/lib/tournament/types";
+
+// ❌ 禁止：ViewModel 导出 Snapshot 相关类型
+export type { Snapshot } from "@/lib/tournament/types";
+```
+
+### 允许的模式
+
+```tsx
+// ✅ 正确：组件只导入 ViewModel
+import type { MatchCardViewModel } from "@/lib/tournament/types";
+
+export function MatchCard({ vm }: MatchCardProps) {
+  // vm 是 MatchCardViewModel，不是 Snapshot
+}
+```
+
+---
+
+## 核心规则 #4：类型文件精简原则
+
+> **P1 - 永远只有两类类型文件**
+
+### 禁止的模式
+
+```text
+// ❌ 禁止：类型文件越来越多
+types/
+├── match.types.ts
+├── group.types.ts
+├── snapshot.types.ts
+├── vm.types.ts
+├── ui.types.ts
+├── common.types.ts
+├── api.types.ts
+└── index.ts  // 导出全部
+```
+
+### 正确的模式
+
+```text
+lib/tournament/types/
+├── index.ts              ← 统一导出
+├── latest-json.types.ts ← Domain Types（对应 latest.json）
+└── ui-adapter.types.ts  ← UI Types（ViewModel 类型）
+```
+
+### 类型文件职责
+
+```typescript
+// latest-json.types.ts — Domain Types
+// 与 latest.json 一一对应，修改需谨慎
+export interface Snapshot { ... }
+export interface GroupMatch { ... }
+
+// ui-adapter.types.ts — UI Types
+// ViewModel 类型，供 React 使用
+export interface MatchCardViewModel { ... }
+export interface ChampionPathViewModel { ... }
+```
+
+---
+
+## 核心规则 #5：VM 不调 Adapter 原则
+
+> **P1 - 依赖方向必须单向：Loader → Adapter → VM Factory → React**
+
+### 依赖方向检查
+
+```text
+✅ 正确：
+Loader → Adapter → VM → Component
+
+❌ 错误：
+VM → Adapter（循环依赖风险）
+Component → Adapter（违反分层）
+```
+
+### 依赖注入模式
+
+```typescript
+// ❌ 禁止：VM 直接调用 Adapter
+export class MatchCardVMBuilder {
+  static build(snapshot: Snapshot, matchId: string) {
+    const adapter = SnapshotAdapter.fromJson(snapshot); // ❌ VM 知道 Adapter
+  }
+}
+
+// ✅ 正确：使用依赖注入
+export class MatchCardVMBuilder {
+  constructor(private adapter: SnapshotAdapter) {}
+  build(snapshot: Snapshot, matchId: string) {
+    // 使用注入的 adapter
+  }
+}
+
+// ✅ 更推荐：数据在 Hook 层处理
+export function useMatchCard(matchId: string): MatchCardViewModel {
+  const snapshot = useSnapshot();
+  const adapter = useAdapter(); // Hook 提供
+  return adapter.toMatchCardVM(snapshot, matchId);
+}
+```
+
+---
+
+## 一、目录规范
 
 ## 一、目录规范
 
@@ -680,64 +998,134 @@ try {
 
 ## 十、Testing 规范
 
-### 10.1 Snapshot Contract Test
+### 10.1 Snapshot Contract Test（增强版）
+
+> **P0 - 必须检查数据类型、范围、格式**
 
 ```typescript
 // __tests__/snapshot-contract.test.ts
-import { loadSnapshot } from "@/lib/tournament/loader";
+describe("Snapshot Contract - 增强版", () => {
 
-describe("Snapshot Contract", () => {
-  it("must have required top-level fields", async () => {
-    const snapshot = await loadSnapshot();
+  describe("ISO8601 时间格式验证", () => {
+    it("snapshot_time 必须是有效的 ISO8601", async () => {
+      const snapshot = await loadSnapshot();
+      const isoRegex = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}/;
+      expect(snapshot.snapshot_time).toMatch(isoRegex);
+    });
 
-    expect(snapshot).toHaveProperty("group_predictions");
-    expect(snapshot).toHaveProperty("knockout_predictions");
-    expect(snapshot).toHaveProperty("reasoning_chain");
-    expect(snapshot).toHaveProperty("llm_analysis");
-    expect(snapshot).toHaveProperty("champion_probabilities");
+    it("expires_at 必须是有效的 ISO8601", async () => {
+      const snapshot = await loadSnapshot();
+      const isoRegex = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}/;
+      expect(snapshot.expires_at).toMatch(isoRegex);
+    });
   });
 
-  it("must have champion with probability", async () => {
-    const snapshot = await loadSnapshot();
+  describe("Confidence Level 枚举验证", () => {
+    it("confidence 必须是 High/Medium/Low", async () => {
+      const snapshot = await loadSnapshot();
 
-    expect(snapshot.knockout_predictions).toHaveProperty("predicted_champion");
-    expect(snapshot.knockout_predictions).toHaveProperty("champion_probability");
+      const allMatches = Object.values(snapshot.group_predictions)
+        .flatMap((g) => g.matches);
 
-    const champion = snapshot.knockout_predictions.predicted_champion;
-    expect(typeof champion).toBe("string");
-    expect(champion.length).toBeGreaterThan(0);
+      for (const match of allMatches) {
+        expect(["High", "Medium", "Low"]).toContain(match.confidence);
+      }
+    });
+
+    it("confidence 不能是 undefined/null/空字符串", async () => {
+      const snapshot = await loadSnapshot();
+
+      const allMatches = Object.values(snapshot.group_predictions)
+        .flatMap((g) => g.matches);
+
+      for (const match of allMatches) {
+        expect(match.confidence).toBeDefined();
+        expect(typeof match.confidence).toBe("string");
+        expect(match.confidence.length).toBeGreaterThan(0);
+      }
+    });
   });
 
-  it("must have reasoning in each match", async () => {
-    const snapshot = await loadSnapshot();
+  describe("Probability 范围验证", () => {
+    it("champion_probability 必须在 0~1 之间", async () => {
+      const snapshot = await loadSnapshot();
+      expect(snapshot.champion_probability).toBeGreaterThanOrEqual(0);
+      expect(snapshot.champion_probability).toBeLessThanOrEqual(1);
+    });
 
-    const allMatches = Object.values(snapshot.group_predictions)
-      .flatMap((g) => g.matches);
+    it("所有概率字段必须是百分比字符串", async () => {
+      const snapshot = await loadSnapshot();
+      const allMatches = Object.values(snapshot.group_predictions)
+        .flatMap((g) => g.matches);
 
-    for (const match of allMatches) {
-      expect(match).toHaveProperty("reasoning");
-      expect(typeof match.reasoning).toBe("string");
-      expect(match.reasoning.length).toBeGreaterThan(0);
-    }
+      for (const match of allMatches) {
+        expect(match.home_win_prob).toMatch(/^\d+(\.\d+)?%$/);
+        expect(match.draw_prob).toMatch(/^\d+(\.\d+)?%$/);
+        expect(match.away_win_prob).toMatch(/^\d+(\.\d+)?%$/);
+      }
+    });
   });
 
-  it("must have confidence in each match", async () => {
-    const snapshot = await loadSnapshot();
+  describe("Reasoning 验证", () => {
+    it("每场比赛必须有非空 reasoning", async () => {
+      const snapshot = await loadSnapshot();
+      const allMatches = Object.values(snapshot.group_predictions)
+        .flatMap((g) => g.matches);
 
-    const allMatches = Object.values(snapshot.group_predictions)
-      .flatMap((g) => g.matches);
+      for (const match of allMatches) {
+        expect(match.reasoning).toBeDefined();
+        expect(typeof match.reasoning).toBe("string");
+        expect(match.reasoning.length).toBeGreaterThan(10); // 至少 10 个字符
+      }
+    });
 
-    for (const match of allMatches) {
-      expect(match).toHaveProperty("confidence");
-      expect(["High", "Medium", "Low"]).toContain(match.confidence);
-    }
+    it("reasoning 不能只是 'N/A' 或占位符", async () => {
+      const snapshot = await loadSnapshot();
+      const allMatches = Object.values(snapshot.group_predictions)
+        .flatMap((g) => g.matches);
+
+      for (const match of allMatches) {
+        const invalidReasonings = ["N/A", "TBD", "pending", "-", ""];
+        expect(invalidReasonings).not.toContain(match.reasoning.toLowerCase());
+      }
+    });
   });
 
-  it("must have Monte Carlo iterations", async () => {
-    const snapshot = await loadSnapshot();
+  describe("比赛数量验证", () => {
+    it("必须有 72 场小组赛", async () => {
+      const snapshot = await loadSnapshot();
+      const totalMatches = Object.values(snapshot.group_predictions)
+        .flatMap((g) => g.matches).length;
+      expect(totalMatches).toBe(72);
+    });
+  });
 
-    expect(snapshot).toHaveProperty("monte_carlo_simulations");
-    expect(snapshot.monte_carlo_simulations).toBeGreaterThanOrEqual(1000);
+  describe("Monte Carlo 验证", () => {
+    it("monte_carlo_simulations 必须 >= 10000", async () => {
+      const snapshot = await loadSnapshot();
+      expect(snapshot.monte_carlo_simulations).toBeGreaterThanOrEqual(10000);
+    });
+
+    it("reasoning_chain 必须包含 monte_carlo_tool", async () => {
+      const snapshot = await loadSnapshot();
+      const hasMonteCarlo = snapshot.reasoning_chain.some(
+        (entry) => entry.tool === "monte_carlo_tool"
+      );
+      expect(hasMonteCarlo).toBe(true);
+    });
+  });
+
+  describe("Champion 数据验证", () => {
+    it("champion 不能为空", async () => {
+      const snapshot = await loadSnapshot();
+      expect(snapshot.champion).toBeDefined();
+      expect(snapshot.champion.length).toBeGreaterThan(0);
+    });
+
+    it("champion_probability 必须是数字", async () => {
+      const snapshot = await loadSnapshot();
+      expect(typeof snapshot.champion_probability).toBe("number");
+    });
   });
 });
 ```
@@ -827,3 +1215,31 @@ hotfix/production-crash
 | 版本 | 日期 | 说明 |
 |---|---|---|
 | v1.0 | 2026-07-05 | 初始版本，锁定文档体系 |
+| v2.0 | 2026-07-05 | 升级核心规则：Presentation Never Thinks、Adapter 纯映射、ViewModel 单一职责、Snapshot 隐藏、类型文件精简、增强 Snapshot Contract Test |
+
+---
+
+## 附录：CTO Code Review Checklist
+
+### P0（必须通过）
+
+- [ ] Loader 职责单一，只读取不转换
+- [ ] Adapter 只做映射，无 if/else > 2 层
+- [ ] ViewModel UI 化，不暴露原始数据字段
+- [ ] **Presentation Never Thinks** — 前端不重新计算
+- [ ] Snapshot 类型只在 Loader 层可见
+- [ ] 增强 Snapshot Contract Test 通过
+
+### P1（建议通过）
+
+- [ ] 类型文件只有 2 个：Domain + UI
+- [ ] VM 不直接调 Adapter
+- [ ] Component 无状态，只消费 ViewModel
+- [ ] Error Boundary 按页面拆分
+- [ ] Accessibility 支持 Tab/Enter
+
+### P2（后期优化）
+
+- [ ] Design Token 完善（Spacing、Radius、Shadow、Typography）
+- [ ] Animation 统一状态机
+- [ ] Performance Budget 达标

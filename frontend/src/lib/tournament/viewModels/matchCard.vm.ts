@@ -6,6 +6,7 @@
 import type { Snapshot } from "@/lib/tournament/types";
 import type { MatchCardViewModel } from "@/lib/tournament/types";
 import { SnapshotAdapter } from "@/lib/tournament/adapters/snapshot.adapter";
+import { buildConfidenceExplain } from "@/lib/tournament/types";
 
 export class MatchCardVMBuilder {
   /**
@@ -71,7 +72,7 @@ export class MatchCardVMBuilder {
     }
 
     const isHomeTeam = true; // Assume home team for simplicity
-    const confidence = SnapshotAdapter.buildConfidenceExplain(
+    const confidence = buildConfidenceExplain(
       match.homeWinProb,
       match.reasoning,
       adapter.monteCarloStats.iterations
@@ -127,7 +128,7 @@ export class MatchCardVMBuilder {
     }
 
     return group.matches.map((match) => {
-      const confidence = SnapshotAdapter.buildConfidenceExplain(
+      const confidence = buildConfidenceExplain(
         match.homeWinProb,
         match.reasoning,
         adapter.monteCarloStats.iterations

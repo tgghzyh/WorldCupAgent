@@ -2,14 +2,11 @@
  * Snapshot Adapter
  * Converts latest.json to intermediate format
  * Future: can be extended to support FastAPI responses
+ * 
+ * Rule: Adapter 只做纯映射，不做业务计算
  */
 
 import type { Snapshot } from "@/lib/tournament/types";
-import type {
-  ConfidenceExplainViewModel,
-  MonteCarloInfo,
-  ConfidenceReason,
-} from "@/lib/tournament/types";
 
 export interface SnapshotAdapterOutput {
   champion: string;
@@ -117,20 +114,10 @@ export interface MetadataAdapter {
 }
 
 /**
- * Convert percentage string to number
+ * Parse percentage string to decimal
  */
 function parseProb(prob: string): number {
   return parseFloat(prob.replace("%", "")) / 100;
-}
-
-/**
- * Determine confidence level from percentage
- */
-function getConfidenceLevel(confidence: string): "High" | "Medium" | "Low" {
-  const value = parseFloat(confidence.replace("%", ""));
-  if (value >= 80) return "High";
-  if (value >= 50) return "Medium";
-  return "Low";
 }
 
 /**
@@ -287,50 +274,5 @@ export class SnapshotAdapter {
       generationDurationMs: snapshot.generation_duration_ms,
       monteCarloSimulations: snapshot.monte_carlo_simulations,
     };
-  }
-
-  /**
-   * Build ConfidenceExplain from a match
-   */
-  static buildConfidenceExplain(
-    homeWinProb: number,
-    reasoning: string,
-    monteCarloIterations: number
-  ): ConfidenceExplainViewModel {
-    const probAvg = homeWinProb;
-    const score = Math.round(probAvg * 100);
-
-    let level: "High" | "Medium" | "Low";
-    if (score >= 70) level = "High";
-    else if (score >= 40) level = "Medium";
-    else level = "Low";
-
-    const reasons: ConfidenceReason[] = [
-      {
-        label: "Simulation convergence reached",
-        status: "pass",
-        detail: `Monte Carlo ${monteCarloIterations.toLocaleString()} iterations`,
-      },
-      {
-        label: "Historical matchup data available",
-        status: probAvg > 0.3 && probAvg < 0.7 ? "warn" : "pass",
-        detail:
-          probAvg > 0.3 && probAvg < 0.7
-            ? "Close match - higher uncertainty"
-            : "Clear probability advantage",
-      },
-      {
-        label: "Reasoning evidence",
-        status: reasoning.length > 10 ? "pass" : "warn",
-        detail: reasoning.length > 10 ? "Strong reasoning provided" : "Limited reasoning available",
-      },
-    ];
-
-    const monteCarlo: MonteCarloInfo = {
-      iterations: monteCarloIterations,
-      convergenceReached: true,
-    };
-
-    return { score, level, reasons, monteCarlo };
   }
 }
