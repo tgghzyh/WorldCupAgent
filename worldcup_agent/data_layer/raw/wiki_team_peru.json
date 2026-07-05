@@ -1,0 +1,49 @@
+{
+  "type": "standard",
+  "title": "Peru national football team",
+  "displaytitle": "<span lang=\"en\" dir=\"ltr\"><span class=\"mw-page-title-main\">Peru national football team</span></span>",
+  "namespace": {
+    "id": 0,
+    "text": ""
+  },
+  "wikibase_item": "Q212166",
+  "titles": {
+    "canonical": "Peru_national_football_team",
+    "normalized": "Peru national football team",
+    "display": "<span lang=\"en\" dir=\"ltr\"><span class=\"mw-page-title-main\">Peru national football team</span></span>"
+  },
+  "pageid": 938180,
+  "thumbnail": {
+    "source": "https://upload.wikimedia.org/wikipedia/en/thumb/3/36/Fpf-logo.svg/330px-Fpf-logo.svg.png",
+    "width": 330,
+    "height": 417
+  },
+  "originalimage": {
+    "source": "https://upload.wikimedia.org/wikipedia/en/thumb/3/36/Fpf-logo.svg/330px-Fpf-logo.svg.png",
+    "width": 257,
+    "height": 325
+  },
+  "lang": "en",
+  "dir": "ltr",
+  "revision": "1362486614",
+  "tid": "f593109a-7779-11f1-9fa9-c66a66a4a79c",
+  "timestamp": "2026-07-04T07:28:32Z",
+  "description": "Men's association football team",
+  "description_source": "local",
+  "content_urls": {
+    "desktop": {
+      "page": "https://en.wikipedia.org/wiki/Peru_national_football_team",
+      "revisions": "https://en.wikipedia.org/wiki/Peru_national_football_team?action=history",
+      "edit": "https://en.wikipedia.org/wiki/Peru_national_football_team?action=edit",
+      "talk": "https://en.wikipedia.org/wiki/Talk:Peru_national_football_team"
+    },
+    "mobile": {
+      "page": "https://en.wikipedia.org/wiki/Peru_national_football_team",
+      "revisions": "https://en.wikipedia.org/wiki/Special:History/Peru_national_football_team",
+      "edit": "https://en.wikipedia.org/wiki/Peru_national_football_team?action=edit",
+      "talk": "https://en.wikipedia.org/wiki/Talk:Peru_national_football_team"
+    }
+  },
+  "extract": "The Peru national football team, nicknamed La Bicolor, represents Peru in men's international football. The national team has been organised, since 1927, by the Federación Peruana de Fútbol. It has been a member of FIFA since 1924 and a member of CONMEBOL since 1925. It was also a member of PFC, the attempt at a unified confederation of the Americas from 1946 to 1961.",
+  "extract_html": "<p>The <b>Peru national football team</b>, nicknamed <i><b>La Bicolor</b></i>, represents Peru in men's international football. The national team has been organised, since 1927, by the Federación Peruana de Fútbol. It has been a member of FIFA since 1924 and a member of CONMEBOL since 1925. It was also a member of PFC, the attempt at a unified confederation of the Americas from 1946 to 1961.</p>"
+}

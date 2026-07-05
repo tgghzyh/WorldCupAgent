@@ -1,0 +1,49 @@
+{
+  "type": "standard",
+  "title": "Nigeria national football team",
+  "displaytitle": "<span lang=\"en\" dir=\"ltr\"><span class=\"mw-page-title-main\">Nigeria national football team</span></span>",
+  "namespace": {
+    "id": 0,
+    "text": ""
+  },
+  "wikibase_item": "Q181930",
+  "titles": {
+    "canonical": "Nigeria_national_football_team",
+    "normalized": "Nigeria national football team",
+    "display": "<span lang=\"en\" dir=\"ltr\"><span class=\"mw-page-title-main\">Nigeria national football team</span></span>"
+  },
+  "pageid": 1006061,
+  "thumbnail": {
+    "source": "https://upload.wikimedia.org/wikipedia/en/thumb/a/a9/Nigeria_Football_Federation_logo.svg/330px-Nigeria_Football_Federation_logo.svg.png",
+    "width": 330,
+    "height": 324
+  },
+  "originalimage": {
+    "source": "https://upload.wikimedia.org/wikipedia/en/thumb/a/a9/Nigeria_Football_Federation_logo.svg/330px-Nigeria_Football_Federation_logo.svg.png",
+    "width": 319,
+    "height": 313
+  },
+  "lang": "en",
+  "dir": "ltr",
+  "revision": "1361901583",
+  "tid": "e0885bfe-74b9-11f1-9991-320e461f5967",
+  "timestamp": "2026-06-30T19:28:31Z",
+  "description": "Football team in Nigeria",
+  "description_source": "local",
+  "content_urls": {
+    "desktop": {
+      "page": "https://en.wikipedia.org/wiki/Nigeria_national_football_team",
+      "revisions": "https://en.wikipedia.org/wiki/Nigeria_national_football_team?action=history",
+      "edit": "https://en.wikipedia.org/wiki/Nigeria_national_football_team?action=edit",
+      "talk": "https://en.wikipedia.org/wiki/Talk:Nigeria_national_football_team"
+    },
+    "mobile": {
+      "page": "https://en.wikipedia.org/wiki/Nigeria_national_football_team",
+      "revisions": "https://en.wikipedia.org/wiki/Special:History/Nigeria_national_football_team",
+      "edit": "https://en.wikipedia.org/wiki/Nigeria_national_football_team?action=edit",
+      "talk": "https://en.wikipedia.org/wiki/Talk:Nigeria_national_football_team"
+    }
+  },
+  "extract": "The Nigeria national football team represents Nigeria in international men's football. Governed by the Nigeria Football Federation (NFF), they are three-time Africa Cup of Nations (AFCON) winners, with their most recent title in 2013. In February 2024, the Nigerian national football team was ranked 28th in the FIFA rankings. The team has qualified for six of the last nine FIFA World Cups, missing only the 2006, 2022 and 2026 tournaments. They have reached the round of 16 on three occasions. Their first World Cup appearance was in the 1994 edition. The team is a member of FIFA and Confederation of African Football (CAF).",
+  "extract_html": "<p>The <b>Nigeria national football team</b> represents Nigeria in international men's football. Governed by the Nigeria Football Federation (NFF), they are three-time Africa Cup of Nations (AFCON) winners, with their most recent title in 2013. In February 2024, the Nigerian national football team was ranked 28th in the FIFA rankings. The team has qualified for six of the last nine FIFA World Cups, missing only the 2006, 2022 and 2026 tournaments. They have reached the round of 16 on three occasions. Their first World Cup appearance was in the 1994 edition. The team is a member of FIFA and Confederation of African Football (CAF).</p>"
+}

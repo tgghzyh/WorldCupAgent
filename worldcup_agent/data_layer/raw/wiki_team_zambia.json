@@ -1,0 +1,49 @@
+{
+  "type": "standard",
+  "title": "Zambia national football team",
+  "displaytitle": "<span lang=\"en\" dir=\"ltr\"><span class=\"mw-page-title-main\">Zambia national football team</span></span>",
+  "namespace": {
+    "id": 0,
+    "text": ""
+  },
+  "wikibase_item": "Q206350",
+  "titles": {
+    "canonical": "Zambia_national_football_team",
+    "normalized": "Zambia national football team",
+    "display": "<span lang=\"en\" dir=\"ltr\"><span class=\"mw-page-title-main\">Zambia national football team</span></span>"
+  },
+  "pageid": 1045380,
+  "thumbnail": {
+    "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Flag_of_Zambia.svg/330px-Flag_of_Zambia.svg.png",
+    "width": 330,
+    "height": 220
+  },
+  "originalimage": {
+    "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Flag_of_Zambia.svg/960px-Flag_of_Zambia.svg.png",
+    "width": 900,
+    "height": 600
+  },
+  "lang": "en",
+  "dir": "ltr",
+  "revision": "1362174889",
+  "tid": "d753d674-75fc-11f1-bea3-0754fae479cb",
+  "timestamp": "2026-07-02T10:00:23Z",
+  "description": "",
+  "description_source": "local",
+  "content_urls": {
+    "desktop": {
+      "page": "https://en.wikipedia.org/wiki/Zambia_national_football_team",
+      "revisions": "https://en.wikipedia.org/wiki/Zambia_national_football_team?action=history",
+      "edit": "https://en.wikipedia.org/wiki/Zambia_national_football_team?action=edit",
+      "talk": "https://en.wikipedia.org/wiki/Talk:Zambia_national_football_team"
+    },
+    "mobile": {
+      "page": "https://en.wikipedia.org/wiki/Zambia_national_football_team",
+      "revisions": "https://en.wikipedia.org/wiki/Special:History/Zambia_national_football_team",
+      "edit": "https://en.wikipedia.org/wiki/Zambia_national_football_team?action=edit",
+      "talk": "https://en.wikipedia.org/wiki/Talk:Zambia_national_football_team"
+    }
+  },
+  "extract": "The Zambia national football team represents Zambia in men's association football and is governed by the Football Association of Zambia (FAZ). During the 1980s, they were known as the KK 11, after founding president Dr. Kenneth Kaunda (\"KK\") who ruled Zambia from 1964 to 1991. After the country adopted multiparty politics, the side was nicknamed Chipolopolo, which means the \"Copper Bullets\". The team won an Africa Cup of Nations title in 2012. The team has also become the most successful team in the COSAFA Cup, surpassing Zimbabwe after winning the 2023 edition.",
+  "extract_html": "<p>The <b>Zambia national football team</b> represents Zambia in men's association football and is governed by the Football Association of Zambia (FAZ). During the 1980s, they were known as the <b>KK 11</b>, after founding president Dr. Kenneth Kaunda (\"KK\") who ruled Zambia from 1964 to 1991. After the country adopted multiparty politics, the side was nicknamed <i>Chipolopolo</i>, which means the \"Copper Bullets\". The team won an Africa Cup of Nations title in 2012. The team has also become the most successful team in the COSAFA Cup, surpassing Zimbabwe after winning the 2023 edition.</p>"
+}

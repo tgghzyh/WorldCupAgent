@@ -1,0 +1,49 @@
+{
+  "type": "standard",
+  "title": "Egypt national football team",
+  "displaytitle": "<span lang=\"en\" dir=\"ltr\"><span class=\"mw-page-title-main\">Egypt national football team</span></span>",
+  "namespace": {
+    "id": 0,
+    "text": ""
+  },
+  "wikibase_item": "Q28089",
+  "titles": {
+    "canonical": "Egypt_national_football_team",
+    "normalized": "Egypt national football team",
+    "display": "<span lang=\"en\" dir=\"ltr\"><span class=\"mw-page-title-main\">Egypt national football team</span></span>"
+  },
+  "pageid": 1022953,
+  "thumbnail": {
+    "source": "https://upload.wikimedia.org/wikipedia/en/thumb/f/f8/Egyptian_Football_Association_logo.svg/330px-Egyptian_Football_Association_logo.svg.png",
+    "width": 330,
+    "height": 330
+  },
+  "originalimage": {
+    "source": "https://upload.wikimedia.org/wikipedia/en/thumb/f/f8/Egyptian_Football_Association_logo.svg/330px-Egyptian_Football_Association_logo.svg.png",
+    "width": 316,
+    "height": 316
+  },
+  "lang": "en",
+  "dir": "ltr",
+  "revision": "1362477597",
+  "tid": "1f433c10-7768-11f1-9747-72e602e68fb5",
+  "timestamp": "2026-07-04T05:20:51Z",
+  "description": "Men's association football team",
+  "description_source": "local",
+  "content_urls": {
+    "desktop": {
+      "page": "https://en.wikipedia.org/wiki/Egypt_national_football_team",
+      "revisions": "https://en.wikipedia.org/wiki/Egypt_national_football_team?action=history",
+      "edit": "https://en.wikipedia.org/wiki/Egypt_national_football_team?action=edit",
+      "talk": "https://en.wikipedia.org/wiki/Talk:Egypt_national_football_team"
+    },
+    "mobile": {
+      "page": "https://en.wikipedia.org/wiki/Egypt_national_football_team",
+      "revisions": "https://en.wikipedia.org/wiki/Special:History/Egypt_national_football_team",
+      "edit": "https://en.wikipedia.org/wiki/Egypt_national_football_team?action=edit",
+      "talk": "https://en.wikipedia.org/wiki/Talk:Egypt_national_football_team"
+    }
+  },
+  "extract": "The Egypt national football team, nicknamed The Pharaohs, represents Egypt in men's international football. It is governed by the Egyptian Football Association (EFA), the governing body of football in Egypt.",
+  "extract_html": "<p>The <b>Egypt national football team</b>, nicknamed <b>The Pharaohs</b>, represents Egypt in men's international football. It is governed by the Egyptian Football Association (EFA), the governing body of football in Egypt.</p>"
+}

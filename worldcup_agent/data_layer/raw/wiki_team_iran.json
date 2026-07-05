@@ -1,0 +1,49 @@
+{
+  "type": "standard",
+  "title": "Iran national football team",
+  "displaytitle": "<span lang=\"en\" dir=\"ltr\"><span class=\"mw-page-title-main\">Iran national football team</span></span>",
+  "namespace": {
+    "id": 0,
+    "text": ""
+  },
+  "wikibase_item": "Q184602",
+  "titles": {
+    "canonical": "Iran_national_football_team",
+    "normalized": "Iran national football team",
+    "display": "<span lang=\"en\" dir=\"ltr\"><span class=\"mw-page-title-main\">Iran national football team</span></span>"
+  },
+  "pageid": 272865,
+  "thumbnail": {
+    "source": "https://upload.wikimedia.org/wikipedia/en/thumb/d/d6/Football_Federation_Islamic_Republic_of_Iran_logo.svg/330px-Football_Federation_Islamic_Republic_of_Iran_logo.svg.png",
+    "width": 330,
+    "height": 531
+  },
+  "originalimage": {
+    "source": "https://upload.wikimedia.org/wikipedia/en/thumb/d/d6/Football_Federation_Islamic_Republic_of_Iran_logo.svg/60px-Football_Federation_Islamic_Republic_of_Iran_logo.svg.png",
+    "width": 59,
+    "height": 95
+  },
+  "lang": "en",
+  "dir": "ltr",
+  "revision": "1362316041",
+  "tid": "dff8ee31-7696-11f1-8feb-dbb2b075e87e",
+  "timestamp": "2026-07-03T04:23:00Z",
+  "description": "Men's association football team",
+  "description_source": "local",
+  "content_urls": {
+    "desktop": {
+      "page": "https://en.wikipedia.org/wiki/Iran_national_football_team",
+      "revisions": "https://en.wikipedia.org/wiki/Iran_national_football_team?action=history",
+      "edit": "https://en.wikipedia.org/wiki/Iran_national_football_team?action=edit",
+      "talk": "https://en.wikipedia.org/wiki/Talk:Iran_national_football_team"
+    },
+    "mobile": {
+      "page": "https://en.wikipedia.org/wiki/Iran_national_football_team",
+      "revisions": "https://en.wikipedia.org/wiki/Special:History/Iran_national_football_team",
+      "edit": "https://en.wikipedia.org/wiki/Iran_national_football_team?action=edit",
+      "talk": "https://en.wikipedia.org/wiki/Talk:Iran_national_football_team"
+    }
+  },
+  "extract": "The Iran national football team have represented Iran in men's international football since their first international match in 1941. It is administered by the Football Federation Islamic Republic of Iran (FFIRI), the governing body of football in Iran, which is affiliated with AFC and comes under the global jurisdiction of FIFA.",
+  "extract_html": "<p>The <b>Iran national football team</b> have represented Iran in men's international football since their first international match in 1941. It is administered by the Football Federation Islamic Republic of Iran (FFIRI), the governing body of football in Iran, which is affiliated with AFC and comes under the global jurisdiction of FIFA.</p>"
+}

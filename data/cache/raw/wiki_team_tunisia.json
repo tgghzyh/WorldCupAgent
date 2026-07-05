@@ -1,0 +1,49 @@
+{
+  "type": "standard",
+  "title": "Tunisia national football team",
+  "displaytitle": "<span lang=\"en\" dir=\"ltr\"><span class=\"mw-page-title-main\">Tunisia national football team</span></span>",
+  "namespace": {
+    "id": 0,
+    "text": ""
+  },
+  "wikibase_item": "Q27971",
+  "titles": {
+    "canonical": "Tunisia_national_football_team",
+    "normalized": "Tunisia national football team",
+    "display": "<span lang=\"en\" dir=\"ltr\"><span class=\"mw-page-title-main\">Tunisia national football team</span></span>"
+  },
+  "pageid": 1029953,
+  "thumbnail": {
+    "source": "https://upload.wikimedia.org/wikipedia/en/c/c4/Tunisia_national_football_team_logo.png",
+    "width": 283,
+    "height": 353
+  },
+  "originalimage": {
+    "source": "https://upload.wikimedia.org/wikipedia/en/c/c4/Tunisia_national_football_team_logo.png",
+    "width": 283,
+    "height": 353
+  },
+  "lang": "en",
+  "dir": "ltr",
+  "revision": "1362394360",
+  "tid": "4a964055-7708-11f1-ba25-974fdddaac8d",
+  "timestamp": "2026-07-03T17:54:52Z",
+  "description": "Men's association football team",
+  "description_source": "local",
+  "content_urls": {
+    "desktop": {
+      "page": "https://en.wikipedia.org/wiki/Tunisia_national_football_team",
+      "revisions": "https://en.wikipedia.org/wiki/Tunisia_national_football_team?action=history",
+      "edit": "https://en.wikipedia.org/wiki/Tunisia_national_football_team?action=edit",
+      "talk": "https://en.wikipedia.org/wiki/Talk:Tunisia_national_football_team"
+    },
+    "mobile": {
+      "page": "https://en.wikipedia.org/wiki/Tunisia_national_football_team",
+      "revisions": "https://en.wikipedia.org/wiki/Special:History/Tunisia_national_football_team",
+      "edit": "https://en.wikipedia.org/wiki/Tunisia_national_football_team?action=edit",
+      "talk": "https://en.wikipedia.org/wiki/Talk:Tunisia_national_football_team"
+    }
+  },
+  "extract": "The Tunisia national football team represents Tunisia in men's international association football competitions, and is controlled by the Tunisian Football Federation (TFF). The team competes under the Confederation of African Football (CAF) on the continental level, and is affiliated with FIFA for global competitions. Additionally, the team is a member of the Union of North African Football (UNAF) and the Union of Arab Football Associations (UAFA). The team is colloquially known as Eagles of Carthage by fans and the media, with the bald eagle serving as its symbol. Their home kit is primarily white and their away kit is red, which is a reference to the national flag of the country. The team has qualified for the FIFA World Cup seven times and the Africa Cup of Nations 22 times, and has appeared in four editions of Summer Olympics and participated once in the FIFA Confederation Cup. Since 2001, Tunisia's home stadium is the Hammadi Agrebi Stadium in Radès, Tunis.",
+  "extract_html": "<p>The <b>Tunisia national football team</b> represents Tunisia in men's international association football competitions, and is controlled by the Tunisian Football Federation (TFF). The team competes under the Confederation of African Football (CAF) on the continental level, and is affiliated with FIFA for global competitions. Additionally, the team is a member of the Union of North African Football (UNAF) and the Union of Arab Football Associations (UAFA). The team is colloquially known as <i>Eagles of Carthage</i> by fans and the media, with the bald eagle serving as its symbol. Their home kit is primarily white and their away kit is red, which is a reference to the national flag of the country. The team has qualified for the FIFA World Cup seven times and the Africa Cup of Nations 22 times, and has appeared in four editions of Summer Olympics and participated once in the FIFA Confederation Cup. Since 2001, Tunisia's home stadium is the Hammadi Agrebi Stadium in Radès, Tunis.</p>"
+}

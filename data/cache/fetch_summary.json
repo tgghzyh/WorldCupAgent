@@ -1,0 +1,26 @@
+{
+  "generated_at": "2026-07-04T11:16:36.721918+00:00",
+  "sources": [
+    {
+      "name": "Wikipedia REST API",
+      "url": "https://en.wikipedia.org/api/rest_v1",
+      "purpose": "Team profiles + 2026 World Cup overview",
+      "fetched": true
+    },
+    {
+      "name": "Wikipedia Action API (wikitext)",
+      "url": "https://en.wikipedia.org/w/api.php",
+      "purpose": "FIFA World Rankings + 2026 World Cup raw",
+      "fetched": true
+    }
+  ],
+  "stats": {
+    "teams_fetched": 48,
+    "teams_with_wiki": 48,
+    "teams_with_fifa_rank": 48,
+    "worldcup_meta_groups": 12,
+    "worldcup_venues_sample": 11,
+    "fifa_rankings_found": 0
+  },
+  "log_file": "data\\cache\\fetch_log.jsonl"
+}

@@ -1,0 +1,49 @@
+{
+  "type": "standard",
+  "title": "Croatia national football team",
+  "displaytitle": "<span lang=\"en\" dir=\"ltr\"><span class=\"mw-page-title-main\">Croatia national football team</span></span>",
+  "namespace": {
+    "id": 0,
+    "text": ""
+  },
+  "wikibase_item": "Q134479",
+  "titles": {
+    "canonical": "Croatia_national_football_team",
+    "normalized": "Croatia national football team",
+    "display": "<span lang=\"en\" dir=\"ltr\"><span class=\"mw-page-title-main\">Croatia national football team</span></span>"
+  },
+  "pageid": 715240,
+  "thumbnail": {
+    "source": "https://upload.wikimedia.org/wikipedia/en/thumb/e/ea/Croatia_national_football_team_logo.svg/330px-Croatia_national_football_team_logo.svg.png",
+    "width": 330,
+    "height": 418
+  },
+  "originalimage": {
+    "source": "https://upload.wikimedia.org/wikipedia/en/thumb/e/ea/Croatia_national_football_team_logo.svg/330px-Croatia_national_football_team_logo.svg.png",
+    "width": 305,
+    "height": 386
+  },
+  "lang": "en",
+  "dir": "ltr",
+  "revision": "1362499297",
+  "tid": "98a3570c-7791-11f1-a7e3-1b0f7b51cab1",
+  "timestamp": "2026-07-04T10:17:44Z",
+  "description": "Men's association football team",
+  "description_source": "local",
+  "content_urls": {
+    "desktop": {
+      "page": "https://en.wikipedia.org/wiki/Croatia_national_football_team",
+      "revisions": "https://en.wikipedia.org/wiki/Croatia_national_football_team?action=history",
+      "edit": "https://en.wikipedia.org/wiki/Croatia_national_football_team?action=edit",
+      "talk": "https://en.wikipedia.org/wiki/Talk:Croatia_national_football_team"
+    },
+    "mobile": {
+      "page": "https://en.wikipedia.org/wiki/Croatia_national_football_team",
+      "revisions": "https://en.wikipedia.org/wiki/Special:History/Croatia_national_football_team",
+      "edit": "https://en.wikipedia.org/wiki/Croatia_national_football_team?action=edit",
+      "talk": "https://en.wikipedia.org/wiki/Talk:Croatia_national_football_team"
+    }
+  },
+  "extract": "The Croatia national football team represents Croatia in men's international football matches. It is governed by the Croatian Football Federation (HNS), the governing body for football in Croatia. It is a member of UEFA in Europe and FIFA in global competition. The team's colours reference two national symbols: the Croatian checkerboard and the country's tricolour. They are colloquially known as the Vatreni (Blazers) and the Kockasti.",
+  "extract_html": "<p>The <b>Croatia national football team</b> represents Croatia in men's international football matches. It is governed by the Croatian Football Federation (HNS), the governing body for football in Croatia. It is a member of UEFA in Europe and FIFA in global competition. The team's colours reference two national symbols: the Croatian checkerboard and the country's tricolour. They are colloquially known as the <span><i lang=\"hr\">Vatreni</i></span> (Blazers) and the <span><i lang=\"hr\">Kockasti</i></span>.</p>"
+}

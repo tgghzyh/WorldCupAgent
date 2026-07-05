@@ -1,0 +1,49 @@
+{
+  "type": "standard",
+  "title": "Costa Rica national football team",
+  "displaytitle": "<span lang=\"en\" dir=\"ltr\"><span class=\"mw-page-title-main\">Costa Rica national football team</span></span>",
+  "namespace": {
+    "id": 0,
+    "text": ""
+  },
+  "wikibase_item": "Q194387",
+  "titles": {
+    "canonical": "Costa_Rica_national_football_team",
+    "normalized": "Costa Rica national football team",
+    "display": "<span lang=\"en\" dir=\"ltr\"><span class=\"mw-page-title-main\">Costa Rica national football team</span></span>"
+  },
+  "pageid": 1014478,
+  "thumbnail": {
+    "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Costa_Rica_national_football_team_logo.svg/330px-Costa_Rica_national_football_team_logo.svg.png",
+    "width": 330,
+    "height": 375
+  },
+  "originalimage": {
+    "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Costa_Rica_national_football_team_logo.svg/60px-Costa_Rica_national_football_team_logo.svg.png",
+    "width": 44,
+    "height": 50
+  },
+  "lang": "en",
+  "dir": "ltr",
+  "revision": "1362428683",
+  "tid": "cf924ff8-772a-11f1-b62f-464bff5871e7",
+  "timestamp": "2026-07-03T22:01:58Z",
+  "description": "Men's association football team",
+  "description_source": "local",
+  "content_urls": {
+    "desktop": {
+      "page": "https://en.wikipedia.org/wiki/Costa_Rica_national_football_team",
+      "revisions": "https://en.wikipedia.org/wiki/Costa_Rica_national_football_team?action=history",
+      "edit": "https://en.wikipedia.org/wiki/Costa_Rica_national_football_team?action=edit",
+      "talk": "https://en.wikipedia.org/wiki/Talk:Costa_Rica_national_football_team"
+    },
+    "mobile": {
+      "page": "https://en.wikipedia.org/wiki/Costa_Rica_national_football_team",
+      "revisions": "https://en.wikipedia.org/wiki/Special:History/Costa_Rica_national_football_team",
+      "edit": "https://en.wikipedia.org/wiki/Costa_Rica_national_football_team?action=edit",
+      "talk": "https://en.wikipedia.org/wiki/Talk:Costa_Rica_national_football_team"
+    }
+  },
+  "extract": "The Costa Rica national football team represents Costa Rica in men's international football, which is governed by the Federación Costarricense de Fútbol, the governing body for football in Costa Rica founded in 1921. It has been an affiliate member of FIFA since 1927 and a founding affiliate member of CONCACAF since 1961. Regionally, it is an affiliate member of UNCAF in the Central American Zone. \nFrom 1938 to 1961, it was a member of CCCF, the former governing body of football in Central America and Caribbean and a predecessor confederation of CONCACAF, and also a member of PFC, the former unified confederation of the Americas, from 1946 to 1961.",
+  "extract_html": "<p>The <b>Costa Rica national football team</b> represents Costa Rica in men's international football, which is governed by the Federación Costarricense de Fútbol, the governing body for football in Costa Rica founded in 1921. It has been an affiliate member of FIFA since 1927 and a founding affiliate member of CONCACAF since 1961. Regionally, it is an affiliate member of UNCAF in the Central American Zone. \nFrom 1938 to 1961, it was a member of CCCF, the former governing body of football in Central America and Caribbean and a predecessor confederation of CONCACAF, and also a member of PFC, the former unified confederation of the Americas, from 1946 to 1961.</p>"
+}

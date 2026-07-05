@@ -1,0 +1,49 @@
+{
+  "type": "standard",
+  "title": "United States men's national soccer team",
+  "displaytitle": "<span lang=\"en\" dir=\"ltr\"><span class=\"mw-page-title-main\">United States men&#039;s national soccer team</span></span>",
+  "namespace": {
+    "id": 0,
+    "text": ""
+  },
+  "wikibase_item": "Q164134",
+  "titles": {
+    "canonical": "United_States_men's_national_soccer_team",
+    "normalized": "United States men's national soccer team",
+    "display": "<span lang=\"en\" dir=\"ltr\"><span class=\"mw-page-title-main\">United States men&#039;s national soccer team</span></span>"
+  },
+  "pageid": 582488,
+  "thumbnail": {
+    "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/United_States_Soccer_Federation_logo.svg/330px-United_States_Soccer_Federation_logo.svg.png",
+    "width": 330,
+    "height": 452
+  },
+  "originalimage": {
+    "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/United_States_Soccer_Federation_logo.svg/250px-United_States_Soccer_Federation_logo.svg.png",
+    "width": 146,
+    "height": 200
+  },
+  "lang": "en",
+  "dir": "ltr",
+  "revision": "1362492448",
+  "tid": "08f7ac26-7785-11f1-b806-67280866c631",
+  "timestamp": "2026-07-04T08:47:49Z",
+  "description": "Men's national soccer team representing United States",
+  "description_source": "local",
+  "content_urls": {
+    "desktop": {
+      "page": "https://en.wikipedia.org/wiki/United_States_men's_national_soccer_team",
+      "revisions": "https://en.wikipedia.org/wiki/United_States_men's_national_soccer_team?action=history",
+      "edit": "https://en.wikipedia.org/wiki/United_States_men's_national_soccer_team?action=edit",
+      "talk": "https://en.wikipedia.org/wiki/Talk:United_States_men's_national_soccer_team"
+    },
+    "mobile": {
+      "page": "https://en.wikipedia.org/wiki/United_States_men's_national_soccer_team",
+      "revisions": "https://en.wikipedia.org/wiki/Special:History/United_States_men's_national_soccer_team",
+      "edit": "https://en.wikipedia.org/wiki/United_States_men's_national_soccer_team?action=edit",
+      "talk": "https://en.wikipedia.org/wiki/Talk:United_States_men's_national_soccer_team"
+    }
+  },
+  "extract": "The United States men's national soccer team represents the United States in men's international soccer, which is governed by the United States Soccer Federation. The team has been an affiliate member of FIFA since 1914 and a founding affiliate member of CONCACAF since 1961. Regionally, it is an affiliate member of NAFU in the North American Zone. From 1946 to 1961, it was a member of NAFC, the former governing soccer body in North America and a predecessor confederation of CONCACAF, and also a member of PFC, the former unified confederation of the Americas.",
+  "extract_html": "<p>The <b>United States men's national soccer team</b> represents the United States in men's international soccer, which is governed by the United States Soccer Federation. The team has been an affiliate member of FIFA since 1914 and a founding affiliate member of CONCACAF since 1961. Regionally, it is an affiliate member of NAFU in the North American Zone. From 1946 to 1961, it was a member of NAFC, the former governing soccer body in North America and a predecessor confederation of CONCACAF, and also a member of PFC, the former unified confederation of the Americas.</p>"
+}

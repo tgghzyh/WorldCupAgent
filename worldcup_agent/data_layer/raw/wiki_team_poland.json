@@ -1,0 +1,49 @@
+{
+  "type": "standard",
+  "title": "Poland national football team",
+  "displaytitle": "<span lang=\"en\" dir=\"ltr\"><span class=\"mw-page-title-main\">Poland national football team</span></span>",
+  "namespace": {
+    "id": 0,
+    "text": ""
+  },
+  "wikibase_item": "Q166196",
+  "titles": {
+    "canonical": "Poland_national_football_team",
+    "normalized": "Poland national football team",
+    "display": "<span lang=\"en\" dir=\"ltr\"><span class=\"mw-page-title-main\">Poland national football team</span></span>"
+  },
+  "pageid": 771860,
+  "thumbnail": {
+    "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Herb_Polski.svg/330px-Herb_Polski.svg.png",
+    "width": 330,
+    "height": 388
+  },
+  "originalimage": {
+    "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Herb_Polski.svg/3840px-Herb_Polski.svg.png",
+    "width": 3158,
+    "height": 3716
+  },
+  "lang": "en",
+  "dir": "ltr",
+  "revision": "1362177440",
+  "tid": "6c0c04f8-7600-11f1-a3c3-447466519c6a",
+  "timestamp": "2026-07-02T10:26:01Z",
+  "description": "Men's association football team",
+  "description_source": "local",
+  "content_urls": {
+    "desktop": {
+      "page": "https://en.wikipedia.org/wiki/Poland_national_football_team",
+      "revisions": "https://en.wikipedia.org/wiki/Poland_national_football_team?action=history",
+      "edit": "https://en.wikipedia.org/wiki/Poland_national_football_team?action=edit",
+      "talk": "https://en.wikipedia.org/wiki/Talk:Poland_national_football_team"
+    },
+    "mobile": {
+      "page": "https://en.wikipedia.org/wiki/Poland_national_football_team",
+      "revisions": "https://en.wikipedia.org/wiki/Special:History/Poland_national_football_team",
+      "edit": "https://en.wikipedia.org/wiki/Poland_national_football_team?action=edit",
+      "talk": "https://en.wikipedia.org/wiki/Talk:Poland_national_football_team"
+    }
+  },
+  "extract": "The Poland national football team represents Poland in men's international football competitions since their first match in 1921. It is governed by the Polish Football Association (PZPN), the governing body for football in Poland. They are known by the nicknames \"The White-Reds\" and \"The Eagles\", symbolized by their coat of arms featuring a white eagle on a red background. The team reached their peak World Ranking of 5th in 2017. Poland's home ground is the Kazimierz Górski National Stadium in Warsaw.",
+  "extract_html": "<p>The <b>Poland national football team</b> represents Poland in men's international football competitions since their first match in 1921. It is governed by the Polish Football Association (PZPN), the governing body for football in Poland. They are known by the nicknames \"The White-Reds\" and \"The Eagles\", symbolized by their coat of arms featuring a white eagle on a red background. The team reached their peak World Ranking of 5th in 2017. Poland's home ground is the Kazimierz Górski National Stadium in Warsaw.</p>"
+}

@@ -1,0 +1,128 @@
+{
+  "card_version": "1.0",
+  "generated_at": "2026-07-04T12:28:30.192752+00:00",
+  "dataset": "teams_2026_enriched.json",
+  "description": "48-team 2026 FIFA World Cup roster enriched with wiki, FIFA ranking, ELO, xG, history",
+  "rows": 48,
+  "source_urls": {
+    "wiki": "https://en.wikipedia.org/api/rest_v1",
+    "fifa_rankings": "https://en.wikipedia.org/w/api.php?action=parse&page=FIFA_World_Rankings",
+    "martj42_intl": "https://raw.githubusercontent.com/martj42/international_results/master/results.csv",
+    "statsbomb": "https://raw.githubusercontent.com/statsbomb/open-data/master/data"
+  },
+  "feature_coverage_pct": {
+    "fifa_ranking": 100.0,
+    "elo_rating": 100.0,
+    "wiki_extract": 100.0,
+    "xg_2018_2022": 75.0,
+    "hist_coverage": 100.0,
+    "recent_form": 100.0
+  },
+  "defects": [
+    {
+      "field": "xg_2018_2022",
+      "affected_teams": [
+        "Jamaica",
+        "New Zealand",
+        "Italy",
+        "Paraguay",
+        "Bolivia",
+        "Algeria",
+        "South Africa",
+        "Burkina Faso",
+        "Austria",
+        "Ivory Coast",
+        "Greece",
+        "Zambia"
+      ],
+      "reason": "12 teams did not qualify for 2018 or 2022 WC; StatsBomb only covers those two tournaments",
+      "fill_strategy": "Use group/continental mean xG from qualifying campaign data, or null-pad",
+      "severity": "low — expected; not a data error"
+    },
+    {
+      "field": "recent_form",
+      "affected_teams": [],
+      "reason": "Team has < 10 matches in martj42 dataset; recent_form requires 10 A-matches",
+      "fill_strategy": "Use all available matches or null; do not impute with group mean",
+      "severity": "medium — verify dataset freshness"
+    },
+    {
+      "field": "wiki_extract",
+      "affected_teams": [],
+      "reason": "Wikipedia REST API returned a disambiguation page (e.g. New Zealand ambiguous term)",
+      "fill_strategy": "Re-scrape with action API (S1 action endpoint) or use raw wikitext fallback",
+      "severity": "low — 1-2 teams"
+    },
+    {
+      "field": "fifa_ranking_wiki",
+      "affected_teams": [
+        "Argentina",
+        "Mexico",
+        "Ecuador",
+        "Jamaica",
+        "Spain",
+        "Netherlands",
+        "Cameroon",
+        "Qatar",
+        "England",
+        "USA",
+        "Iran",
+        "Wales",
+        "Brazil",
+        "Portugal",
+        "Serbia",
+        "Ghana",
+        "Germany",
+        "Japan",
+        "Costa Rica",
+        "New Zealand",
+        "Belgium",
+        "Croatia",
+        "Morocco",
+        "Canada",
+        "France",
+        "Denmark",
+        "Tunisia",
+        "Peru",
+        "Uruguay",
+        "Italy",
+        "South Korea",
+        "Australia",
+        "Colombia",
+        "Paraguay",
+        "Panama",
+        "Bolivia",
+        "Senegal",
+        "Algeria",
+        "South Africa",
+        "Burkina Faso",
+        "Poland",
+        "Sweden",
+        "Austria",
+        "Egypt",
+        "Nigeria",
+        "Ivory Coast",
+        "Greece",
+        "Zambia"
+      ],
+      "reason": "Live FIFA ranking could not be extracted from wiki; baseline used instead",
+      "fill_strategy": "Source from official FIFA rankings API; baseline is acceptable placeholder",
+      "severity": "info"
+    }
+  ],
+  "leakage_check": {
+    "all_features_prematch": true,
+    "note": "xg_2018_2022 comes from PAST tournaments (2018+2022), not current match. recent_form_score is a rolling window from martj42 historical data. All features are safe for pre-match prediction — no in-game stats included."
+  },
+  "date_range": {
+    "history_min": "1872-11-30",
+    "history_max": "2026-07-06"
+  },
+  "recommendations": [
+    "Re-scrape New Zealand and Sweden wiki_extract with action API (disambiguation pages)",
+    "Decide on xG null-fill strategy: group mean vs. continental mean vs. null",
+    "Add FIFA 2022 technical report PDF extraction (S7) for tactical features",
+    "Add tactical text corpus files (S8) for entity-tactic triples",
+    "Evaluate FBref injury data before pre-tournament model training"
+  ]
+}

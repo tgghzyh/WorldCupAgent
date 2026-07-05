@@ -1,0 +1,49 @@
+{
+  "type": "standard",
+  "title": "South Korea national football team",
+  "displaytitle": "<span lang=\"en\" dir=\"ltr\"><span class=\"mw-page-title-main\">South Korea national football team</span></span>",
+  "namespace": {
+    "id": 0,
+    "text": ""
+  },
+  "wikibase_item": "Q543842",
+  "titles": {
+    "canonical": "South_Korea_national_football_team",
+    "normalized": "South Korea national football team",
+    "display": "<span lang=\"en\" dir=\"ltr\"><span class=\"mw-page-title-main\">South Korea national football team</span></span>"
+  },
+  "pageid": 1018627,
+  "thumbnail": {
+    "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Flag_of_South_Korea.svg/330px-Flag_of_South_Korea.svg.png",
+    "width": 330,
+    "height": 220
+  },
+  "originalimage": {
+    "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Flag_of_South_Korea.svg/960px-Flag_of_South_Korea.svg.png",
+    "width": 900,
+    "height": 600
+  },
+  "lang": "en",
+  "dir": "ltr",
+  "revision": "1362313083",
+  "tid": "7aa2fa5f-7692-11f1-93c5-366350e33d38",
+  "timestamp": "2026-07-03T03:51:32Z",
+  "description": "Men's association football team",
+  "description_source": "local",
+  "content_urls": {
+    "desktop": {
+      "page": "https://en.wikipedia.org/wiki/South_Korea_national_football_team",
+      "revisions": "https://en.wikipedia.org/wiki/South_Korea_national_football_team?action=history",
+      "edit": "https://en.wikipedia.org/wiki/South_Korea_national_football_team?action=edit",
+      "talk": "https://en.wikipedia.org/wiki/Talk:South_Korea_national_football_team"
+    },
+    "mobile": {
+      "page": "https://en.wikipedia.org/wiki/South_Korea_national_football_team",
+      "revisions": "https://en.wikipedia.org/wiki/Special:History/South_Korea_national_football_team",
+      "edit": "https://en.wikipedia.org/wiki/South_Korea_national_football_team?action=edit",
+      "talk": "https://en.wikipedia.org/wiki/Talk:South_Korea_national_football_team"
+    }
+  },
+  "extract": "The South Korea national football team represents South Korea in men's international football and is governed by the Korea Football Association, a member of FIFA and the Asian Football Confederation (AFC).",
+  "extract_html": "<p>The <b>South Korea national football team</b> represents South Korea in men's international football and is governed by the Korea Football Association, a member of FIFA and the Asian Football Confederation (AFC).</p>"
+}

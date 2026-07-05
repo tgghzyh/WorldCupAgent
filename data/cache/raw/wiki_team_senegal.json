@@ -1,0 +1,39 @@
+{
+  "type": "standard",
+  "title": "Senegal national football team",
+  "displaytitle": "<span lang=\"en\" dir=\"ltr\"><span class=\"mw-page-title-main\">Senegal national football team</span></span>",
+  "namespace": {
+    "id": 0,
+    "text": ""
+  },
+  "wikibase_item": "Q207441",
+  "titles": {
+    "canonical": "Senegal_national_football_team",
+    "normalized": "Senegal national football team",
+    "display": "<span lang=\"en\" dir=\"ltr\"><span class=\"mw-page-title-main\">Senegal national football team</span></span>"
+  },
+  "pageid": 1017436,
+  "lang": "en",
+  "dir": "ltr",
+  "revision": "1362482071",
+  "tid": "2ae73005-7771-11f1-ba38-5493ef940c2c",
+  "timestamp": "2026-07-04T06:25:36Z",
+  "description": "Men's association football team",
+  "description_source": "local",
+  "content_urls": {
+    "desktop": {
+      "page": "https://en.wikipedia.org/wiki/Senegal_national_football_team",
+      "revisions": "https://en.wikipedia.org/wiki/Senegal_national_football_team?action=history",
+      "edit": "https://en.wikipedia.org/wiki/Senegal_national_football_team?action=edit",
+      "talk": "https://en.wikipedia.org/wiki/Talk:Senegal_national_football_team"
+    },
+    "mobile": {
+      "page": "https://en.wikipedia.org/wiki/Senegal_national_football_team",
+      "revisions": "https://en.wikipedia.org/wiki/Special:History/Senegal_national_football_team",
+      "edit": "https://en.wikipedia.org/wiki/Senegal_national_football_team?action=edit",
+      "talk": "https://en.wikipedia.org/wiki/Talk:Senegal_national_football_team"
+    }
+  },
+  "extract": "The Senegal national football team, nicknamed Les Lions de la Teranga, represents Senegal in men's international association football and is operated by the Senegalese Football Federation.",
+  "extract_html": "<p>The <b>Senegal national football team</b>, nicknamed <i><b>Les Lions de la Teranga</b></i>, represents Senegal in men's international association football and is operated by the Senegalese Football Federation.</p>"
+}

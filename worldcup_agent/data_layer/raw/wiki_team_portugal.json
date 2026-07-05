@@ -1,0 +1,49 @@
+{
+  "type": "standard",
+  "title": "Portugal national football team",
+  "displaytitle": "<span lang=\"en\" dir=\"ltr\"><span class=\"mw-page-title-main\">Portugal national football team</span></span>",
+  "namespace": {
+    "id": 0,
+    "text": ""
+  },
+  "wikibase_item": "Q267245",
+  "titles": {
+    "canonical": "Portugal_national_football_team",
+    "normalized": "Portugal national football team",
+    "display": "<span lang=\"en\" dir=\"ltr\"><span class=\"mw-page-title-main\">Portugal national football team</span></span>"
+  },
+  "pageid": 576328,
+  "thumbnail": {
+    "source": "https://upload.wikimedia.org/wikipedia/en/thumb/6/64/Portuguese_Football_Federation_logo.svg/330px-Portuguese_Football_Federation_logo.svg.png",
+    "width": 330,
+    "height": 441
+  },
+  "originalimage": {
+    "source": "https://upload.wikimedia.org/wikipedia/en/thumb/6/64/Portuguese_Football_Federation_logo.svg/330px-Portuguese_Football_Federation_logo.svg.png",
+    "width": 274,
+    "height": 366
+  },
+  "lang": "en",
+  "dir": "ltr",
+  "revision": "1362486885",
+  "tid": "78b466df-777a-11f1-adc8-d92ee0219145",
+  "timestamp": "2026-07-04T07:32:12Z",
+  "description": "Men's association football team",
+  "description_source": "local",
+  "content_urls": {
+    "desktop": {
+      "page": "https://en.wikipedia.org/wiki/Portugal_national_football_team",
+      "revisions": "https://en.wikipedia.org/wiki/Portugal_national_football_team?action=history",
+      "edit": "https://en.wikipedia.org/wiki/Portugal_national_football_team?action=edit",
+      "talk": "https://en.wikipedia.org/wiki/Talk:Portugal_national_football_team"
+    },
+    "mobile": {
+      "page": "https://en.wikipedia.org/wiki/Portugal_national_football_team",
+      "revisions": "https://en.wikipedia.org/wiki/Special:History/Portugal_national_football_team",
+      "edit": "https://en.wikipedia.org/wiki/Portugal_national_football_team?action=edit",
+      "talk": "https://en.wikipedia.org/wiki/Talk:Portugal_national_football_team"
+    }
+  },
+  "extract": "The Portugal national football team has represented Portugal in men's international football competition since 1921. The national team is controlled by the Portuguese Football Federation (FPF), the governing body for football in Portugal. Portugal's home stadium is the Estádio Nacional in Oeiras, located next to its primary training ground and the FPF headquarters, but the team usually plays its home matches in more modern stadiums throughout the country, such as the Estádio da Luz, Estádio José Alvalade and the Estádio do Dragão. The head coach is Roberto Martínez, and the captain is Cristiano Ronaldo, who holds the team records for most caps and most goals.",
+  "extract_html": "<p>The <b>Portugal national football team</b> has represented Portugal in men's international football competition since 1921. The national team is controlled by the Portuguese Football Federation (FPF), the governing body for football in Portugal. Portugal's home stadium is the Estádio Nacional in Oeiras, located next to its primary training ground and the FPF headquarters, but the team usually plays its home matches in more modern stadiums throughout the country, such as the Estádio da Luz, Estádio José Alvalade and the Estádio do Dragão. The head coach is Roberto Martínez, and the captain is Cristiano Ronaldo, who holds the team records for most caps and most goals.</p>"
+}

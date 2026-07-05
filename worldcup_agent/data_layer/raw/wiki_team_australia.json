@@ -1,0 +1,49 @@
+{
+  "type": "standard",
+  "title": "Australia men's national soccer team",
+  "displaytitle": "<span lang=\"en\" dir=\"ltr\"><span class=\"mw-page-title-main\">Australia men&#039;s national soccer team</span></span>",
+  "namespace": {
+    "id": 0,
+    "text": ""
+  },
+  "wikibase_item": "Q268208",
+  "titles": {
+    "canonical": "Australia_men's_national_soccer_team",
+    "normalized": "Australia men's national soccer team",
+    "display": "<span lang=\"en\" dir=\"ltr\"><span class=\"mw-page-title-main\">Australia men&#039;s national soccer team</span></span>"
+  },
+  "pageid": 4792249,
+  "thumbnail": {
+    "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Australia_national_football_team_badge.svg/330px-Australia_national_football_team_badge.svg.png",
+    "width": 330,
+    "height": 333
+  },
+  "originalimage": {
+    "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Australia_national_football_team_badge.svg/960px-Australia_national_football_team_badge.svg.png",
+    "width": 770,
+    "height": 778
+  },
+  "lang": "en",
+  "dir": "ltr",
+  "revision": "1362453952",
+  "tid": "0d9c6dfe-7745-11f1-92e5-8a506dda90c7",
+  "timestamp": "2026-07-04T01:09:49Z",
+  "description": "",
+  "description_source": "local",
+  "content_urls": {
+    "desktop": {
+      "page": "https://en.wikipedia.org/wiki/Australia_men's_national_soccer_team",
+      "revisions": "https://en.wikipedia.org/wiki/Australia_men's_national_soccer_team?action=history",
+      "edit": "https://en.wikipedia.org/wiki/Australia_men's_national_soccer_team?action=edit",
+      "talk": "https://en.wikipedia.org/wiki/Talk:Australia_men's_national_soccer_team"
+    },
+    "mobile": {
+      "page": "https://en.wikipedia.org/wiki/Australia_men's_national_soccer_team",
+      "revisions": "https://en.wikipedia.org/wiki/Special:History/Australia_men's_national_soccer_team",
+      "edit": "https://en.wikipedia.org/wiki/Australia_men's_national_soccer_team?action=edit",
+      "talk": "https://en.wikipedia.org/wiki/Talk:Australia_men's_national_soccer_team"
+    }
+  },
+  "extract": "The Australia men's national soccer team represents Australia in international men's soccer. Officially nicknamed the Socceroos, the team is controlled by the governing body for soccer in Australia, Football Australia, which is affiliated with the Asian Football Confederation (AFC) and the regional ASEAN Football Federation (AFF).",
+  "extract_html": "<p>The <b>Australia men's national soccer team</b> represents Australia in international men's soccer. Officially nicknamed the <b>Socceroos</b>, the team is controlled by the governing body for soccer in Australia, Football Australia, which is affiliated with the Asian Football Confederation (AFC) and the regional ASEAN Football Federation (AFF).</p>"
+}

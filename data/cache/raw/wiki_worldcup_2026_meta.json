@@ -1,0 +1,33 @@
+{
+  "groups_found": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E",
+    "F",
+    "G",
+    "H",
+    "I",
+    "J",
+    "K",
+    "L"
+  ],
+  "venues_sample": [
+    "MetLife Stadium",
+    "Gillette Stadium",
+    "Northwest Stadium",
+    "NRG Stadium",
+    "SoFi Stadium",
+    "Levi's Stadium",
+    "Hard Rock Stadium",
+    "Allegiant Stadium",
+    "TD Place Stadium",
+    "Giants Stadium",
+    "Arrowhead Stadium"
+  ],
+  "teams_in_wikitext_sample": [],
+  "match_date_count_in_text": 0,
+  "fetched_at": "2026-07-04T11:16:35.148496+00:00",
+  "wikitext_length_bytes": 187704
+}

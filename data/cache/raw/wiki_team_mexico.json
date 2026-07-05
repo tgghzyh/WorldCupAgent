@@ -1,0 +1,49 @@
+{
+  "type": "standard",
+  "title": "Mexico national football team",
+  "displaytitle": "<span lang=\"en\" dir=\"ltr\"><span class=\"mw-page-title-main\">Mexico national football team</span></span>",
+  "namespace": {
+    "id": 0,
+    "text": ""
+  },
+  "wikibase_item": "Q164089",
+  "titles": {
+    "canonical": "Mexico_national_football_team",
+    "normalized": "Mexico national football team",
+    "display": "<span lang=\"en\" dir=\"ltr\"><span class=\"mw-page-title-main\">Mexico national football team</span></span>"
+  },
+  "pageid": 808402,
+  "thumbnail": {
+    "source": "https://upload.wikimedia.org/wikipedia/en/thumb/3/3f/Mexico_national_football_team_crest.svg/330px-Mexico_national_football_team_crest.svg.png",
+    "width": 330,
+    "height": 449
+  },
+  "originalimage": {
+    "source": "https://upload.wikimedia.org/wikipedia/en/thumb/3/3f/Mexico_national_football_team_crest.svg/330px-Mexico_national_football_team_crest.svg.png",
+    "width": 271,
+    "height": 369
+  },
+  "lang": "en",
+  "dir": "ltr",
+  "revision": "1362454515",
+  "tid": "cc588dc9-7745-11f1-990a-2dbfece7b78b",
+  "timestamp": "2026-07-04T01:15:09Z",
+  "description": "Men's association football team",
+  "description_source": "local",
+  "content_urls": {
+    "desktop": {
+      "page": "https://en.wikipedia.org/wiki/Mexico_national_football_team",
+      "revisions": "https://en.wikipedia.org/wiki/Mexico_national_football_team?action=history",
+      "edit": "https://en.wikipedia.org/wiki/Mexico_national_football_team?action=edit",
+      "talk": "https://en.wikipedia.org/wiki/Talk:Mexico_national_football_team"
+    },
+    "mobile": {
+      "page": "https://en.wikipedia.org/wiki/Mexico_national_football_team",
+      "revisions": "https://en.wikipedia.org/wiki/Special:History/Mexico_national_football_team",
+      "edit": "https://en.wikipedia.org/wiki/Mexico_national_football_team?action=edit",
+      "talk": "https://en.wikipedia.org/wiki/Talk:Mexico_national_football_team"
+    }
+  },
+  "extract": "The Mexico national football team represents Mexico in men's international football, which is governed by the Mexican Football Federation founded in 1927. It has been an affiliate member of FIFA since 1929 and a founding affiliate member of CONCACAF since 1961. Regionally, it is an affiliate member of NAFU in the North American Zone.\nFrom 1946 to 1961, it was a member of NAFC, the former governing body of football in North America and a predecessor confederation of CONCACAF, and also a member of PFC, the former unified confederation of the Americas.",
+  "extract_html": "<p>The <b>Mexico national football team</b> represents Mexico in men's international football, which is governed by the Mexican Football Federation founded in 1927. It has been an affiliate member of FIFA since 1929 and a founding affiliate member of CONCACAF since 1961. Regionally, it is an affiliate member of NAFU in the North American Zone.\nFrom 1946 to 1961, it was a member of NAFC, the former governing body of football in North America and a predecessor confederation of CONCACAF, and also a member of PFC, the former unified confederation of the Americas.</p>"
+}

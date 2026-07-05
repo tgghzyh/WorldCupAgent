@@ -1,0 +1,49 @@
+{
+  "type": "standard",
+  "title": "Netherlands national football team",
+  "displaytitle": "<span lang=\"en\" dir=\"ltr\"><span class=\"mw-page-title-main\">Netherlands national football team</span></span>",
+  "namespace": {
+    "id": 0,
+    "text": ""
+  },
+  "wikibase_item": "Q47050",
+  "titles": {
+    "canonical": "Netherlands_national_football_team",
+    "normalized": "Netherlands national football team",
+    "display": "<span lang=\"en\" dir=\"ltr\"><span class=\"mw-page-title-main\">Netherlands national football team</span></span>"
+  },
+  "pageid": 9647657,
+  "thumbnail": {
+    "source": "https://upload.wikimedia.org/wikipedia/en/thumb/7/78/Netherlands_national_football_team_logo.svg/330px-Netherlands_national_football_team_logo.svg.png",
+    "width": 330,
+    "height": 430
+  },
+  "originalimage": {
+    "source": "https://upload.wikimedia.org/wikipedia/en/thumb/7/78/Netherlands_national_football_team_logo.svg/330px-Netherlands_national_football_team_logo.svg.png",
+    "width": 277,
+    "height": 361
+  },
+  "lang": "en",
+  "dir": "ltr",
+  "revision": "1362414592",
+  "tid": "12e5c55d-771d-11f1-b2c1-3d9edc1a3a7b",
+  "timestamp": "2026-07-03T20:23:38Z",
+  "description": "Men's association football team",
+  "description_source": "local",
+  "content_urls": {
+    "desktop": {
+      "page": "https://en.wikipedia.org/wiki/Netherlands_national_football_team",
+      "revisions": "https://en.wikipedia.org/wiki/Netherlands_national_football_team?action=history",
+      "edit": "https://en.wikipedia.org/wiki/Netherlands_national_football_team?action=edit",
+      "talk": "https://en.wikipedia.org/wiki/Talk:Netherlands_national_football_team"
+    },
+    "mobile": {
+      "page": "https://en.wikipedia.org/wiki/Netherlands_national_football_team",
+      "revisions": "https://en.wikipedia.org/wiki/Special:History/Netherlands_national_football_team",
+      "edit": "https://en.wikipedia.org/wiki/Netherlands_national_football_team?action=edit",
+      "talk": "https://en.wikipedia.org/wiki/Talk:Netherlands_national_football_team"
+    }
+  },
+  "extract": "The Netherlands national football team or simply Het Nederlands elftal has represented the Netherlands in international men's football matches since 1905. The men's national team is controlled by the Royal Dutch Football Association (KNVB), the governing body for football in the Netherlands, which is a part of UEFA, under the jurisdiction of FIFA. Most of the Netherlands home matches are played at the Johan Cruyff Arena, De Kuip, Philips Stadion, and De Grolsch Veste.",
+  "extract_html": "<p>The <b>Netherlands national football team</b> or simply <i>Het Nederlands elftal</i> has represented the Netherlands in international men's football matches since 1905. The men's national team is controlled by the Royal Dutch Football Association (KNVB), the governing body for football in the Netherlands, which is a part of UEFA, under the jurisdiction of FIFA. Most of the Netherlands home matches are played at the Johan Cruyff Arena, De Kuip, Philips Stadion, and De Grolsch Veste.</p>"
+}

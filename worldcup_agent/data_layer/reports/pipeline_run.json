@@ -1,0 +1,69 @@
+{
+  "generated_at": "2026-07-04T11:49:11.197213+00:00",
+  "elapsed_seconds": 20.81,
+  "steps": [
+    {
+      "step": "intl_results",
+      "ok": true,
+      "raw": "C:\\Users\\43021\\Desktop\\ART\\WorldCupAgent\\worldcup_agent\\data_layer\\raw\\intl_results_raw.csv",
+      "cleaned": {
+        "parquet": "C:\\Users\\43021\\Desktop\\ART\\WorldCupAgent\\worldcup_agent\\data_layer\\cleaned\\intl_results.parquet",
+        "summary": "C:\\Users\\43021\\Desktop\\ART\\WorldCupAgent\\worldcup_agent\\data_layer\\cleaned\\intl_results_summary.json",
+        "wc_csv": "C:\\Users\\43021\\Desktop\\ART\\WorldCupAgent\\worldcup_agent\\data_layer\\cleaned\\world_cup_finals_only.csv"
+      },
+      "features": {
+        "team_match_counts": "C:\\Users\\43021\\Desktop\\ART\\WorldCupAgent\\worldcup_agent\\data_layer\\features\\team_match_counts.csv",
+        "team_recent_form": "C:\\Users\\43021\\Desktop\\ART\\WorldCupAgent\\worldcup_agent\\data_layer\\features\\team_recent_form.csv",
+        "team_2026_coverage": "C:\\Users\\43021\\Desktop\\ART\\WorldCupAgent\\worldcup_agent\\data_layer\\features\\team_2026_history_coverage.csv"
+      }
+    },
+    {
+      "step": "footballdata",
+      "ok": true,
+      "raw": "C:\\Users\\43021\\Desktop\\ART\\WorldCupAgent\\worldcup_agent\\data_layer\\raw\\footballdata_fixtures.csv",
+      "cleaned": "C:\\Users\\43021\\Desktop\\ART\\WorldCupAgent\\worldcup_agent\\data_layer\\cleaned\\footballdata_fixtures.parquet"
+    },
+    {
+      "step": "wikipedia",
+      "ok": true,
+      "generated_at": "2026-07-04T11:48:59.235142+00:00",
+      "team_summaries_fetched": 48,
+      "fifa_ranks_parsed_from_wikitext": 0,
+      "wc_2026_groups_detected": 12,
+      "wc_2026_venues_detected": 11,
+      "wc_2026_date_mentions": 5,
+      "enriched_path": "C:\\Users\\43021\\Desktop\\ART\\WorldCupAgent\\worldcup_agent\\data_layer\\cleaned\\teams_2026_enriched.json"
+    },
+    {
+      "step": "statsbomb",
+      "ok": true,
+      "competitions_index": "C:\\Users\\43021\\Desktop\\ART\\WorldCupAgent\\worldcup_agent\\data_layer\\raw\\sb_competitions.json",
+      "matches_files": [
+        "C:\\Users\\43021\\Desktop\\ART\\WorldCupAgent\\worldcup_agent\\data_layer\\raw\\sb_matches_43_106.json",
+        "C:\\Users\\43021\\Desktop\\ART\\WorldCupAgent\\worldcup_agent\\data_layer\\raw\\sb_matches_43_3.json"
+      ],
+      "shots_parquet": "C:\\Users\\43021\\Desktop\\ART\\WorldCupAgent\\worldcup_agent\\data_layer\\cleaned\\statsbomb_shots.parquet",
+      "passes_parquet": "C:\\Users\\43021\\Desktop\\ART\\WorldCupAgent\\worldcup_agent\\data_layer\\cleaned\\statsbomb_passes.parquet",
+      "team_xg_summary": "C:\\Users\\43021\\Desktop\\ART\\WorldCupAgent\\worldcup_agent\\data_layer\\features\\team_xg_summary_2018_2022.csv",
+      "failures_count": 0,
+      "failures_file": "C:\\Users\\43021\\Desktop\\ART\\WorldCupAgent\\worldcup_agent\\data_layer\\cleaned\\statsbomb_failures.json"
+    },
+    {
+      "step": "pdf_reports",
+      "ok": true,
+      "processed": [],
+      "hint": "Download a FIFA technical report PDF and drop it under worldcup_agent/data_layer/raw/fifa_reports/"
+    },
+    {
+      "step": "tactical_text",
+      "ok": true,
+      "processed": [],
+      "hint": "Drop .txt or .md files into worldcup_agent/data_layer/raw/tactical_corpus/ and re-run."
+    }
+  ],
+  "raw_dir": "C:\\Users\\43021\\Desktop\\ART\\WorldCupAgent\\worldcup_agent\\data_layer\\raw",
+  "cleaned_dir": "C:\\Users\\43021\\Desktop\\ART\\WorldCupAgent\\worldcup_agent\\data_layer\\cleaned",
+  "features_dir": "C:\\Users\\43021\\Desktop\\ART\\WorldCupAgent\\worldcup_agent\\data_layer\\features",
+  "logs_dir": "C:\\Users\\43021\\Desktop\\ART\\WorldCupAgent\\worldcup_agent\\data_layer\\logs",
+  "audit_log": "C:\\Users\\43021\\Desktop\\ART\\WorldCupAgent\\worldcup_agent\\data_layer\\logs\\data_layer_audit.jsonl"
+}

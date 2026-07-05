@@ -1,0 +1,49 @@
+{
+  "type": "standard",
+  "title": "Brazil national football team",
+  "displaytitle": "<span lang=\"en\" dir=\"ltr\"><span class=\"mw-page-title-main\">Brazil national football team</span></span>",
+  "namespace": {
+    "id": 0,
+    "text": ""
+  },
+  "wikibase_item": "Q83459",
+  "titles": {
+    "canonical": "Brazil_national_football_team",
+    "normalized": "Brazil national football team",
+    "display": "<span lang=\"en\" dir=\"ltr\"><span class=\"mw-page-title-main\">Brazil national football team</span></span>"
+  },
+  "pageid": 149286,
+  "thumbnail": {
+    "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Confedera%C3%A7%C3%A3o_Brasileira_de_Futebol_logo_%282020%29.svg/330px-Confedera%C3%A7%C3%A3o_Brasileira_de_Futebol_logo_%282020%29.svg.png",
+    "width": 330,
+    "height": 545
+  },
+  "originalimage": {
+    "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Confedera%C3%A7%C3%A3o_Brasileira_de_Futebol_logo_%282020%29.svg/960px-Confedera%C3%A7%C3%A3o_Brasileira_de_Futebol_logo_%282020%29.svg.png",
+    "width": 543,
+    "height": 896
+  },
+  "lang": "en",
+  "dir": "ltr",
+  "revision": "1362454320",
+  "tid": "84396ab7-7745-11f1-9bd6-8c7237cb4327",
+  "timestamp": "2026-07-04T01:13:08Z",
+  "description": "Men's association football team",
+  "description_source": "local",
+  "content_urls": {
+    "desktop": {
+      "page": "https://en.wikipedia.org/wiki/Brazil_national_football_team",
+      "revisions": "https://en.wikipedia.org/wiki/Brazil_national_football_team?action=history",
+      "edit": "https://en.wikipedia.org/wiki/Brazil_national_football_team?action=edit",
+      "talk": "https://en.wikipedia.org/wiki/Talk:Brazil_national_football_team"
+    },
+    "mobile": {
+      "page": "https://en.wikipedia.org/wiki/Brazil_national_football_team",
+      "revisions": "https://en.wikipedia.org/wiki/Special:History/Brazil_national_football_team",
+      "edit": "https://en.wikipedia.org/wiki/Brazil_national_football_team?action=edit",
+      "talk": "https://en.wikipedia.org/wiki/Talk:Brazil_national_football_team"
+    }
+  },
+  "extract": "The Brazil national football team, nicknamed Canarinho, represents Brazil in men's international football and is administered by the Brazilian Football Confederation, the governing body of football in Brazil. It has been a member of FIFA since 1923 and was a founding member of CONMEBOL in 1916. It was also a member of PFC, the unified confederation of the Americas, from 1946 to 1961.",
+  "extract_html": "<p>The <b>Brazil national football team</b>, nicknamed <i><b>Canarinho</b></i>, represents Brazil in men's international football and is administered by the Brazilian Football Confederation, the governing body of football in Brazil. It has been a member of FIFA since 1923 and was a founding member of CONMEBOL in 1916. It was also a member of PFC, the unified confederation of the Americas, from 1946 to 1961.</p>"
+}

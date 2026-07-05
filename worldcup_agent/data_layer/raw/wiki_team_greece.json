@@ -1,0 +1,49 @@
+{
+  "type": "standard",
+  "title": "Greece national football team",
+  "displaytitle": "<span lang=\"en\" dir=\"ltr\"><span class=\"mw-page-title-main\">Greece national football team</span></span>",
+  "namespace": {
+    "id": 0,
+    "text": ""
+  },
+  "wikibase_item": "Q134925",
+  "titles": {
+    "canonical": "Greece_national_football_team",
+    "normalized": "Greece national football team",
+    "display": "<span lang=\"en\" dir=\"ltr\"><span class=\"mw-page-title-main\">Greece national football team</span></span>"
+  },
+  "pageid": 722668,
+  "thumbnail": {
+    "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Greece_National_Football_Team.svg/330px-Greece_National_Football_Team.svg.png",
+    "width": 330,
+    "height": 545
+  },
+  "originalimage": {
+    "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Greece_National_Football_Team.svg/500px-Greece_National_Football_Team.svg.png",
+    "width": 430,
+    "height": 710
+  },
+  "lang": "en",
+  "dir": "ltr",
+  "revision": "1362211588",
+  "tid": "0da64e65-7627-11f1-9d47-b596ec6cfb4a",
+  "timestamp": "2026-07-02T15:02:33Z",
+  "description": "Men's association football team",
+  "description_source": "local",
+  "content_urls": {
+    "desktop": {
+      "page": "https://en.wikipedia.org/wiki/Greece_national_football_team",
+      "revisions": "https://en.wikipedia.org/wiki/Greece_national_football_team?action=history",
+      "edit": "https://en.wikipedia.org/wiki/Greece_national_football_team?action=edit",
+      "talk": "https://en.wikipedia.org/wiki/Talk:Greece_national_football_team"
+    },
+    "mobile": {
+      "page": "https://en.wikipedia.org/wiki/Greece_national_football_team",
+      "revisions": "https://en.wikipedia.org/wiki/Special:History/Greece_national_football_team",
+      "edit": "https://en.wikipedia.org/wiki/Greece_national_football_team?action=edit",
+      "talk": "https://en.wikipedia.org/wiki/Talk:Greece_national_football_team"
+    }
+  },
+  "extract": "The Greece national football team represents Greece in men's international football matches, and is controlled by the Hellenic Football Federation, the governing body for football in Greece. Greece is one of only ten national teams to have been crowned UEFA European Champions.",
+  "extract_html": "<p>The <b>Greece national football team</b> represents Greece in men's international football matches, and is controlled by the Hellenic Football Federation, the governing body for football in Greece. Greece is one of only ten national teams to have been crowned UEFA European Champions.</p>"
+}

@@ -1,0 +1,49 @@
+{
+  "type": "standard",
+  "title": "Ivory Coast national football team",
+  "displaytitle": "<span lang=\"en\" dir=\"ltr\"><span class=\"mw-page-title-main\">Ivory Coast national football team</span></span>",
+  "namespace": {
+    "id": 0,
+    "text": ""
+  },
+  "wikibase_item": "Q175145",
+  "titles": {
+    "canonical": "Ivory_Coast_national_football_team",
+    "normalized": "Ivory Coast national football team",
+    "display": "<span lang=\"en\" dir=\"ltr\"><span class=\"mw-page-title-main\">Ivory Coast national football team</span></span>"
+  },
+  "pageid": 1039856,
+  "thumbnail": {
+    "source": "https://upload.wikimedia.org/wikipedia/en/thumb/0/09/Ivory_Coast_national_football_team_logo.svg/330px-Ivory_Coast_national_football_team_logo.svg.png",
+    "width": 330,
+    "height": 323
+  },
+  "originalimage": {
+    "source": "https://upload.wikimedia.org/wikipedia/en/thumb/0/09/Ivory_Coast_national_football_team_logo.svg/330px-Ivory_Coast_national_football_team_logo.svg.png",
+    "width": 320,
+    "height": 313
+  },
+  "lang": "en",
+  "dir": "ltr",
+  "revision": "1362505690",
+  "tid": "89c2a209-779d-11f1-a9e3-92f9ec341c97",
+  "timestamp": "2026-07-04T11:43:13Z",
+  "description": "Men's association football team",
+  "description_source": "local",
+  "content_urls": {
+    "desktop": {
+      "page": "https://en.wikipedia.org/wiki/Ivory_Coast_national_football_team",
+      "revisions": "https://en.wikipedia.org/wiki/Ivory_Coast_national_football_team?action=history",
+      "edit": "https://en.wikipedia.org/wiki/Ivory_Coast_national_football_team?action=edit",
+      "talk": "https://en.wikipedia.org/wiki/Talk:Ivory_Coast_national_football_team"
+    },
+    "mobile": {
+      "page": "https://en.wikipedia.org/wiki/Ivory_Coast_national_football_team",
+      "revisions": "https://en.wikipedia.org/wiki/Special:History/Ivory_Coast_national_football_team",
+      "edit": "https://en.wikipedia.org/wiki/Ivory_Coast_national_football_team?action=edit",
+      "talk": "https://en.wikipedia.org/wiki/Talk:Ivory_Coast_national_football_team"
+    }
+  },
+  "extract": "The Ivory Coast national football team represents Ivory Coast in men's international football. Nicknamed the Elephants, the team is managed by the Ivorian Football Federation (FIF). The team has won the Africa Cup of Nations three times, in 1992, 2015 and 2023, and has qualified for the FIFA World Cup four times, in 2006, 2010, 2014 and 2026.",
+  "extract_html": "<p>The <b>Ivory Coast national football team</b> represents Ivory Coast in men's international football. Nicknamed <i>the Elephants</i>, the team is managed by the Ivorian Football Federation (FIF). The team has won the Africa Cup of Nations three times, in 1992, 2015 and 2023, and has qualified for the FIFA World Cup four times, in 2006, 2010, 2014 and 2026.</p>"
+}

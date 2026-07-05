@@ -1,0 +1,49 @@
+{
+  "type": "standard",
+  "title": "Paraguay national football team",
+  "displaytitle": "<span lang=\"en\" dir=\"ltr\"><span class=\"mw-page-title-main\">Paraguay national football team</span></span>",
+  "namespace": {
+    "id": 0,
+    "text": ""
+  },
+  "wikibase_item": "Q172020",
+  "titles": {
+    "canonical": "Paraguay_national_football_team",
+    "normalized": "Paraguay national football team",
+    "display": "<span lang=\"en\" dir=\"ltr\"><span class=\"mw-page-title-main\">Paraguay national football team</span></span>"
+  },
+  "pageid": 804025,
+  "thumbnail": {
+    "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Asociaci%C3%B3n_Paraguaya_de_F%C3%BAtbol_logo.svg/330px-Asociaci%C3%B3n_Paraguaya_de_F%C3%BAtbol_logo.svg.png",
+    "width": 330,
+    "height": 330
+  },
+  "originalimage": {
+    "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Asociaci%C3%B3n_Paraguaya_de_F%C3%BAtbol_logo.svg/120px-Asociaci%C3%B3n_Paraguaya_de_F%C3%BAtbol_logo.svg.png",
+    "width": 100,
+    "height": 100
+  },
+  "lang": "en",
+  "dir": "ltr",
+  "revision": "1362478876",
+  "tid": "dccf2f8d-776a-11f1-942c-6a9005b96207",
+  "timestamp": "2026-07-04T05:40:28Z",
+  "description": "Men's association football team",
+  "description_source": "local",
+  "content_urls": {
+    "desktop": {
+      "page": "https://en.wikipedia.org/wiki/Paraguay_national_football_team",
+      "revisions": "https://en.wikipedia.org/wiki/Paraguay_national_football_team?action=history",
+      "edit": "https://en.wikipedia.org/wiki/Paraguay_national_football_team?action=edit",
+      "talk": "https://en.wikipedia.org/wiki/Talk:Paraguay_national_football_team"
+    },
+    "mobile": {
+      "page": "https://en.wikipedia.org/wiki/Paraguay_national_football_team",
+      "revisions": "https://en.wikipedia.org/wiki/Special:History/Paraguay_national_football_team",
+      "edit": "https://en.wikipedia.org/wiki/Paraguay_national_football_team?action=edit",
+      "talk": "https://en.wikipedia.org/wiki/Talk:Paraguay_national_football_team"
+    }
+  },
+  "extract": "The Paraguay national football team, nicknamed La Albirroja, represents Paraguay in men's international football competitions, and are controlled by the Asociación Paraguaya de Fútbol. Paraguay is a member of CONMEBOL. The Albirroja has qualified for nine FIFA World Cup competitions, with their best performance coming in 2010 when they reached the quarter-finals. A regular participant at the Copa América, Paraguay have been crowned champions of the competition on two occasions. Paraguay's highest FIFA World Ranking was 8th in March 2001 and their lowest was 103rd in May 1995. Paraguay was awarded second place with Best Move of the Year in 1996 for their rise in the FIFA World Ranking.",
+  "extract_html": "<p>The <b>Paraguay national football team</b>, nicknamed <i><b>La Albirroja</b></i>, represents Paraguay in men's international football competitions, and are controlled by the Asociación Paraguaya de Fútbol. Paraguay is a member of CONMEBOL. The Albirroja has qualified for nine FIFA World Cup competitions, with their best performance coming in 2010 when they reached the quarter-finals. A regular participant at the Copa América, Paraguay have been crowned champions of the competition on two occasions. Paraguay's highest FIFA World Ranking was 8th in March 2001 and their lowest was 103rd in May 1995. Paraguay was awarded second place with Best Move of the Year in 1996 for their rise in the FIFA World Ranking.</p>"
+}

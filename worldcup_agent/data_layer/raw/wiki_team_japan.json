@@ -1,0 +1,49 @@
+{
+  "type": "standard",
+  "title": "Japan national football team",
+  "displaytitle": "<span lang=\"en\" dir=\"ltr\"><span class=\"mw-page-title-main\">Japan national football team</span></span>",
+  "namespace": {
+    "id": 0,
+    "text": ""
+  },
+  "wikibase_item": "Q170566",
+  "titles": {
+    "canonical": "Japan_national_football_team",
+    "normalized": "Japan national football team",
+    "display": "<span lang=\"en\" dir=\"ltr\"><span class=\"mw-page-title-main\">Japan national football team</span></span>"
+  },
+  "pageid": 993546,
+  "thumbnail": {
+    "source": "https://upload.wikimedia.org/wikipedia/en/thumb/8/84/Japan_national_football_team_crest.svg/330px-Japan_national_football_team_crest.svg.png",
+    "width": 330,
+    "height": 440
+  },
+  "originalimage": {
+    "source": "https://upload.wikimedia.org/wikipedia/en/thumb/8/84/Japan_national_football_team_crest.svg/330px-Japan_national_football_team_crest.svg.png",
+    "width": 274,
+    "height": 365
+  },
+  "lang": "en",
+  "dir": "ltr",
+  "revision": "1362474784",
+  "tid": "865ef21b-7764-11f1-a88e-aa0a01bbda02",
+  "timestamp": "2026-07-04T04:55:06Z",
+  "description": "Men's association football team",
+  "description_source": "local",
+  "content_urls": {
+    "desktop": {
+      "page": "https://en.wikipedia.org/wiki/Japan_national_football_team",
+      "revisions": "https://en.wikipedia.org/wiki/Japan_national_football_team?action=history",
+      "edit": "https://en.wikipedia.org/wiki/Japan_national_football_team?action=edit",
+      "talk": "https://en.wikipedia.org/wiki/Talk:Japan_national_football_team"
+    },
+    "mobile": {
+      "page": "https://en.wikipedia.org/wiki/Japan_national_football_team",
+      "revisions": "https://en.wikipedia.org/wiki/Special:History/Japan_national_football_team",
+      "edit": "https://en.wikipedia.org/wiki/Japan_national_football_team?action=edit",
+      "talk": "https://en.wikipedia.org/wiki/Talk:Japan_national_football_team"
+    }
+  },
+  "extract": "The Japan national football team , also known by the nickname Samurai Blue , represents Japan in men's international football. It is controlled by the Japan Football Association (JFA), the governing body for football in Japan.",
+  "extract_html": "<p>The <b>Japan national football team</b><span style=\"font-weight:normal\"> </span>, also known by the nickname <b>Samurai Blue</b><span style=\"font-weight:normal\"> </span>, represents Japan in men's international football. It is controlled by the Japan Football Association (JFA), the governing body for football in Japan.</p>"
+}

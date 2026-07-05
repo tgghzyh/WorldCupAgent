@@ -1,0 +1,49 @@
+{
+  "type": "standard",
+  "title": "Qatar national football team",
+  "displaytitle": "<span lang=\"en\" dir=\"ltr\"><span class=\"mw-page-title-main\">Qatar national football team</span></span>",
+  "namespace": {
+    "id": 0,
+    "text": ""
+  },
+  "wikibase_item": "Q232731",
+  "titles": {
+    "canonical": "Qatar_national_football_team",
+    "normalized": "Qatar national football team",
+    "display": "<span lang=\"en\" dir=\"ltr\"><span class=\"mw-page-title-main\">Qatar national football team</span></span>"
+  },
+  "pageid": 1111350,
+  "thumbnail": {
+    "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Flag_of_Qatar.svg/330px-Flag_of_Qatar.svg.png",
+    "width": 330,
+    "height": 130
+  },
+  "originalimage": {
+    "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Flag_of_Qatar.svg/1920px-Flag_of_Qatar.svg.png",
+    "width": 1400,
+    "height": 550
+  },
+  "lang": "en",
+  "dir": "ltr",
+  "revision": "1362173068",
+  "tid": "f69d3665-75f9-11f1-83ee-0e50bff464cc",
+  "timestamp": "2026-07-02T09:39:47Z",
+  "description": "Men's association football team",
+  "description_source": "local",
+  "content_urls": {
+    "desktop": {
+      "page": "https://en.wikipedia.org/wiki/Qatar_national_football_team",
+      "revisions": "https://en.wikipedia.org/wiki/Qatar_national_football_team?action=history",
+      "edit": "https://en.wikipedia.org/wiki/Qatar_national_football_team?action=edit",
+      "talk": "https://en.wikipedia.org/wiki/Talk:Qatar_national_football_team"
+    },
+    "mobile": {
+      "page": "https://en.wikipedia.org/wiki/Qatar_national_football_team",
+      "revisions": "https://en.wikipedia.org/wiki/Special:History/Qatar_national_football_team",
+      "edit": "https://en.wikipedia.org/wiki/Qatar_national_football_team?action=edit",
+      "talk": "https://en.wikipedia.org/wiki/Talk:Qatar_national_football_team"
+    }
+  },
+  "extract": "The Qatar national football team, nicknamed \"The Maroons\", represents Qatar in international football, and is controlled by the Qatar Football Association, which is affiliated with the Asian Football Confederation (AFC) and comes under the global jurisdiction of world football’s governing body FIFA. They play their home games at Jassim bin Hamad Stadium.",
+  "extract_html": "<p>The <b>Qatar national football team</b>, nicknamed \"The Maroons\", represents Qatar in international football, and is controlled by the Qatar Football Association, which is affiliated with the Asian Football Confederation (AFC) and comes under the global jurisdiction of world football’s governing body FIFA. They play their home games at Jassim bin Hamad Stadium.</p>"
+}

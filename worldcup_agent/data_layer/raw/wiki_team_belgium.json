@@ -1,0 +1,49 @@
+{
+  "type": "standard",
+  "title": "Belgium national football team",
+  "displaytitle": "<span lang=\"en\" dir=\"ltr\"><span class=\"mw-page-title-main\">Belgium national football team</span></span>",
+  "namespace": {
+    "id": 0,
+    "text": ""
+  },
+  "wikibase_item": "Q166776",
+  "titles": {
+    "canonical": "Belgium_national_football_team",
+    "normalized": "Belgium national football team",
+    "display": "<span lang=\"en\" dir=\"ltr\"><span class=\"mw-page-title-main\">Belgium national football team</span></span>"
+  },
+  "pageid": 679716,
+  "thumbnail": {
+    "source": "https://upload.wikimedia.org/wikipedia/en/thumb/f/f9/Royal_Belgian_FA_logo_2019.svg/330px-Royal_Belgian_FA_logo_2019.svg.png",
+    "width": 330,
+    "height": 641
+  },
+  "originalimage": {
+    "source": "https://upload.wikimedia.org/wikipedia/en/thumb/f/f9/Royal_Belgian_FA_logo_2019.svg/250px-Royal_Belgian_FA_logo_2019.svg.png",
+    "width": 226,
+    "height": 439
+  },
+  "lang": "en",
+  "dir": "ltr",
+  "revision": "1362235464",
+  "tid": "46eab69e-763f-11f1-a55d-43e70adfd249",
+  "timestamp": "2026-07-02T17:55:57Z",
+  "description": "Men's association football team",
+  "description_source": "local",
+  "content_urls": {
+    "desktop": {
+      "page": "https://en.wikipedia.org/wiki/Belgium_national_football_team",
+      "revisions": "https://en.wikipedia.org/wiki/Belgium_national_football_team?action=history",
+      "edit": "https://en.wikipedia.org/wiki/Belgium_national_football_team?action=edit",
+      "talk": "https://en.wikipedia.org/wiki/Talk:Belgium_national_football_team"
+    },
+    "mobile": {
+      "page": "https://en.wikipedia.org/wiki/Belgium_national_football_team",
+      "revisions": "https://en.wikipedia.org/wiki/Special:History/Belgium_national_football_team",
+      "edit": "https://en.wikipedia.org/wiki/Belgium_national_football_team?action=edit",
+      "talk": "https://en.wikipedia.org/wiki/Talk:Belgium_national_football_team"
+    }
+  },
+  "extract": "The Belgium national football team has represented Belgium in men's international football since their maiden match in 1904. The squad is under the global jurisdiction of FIFA and is governed in Europe by UEFA—both of which were co-founded by the Belgian team's supervising body, the Royal Belgian Football Association. Periods of regular Belgian representation at the highest international level, from 1920 to 1938, from 1980 to 2002 and again from 2014 onwards, have alternated with mostly unsuccessful qualification rounds. Most of Belgium's home matches are played at the King Baudouin Stadium in Brussels.",
+  "extract_html": "<p>The <b>Belgium national football team</b> has represented Belgium in men's international football since their maiden match in 1904. The squad is under the global jurisdiction of FIFA and is governed in Europe by UEFA—both of which were co-founded by the Belgian team's supervising body, the Royal Belgian Football Association. Periods of regular Belgian representation at the highest international level, from 1920 to 1938, from 1980 to 2002 and again from 2014 onwards, have alternated with mostly unsuccessful qualification rounds. Most of Belgium's home matches are played at the King Baudouin Stadium in Brussels.</p>"
+}
