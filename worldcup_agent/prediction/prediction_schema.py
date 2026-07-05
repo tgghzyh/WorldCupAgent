@@ -345,10 +345,6 @@ def compare_snapshots(id_a: str, id_b: str) -> list[dict]:
     return changes
 
 
-from pathlib import Path
-import json
-
-
 # ── Versioned snapshot manager ───────────────────────────────────────────────────
 
 CURRENT_VERSION_FILE = DATA_DIR / "snapshots" / "current_version.txt"
