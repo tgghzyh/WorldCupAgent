@@ -83,6 +83,7 @@ export function getAllTeams(): Team[] {
  */
 export function getTopTeams(count: number = 10): Team[] {
   return Object.values(teamsKnowledge.teams)
+    .filter((team) => team.ai_impact?.overall_score !== undefined)
     .sort((a, b) => b.ai_impact.overall_score - a.ai_impact.overall_score)
     .slice(0, count);
 }

@@ -720,13 +720,12 @@
         "potential_weaknesses_zh": ["进攻效率", "战术纪律"],
         "potential_weaknesses_en": ["Attacking efficiency", "Tactical discipline"]
       },
-      "key_players": ["song", "hongla", "mbala", "zambo", "ony">
-      },
+      "key_players": ["song", "hongla", "mbala", "zambo", "ony"],
       "coach_id": "rigobert",
       "ai_impact": {
-        "overall_score": 72,
-        "description_zh": "非洲老牌强队，但近年实力下滑",
-        "description_en": "Traditional African powerhouse but declined recently"
+        "overall_score": 68,
+        "description_zh": "非洲老牌强队，经验和斗志",
+        "description_en": "Traditional African powerhouse with experience and fighting spirit"
       }
     },
     "qatar": {
@@ -1597,7 +1596,6 @@
         "potential_weaknesses_en": ["Overall quality", "Star players"]
       },
       "key_players": ["zungu", "mosimane", "fak", "dlodlo", "mom"],
-      },
       "coach_id": "bro",
       "ai_impact": {
         "overall_score": 69,

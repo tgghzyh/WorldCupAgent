@@ -1,0 +1,348 @@
+{
+  "tournament": "FIFA World Cup 2026",
+  "current_date": "2026-07-05T08:15:00.899994+00:00",
+  "current_stage": "group",
+  "teams": {
+    "Argentina": {
+      "elo": 2151,
+      "effective_elo": 2129.49,
+      "group": "Group A",
+      "stage": "group",
+      "stats": {
+        "played": 1,
+        "won": 0,
+        "drawn": 1,
+        "lost": 0,
+        "gf": 1,
+        "ga": 1,
+        "gd": 0,
+        "points": 1
+      },
+      "strength_multiplier": 0.99,
+      "injury_impact": 0.0,
+      "is_eliminated": false
+    },
+    "Brazil": {
+      "elo": 2134,
+      "effective_elo": 2112.66,
+      "group": "Group B",
+      "stage": "group",
+      "stats": {
+        "played": 1,
+        "won": 0,
+        "drawn": 1,
+        "lost": 0,
+        "gf": 1,
+        "ga": 1,
+        "gd": 0,
+        "points": 1
+      },
+      "strength_multiplier": 0.99,
+      "injury_impact": 0.0,
+      "is_eliminated": false
+    },
+    "France": {
+      "elo": 2128,
+      "effective_elo": 2106.72,
+      "group": "Group C",
+      "stage": "group",
+      "stats": {
+        "played": 1,
+        "won": 0,
+        "drawn": 0,
+        "lost": 1,
+        "gf": 0,
+        "ga": 2,
+        "gd": -2,
+        "points": 0
+      },
+      "strength_multiplier": 0.99,
+      "injury_impact": 0.0,
+      "is_eliminated": false
+    },
+    "England": {
+      "elo": 2095,
+      "effective_elo": 2115.95,
+      "group": "Group D",
+      "stage": "group",
+      "stats": {
+        "played": 1,
+        "won": 1,
+        "drawn": 0,
+        "lost": 0,
+        "gf": 2,
+        "ga": 0,
+        "gd": 2,
+        "points": 3
+      },
+      "strength_multiplier": 1.01,
+      "injury_impact": 0.0,
+      "is_eliminated": false
+    },
+    "Germany": {
+      "elo": 2067,
+      "effective_elo": 2087.67,
+      "group": "Group E",
+      "stage": "group",
+      "stats": {
+        "played": 1,
+        "won": 1,
+        "drawn": 0,
+        "lost": 0,
+        "gf": 2,
+        "ga": 1,
+        "gd": 1,
+        "points": 3
+      },
+      "strength_multiplier": 1.01,
+      "injury_impact": 0.0,
+      "is_eliminated": false
+    },
+    "Spain": {
+      "elo": 2089,
+      "effective_elo": 2068.11,
+      "group": "Group F",
+      "stage": "group",
+      "stats": {
+        "played": 1,
+        "won": 0,
+        "drawn": 0,
+        "lost": 1,
+        "gf": 1,
+        "ga": 2,
+        "gd": -1,
+        "points": 0
+      },
+      "strength_multiplier": 0.99,
+      "injury_impact": 0.0,
+      "is_eliminated": false
+    },
+    "Portugal": {
+      "elo": 2068,
+      "effective_elo": 2068.0,
+      "group": "Group G",
+      "stage": "group",
+      "stats": {
+        "played": 0,
+        "won": 0,
+        "drawn": 0,
+        "lost": 0,
+        "gf": 0,
+        "ga": 0,
+        "gd": 0,
+        "points": 0
+      },
+      "strength_multiplier": 1.0,
+      "injury_impact": 0.0,
+      "is_eliminated": false
+    },
+    "Netherlands": {
+      "elo": 2045,
+      "effective_elo": 2045.0,
+      "group": "Group H",
+      "stage": "group",
+      "stats": {
+        "played": 0,
+        "won": 0,
+        "drawn": 0,
+        "lost": 0,
+        "gf": 0,
+        "ga": 0,
+        "gd": 0,
+        "points": 0
+      },
+      "strength_multiplier": 1.0,
+      "injury_impact": 0.0,
+      "is_eliminated": false
+    },
+    "Italy": {
+      "elo": 2034,
+      "effective_elo": 2034.0,
+      "group": "Group A",
+      "stage": "group",
+      "stats": {
+        "played": 0,
+        "won": 0,
+        "drawn": 0,
+        "lost": 0,
+        "gf": 0,
+        "ga": 0,
+        "gd": 0,
+        "points": 0
+      },
+      "strength_multiplier": 1.0,
+      "injury_impact": 0.0,
+      "is_eliminated": false
+    },
+    "Belgium": {
+      "elo": 2031,
+      "effective_elo": 2031.0,
+      "group": "Group B",
+      "stage": "group",
+      "stats": {
+        "played": 0,
+        "won": 0,
+        "drawn": 0,
+        "lost": 0,
+        "gf": 0,
+        "ga": 0,
+        "gd": 0,
+        "points": 0
+      },
+      "strength_multiplier": 1.0,
+      "injury_impact": 0.0,
+      "is_eliminated": false
+    },
+    "Uruguay": {
+      "elo": 1978,
+      "effective_elo": 1978.0,
+      "group": "Group C",
+      "stage": "group",
+      "stats": {
+        "played": 0,
+        "won": 0,
+        "drawn": 0,
+        "lost": 0,
+        "gf": 0,
+        "ga": 0,
+        "gd": 0,
+        "points": 0
+      },
+      "strength_multiplier": 1.0,
+      "injury_impact": 0.0,
+      "is_eliminated": false
+    },
+    "Mexico": {
+      "elo": 1912,
+      "effective_elo": 1912.0,
+      "group": "Group D",
+      "stage": "group",
+      "stats": {
+        "played": 0,
+        "won": 0,
+        "drawn": 0,
+        "lost": 0,
+        "gf": 0,
+        "ga": 0,
+        "gd": 0,
+        "points": 0
+      },
+      "strength_multiplier": 1.0,
+      "injury_impact": 0.0,
+      "is_eliminated": false
+    },
+    "USA": {
+      "elo": 1890,
+      "effective_elo": 1890.0,
+      "group": "Group E",
+      "stage": "group",
+      "stats": {
+        "played": 0,
+        "won": 0,
+        "drawn": 0,
+        "lost": 0,
+        "gf": 0,
+        "ga": 0,
+        "gd": 0,
+        "points": 0
+      },
+      "strength_multiplier": 1.0,
+      "injury_impact": 0.0,
+      "is_eliminated": false
+    },
+    "Croatia": {
+      "elo": 1967,
+      "effective_elo": 1967.0,
+      "group": "Group F",
+      "stage": "group",
+      "stats": {
+        "played": 0,
+        "won": 0,
+        "drawn": 0,
+        "lost": 0,
+        "gf": 0,
+        "ga": 0,
+        "gd": 0,
+        "points": 0
+      },
+      "strength_multiplier": 1.0,
+      "injury_impact": 0.0,
+      "is_eliminated": false
+    },
+    "Japan": {
+      "elo": 1888,
+      "effective_elo": 1888.0,
+      "group": "Group G",
+      "stage": "group",
+      "stats": {
+        "played": 0,
+        "won": 0,
+        "drawn": 0,
+        "lost": 0,
+        "gf": 0,
+        "ga": 0,
+        "gd": 0,
+        "points": 0
+      },
+      "strength_multiplier": 1.0,
+      "injury_impact": 0.0,
+      "is_eliminated": false
+    },
+    "South Korea": {
+      "elo": 1876,
+      "effective_elo": 1876.0,
+      "group": "Group H",
+      "stage": "group",
+      "stats": {
+        "played": 0,
+        "won": 0,
+        "drawn": 0,
+        "lost": 0,
+        "gf": 0,
+        "ga": 0,
+        "gd": 0,
+        "points": 0
+      },
+      "strength_multiplier": 1.0,
+      "injury_impact": 0.0,
+      "is_eliminated": false
+    }
+  },
+  "results": [
+    {
+      "match_id": "group_001",
+      "home_team": "Argentina",
+      "away_team": "Brazil",
+      "home_score": 1,
+      "away_score": 1,
+      "stage": "group",
+      "kickoff": "2026-07-05T08:15:00.899994+00:00",
+      "winner": null,
+      "is_draw": true
+    },
+    {
+      "match_id": "group_002",
+      "home_team": "France",
+      "away_team": "England",
+      "home_score": 0,
+      "away_score": 2,
+      "stage": "group",
+      "kickoff": "2026-07-05T08:15:00.899994+00:00",
+      "winner": "England",
+      "is_draw": false
+    },
+    {
+      "match_id": "group_003",
+      "home_team": "Germany",
+      "away_team": "Spain",
+      "home_score": 2,
+      "away_score": 1,
+      "stage": "group",
+      "kickoff": "2026-07-05T08:15:00.899994+00:00",
+      "winner": "Germany",
+      "is_draw": false
+    }
+  ],
+  "bracket": {},
+  "pending": []
+}

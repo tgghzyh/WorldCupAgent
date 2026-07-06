@@ -1,0 +1,10 @@
+feat: complete frontend redesign with bilingual UI and modern design
+
+- Complete UI overhaul with glass-morphism design and gradient backgrounds
+- Add bilingual Chinese/English support with instant language toggle
+- Implement new demo page with Hero section, Featured Match, Top Teams, Star Players
+- Update TeamComponents and PlayerComponents with modern card designs
+- Add TranslationCard and FeatureCard components
+- Fix JSON syntax errors in teams_knowledge.json
+- Add missing translation keys (semifinal, quarterfinal)
+- Update README.md with frontend documentation

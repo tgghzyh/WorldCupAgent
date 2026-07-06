@@ -6,20 +6,29 @@ An AI agent that generates daily predictions for all 104 matches in the 2026 FIF
 
 ## Live Demo
 
-> **Frontend**: Streamlit app at `http://localhost:8502`
+> **Frontend**: Next.js app at `http://localhost:3000`
+>
+> **Demo Page**: `http://localhost:3000/demo` - Interactive bilingual showcase
 >
 > **Agent**: Run `python -m worldcup_agent.prediction.agent` for daily predictions
->
-> **Latest Snapshot**: `data/snapshots/latest.json`
 
 ## Features
 
 ### Core Capabilities
 
-- **Daily Predictions**: 72 group-stage matches with win/draw/lose probabilities
+- **Daily Predictions**: 104 matches with win/draw/lose probabilities
 - **Factor Attribution**: Each prediction includes ranked factors (ELO, FIFA Ranking, Recent Form) with percentage contributions
 - **LLM-Powered Reasoning**: Uses Qwen LLM to generate natural language explanations
+- **Bilingual Support**: Full Chinese/English interface with instant switching
 - **Versioned Snapshots**: Every prediction snapshot records version history for comparison
+
+### Modern Frontend
+
+- **Next.js 16 with Turbopack**: Lightning-fast development and builds
+- **Real-time Language Toggle**: Switch between Chinese and English instantly
+- **Responsive Design**: Mobile-first approach with dark theme
+- **Interactive Components**: Animated cards, hover effects, and smooth transitions
+- **Knowledge Layer**: 48 teams, 60+ players, 48 coaches with detailed profiles
 
 ### Multi-Agent Architecture
 
@@ -40,7 +49,7 @@ An AI agent that generates daily predictions for all 104 matches in the 2026 FIF
 │  └─────────────────────────────────────────────────────┘   │
 │         ↓                                                 │
 │  ┌─────────────┐  ┌─────────────┐  ┌─────────────────┐   │
-│  │ReflectionAgent│→│ExplainerAgent│→│  Quality Agent  │   │
+│  │ReflectionAgent│→ │ExplainerAgent│→│  Quality Agent  │   │
 │  │ (Self-check) │  │ (Narratives) │  │ (QA checks)    │   │
 │  └─────────────┘  └─────────────┘  └─────────────────┘   │
 └─────────────────────────────────────────────────────────────┘
@@ -63,7 +72,19 @@ Top Factors:
 
 ## Quick Start
 
-### 1. Generate Predictions
+### 1. Start Frontend
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+Visit:
+- **Main App**: http://localhost:3000
+- **Demo Page**: http://localhost:3000/demo
+
+### 2. Generate Predictions
 
 ```bash
 # Single run
@@ -74,13 +95,6 @@ python -m worldcup_agent.prediction.agent --force-refresh
 
 # Continuous loop (production mode)
 python -m worldcup_agent.prediction.agent --loop --interval 3600
-```
-
-### 2. View Frontend
-
-```bash
-# Start Streamlit app
-python -m streamlit run explainable_page.py --server.port 8502
 ```
 
 ### 3. Access Data
@@ -106,7 +120,7 @@ WorldCupAgent/
 │   │   ├── observer.py    # Data observation system
 │   │   ├── elo_system.py  # Elo probability model
 │   │   └── prediction_schema.py  # Versioned data schemas
-│   ├── multi_agent/       # Multi-agent system (NEW)
+│   ├── multi_agent/       # Multi-agent system
 │   │   ├── core.py       # WorldState, BaseAgent, Orchestrator
 │   │   ├── cognitive_model.py   # Belief-Uncertainty-Evidence
 │   │   ├── goal_agent.py        # Goal-driven autonomy
@@ -115,12 +129,61 @@ WorldCupAgent/
 │   └── tournament/         # Tournament rules engine
 │       ├── rule.py        # FIFA 2026 rules (Tiebreakers, R32)
 │       └── knockout_simulator.py  # Bracket simulation
+├── frontend/              # Next.js 16 application
+│   ├── src/
+│   │   ├── app/
+│   │   │   ├── page.tsx          # Main page
+│   │   │   └── demo/page.tsx     # Demo showcase page
+│   │   ├── components/
+│   │   │   ├── TeamComponents.tsx    # Team cards & match cards
+│   │   │   ├── PlayerComponents.tsx  # Player cards
+│   │   │   └── LanguageSwitcher.tsx  # Language toggle
+│   │   ├── i18n/                  # Internationalization
+│   │   │   ├── index.tsx
+│   │   │   ├── zh.json
+│   │   │   └── en.json
+│   │   └── knowledge/             # Football knowledge layer
+│   │       ├── teams_knowledge.json   # 48 teams data
+│   │       ├── players_knowledge.json # 60+ players data
+│   │       ├── coaches_knowledge.json # 48 coaches data
+│   │       └── types.ts
+│   └── public/
 ├── data/
 │   ├── snapshots/         # Prediction snapshots
 │   └── cache/             # Cached data (Elo, Odds)
-├── frontend/              # Frontend application
-├── explainable_page.py  # Streamlit visualization
+├── explainable_page.py  # Streamlit visualization (legacy)
 └── elo_ratings.py      # Elo data scraper
+```
+
+## Frontend Features
+
+### Demo Page Components
+
+| Component | Description |
+|-----------|-------------|
+| Hero Section | Gradient background with live stats |
+| Match Card | Featured match with probability bars |
+| Team Cards | AI-powered team analysis |
+| Player Cards | Key player statistics |
+| Translation Showcase | Bilingual UI examples |
+
+### Knowledge Layer
+
+The frontend includes a comprehensive knowledge layer with:
+
+- **48 Teams**: Full profiles with tactical analysis
+- **60+ Players**: Performance stats and highlights
+- **48 Coaches**: Tactical philosophy and achievements
+
+### Bilingual Support
+
+```tsx
+// Component usage
+const { locale, t } = useI18n();
+
+// Switch languages
+<span>{t("prediction.home_win")}</span>
+// ZH: 主场胜 | EN: Home Win
 ```
 
 ## Architecture Highlights
@@ -227,18 +290,19 @@ manager.judge_debate(debate.id)
 | `DASHSCOPE_API_KEY` | - | Alibaba Cloud API key for LLM |
 | `ELO_CACHE_TTL_HOURS` | 168 | Elo cache TTL (7 days) |
 
-### Dependencies
+### Frontend Dependencies
 
-See `requirements.txt` for full list. Key packages:
-- `httpx` - HTTP client
-- `pandas` - Data processing
-- `streamlit` - Frontend
-- `dashscope` - LLM integration
+| Package | Version | Purpose |
+|---------|---------|---------|
+| Next.js | 16.x | React framework |
+| Tailwind CSS | 3.x | Styling |
+| TypeScript | 5.x | Type safety |
 
 ## Version History
 
 | Version | Date | Changes |
 |---------|------|---------|
+| 0.3.0 | 2026-07-06 | Next.js 16 frontend with bilingual UI, modern glass-morphism design |
 | 0.2.0 | 2026-07-05 | Elo ratings (S9) integrated; FactorAttribution schema; versioned snapshots |
 | 0.1.0 | 2026-06-01 | Initial release: sequential pipeline, Monte Carlo simulation |
 

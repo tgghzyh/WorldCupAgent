@@ -1,0 +1,10 @@
+feat: add multi-agent system and modern UI redesign
+
+- Multi-agent architecture with Belief-Uncertainty-Evidence cognitive model
+- 6 specialized agents: Data, Analysis, Simulation, Reflection, Explainer, Quality
+- Adversarial debate mechanism for conflict resolution
+- Goal-driven autonomous agents
+- Modern glass-morphism frontend design with bilingual support
+- 48 teams, 60+ players, 48 coaches knowledge layer
+- Demo page showcasing all features
+
