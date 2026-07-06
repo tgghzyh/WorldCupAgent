@@ -1,0 +1,1837 @@
+{
+  "_metadata": {
+    "version": "1.0.0",
+    "generated_at": "2026-07-06T00:00:00Z",
+    "description": "Football Knowledge Layer - Team Information for WC2026",
+    "locale": "bilingual"
+  },
+  "teams": {
+    "argentina": {
+      "id": "argentina",
+      "names": {
+        "zh": "阿根廷",
+        "en": "Argentina"
+      },
+      "flag_emoji": "🇦🇷",
+      "short_code": "ARG",
+      "fifa_code": "AR",
+      "confederation": "CONMEBOL",
+      "group": "A",
+      "worldcup_appearances": 19,
+      "worldcup_titles": 3,
+      "tournament_history": {
+        "zh": "3次世界杯冠军（1978、1986、2022），2022年卡塔尔世界杯冠军，15次参赛",
+        "en": "3x World Cup Champion (1978, 1986, 2022), 2022 Qatar Champions, 19 appearances"
+      },
+      "nickname": {
+        "zh": "潘帕斯雄鹰",
+        "en": "La Albiceleste"
+      },
+      "tactical_info": {
+        "formation": "4-3-3 / 4-2-3-1",
+        "style_zh": "防守反击与控球并重，中场控制力强，定位球威胁大",
+        "style_en": "Balanced defense-counter and possession, strong midfield control, dangerous set-pieces",
+        "key_strengths_zh": ["技术精湛", "大赛经验丰富", "团队凝聚力强", "定位球能力强"],
+        "key_strengths_en": ["Excellent technique", "Rich tournament experience", "Strong team cohesion", "Strong set-piece execution"],
+        "potential_weaknesses_zh": ["老龄化趋势", "边路防守"],
+        "potential_weaknesses_en": ["Aging squad", "Vulnerable flanks"]
+      },
+      "key_players": ["messi", "alvarez", "macallister", "montiel", "dibmartinez"],
+      "coach_id": "scaloni",
+      "ai_impact": {
+        "overall_score": 94,
+        "description_zh": "夺冠热门，技术与经验兼备",
+        "description_en": "Championship favorite, balanced technique and experience"
+      }
+    },
+    "brazil": {
+      "id": "brazil",
+      "names": {
+        "zh": "巴西",
+        "en": "Brazil"
+      },
+      "flag_emoji": "🇧🇷",
+      "short_code": "BRA",
+      "fifa_code": "BR",
+      "confederation": "CONMEBOL",
+      "group": "D",
+      "worldcup_appearances": 22,
+      "worldcup_titles": 5,
+      "tournament_history": {
+        "zh": "5次世界杯冠军（1958、1962、1970、1994、2002），夺冠次数最多",
+        "en": "5x World Cup Champion (1958, 1962, 1970, 1994, 2002), most titles ever"
+      },
+      "nickname": {
+        "zh": "桑巴军团",
+        "en": "Canarinho"
+      },
+      "tactical_info": {
+        "formation": "4-3-3",
+        "style_zh": "进攻华丽，技术流，代表南美足球精髓",
+        "style_en": "Glamorous attacking play, technical style, essence of South American football",
+        "key_strengths_zh": ["技术出众", "进攻火力强", "板凳深度厚", "个人能力强"],
+        "key_strengths_en": ["Excellent technique", "Strong attack", "Deep bench", "Individual brilliance"],
+        "potential_weaknesses_zh": ["防守稳定性", "大赛压力"],
+        "potential_weaknesses_en": ["Defensive consistency", "Tournament pressure"]
+      },
+      "key_players": ["neymar", "vinicius", "rodri", "raphael_leao"],
+      "coach_id": "ancelotti",
+      "ai_impact": {
+        "overall_score": 93,
+        "description_zh": "传统强队，进攻火力强大",
+        "description_en": "Traditional powerhouse with devastating attack"
+      }
+    },
+    "france": {
+      "id": "france",
+      "names": {
+        "zh": "法国",
+        "en": "France"
+      },
+      "flag_emoji": "🇫🇷",
+      "short_code": "FRA",
+      "fifa_code": "FR",
+      "confederation": "UEFA",
+      "group": "G",
+      "worldcup_appearances": 16,
+      "worldcup_titles": 2,
+      "tournament_history": {
+        "zh": "2次世界杯冠军（1998、2018），2018年俄罗斯世界杯冠军",
+        "en": "2x World Cup Champion (1998, 2018), 2018 Russia Champions"
+      },
+      "nickname": {
+        "zh": "高卢雄鸡",
+        "en": "Les Bleus"
+      },
+      "tactical_info": {
+        "formation": "4-3-3 / 4-2-3-1",
+        "style_zh": "身体对抗强，防守稳固，快速反击犀利",
+        "style_en": "Strong physical play, solid defense, lethal counter-attacks",
+        "key_strengths_zh": ["身体素质出众", "防守稳固", "反击效率高", "明星球员多"],
+        "key_strengths_en": ["Excellent physicality", "Solid defense", "Efficient counter-attacks", "Star players"],
+        "potential_weaknesses_zh": ["更衣室问题", "伤病困扰"],
+        "potential_weaknesses_en": ["Dressing room issues", "Injury concerns"]
+      },
+      "key_players": ["mbappe", "griezmann", "kante", "pavard", "upamecano"],
+      "coach_id": "deschamps",
+      "ai_impact": {
+        "overall_score": 92,
+        "description_zh": "上届亚军，阵容豪华",
+        "description_en": "Reigning runner-up, exceptionally talented squad"
+      }
+    },
+    "england": {
+      "id": "england",
+      "names": {
+        "zh": "英格兰",
+        "en": "England"
+      },
+      "flag_emoji": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+      "short_code": "ENG",
+      "fifa_code": "EN",
+      "confederation": "UEFA",
+      "group": "C",
+      "worldcup_appearances": 17,
+      "worldcup_titles": 1,
+      "tournament_history": {
+        "zh": "1次世界杯冠军（1966），2022年卡塔尔世界杯四强",
+        "en": "1x World Cup Champion (1966), 2022 Qatar Semi-finalist"
+      },
+      "nickname": {
+        "zh": "三狮军团",
+        "en": "Three Lions"
+      },
+      "tactical_info": {
+        "formation": "4-3-3 / 3-4-3",
+        "style_zh": "边路进攻强，身体对抗好，年轻有活力",
+        "style_en": "Strong wing play, good physicality, youthful energy",
+        "key_strengths_zh": ["边路进攻强", "定位球威胁大", "年轻有活力", "豪门球员多"],
+        "key_strengths_en": ["Strong wing attacks", "Dangerous set-pieces", "Youthful squad", "Many top-tier players"],
+        "potential_weaknesses_zh": ["大赛关键时刻", "中场创造力"],
+        "potential_weaknesses_en": ["Key moment failures", "Creative midfield"]
+      },
+      "key_players": ["kane", "bellingham", "saka", "rice", "trippier"],
+      "coach_id": "southgate",
+      "ai_impact": {
+        "overall_score": 88,
+        "description_zh": "夺冠热门之一，年轻阵容潜力大",
+        "description_en": "Championship contender with youthful potential"
+      }
+    },
+    "germany": {
+      "id": "germany",
+      "names": {
+        "zh": "德国",
+        "en": "Germany"
+      },
+      "flag_emoji": "🇩🇪",
+      "short_code": "GER",
+      "fifa_code": "DE",
+      "confederation": "UEFA",
+      "group": "E",
+      "worldcup_appearances": 20,
+      "worldcup_titles": 4,
+      "tournament_history": {
+        "zh": "4次世界杯冠军（1954、1974、1990、2014），2014年巴西世界杯冠军",
+        "en": "4x World Cup Champion (1954, 1974, 1990, 2014), 2014 Brazil Champions"
+      },
+      "nickname": {
+        "zh": "日耳曼战车",
+        "en": "Die Mannschaft"
+      },
+      "tactical_info": {
+        "formation": "4-2-3-1 / 4-3-3",
+        "style_zh": "组织纪律性强，战术执行到位，身体对抗硬朗",
+        "style_en": "Highly organized, excellent tactical discipline, strong physical play",
+        "key_strengths_zh": ["战术纪律强", "身体对抗好", "大赛经验丰富", "团队协作佳"],
+        "key_strengths_en": ["Strong tactical discipline", "Good physicality", "Tournament experience", "Excellent teamwork"],
+        "potential_weaknesses_zh": ["进攻创造力", "新生代球员成长"],
+        "potential_weaknesses_en": ["Creative attack", "Youth development"]
+      },
+      "key_players": ["kroos", "havertz", "sane", "rüdiger", "neuer"],
+      "coach_id": "nagelsmann",
+      "ai_impact": {
+        "overall_score": 87,
+        "description_zh": "传统强队，战术纪律性强",
+        "description_en": "Traditional powerhouse with strong tactical discipline"
+      }
+    },
+    "spain": {
+      "id": "spain",
+      "names": {
+        "zh": "西班牙",
+        "en": "Spain"
+      },
+      "flag_emoji": "🇪🇸",
+      "short_code": "ESP",
+      "fifa_code": "ES",
+      "confederation": "UEFA",
+      "group": "B",
+      "worldcup_appearances": 16,
+      "worldcup_titles": 1,
+      "tournament_history": {
+        "zh": "1次世界杯冠军（2010），2008-2012年连续三届大赛冠军",
+        "en": "1x World Cup Champion (2010), three consecutive major tournament titles 2008-2012"
+      },
+      "nickname": {
+        "zh": "斗牛士军团",
+        "en": "La Roja"
+      },
+      "tactical_info": {
+        "formation": "4-3-3 / 4-2-3-1",
+        "style_zh": "传控打法代表，Tiki-taka战术深入人心",
+        "style_en": "Archetype of possession football, deep-rooted Tiki-taka philosophy",
+        "key_strengths_zh": ["传控能力顶级", "中场技术精湛", "整体配合默契", "青训体系完善"],
+        "key_strengths_en": ["Top-tier possession play", "Excellent technical midfield", "Great team chemistry", "Excellent youth system"],
+        "potential_weaknesses_zh": ["攻坚能力", "防守高度"],
+        "potential_weaknesses_en": ["Breaking down defenses", "Defensive height"]
+      },
+      "key_players": ["rodri", "gavi", "pedri", "williams", "carlos"],
+      "coach_id": "flick",
+      "ai_impact": {
+        "overall_score": 91,
+        "description_zh": "传控足球代表，整体实力强劲",
+        "description_en": "Possession football master with strong overall ability"
+      }
+    },
+    "italy": {
+      "id": "italy",
+      "names": {
+        "zh": "意大利",
+        "en": "Italy"
+      },
+      "flag_emoji": "🇮🇹",
+      "short_code": "ITA",
+      "fifa_code": "IT",
+      "confederation": "UEFA",
+      "group": "H",
+      "worldcup_appearances": 18,
+      "worldcup_titles": 4,
+      "tournament_history": {
+        "zh": "4次世界杯冠军（1934、1938、1982、2006），2022年缺席世界杯",
+        "en": "4x World Cup Champion (1934, 1938, 1982, 2006), missed 2022 tournament"
+      },
+      "nickname": {
+        "zh": "蓝衣军团",
+        "en": "Gli Azzurri"
+      },
+      "tactical_info": {
+        "formation": "3-5-2 / 4-3-3",
+        "style_zh": "防守反击见长，链式防守经典，战术素养高",
+        "style_en": "Masters of defensive counter-attack, classic zonal marking, high tactical intelligence",
+        "key_strengths_zh": ["防守稳固", "战术素养高", "关键时刻发挥好", "门将位置强"],
+        "key_strengths_en": ["Solid defense", "High tactical intelligence", "Performs in key moments", "Strong goalkeeping"],
+        "potential_weaknesses_zh": ["进攻效率", "老龄化问题"],
+        "potential_weaknesses_en": ["Attacking efficiency", "Aging squad"]
+      },
+      "key_players": ["donnarumma", "bastoni", "tonali", "chiesa", "raspadori"],
+      "coach_id": "spalletti",
+      "ai_impact": {
+        "overall_score": 85,
+        "description_zh": "防守大师，战术素养极高",
+        "description_en": "Defensive masters with exceptional tactical intelligence"
+      }
+    },
+    "portugal": {
+      "id": "portugal",
+      "names": {
+        "zh": "葡萄牙",
+        "en": "Portugal"
+      },
+      "flag_emoji": "🇵🇹",
+      "short_code": "POR",
+      "fifa_code": "PT",
+      "confederation": "UEFA",
+      "group": "D",
+      "worldcup_appearances": 8,
+      "worldcup_titles": 1,
+      "tournament_history": {
+        "zh": "1次世界杯冠军（2016欧锦赛），2016年欧洲杯冠军，2019年欧国联冠军",
+        "en": "1x Major trophy (Euro 2016), 2016 European Champion, 2019 Nations League Champion"
+      },
+      "nickname": {
+        "zh": "五盾军团",
+        "en": "Selecção"
+      },
+      "tactical_info": {
+        "formation": "4-3-3 / 4-2-3-1",
+        "style_zh": "进攻依赖个人能力，防守反击效率高",
+        "style_en": "Relies on individual brilliance, efficient defensive counters",
+        "key_strengths_zh": ["个人能力突出", "反击效率高", "定位球威胁大", "精神属性强"],
+        "key_strengths_en": ["Outstanding individuals", "Efficient counters", "Dangerous set-pieces", "Strong mentality"],
+        "potential_weaknesses_zh": ["整体配合", "防守稳定性"],
+        "potential_weaknesses_en": ["Team chemistry", "Defensive consistency"]
+      },
+      "key_players": ["ronaldo", "bruno", "bernardo", "fernandes", "dias"],
+      "coach_id": "martinez",
+      "ai_impact": {
+        "overall_score": 89,
+        "description_zh": "C罗领衔，个人能力突出",
+        "description_en": "Led by Ronaldo with exceptional individual talent"
+      }
+    },
+    "netherlands": {
+      "id": "netherlands",
+      "names": {
+        "zh": "荷兰",
+        "en": "Netherlands"
+      },
+      "flag_emoji": "🇳🇱",
+      "short_code": "NED",
+      "fifa_code": "NL",
+      "confederation": "UEFA",
+      "group": "B",
+      "worldcup_appearances": 11,
+      "worldcup_titles": 0,
+      "tournament_history": {
+        "zh": "3次世界杯亚军（1974、1978、2010），无冕之王",
+        "en": "3x World Cup Runner-up (1974, 1978, 2010), The Uncrowned Kings"
+      },
+      "nickname": {
+        "zh": "橙衣军团",
+        "en": "Oranje"
+      },
+      "tactical_info": {
+        "formation": "4-3-3 / 3-4-3",
+        "style_zh": "全攻全守代表，进攻足球哲学，控球能力强",
+        "style_en": "Archetype of Total Football, attacking philosophy, strong possession",
+        "key_strengths_zh": ["进攻足球", "控球能力强", "边路进攻犀利", "范加尔战术体系"],
+        "key_strengths_en": ["Attacking football", "Strong possession", "Sharp wing play", "Van Gaal's tactical system"],
+        "potential_weaknesses_zh": ["防守问题", "关键时刻"],
+        "potential_weaknesses_en": ["Defensive issues", "Key moments"]
+      },
+      "key_players": ["vandijk", "dejong", "gakpo", "simons", "blind"],
+      "coach_id": "koeman",
+      "ai_impact": {
+        "overall_score": 86,
+        "description_zh": "进攻型球队，无冕之王期待突破",
+        "description_en": "Attacking team, Uncrowned Kings seeking breakthrough"
+      }
+    },
+    "belgium": {
+      "id": "belgium",
+      "names": {
+        "zh": "比利时",
+        "en": "Belgium"
+      },
+      "flag_emoji": "🇧🇪",
+      "short_code": "BEL",
+      "fifa_code": "BE",
+      "confederation": "UEFA",
+      "group": "F",
+      "worldcup_appearances": 14,
+      "worldcup_titles": 0,
+      "tournament_history": {
+        "zh": "2018年世界杯季军，黄金一代最佳成绩",
+        "en": "2018 World Cup Third Place, best result for Golden Generation"
+      },
+      "nickname": {
+        "zh": "欧洲红魔",
+        "en": "Red Devils"
+      },
+      "tactical_info": {
+        "formation": "4-2-3-1 / 3-4-3",
+        "style_zh": "快速反击犀利，个人能力出众，进攻火力强",
+        "style_en": "Lethal counter-attacks, outstanding individuals, strong firepower",
+        "key_strengths_zh": ["个人能力顶级", "反击速度快", "进攻选择多", "德布劳内组织"],
+        "key_strengths_en": ["World-class individuals", "Fast counters", "Multiple attacking options", "De Bruyne's playmaking"],
+        "potential_weaknesses_zh": ["后防线老化", "关键时刻心态"],
+        "potential_weaknesses_en": ["Aging defense", "Mentality in key moments"]
+      },
+      "key_players": ["debruyne", "lukaku", "trossard", "doku", "casteels"],
+      "coach_id": "tedesco",
+      "ai_impact": {
+        "overall_score": 84,
+        "description_zh": "黄金一代末期，仍有竞争力",
+        "description_en": "End of Golden Generation, still competitive"
+      }
+    },
+    "croatia": {
+      "id": "croatia",
+      "names": {
+        "zh": "克罗地亚",
+        "en": "Croatia"
+      },
+      "flag_emoji": "🇭🇷",
+      "short_code": "CRO",
+      "fifa_code": "HR",
+      "confederation": "UEFA",
+      "group": "F",
+      "worldcup_appearances": 6,
+      "worldcup_titles": 0,
+      "tournament_history": {
+        "zh": "2018年世界杯亚军，2022年世界杯季军",
+        "en": "2018 World Cup Runner-up, 2022 World Cup Third Place"
+      },
+      "nickname": {
+        "zh": "格子军团",
+        "en": "Vatreni"
+      },
+      "tactical_info": {
+        "formation": "4-3-3 / 4-2-3-1",
+        "style_zh": "中场控制力强，莫德里奇领衔，大赛经验丰富",
+        "style_en": "Strong midfield control, led by Modric, rich tournament experience",
+        "key_strengths_zh": ["中场控制强", "莫德里奇领衔", "大赛经验丰富", "团队精神"],
+        "key_strengths_en": ["Strong midfield control", "Modric's leadership", "Tournament experience", "Team spirit"],
+        "potential_weaknesses_zh": ["老龄化问题", "进攻火力下降"],
+        "potential_weaknesses_en": ["Aging squad", "Declining attack"]
+      },
+      "key_players": ["modric", "kovacic", "perisic", "gvardiol", "livakovic"],
+      "coach_id": "dalic",
+      "ai_impact": {
+        "overall_score": 83,
+        "description_zh": "中场强大，但老龄化严重",
+        "description_en": "Strong midfield but serious aging issues"
+      }
+    },
+    "uruguay": {
+      "id": "uruguay",
+      "names": {
+        "zh": "乌拉圭",
+        "en": "Uruguay"
+      },
+      "flag_emoji": "🇺🇾",
+      "short_code": "URU",
+      "fifa_code": "UY",
+      "confederation": "CONMEBOL",
+      "group": "H",
+      "worldcup_appearances": 14,
+      "worldcup_titles": 2,
+      "tournament_history": {
+        "zh": "2次世界杯冠军（1930、1950），南美传统强队",
+        "en": "2x World Cup Champion (1930, 1950), traditional South American powerhouse"
+      },
+      "nickname": {
+        "zh": "天蓝军团",
+        "en": "La Celeste"
+      },
+      "tactical_info": {
+        "formation": "4-3-3 / 4-4-2",
+        "style_zh": "防守凶悍，进攻直接，斗志顽强",
+        "style_en": "Tough defense, direct attack, fighting spirit",
+        "key_strengths_zh": ["防守凶悍", "进攻直接", "斗志顽强", "努涅斯领衔锋线"],
+        "key_strengths_en": ["Tough defense", "Direct attack", "Fighting spirit", "Nunez leading attack"],
+        "potential_weaknesses_zh": ["老龄化", "中场控制"],
+        "potential_weaknesses_en": ["Aging squad", "Midfield control"]
+      },
+      "key_players": ["nunez", "bevilacqua", "valverde", "gimenez", "rochet"],
+      "coach_id": "bielsa",
+      "ai_impact": {
+        "overall_score": 85,
+        "description_zh": "南美强队，防守凶悍",
+        "description_en": "South American powerhouse with tough defense"
+      }
+    },
+    "colombia": {
+      "id": "colombia",
+      "names": {
+        "zh": "哥伦比亚",
+        "en": "Colombia"
+      },
+      "flag_emoji": "🇨🇴",
+      "short_code": "COL",
+      "fifa_code": "CO",
+      "confederation": "CONMEBOL",
+      "group": "I",
+      "worldcup_appearances": 6,
+      "worldcup_titles": 0,
+      "tournament_history": {
+        "zh": "2014年世界杯八强，J罗时代最佳成绩",
+        "en": "2014 World Cup Quarter-finals, best result during James Rodriguez era"
+      },
+      "nickname": {
+        "zh": "咖啡勇士",
+        "en": "Los Cafeteros"
+      },
+      "tactical_info": {
+        "formation": "4-2-3-1 / 4-3-3",
+        "style_zh": "进攻有创意，身体对抗好，中前场逼抢积极",
+        "style_en": "Creative attack, good physicality, aggressive pressing",
+        "key_strengths_zh": ["进攻有创意", "身体对抗好", "前场逼抢", "J罗回归"],
+        "key_strengths_en": ["Creative attack", "Good physicality", "Aggressive press", "James Rodriguez returns"],
+        "potential_weaknesses_zh": ["防线稳定性", "大赛经验"],
+        "potential_weaknesses_en": ["Defensive stability", "Tournament experience"]
+      },
+      "key_players": ["james", " Diaz", "cuateros", "quintero", "cuesta"],
+      "coach_id": "lorenzo",
+      "ai_impact": {
+        "overall_score": 82,
+        "description_zh": "南美黑马，J罗回归增强实力",
+        "description_en": "South American dark horse, James Rodriguez strengthens team"
+      }
+    },
+    "mexico": {
+      "id": "mexico",
+      "names": {
+        "zh": "墨西哥",
+        "en": "Mexico"
+      },
+      "flag_emoji": "🇲🇽",
+      "short_code": "MEX",
+      "fifa_code": "MX",
+      "confederation": "CONCACAF",
+      "group": "A",
+      "worldcup_appearances": 17,
+      "worldcup_titles": 0,
+      "tournament_history": {
+        "zh": "8次进入16强，从未突破八强",
+        "en": "8x Round of 16 appearances, never passed Quarter-finals"
+      },
+      "nickname": {
+        "zh": "草帽军团",
+        "en": "El Tri"
+      },
+      "tactical_info": {
+        "formation": "4-3-3 / 5-3-2",
+        "style_zh": "技术灵活，防守组织好，进攻有创意",
+        "style_en": "Flexible technique, good defensive organization, creative attack",
+        "key_strengths_zh": ["技术灵活", "防守组织好", "进攻有创意", "洛萨诺边路"],
+        "key_strengths_en": ["Flexible technique", "Good defensive organization", "Creative attack", "Lozano on the wing"],
+        "potential_weaknesses_zh": ["身高劣势", "关键时刻"],
+        "potential_weaknesses_en": ["Height disadvantage", "Key moments"]
+      },
+      "key_players": ["lozano", "chicharito", "herrera", "gallardo", "ocampbel"],
+      "coach_id": "sanchez",
+      "ai_impact": {
+        "overall_score": 76,
+        "description_zh": "中北美强队，擅长技术流",
+        "description_en": "CONCACAF powerhouse with technical style"
+      }
+    },
+    "usa": {
+      "id": "usa",
+      "names": {
+        "zh": "美国",
+        "en": "United States"
+      },
+      "flag_emoji": "🇺🇸",
+      "short_code": "USA",
+      "fifa_code": "US",
+      "confederation": "CONCACAF",
+      "group": "C",
+      "worldcup_appearances": 11,
+      "worldcup_titles": 0,
+      "tournament_history": {
+        "zh": "2002年世界杯八强，本土举办2026世界杯",
+        "en": "2002 World Cup Quarter-finals, hosting 2026 World Cup"
+      },
+      "nickname": {
+        "zh": "山姆大叔",
+        "en": "USMNT"
+      },
+      "tactical_info": {
+        "formation": "4-3-3 / 4-4-2",
+        "style_zh": "身体对抗好，年轻有活力，美职联培养",
+        "style_en": "Good physicality, youthful energy, MLS-developed talent",
+        "key_strengths_zh": ["身体对抗好", "年轻有活力", "主场优势", "普利西奇领衔"],
+        "key_strengths_en": ["Good physicality", "Youthful energy", "Home advantage", "Pulisic leading"],
+        "potential_weaknesses_zh": ["大赛经验", "中场组织"],
+        "potential_weaknesses_en": ["Tournament experience", "Midfield creativity"]
+      },
+      "key_players": ["pulisic", "reyna", "mckennie", "dest", "turner"],
+      "coach_id": "berhalter",
+      "ai_impact": {
+        "overall_score": 78,
+        "description_zh": "东道主之一，年轻阵容有潜力",
+        "description_en": "Co-host with youthful, potential-filled squad"
+      }
+    },
+    "japan": {
+      "id": "japan",
+      "names": {
+        "zh": "日本",
+        "en": "Japan"
+      },
+      "flag_emoji": "🇯🇵",
+      "short_code": "JPN",
+      "fifa_code": "JP",
+      "confederation": "AFC",
+      "group": "E",
+      "worldcup_appearances": 7,
+      "worldcup_titles": 0,
+      "tournament_history": {
+        "zh": "2002、2010、2018年进入16强，2022年进入8强",
+        "en": "Round of 16 in 2002, 2010, 2018; Quarter-finals in 2022"
+      },
+      "nickname": {
+        "zh": "蓝武士",
+        "en": "Samurai Blue"
+      },
+      "tactical_info": {
+        "formation": "4-2-3-1 / 4-3-3",
+        "style_zh": "技术精湛，战术执行到位，整体配合好",
+        "style_en": "Excellent technique, precise tactical execution, great teamwork",
+        "key_strengths_zh": ["技术精湛", "战术执行到位", "整体配合好", "多名球员旅欧"],
+        "key_strengths_en": ["Excellent technique", "Precise tactical execution", "Great teamwork", "Many Europe-based players"],
+        "potential_weaknesses_zh": ["身体对抗", "防守高度"],
+        "potential_weaknesses_en": ["Physicality", "Defensive height"]
+      },
+      "key_players": ["minamino", "kub", "minamino", "tomiyasu", "kawashima"],
+      "coach_id": "moriyasu",
+      "ai_impact": {
+        "overall_score": 81,
+        "description_zh": "亚洲最强，多人旅欧锻炼",
+        "description_en": "Strongest Asian team with many Europe-experienced players"
+      }
+    },
+    "morocco": {
+      "id": "morocco",
+      "names": {
+        "zh": "摩洛哥",
+        "en": "Morocco"
+      },
+      "flag_emoji": "🇲🇦",
+      "short_code": "MAR",
+      "fifa_code": "MA",
+      "confederation": "CAF",
+      "group": "F",
+      "worldcup_appearances": 6,
+      "worldcup_titles": 0,
+      "tournament_history": {
+        "zh": "2022年世界杯四强，非洲球队最佳成绩",
+        "en": "2022 World Cup Semi-finals, best result for any African team"
+      },
+      "nickname": {
+        "zh": "亚特拉斯雄狮",
+        "en": "Atlas Lions"
+      },
+      "tactical_info": {
+        "formation": "4-3-3 / 4-1-4-1",
+        "style_zh": "防守稳固，反击犀利，团队精神强",
+        "style_en": "Solid defense, lethal counters, strong team spirit",
+        "key_strengths_zh": ["防守稳固", "反击犀利", "团队精神强", "齐耶赫组织"],
+        "key_strengths_en": ["Solid defense", "Lethal counters", "Strong team spirit", "Ziyech's playmaking"],
+        "potential_weaknesses_zh": ["进攻效率", "老龄化"],
+        "potential_weaknesses_en": ["Attacking efficiency", "Aging squad"]
+      },
+      "key_players": ["ziyech", "hakimi", "amrabat", "enyoka", "boufal"],
+      "coach_id": "regragui",
+      "ai_impact": {
+        "overall_score": 84,
+        "description_zh": "非洲最强，2022黑马继续征战",
+        "description_en": "Strongest African team, 2022 dark horse continues"
+      }
+    },
+    "senegal": {
+      "id": "senegal",
+      "names": {
+        "zh": "塞内加尔",
+        "en": "Senegal"
+      },
+      "flag_emoji": "🇸🇳",
+      "short_code": "SEN",
+      "fifa_code": "SN",
+      "confederation": "CAF",
+      "group": "J",
+      "worldcup_appearances": 4,
+      "worldcup_titles": 0,
+      "tournament_history": {
+        "zh": "2022年世界杯八强，2021年非洲杯冠军",
+        "en": "2022 World Cup Quarter-finals, 2021 AFCON Champion"
+      },
+      "nickname": {
+        "zh": "特兰加雄狮",
+        "en": "Les Lions de la Teranga"
+      },
+      "tactical_info": {
+        "formation": "4-3-3 / 4-2-3-1",
+        "style_zh": "身体对抗强，防守凶悍，马内领衔进攻",
+        "style_en": "Strong physicality, tough defense, Mane leading attack",
+        "key_strengths_zh": ["身体对抗强", "防守凶悍", "马内领衔", "门将门迪"],
+        "key_strengths_en": ["Strong physicality", "Tough defense", "Mane leading", "Goalkeeper Mendy"],
+        "potential_weaknesses_zh": ["进攻创造力", "中场控制"],
+        "potential_weaknesses_en": ["Creative attack", "Midfield control"]
+      },
+      "key_players": ["mane", "sarr", "koulibaly", "mendy", "diatta"],
+      "coach_id": "cissokho",
+      "ai_impact": {
+        "overall_score": 80,
+        "description_zh": "非洲杯冠军，整体实力强",
+        "description_en": "AFCON champions with strong overall ability"
+      }
+    },
+    "cameroon": {
+      "id": "cameroon",
+      "names": {
+        "zh": "喀麦隆",
+        "en": "Cameroon"
+      },
+      "flag_emoji": "🇨🇲",
+      "short_code": "CMR",
+      "fifa_code": "CM",
+      "confederation": "CAF",
+      "group": "B",
+      "worldcup_appearances": 8,
+      "worldcup_titles": 0,
+      "tournament_history": {
+        "zh": "1990年进入八强，非洲球队早期代表",
+        "en": "Quarter-finals in 1990, early African representative"
+      },
+      "nickname": {
+        "zh": "非洲雄狮",
+        "en": "Indomitable Lions"
+      },
+      "tactical_info": {
+        "formation": "4-3-3 / 4-4-2",
+        "style_zh": "身体素质好，防守积极，斗志顽强",
+        "style_en": "Good physical素质, active defense, fighting spirit",
+        "key_strengths_zh": ["身体素质好", "防守积极", "斗志顽强", "安古伊萨中场"],
+        "key_strengths_en": ["Good physical素质", "Active defense", "Fighting spirit", "Anguissa in midfield"],
+        "potential_weaknesses_zh": ["进攻效率", "战术纪律"],
+        "potential_weaknesses_en": ["Attacking efficiency", "Tactical discipline"]
+      },
+      "key_players": ["song", "hongla", "mbala", "zambo", "ony">
+      },
+      "coach_id": "rigobert",
+      "ai_impact": {
+        "overall_score": 72,
+        "description_zh": "非洲老牌强队，但近年实力下滑",
+        "description_en": "Traditional African powerhouse but declined recently"
+      }
+    },
+    "qatar": {
+      "id": "qatar",
+      "names": {
+        "zh": "卡塔尔",
+        "en": "Qatar"
+      },
+      "flag_emoji": "🇶🇦",
+      "short_code": "QAT",
+      "fifa_code": "QA",
+      "confederation": "AFC",
+      "group": "B",
+      "worldcup_appearances": 2,
+      "worldcup_titles": 0,
+      "tournament_history": {
+        "zh": "2022年世界杯东道主，小组赛出局",
+        "en": "2022 World Cup hosts, eliminated in group stage"
+      },
+      "nickname": {
+        "zh": "沙漠之鹰",
+        "en": "Maroon"
+      },
+      "tactical_info": {
+        "formation": "5-3-2 / 4-3-3",
+        "style_zh": "防守反击，依赖阿费夫组织",
+        "style_en": "Defensive counter-attack, relies on Almoez Ali",
+        "key_strengths_zh": ["主场优势", "阿费夫进攻", "防守组织"],
+        "key_strengths_en": ["Home advantage", "Almoez Ali's attack", "Defensive organization"],
+        "potential_weaknesses_zh": ["整体实力", "大赛经验"],
+        "potential_weaknesses_en": ["Overall quality", "Tournament experience"]
+      },
+      "key_players": ["almoez", "afif", " hassan", "khoukhi", "barsham"],
+      "coach_id": "tomas",
+      "ai_impact": {
+        "overall_score": 65,
+        "description_zh": "东道主之一，但整体实力有限",
+        "description_en": "Co-host but limited overall quality"
+      }
+    },
+    "ecuador": {
+      "id": "ecuador",
+      "names": {
+        "zh": "厄瓜多尔",
+        "en": "Ecuador"
+      },
+      "flag_emoji": "🇪🇨",
+      "short_code": "ECU",
+      "fifa_code": "EC",
+      "confederation": "CONMEBOL",
+      "group": "A",
+      "worldcup_appearances": 4,
+      "worldcup_titles": 0,
+      "tournament_history": {
+        "zh": "2006年进入16强，高原优势明显",
+        "en": "Round of 16 in 2006, significant altitude advantage"
+      },
+      "nickname": {
+        "zh": "三色军团",
+        "en": "La Tricolor"
+      },
+      "tactical_info": {
+        "formation": "4-3-3 / 4-2-3-1",
+        "style_zh": "高原主场优势，身体对抗好，防守积极",
+        "style_en": "Altitude home advantage, good physicality, active defense",
+        "key_strengths_zh": ["高原主场优势", "身体对抗好", "防守积极", "恩纳瓦伦西亚"],
+        "key_strengths_en": ["Altitude home advantage", "Good physicality", "Active defense", "Enner Valencia"],
+        "potential_weaknesses_zh": ["客场作战", "进攻效率"],
+        "potential_weaknesses_en": ["Away games", "Attacking efficiency"]
+      },
+      "key_players": ["valencia", "caicedo", "hincapie", "sarmiento", "galindez"],
+      "coach_id": "sanchez_f",
+      "ai_impact": {
+        "overall_score": 75,
+        "description_zh": "南美中游球队，依赖高原主场",
+        "description_en": "Mid-table South American team, relies on altitude"
+      }
+    },
+    "iran": {
+      "id": "iran",
+      "names": {
+        "zh": "伊朗",
+        "en": "Iran"
+      },
+      "flag_emoji": "🇮🇷",
+      "short_code": "IRN",
+      "fifa_code": "IR",
+      "confederation": "AFC",
+      "group": "C",
+      "worldcup_appearances": 6,
+      "worldcup_titles": 0,
+      "tournament_history": {
+        "zh": "从未突破小组赛，亚洲强队",
+        "en": "Never passed group stage, Asian powerhouse"
+      },
+      "nickname": {
+        "zh": "波斯铁骑",
+        "en": "Team Melli"
+      },
+      "tactical_info": {
+        "formation": "4-4-2 / 5-4-1",
+        "style_zh": "防守严密，身体对抗好，防守反击",
+        "style_en": "Tight defense, good physicality, defensive counter",
+        "key_strengths_zh": ["防守严密", "身体对抗好", "防守反击", "阿兹蒙前锋"],
+        "key_strengths_en": ["Tight defense", "Good physicality", "Defensive counter", "Azmoun as striker"],
+        "potential_weaknesses_zh": ["进攻创造力", "大赛经验"],
+        "potential_weaknesses_en": ["Creative attack", "Tournament experience"]
+      },
+      "key_players": ["azmoun", "e的全名", "pourghayaz", "nour"],
+      "coach_id": "qfl",
+      "ai_impact": {
+        "overall_score": 74,
+        "description_zh": "亚洲防守强队，进攻有待提高",
+        "description_en": "Strong Asian defensive team, attack needs improvement"
+      }
+    },
+    "wales": {
+      "id": "wales",
+      "names": {
+        "zh": "威尔士",
+        "en": "Wales"
+      },
+      "flag_emoji": "🏴󠁧󠁢󠁷󠁬󠁳󠁿",
+      "short_code": "WAL",
+      "fifa_code": "WA",
+      "confederation": "UEFA",
+      "group": "C",
+      "worldcup_appearances": 2,
+      "worldcup_titles": 0,
+      "tournament_history": {
+        "zh": "2022年首次进入世界杯16强",
+        "en": "First World Cup in 2022, reached Round of 16"
+      },
+      "nickname": {
+        "zh": "红龙",
+        "en": "Dragons"
+      },
+      "tactical_info": {
+        "formation": "4-2-3-1 / 3-5-2",
+        "style_zh": "贝尔时代末期，防守反击为主",
+        "style_en": "Post-Bale era, mainly defensive counter-attack",
+        "key_strengths_zh": ["团队精神", "防守组织", "定位球"],
+        "key_strengths_en": ["Team spirit", "Defensive organization", "Set-pieces"],
+        "potential_weaknesses_zh": ["缺少核心", "进攻火力"],
+        "potential_weaknesses_en": ["Lacking key player", "Attacking firepower"]
+      },
+      "key_players": ["ramsey", "bale", "james", "roberts", "hennessey"],
+      "coach_id": "page",
+      "ai_impact": {
+        "overall_score": 71,
+        "description_zh": "贝尔退役后，整体实力下降",
+        "description_en": "Overall quality declined after Bale's retirement"
+      }
+    },
+    "serbia": {
+      "id": "serbia",
+      "names": {
+        "zh": "塞尔维亚",
+        "en": "Serbia"
+      },
+      "flag_emoji": "🇷🇸",
+      "short_code": "SRB",
+      "fifa_code": "RS",
+      "confederation": "UEFA",
+      "group": "D",
+      "worldcup_appearances": 13,
+      "worldcup_titles": 0,
+      "tournament_history": {
+        "zh": "前南斯拉夫足球遗产，2010年进入小组赛",
+        "en": "Heritage of Yugoslav football, group stage in 2010"
+      },
+      "nickname": {
+        "zh": "飞鹰",
+        "en": "Orlovi"
+      },
+      "tactical_info": {
+        "formation": "3-4-3 / 4-3-3",
+        "style_zh": "身体条件出色，中场有创造力，定位球威胁大",
+        "style_en": "Excellent physical condition, creative midfield, dangerous set-pieces",
+        "key_strengths_zh": ["身体条件出色", "中场有创造力", "定位球威胁大", "米特罗维奇"],
+        "key_strengths_en": ["Excellent physical condition", "Creative midfield", "Dangerous set-pieces", "Mitrovic"],
+        "potential_weaknesses_zh": ["防守稳定性", "大赛经验"],
+        "potential_weaknesses_en": ["Defensive stability", "Tournament experience"]
+      },
+      "key_players": ["mitrovic", "tadic", "milinkovic", "kostic", "dmitrovic"],
+      "coach_id": "stojkovic",
+      "ai_impact": {
+        "overall_score": 79,
+        "description_zh": "东欧强队，定位球能力突出",
+        "description_en": "Eastern European powerhouse with strong set-pieces"
+      }
+    },
+    "ghana": {
+      "id": "ghana",
+      "names": {
+        "zh": "加纳",
+        "en": "Ghana"
+      },
+      "flag_emoji": "🇬🇭",
+      "short_code": "GHA",
+      "fifa_code": "GH",
+      "confederation": "CAF",
+      "group": "D",
+      "worldcup_appearances": 4,
+      "worldcup_titles": 0,
+      "tournament_history": {
+        "zh": "2010年进入八强，非洲球队代表",
+        "en": "Quarter-finals in 2010, representative African team"
+      },
+      "nickname": {
+        "zh": "黑星",
+        "en": "Black Stars"
+      },
+      "tactical_info": {
+        "formation": "4-3-3 / 4-2-3-1",
+        "style_zh": "技术不错，速度快，年轻有活力",
+        "style_en": "Decent technique, fast, youthful energy",
+        "key_strengths_zh": ["速度快", "年轻有活力", "技术不错"],
+        "key_strengths_en": ["Fast", "Youthful energy", "Decent technique"],
+        "potential_weaknesses_zh": ["防守问题", "经验不足"],
+        "potential_weaknesses_en": ["Defensive issues", "Lack of experience"]
+      },
+      "key_players": ["kud", "baba", "jwill", "slimane"],
+      "coach_id": "chris",
+      "ai_impact": {
+        "overall_score": 73,
+        "description_zh": "非洲年轻球队，潜力与问题并存",
+        "description_en": "Young African team with both potential and issues"
+      }
+    },
+    "australia": {
+      "id": "australia",
+      "names": {
+        "zh": "澳大利亚",
+        "en": "Australia"
+      },
+      "flag_emoji": "🇦🇺",
+      "short_code": "AUS",
+      "fifa_code": "AU",
+      "confederation": "AFC",
+      "group": "H",
+      "worldcup_appearances": 6,
+      "worldcup_titles": 0,
+      "tournament_history": {
+        "zh": "2006年进入16强，亚洲区表现好",
+        "en": "Round of 16 in 2006, good performance in Asian qualifiers"
+      },
+      "nickname": {
+        "zh": "澳洲袋鼠",
+        "en": "Socceroos"
+      },
+      "tactical_info": {
+        "formation": "4-3-3 / 4-4-2",
+        "style_zh": "身体对抗好，防守积极，战术纪律强",
+        "style_en": "Good physicality, active defense, strong tactical discipline",
+        "key_strengths_zh": ["身体对抗好", "防守积极", "战术纪律强", "瑞恩门将"],
+        "key_strengths_en": ["Good physicality", "Active defense", "Strong tactical discipline", "Ryan as goalkeeper"],
+        "potential_weaknesses_zh": ["进攻质量", "明星球员"],
+        "potential_weaknesses_en": ["Attacking quality", "Star players"]
+      },
+      "key_players": ["ryan", "mooy", "irving", "good", "mabic"],
+      "coach_id": "arnold",
+      "ai_impact": {
+        "overall_score": 74,
+        "description_zh": "亚足联球队，防守纪律好",
+        "description_en": "AFC team with disciplined defense"
+      }
+    },
+    "south_korea": {
+      "id": "south_korea",
+      "names": {
+        "zh": "韩国",
+        "en": "South Korea"
+      },
+      "flag_emoji": "🇰🇷",
+      "short_code": "KOR",
+      "fifa_code": "KR",
+      "confederation": "AFC",
+      "group": "H",
+      "worldcup_appearances": 11,
+      "worldcup_titles": 0,
+      "tournament_history": {
+        "zh": "2002年进入四强，孙兴慜时代最佳成绩",
+        "en": "Semi-finals in 2002, best result in Son Heung-min era"
+      },
+      "nickname": {
+        "zh": "太极虎",
+        "en": "Taeguk Warriors"
+      },
+      "tactical_info": {
+        "formation": "4-3-3 / 4-2-3-1",
+        "style_zh": "孙兴慜领衔进攻，跑动积极，整体防守好",
+        "style_en": "Son leading attack, active running, good collective defense",
+        "key_strengths_zh": ["孙兴慜进攻核心", "跑动积极", "整体防守好", "团队精神"],
+        "key_strengths_en": ["Son as attacking core", "Active running", "Good collective defense", "Team spirit"],
+        "potential_weaknesses_zh": ["防守高度", "中场控制"],
+        "potential_weaknesses_en": ["Defensive height", "Midfield control"]
+      },
+      "key_players": ["son", "kim", "hwang", "lee", "jhg"],
+      "coach_id": "hong",
+      "ai_impact": {
+        "overall_score": 77,
+        "description_zh": "亚洲强队，孙兴慜世界级",
+        "description_en": "Asian powerhouse with world-class Son Heung-min"
+      }
+    },
+    "poland": {
+      "id": "poland",
+      "names": {
+        "zh": "波兰",
+        "en": "Poland"
+      },
+      "flag_emoji": "🇵🇱",
+      "short_code": "POL",
+      "fifa_code": "PL",
+      "confederation": "UEFA",
+      "group": "K",
+      "worldcup_appearances": 9,
+      "worldcup_titles": 0,
+      "tournament_history": {
+        "zh": "1974、1982年进入四强，莱万时代期待突破",
+        "en": "Semi-finals in 1974, 1982; Lewandowski era seeks breakthrough"
+      },
+      "nickname": {
+        "zh": "白鹰",
+        "en": "Biało-Czerwoni"
+      },
+      "tactical_info": {
+        "formation": "4-2-3-1 / 3-5-2",
+        "style_zh": "莱万单箭头，防守反击为主",
+        "style_en": "Lewandowski as spearhead, mainly defensive counter",
+        "key_strengths_zh": ["莱万进攻核心", "防守反击", "门将什琴斯尼"],
+        "key_strengths_en": ["Lewandowski as core", "Defensive counter", "Goalkeeper Szczesny"],
+        "potential_weaknesses_zh": ["中场创造力", "整体配合"],
+        "potential_weaknesses_en": ["Midfield creativity", "Overall chemistry"]
+      },
+      "key_players": ["lewandowski", "szczesny", "zielinski", "gvardiol", "piotek"],
+      "coach_id": "probierz",
+      "ai_impact": {
+        "overall_score": 75,
+        "description_zh": "东欧球队，依赖莱万发挥",
+        "description_en": "Eastern European team reliant on Lewandowski"
+      }
+    },
+    "sweden": {
+      "id": "sweden",
+      "names": {
+        "zh": "瑞典",
+        "en": "Sweden"
+      },
+      "flag_emoji": "🇸🇪",
+      "short_code": "SWE",
+      "fifa_code": "SE",
+      "confederation": "UEFA",
+      "group": "K",
+      "worldcup_appearances": 12,
+      "worldcup_titles": 0,
+      "tournament_history": {
+        "zh": "1958年进入决赛，伊布退役后重建",
+        "en": "Final in 1958, rebuilding after Ibrahimovic's retirement"
+      },
+      "nickname": {
+        "zh": "北欧海盗",
+        "en": "Blågult"
+      },
+      "tactical_info": {
+        "formation": "4-4-2 / 4-3-3",
+        "style_zh": "身体对抗好，防守积极，进攻直接",
+        "style_en": "Good physicality, active defense, direct attack",
+        "key_strengths_zh": ["身体对抗好", "防守积极", "进攻直接", "队长福斯贝里"],
+        "key_strengths_en": ["Good physicality", "Active defense", "Direct attack", "Captain Forsberg"],
+        "potential_weaknesses_zh": ["缺少明星", "中场组织"],
+        "potential_weaknesses_en": ["Lacking stars", "Midfield organization"]
+      },
+      "key_players": ["forsberg", "isak", "kulon", "lindelof", "olsen"],
+      "coach_id": "jontveit",
+      "ai_impact": {
+        "overall_score": 76,
+        "description_zh": "北欧球队，重建期有潜力",
+        "description_en": "Nordic team with potential during rebuild"
+      }
+    },
+    "austria": {
+      "id": "austria",
+      "names": {
+        "zh": "奥地利",
+        "en": "Austria"
+      },
+      "flag_emoji": "🇦🇹",
+      "short_code": "AUT",
+      "fifa_code": "AT",
+      "confederation": "UEFA",
+      "group": "K",
+      "worldcup_appearances": 8,
+      "worldcup_titles": 0,
+      "tournament_history": {
+        "zh": "1934、1954年进入四强，近年重返世界杯",
+        "en": "Semi-finals in 1934, 1954; returned to World Cup recently"
+      },
+      "nickname": {
+        "zh": "奥地利",
+        "en": "Das Team"
+      },
+      "tactical_info": {
+        "formation": "4-2-3-1 / 4-3-3",
+        "style_zh": "技术不错，中场有阿瑙托维奇",
+        "style_en": "Decent technique, Arnautovic in midfield",
+        "key_strengths_zh": ["技术不错", "中场有球星", "团队配合"],
+        "key_strengths_en": ["Decent technique", "Star in midfield", "Team coordination"],
+        "potential_weaknesses_zh": ["整体实力", "大赛经验"],
+        "potential_weaknesses_en": ["Overall quality", "Tournament experience"]
+      },
+      "key_players": ["arnautovic", "sabitzer", "lainer", "alaba", "pfaff"]
+      },
+      "coach_id": "ralf",
+      "ai_impact": {
+        "overall_score": 74,
+        "description_zh": "中欧球队，实力中游",
+        "description_en": "Central European team of mid-table quality"
+      }
+    },
+    "egypt": {
+      "id": "egypt",
+      "names": {
+        "zh": "埃及",
+        "en": "Egypt"
+      },
+      "flag_emoji": "🇪🇬",
+      "short_code": "EGY",
+      "fifa_code": "EG",
+      "confederation": "CAF",
+      "group": "K",
+      "worldcup_appearances": 3,
+      "worldcup_titles": 0,
+      "tournament_history": {
+        "zh": "从未小组出线，萨拉赫时代期待突破",
+        "en": "Never passed group stage, Salah era seeks breakthrough"
+      },
+      "nickname": {
+        "zh": "法老",
+        "en": "Pharaohs"
+      },
+      "tactical_info": {
+        "formation": "4-3-3 / 4-2-3-1",
+        "style_zh": "萨拉赫单点核心，防守反击",
+        "style_en": "Salah as sole attacking core, defensive counter",
+        "key_strengths_zh": ["萨拉赫世界级", "防守反击", "定位球"],
+        "key_strengths_en": ["World-class Salah", "Defensive counter", "Set-pieces"],
+        "potential_weaknesses_zh": ["依赖萨拉赫", "整体实力"],
+        "potential_weaknesses_en": ["Reliant on Salah", "Overall quality"]
+      },
+      "key_players": ["salah", "el_neny", "trezeguet", "abdel_fatah", "elshehry"],
+      "coach_id": "hossam",
+      "ai_impact": {
+        "overall_score": 73,
+        "description_zh": "非洲强队，萨拉赫决定上限",
+        "description_en": "African powerhouse, Salah determines ceiling"
+      }
+    },
+    "nigeria": {
+      "id": "nigeria",
+      "names": {
+        "zh": "尼日利亚",
+        "en": "Nigeria"
+      },
+      "flag_emoji": "🇳🇬",
+      "short_code": "NGA",
+      "fifa_code": "NG",
+      "confederation": "CAF",
+      "group": "L",
+      "worldcup_appearances": 7,
+      "worldcup_titles": 0,
+      "tournament_history": {
+        "zh": "1994、1998、2014进入16强",
+        "en": "Round of 16 in 1994, 1998, 2014"
+      },
+      "nickname": {
+        "zh": "超级雄鹰",
+        "en": "Super Eagles"
+      },
+      "tactical_info": {
+        "formation": "4-3-3 / 4-2-3-1",
+        "style_zh": "身体素质好，速度快，进攻有活力",
+        "style_en": "Excellent physical素质, fast, attacking energy",
+        "key_strengths_zh": ["身体素质好", "速度快", "进攻有活力", "奥斯梅恩"],
+        "key_strengths_en": ["Excellent physical素质", "Fast", "Attacking energy", "Osimhen"],
+        "potential_weaknesses_zh": ["防守问题", "战术纪律"],
+        "potential_weaknesses_en": ["Defensive issues", "Tactical discipline"]
+      },
+      "key_players": ["osimhen", "iwobi", "ndidi", "chikwal", "kvaratskhelia"],
+      "coach_id": "finidi",
+      "ai_impact": {
+        "overall_score": 77,
+        "description_zh": "非洲强队，奥斯梅恩领衔锋线",
+        "description_en": "African powerhouse with Osimhen leading attack"
+      }
+    },
+    "ivory_coast": {
+      "id": "ivory_coast",
+      "names": {
+        "zh": "科特迪瓦",
+        "en": "Ivory Coast"
+      },
+      "flag_emoji": "🇨🇮",
+      "short_code": "CIV",
+      "fifa_code": "CI",
+      "confederation": "CAF",
+      "group": "L",
+      "worldcup_appearances": 3,
+      "worldcup_titles": 0,
+      "tournament_history": {
+        "zh": "2006、2010、2014年参赛，从未小组出线",
+        "en": "Appeared in 2006, 2010, 2014; never passed group stage"
+      },
+      "nickname": {
+        "zh": "大象",
+        "en": "Les Éléphants"
+      },
+      "tactical_info": {
+        "formation": "4-3-3 / 4-2-3-1",
+        "style_zh": "身体对抗好，进攻有实力，2023非洲杯冠军",
+        "style_en": "Good physicality, attacking quality, 2023 AFCON Champions",
+        "key_strengths_zh": ["身体对抗好", "进攻有实力", "2023非洲杯冠军", "凯西"],
+        "key_strengths_en": ["Good physicality", "Attacking quality", "2023 AFCON Champions", "Kessie"],
+        "potential_weaknesses_zh": ["防守稳定性", "大赛经验"],
+        "potential_weaknesses_en": ["Defensive stability", "Tournament experience"]
+      },
+      "key_players": ["singo", "pepin", "kessie", "singleton", "nonda"],
+      "coach_id": "emerse",
+      "ai_impact": {
+        "overall_score": 76,
+        "description_zh": "非洲杯冠军，整体实力强",
+        "description_en": "AFCON champions with strong overall ability"
+      }
+    },
+    "greece": {
+      "id": "greece",
+      "names": {
+        "zh": "希腊",
+        "en": "Greece"
+      },
+      "flag_emoji": "🇬🇷",
+      "short_code": "GRE",
+      "fifa_code": "GR",
+      "confederation": "UEFA",
+      "group": "L",
+      "worldcup_appearances": 4,
+      "worldcup_titles": 0,
+      "tournament_history": {
+        "zh": "2014年首次参赛，2004年欧洲杯冠军",
+        "en": "First World Cup in 2014, Euro 2004 Champions"
+      },
+      "nickname": {
+        "zh": "神话",
+        "en": "Ethniki"
+      },
+      "tactical_info": {
+        "formation": "4-4-2 / 4-3-3",
+        "style_zh": "防守纪律强，定位球有威胁",
+        "style_en": "Strong defensive discipline, set-piece threat",
+        "key_strengths_zh": ["防守纪律强", "定位球有威胁", "团队精神"],
+        "key_strengths_en": ["Strong defensive discipline", "Set-piece threat", "Team spirit"],
+        "potential_weaknesses_zh": ["进攻能力", "明星球员"],
+        "potential_weaknesses_en": ["Attacking ability", "Star players"]
+      },
+      "key_players": ["bouchalakis", "mantalos", "douvik", "bakake", "giakoumakis"],
+      "coach_id": "skibbe",
+      "ai_impact": {
+        "overall_score": 71,
+        "description_zh": "2004神话后艰难重建",
+        "description_en": "Difficult rebuild after 2004 miracle"
+      }
+    },
+    "denmark": {
+      "id": "denmark",
+      "names": {
+        "zh": "丹麦",
+        "en": "Denmark"
+      },
+      "flag_emoji": "🇩🇰",
+      "short_code": "DEN",
+      "fifa_code": "DK",
+      "confederation": "UEFA",
+      "group": "G",
+      "worldcup_appearances": 6,
+      "worldcup_titles": 0,
+      "tournament_history": {
+        "zh": "1992年欧洲杯冠军，2022年进入16强",
+        "en": "Euro 1992 Champions, Round of 16 in 2022"
+      },
+      "nickname": {
+        "zh": "红白",
+        "en": "Danish Dynamite"
+      },
+      "tactical_info": {
+        "formation": "3-4-3 / 4-3-3",
+        "style_zh": "战术纪律强，团队配合好，埃里克森组织",
+        "style_en": "Strong tactical discipline, great teamwork, Eriksen organizing",
+        "key_strengths_zh": ["战术纪律强", "团队配合好", "埃里克森组织", "小舒梅切尔"],
+        "key_strengths_en": ["Strong tactical discipline", "Great teamwork", "Eriksen organizing", "Schmeichel Jr."],
+        "potential_weaknesses_zh": ["个人能力", "进攻火力"],
+        "potential_weaknesses_en": ["Individual quality", "Attacking firepower"]
+      },
+      "key_players": ["eriksen", "højlund", "dolberg", "christensen", "schmeichel"],
+      "coach_id": "olsen_j",
+      "ai_impact": {
+        "overall_score": 81,
+        "description_zh": "北欧代表，团队配合出色",
+        "description_en": "Nordic representative with excellent teamwork"
+      }
+    },
+    "tunisia": {
+      "id": "tunisia",
+      "names": {
+        "zh": "突尼斯",
+        "en": "Tunisia"
+      },
+      "flag_emoji": "🇹🇳",
+      "short_code": "TUN",
+      "fifa_code": "TN",
+      "confederation": "CAF",
+      "group": "G",
+      "worldcup_appearances": 6,
+      "worldcup_titles": 0,
+      "tournament_history": {
+        "zh": "1978年首次参赛，2022年进入16强",
+        "en": "First appearance in 1978, Round of 16 in 2022"
+      },
+      "nickname": {
+        "zh": "迦太基之鹰",
+        "en": "Les Aigles de Carthage"
+      },
+      "tactical_info": {
+        "formation": "4-3-3 / 4-4-2",
+        "style_zh": "防守积极，团队精神，进攻直接",
+        "style_en": "Active defense, team spirit, direct attack",
+        "key_strengths_zh": ["防守积极", "团队精神", "进攻直接"],
+        "key_strengths_en": ["Active defense", "Team spirit", "Direct attack"],
+        "potential_weaknesses_zh": ["整体实力", "明星球员"],
+        "potential_weaknesses_en": ["Overall quality", "Star players"]
+      },
+      "key_players": ["khazri", "msakni", "laidouni", "talbi", "dahben"],
+      "coach_id": "khalil",
+      "ai_impact": {
+        "overall_score": 72,
+        "description_zh": "北非球队，实力有限",
+        "description_en": "North African team with limited quality"
+      }
+    },
+    "peru": {
+      "id": "peru",
+      "names": {
+        "zh": "秘鲁",
+        "en": "Peru"
+      },
+      "flag_emoji": "🇵🇪",
+      "short_code": "PER",
+      "fifa_code": "PE",
+      "confederation": "CONMEBOL",
+      "group": "G",
+      "worldcup_appearances": 5,
+      "worldcup_titles": 0,
+      "tournament_history": {
+        "zh": "1970、1978、1982进入8强，格雷罗时代",
+        "en": "Quarter-finals in 1970, 1978, 1982; Guerrero era"
+      },
+      "nickname": {
+        "zh": "高原球队",
+        "en": "Blanquirrojos"
+      },
+      "tactical_info": {
+        "formation": "4-3-3 / 4-2-3-1",
+        "style_zh": "高原主场优势，格雷罗领衔，防守积极",
+        "style_en": "Altitude home advantage, Guerrero leading, active defense",
+        "key_strengths_zh": ["高原主场优势", "格雷罗领衔", "防守积极", "奎瓦组织"],
+        "key_strengths_en": ["Altitude home advantage", "Guerrero leading", "Active defense", "Cueva organizing"],
+        "potential_weaknesses_zh": ["客场作战", "整体实力"],
+        "potential_weaknesses_en": ["Away games", "Overall quality"]
+      },
+      "key_players": ["guerrero", "cueva", "flores", "trauco", "gallese"],
+      "coach_id": "fossati",
+      "ai_impact": {
+        "overall_score": 74,
+        "description_zh": "南美中游球队，高原主场重要",
+        "description_en": "Mid-table South American team, altitude home crucial"
+      }
+    },
+    "paraguay": {
+      "id": "paraguay",
+      "names": {
+        "zh": "巴拉圭",
+        "en": "Paraguay"
+      },
+      "flag_emoji": "🇵🇾",
+      "short_code": "PAR",
+      "fifa_code": "PY",
+      "confederation": "CONMEBOL",
+      "group": "I",
+      "worldcup_appearances": 9,
+      "worldcup_titles": 0,
+      "tournament_history": {
+        "zh": "2010年进入八强，南美老牌强队",
+        "en": "Quarter-finals in 2010, traditional South American powerhouse"
+      },
+      "nickname": {
+        "zh": "红白军团",
+        "en": "La Albirroja"
+      },
+      "tactical_info": {
+        "formation": "4-4-2 / 4-3-3",
+        "style_zh": "防守凶悍，进攻直接，团队精神",
+        "style_en": "Tough defense, direct attack, team spirit",
+        "key_strengths_zh": ["防守凶悍", "进攻直接", "团队精神", "阿尔米隆"],
+        "key_strengths_en": ["Tough defense", "Direct attack", "Team spirit", "Almiron"],
+        "potential_weaknesses_zh": ["进攻效率", "明星球员"],
+        "potential_weaknesses_en": ["Attacking efficiency", "Star players"]
+      },
+      "key_players": ["almiron", "gomez", "romero", "arce", "silva"],
+      "coach_id": "schelotto",
+      "ai_impact": {
+        "overall_score": 76,
+        "description_zh": "南美老牌球队，整体实力下滑",
+        "description_en": "Traditional South American team with declining quality"
+      }
+    },
+    "panama": {
+      "id": "panama",
+      "names": {
+        "zh": "巴拿马",
+        "en": "Panama"
+      },
+      "flag_emoji": "🇵🇦",
+      "short_code": "PAN",
+      "fifa_code": "PA",
+      "confederation": "CONCACAF",
+      "group": "I",
+      "worldcup_appearances": 2,
+      "worldcup_titles": 0,
+      "tournament_history": {
+        "zh": "2018年首次参赛，小组赛出局",
+        "en": "First World Cup in 2018, eliminated in group stage"
+      },
+      "nickname": {
+        "zh": "运河之队",
+        "en": "Los Canaleros"
+      },
+      "tactical_info": {
+        "formation": "4-4-2 / 5-3-2",
+        "style_zh": "防守反击，团队精神，身体对抗",
+        "style_en": "Defensive counter, team spirit, physicality",
+        "key_strengths_zh": ["团队精神", "身体对抗", "防守组织"],
+        "key_strengths_en": ["Team spirit", "Physicality", "Defensive organization"],
+        "potential_weaknesses_zh": ["整体实力", "明星球员"],
+        "potential_weaknesses_en": ["Overall quality", "Star players"]
+      },
+      "key_players": ["tejada", "gonzalez", "baldellon", "mid", "carranza"],
+      "coach_id": "daniel",
+      "ai_impact": {
+        "overall_score": 68,
+        "description_zh": "中北美球队，实力有限",
+        "description_en": "CONCACAF team with limited quality"
+      }
+    },
+    "bolivia": {
+      "id": "bolivia",
+      "names": {
+        "zh": "玻利维亚",
+        "en": "Bolivia"
+      },
+      "flag_emoji": "🇧🇴",
+      "short_code": "BOL",
+      "fifa_code": "BO",
+      "confederation": "CONMEBOL",
+      "group": "I",
+      "worldcup_appearances": 4,
+      "worldcup_titles": 0,
+      "tournament_history": {
+        "zh": "1994年首次参赛，高原主场是最大优势",
+        "en": "First appearance in 1994, altitude home is biggest advantage"
+      },
+      "nickname": {
+        "zh": "高原之魂",
+        "en": "La Verde"
+      },
+      "tactical_info": {
+        "formation": "4-4-2 / 4-3-3",
+        "style_zh": "高原主场优势，防守反击，斗志顽强",
+        "style_en": "Altitude home advantage, defensive counter, fighting spirit",
+        "key_strengths_zh": ["高原主场优势", "斗志顽强", "防守积极"],
+        "key_strengths_en": ["Altitude home advantage", "Fighting spirit", "Active defense"],
+        "potential_weaknesses_zh": ["客场作战", "整体实力"],
+        "potential_weaknesses_en": ["Away games", "Overall quality"]
+      },
+      "key_players": ["arce", "moreno", "chumacero", "gutierrez", "lampe"],
+      "coach_id": "cOliveira",
+      "ai_impact": {
+        "overall_score": 66,
+        "description_zh": "高原主场是最大武器",
+        "description_en": "Altitude home is the biggest weapon"
+      }
+    },
+    "algeria": {
+      "id": "algeria",
+      "names": {
+        "zh": "阿尔及利亚",
+        "en": "Algeria"
+      },
+      "flag_emoji": "🇩🇿",
+      "short_code": "ALG",
+      "fifa_code": "DZ",
+      "confederation": "CAF",
+      "group": "J",
+      "worldcup_appearances": 5,
+      "worldcup_titles": 0,
+      "tournament_history": {
+        "zh": "2014年首次16强，2019年非洲杯冠军",
+        "en": "First Round of 16 in 2014, 2019 AFCON Champion"
+      },
+      "nickname": {
+        "zh": "绿旗军团",
+        "en": "Les Verts"
+      },
+      "tactical_info": {
+        "formation": "4-3-3 / 4-2-3-1",
+        "style_zh": "马赫雷斯边路突破，进攻有实力，防守积极",
+        "style_en": "Mahrez on the wing, attacking quality, active defense",
+        "key_strengths_zh": ["马赫雷斯边路", "进攻有实力", "2019非洲杯冠军"],
+        "key_strengths_en": ["Mahrez on the wing", "Attacking quality", "2019 AFCON Champions"],
+        "potential_weaknesses_zh": ["防守稳定性", "大赛经验"],
+        "potential_weaknesses_en": ["Defensive stability", "Tournament experience"]
+      },
+      "key_players": ["mahrez", "bennacer", "belaili", "atalid", "mandi"],
+      "coach_id": "belmadi",
+      "ai_impact": {
+        "overall_score": 78,
+        "description_zh": "非洲杯冠军，整体实力不错",
+        "description_en": "AFCON champions with decent overall ability"
+      }
+    },
+    "south_africa": {
+      "id": "south_africa",
+      "names": {
+        "zh": "南非",
+        "en": "South Africa"
+      },
+      "flag_emoji": "🇿🇦",
+      "short_code": "RSA",
+      "fifa_code": "ZA",
+      "confederation": "CAF",
+      "group": "J",
+      "worldcup_appearances": 4,
+      "worldcup_titles": 0,
+      "tournament_history": {
+        "zh": "2010年东道主，举办过世界杯",
+        "en": "Hosts in 2010, have hosted World Cup"
+      },
+      "nickname": {
+        "zh": "巴法纳巴法纳",
+        "en": "Bafana Bafana"
+      },
+      "tactical_info": {
+        "formation": "4-3-3 / 4-4-2",
+        "style_zh": "团队精神，防守积极，但整体实力有限",
+        "style_en": "Team spirit, active defense, but limited overall quality",
+        "key_strengths_zh": ["团队精神", "2010东道主", "主场优势"],
+        "key_strengths_en": ["Team spirit", "2010 hosts", "Home advantage"],
+        "potential_weaknesses_zh": ["整体实力", "明星球员"],
+        "potential_weaknesses_en": ["Overall quality", "Star players"]
+      },
+      "key_players": ["zungu", "mosimane", "fak", "dlodlo", "mom"],
+      },
+      "coach_id": "bro",
+      "ai_impact": {
+        "overall_score": 69,
+        "description_zh": "非洲中游球队",
+        "description_en": "Mid-table African team"
+      }
+    },
+    "burkina_faso": {
+      "id": "burkina_faso",
+      "names": {
+        "zh": "布基纳法索",
+        "en": "Burkina Faso"
+      },
+      "flag_emoji": "🇧🇫",
+      "short_code": "BFA",
+      "fifa_code": "BF",
+      "confederation": "CAF",
+      "group": "J",
+      "worldcup_appearances": 3,
+      "worldcup_titles": 0,
+      "tournament_history": {
+        "zh": "从未小组出线，2013年非洲杯亚军",
+        "en": "Never passed group stage, 2013 AFCON Runner-up"
+      },
+      "nickname": {
+        "zh": "雄鹰",
+        "en": "Les Étalons"
+      },
+      "tactical_info": {
+        "formation": "4-3-3 / 4-4-2",
+        "style_zh": "团队精神，防守积极，进攻直接",
+        "style_en": "Team spirit, active defense, direct attack",
+        "key_strengths_zh": ["团队精神", "防守积极", "斗志顽强"],
+        "key_strengths_en": ["Team spirit", "Active defense", "Fighting spirit"],
+        "potential_weaknesses_zh": ["整体实力", "明星球员"],
+        "potential_weaknesses_en": ["Overall quality", "Star players"]
+      },
+      "key_players": ["traore_b", "bert", "kaboré", "dayo", "ouedraogo"],
+      "coach_id": "houga",
+      "ai_impact": {
+        "overall_score": 70,
+        "description_zh": "非洲小球队",
+        "description_en": "Small African nation"
+      }
+    },
+    "new_zealand": {
+      "id": "new_zealand",
+      "names": {
+        "zh": "新西兰",
+        "en": "New Zealand"
+      },
+      "flag_emoji": "🇳🇿",
+      "short_code": "NZL",
+      "fifa_code": "NZ",
+      "confederation": "OFC",
+      "group": "E",
+      "worldcup_appearances": 3,
+      "worldcup_titles": 0,
+      "tournament_history": {
+        "zh": "1982、2010年参赛，2010年小组赛出局",
+        "en": "Appeared in 1982, 2010; eliminated in group stage 2010"
+      },
+      "nickname": {
+        "zh": "全黑队",
+        "en": "All Whites"
+      },
+      "tactical_info": {
+        "formation": "4-4-2 / 4-3-3",
+        "style_zh": "身体对抗好，防守积极，但整体实力有限",
+        "style_en": "Good physicality, active defense, but limited quality",
+        "key_strengths_zh": ["身体对抗好", "防守积极", "团队精神"],
+        "key_strengths_en": ["Good physicality", "Active defense", "Team spirit"],
+        "potential_weaknesses_zh": ["整体实力", "进攻能力"],
+        "potential_weaknesses_en": ["Overall quality", "Attacking ability"]
+      },
+      "key_players": ["wood", "sinn", "warski", "birch", "cathro"],
+      "coach_id": "j_city",
+      "ai_impact": {
+        "overall_score": 64,
+        "description_zh": "大洋洲代表，实力有限",
+        "description_en": "OFC representative with limited quality"
+      }
+    },
+    "canada": {
+      "id": "canada",
+      "names": {
+        "zh": "加拿大",
+        "en": "Canada"
+      },
+      "flag_emoji": "🇨🇦",
+      "short_code": "CAN",
+      "fifa_code": "CA",
+      "confederation": "CONCACAF",
+      "group": "F",
+      "worldcup_appearances": 2,
+      "worldcup_titles": 0,
+      "tournament_history": {
+        "zh": "2022年首次参赛，东道主之一",
+        "en": "First World Cup in 2022, co-host nation"
+      },
+      "nickname": {
+        "zh": "枫叶军团",
+        "en": "Canucks"
+      },
+      "tactical_info": {
+        "formation": "4-3-3 / 4-4-2",
+        "style_zh": "阿方索领衔进攻，年轻有活力，速度快",
+        "style_en": "Davies leading attack, youthful energy, fast",
+        "key_strengths_zh": ["阿方索边路", "年轻有活力", "速度快", "东道主优势"],
+        "key_strengths_en": ["Davies on the wing", "Youthful energy", "Fast", "Host advantage"],
+        "potential_weaknesses_zh": ["大赛经验", "防守稳定性"],
+        "potential_weaknesses_en": ["Tournament experience", "Defensive stability"]
+      },
+      "key_players": ["davies", "hutchinson", "lain", "bbu", "milan"],
+      "coach_id": "marsch",
+      "ai_impact": {
+        "overall_score": 75,
+        "description_zh": "东道主之一，阿方索世界级",
+        "description_en": "Co-host with world-class Alphonso Davies"
+      }
+    },
+    "costa_rica": {
+      "id": "costa_rica",
+      "names": {
+        "zh": "哥斯达黎加",
+        "en": "Costa Rica"
+      },
+      "flag_emoji": "🇨🇷",
+      "short_code": "CRC",
+      "fifa_code": "CR",
+      "confederation": "CONCACAF",
+      "group": "E",
+      "worldcup_appearances": 6,
+      "worldcup_titles": 0,
+      "tournament_history": {
+        "zh": "2014年进入8强，历史最佳成绩",
+        "en": "Quarter-finals in 2014, best ever result"
+      },
+      "nickname": {
+        "zh": "加勒比海盗",
+        "en": "Los Ticos"
+      },
+      "tactical_info": {
+        "formation": "5-4-1 / 4-4-2",
+        "style_zh": "纳瓦斯门将神勇，防守反击，团队精神",
+        "style_en": "Navas saving brilliantly, defensive counter, team spirit",
+        "key_strengths_zh": ["纳瓦斯门将", "防守反击", "团队精神", "2014黑马"],
+        "key_strengths_en": ["Goalkeeper Navas", "Defensive counter", "Team spirit", "2014 dark horse"],
+        "potential_weaknesses_zh": ["整体实力", "明星球员"],
+        "potential_weaknesses_en": ["Overall quality", "Star players"]
+      },
+      "key_players": ["navas", "campbell", "borges", "acosta", "duarte"],
+      "coach_id": "suarez",
+      "ai_impact": {
+        "overall_score": 72,
+        "description_zh": "中北美黑马，纳瓦斯是核心",
+        "description_en": "CONCACAF dark horse with Keylor Navas as core"
+      }
+    },
+    "jamaica": {
+      "id": "jamaica",
+      "names": {
+        "zh": "牙买加",
+        "en": "Jamaica"
+      },
+      "flag_emoji": "🇯🇲",
+      "short_code": "JAM",
+      "fifa_code": "JM",
+      "confederation": "CONCACAF",
+      "group": "A",
+      "worldcup_appearances": 1,
+      "worldcup_titles": 0,
+      "tournament_history": {
+        "zh": "1998年首次参赛，小组赛出局",
+        "en": "First World Cup in 1998, eliminated in group stage"
+      },
+      "nickname": {
+        "zh": "雷鬼男孩",
+        "en": "Reggae Boyz"
+      },
+      "tactical_info": {
+        "formation": "4-4-2 / 4-3-3",
+        "style_zh": "速度为主，进攻直接，团队精神",
+        "style_en": "Speed-focused, direct attack, team spirit",
+        "key_strengths_zh": ["速度快", "进攻直接", "团队精神"],
+        "key_strengths_en": ["Fast", "Direct attack", "Team spirit"],
+        "potential_weaknesses_zh": ["整体实力", "防守问题"],
+        "potential_weaknesses_en": ["Overall quality", "Defensive issues"]
+      },
+      "key_players": ["bailey", "morrison", "dowell", "donal", "lawrence"],
+      "coach_id": "hegarty",
+      "ai_impact": {
+        "overall_score": 67,
+        "description_zh": "加勒比球队，速度快但实力有限",
+        "description_en": "Caribbean team, fast but limited quality"
+      }
+    },
+    "zambia": {
+      "id": "zambia",
+      "names": {
+        "zh": "赞比亚",
+        "en": "Zambia"
+      },
+      "flag_emoji": "🇿🇲",
+      "short_code": "ZAM",
+      "fifa_code": "ZM",
+      "confederation": "CAF",
+      "group": "L",
+      "worldcup_appearances": 1,
+      "worldcup_titles": 0,
+      "tournament_history": {
+        "zh": "1982年首次参赛，非洲杯冠军（2012）",
+        "en": "First appearance in 1982, AFCON Champions (2012)"
+      },
+      "nickname": {
+        "zh": "铜箭",
+        "en": "Chipolopolo"
+      },
+      "tactical_info": {
+        "formation": "4-3-3 / 4-4-2",
+        "style_zh": "团队精神，防守积极，但整体实力有限",
+        "style_en": "Team spirit, active defense, limited overall quality",
+        "key_strengths_zh": ["团队精神", "2012非洲杯冠军", "斗志顽强"],
+        "key_strengths_en": ["Team spirit", "2012 AFCON Champions", "Fighting spirit"],
+        "potential_weaknesses_zh": ["整体实力", "明星球员"],
+        "potential_weaknesses_en": ["Overall quality", "Star players"]
+      },
+      "key_players": ["chambeshi", "kaputos", "mush", "lucking", "mwape"],
+      "coach_id": "mitumu",
+      "ai_impact": {
+        "overall_score": 65,
+        "description_zh": "非洲球队，2012辉煌后下滑",
+        "description_en": "African team, declined after 2012 peak"
+      }
+    }
+  }
+}

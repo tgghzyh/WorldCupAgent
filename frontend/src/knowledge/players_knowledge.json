@@ -1,0 +1,2169 @@
+{
+  "_metadata": {
+    "version": "1.0.0",
+    "generated_at": "2026-07-06T00:00:00Z",
+    "description": "Football Knowledge Layer - Player Information for WC2026"
+  },
+  "players": {
+    "messi": {
+      "id": "messi",
+      "names": {
+        "zh": "利昂内尔·梅西",
+        "en": "Lionel Messi"
+      },
+      "team_id": "argentina",
+      "position": "Forward",
+      "position_short": "FW",
+      "position_zh": "前锋",
+      "age": 39,
+      "club": "Inter Miami",
+      "nationality": {
+        "zh": "阿根廷",
+        "en": "Argentina"
+      },
+      "national_team_stats": {
+        "caps": 180,
+        "goals": 106
+      },
+      "highlights_zh": [
+        "8座金球奖得主",
+        "2022年世界杯冠军+金球奖",
+        "国家队出场纪录保持者"
+      ],
+      "highlights_en": [
+        "8x Ballon d'Or winner",
+        "2022 World Cup Champion & Golden Ball",
+        "All-time Argentina caps record"
+      ],
+      "ai_impact": {
+        "score": 95,
+        "description_zh": "球王，决定比赛走向的关键人物",
+        "description_en": "Football legend, key to deciding matches"
+      }
+    },
+    "mbappe": {
+      "id": "mbappe",
+      "names": {
+        "zh": "基利安·姆巴佩",
+        "en": "Kylian Mbappé"
+      },
+      "team_id": "france",
+      "position": "Forward",
+      "position_short": "FW",
+      "position_zh": "前锋",
+      "age": 26,
+      "club": "Real Madrid",
+      "nationality": {
+        "zh": "法国",
+        "en": "France"
+      },
+      "national_team_stats": {
+        "caps": 85,
+        "goals": 48
+      },
+      "highlights_zh": [
+        "2018年世界杯冠军+最佳新人",
+        "2022年世界杯金靴奖",
+        "当今速度最快的前锋之一"
+      ],
+      "highlights_en": [
+        "2018 World Cup Champion & Best Young Player",
+        "2022 World Cup Golden Boot",
+        "One of the fastest forwards today"
+      ],
+      "ai_impact": {
+        "score": 94,
+        "description_zh": "世界级前锋，速度与技术兼备",
+        "description_en": "World-class forward, speed and technique combined"
+      }
+    },
+    "neymar": {
+      "id": "neymar",
+      "names": {
+        "zh": "内马尔·达席尔瓦",
+        "en": "Neymar Jr"
+      },
+      "team_id": "brazil",
+      "position": "Forward",
+      "position_short": "FW",
+      "position_zh": "前锋",
+      "age": 33,
+      "club": "Al-Hilal",
+      "nationality": {
+        "zh": "巴西",
+        "en": "Brazil"
+      },
+      "national_team_stats": {
+        "caps": 128,
+        "goals": 83
+      },
+      "highlights_zh": [
+        "2016年奥运会金牌",
+        "桑巴军团核心球员",
+        "技术华丽的代表"
+      ],
+      "highlights_en": [
+        "2016 Olympic Gold Medalist",
+        "Core player of Samba squad",
+        "Representative of technical brilliance"
+      ],
+      "ai_impact": {
+        "score": 91,
+        "description_zh": "巴西核心，技术能力顶尖",
+        "description_en": "Brazil's core player, top technical ability"
+      }
+    },
+    "kane": {
+      "id": "kane",
+      "names": {
+        "zh": "哈里·凯恩",
+        "en": "Harry Kane"
+      },
+      "team_id": "england",
+      "position": "Forward",
+      "position_short": "FW",
+      "position_zh": "前锋",
+      "age": 31,
+      "club": "Bayern Munich",
+      "nationality": {
+        "zh": "英格兰",
+        "en": "England"
+      },
+      "national_team_stats": {
+        "caps": 98,
+        "goals": 66
+      },
+      "highlights_zh": [
+        "英格兰队史最佳射手",
+        "2022年世界杯金靴",
+        "全能型前锋"
+      ],
+      "highlights_en": [
+        "All-time England top scorer",
+        "2022 World Cup Golden Boot",
+        "Complete forward"
+      ],
+      "ai_impact": {
+        "score": 92,
+        "description_zh": "英格兰核心射手，禁区杀手",
+        "description_en": "England's key striker, penalty box predator"
+      }
+    },
+    "ronaldo": {
+      "id": "ronaldo",
+      "names": {
+        "zh": "克里斯蒂亚诺·罗纳尔多",
+        "en": "Cristiano Ronaldo"
+      },
+      "team_id": "portugal",
+      "position": "Forward",
+      "position_short": "FW",
+      "position_zh": "前锋",
+      "age": 40,
+      "club": "Al-Nassr",
+      "nationality": {
+        "zh": "葡萄牙",
+        "en": "Portugal"
+      },
+      "national_team_stats": {
+        "caps": 206,
+        "goals": 131
+      },
+      "highlights_zh": [
+        "5座金球奖得主",
+        "国家队进球纪录保持者",
+        "2016年欧洲杯冠军"
+      ],
+      "highlights_en": [
+        "5x Ballon d'Or winner",
+        "All-time top international scorer",
+        "2016 Euro Champion"
+      ],
+      "ai_impact": {
+        "score": 88,
+        "description_zh": "传奇球星，葡萄牙精神领袖",
+        "description_en": "Legendary player, Portugal's spiritual leader"
+      }
+    },
+    "modric": {
+      "id": "modric",
+      "names": {
+        "zh": "卢卡·莫德里奇",
+        "en": "Luka Modrić"
+      },
+      "team_id": "croatia",
+      "position": "Midfielder",
+      "position_short": "MF",
+      "position_zh": "中场",
+      "age": 39,
+      "club": "Real Madrid",
+      "nationality": {
+        "zh": "克罗地亚",
+        "en": "Croatia"
+      },
+      "national_team_stats": {
+        "caps": 175,
+        "goals": 26
+      },
+      "highlights_zh": [
+        "2018年金球奖得主",
+        "克罗地亚历史标志性人物",
+        "中场大师"
+      ],
+      "highlights_en": [
+        "2018 Ballon d'Or winner",
+        "Croatian football icon",
+        "Midfield maestro"
+      ],
+      "ai_impact": {
+        "score": 88,
+        "description_zh": "克罗地亚中场指挥官",
+        "description_en": "Croatia's midfield commander"
+      }
+    },
+    "debruyne": {
+      "id": "debruyne",
+      "names": {
+        "zh": "凯文·德布劳内",
+        "en": "Kevin De Bruyne"
+      },
+      "team_id": "belgium",
+      "position": "Midfielder",
+      "position_short": "MF",
+      "position_zh": "中场",
+      "age": 33,
+      "club": "Manchester City",
+      "nationality": {
+        "zh": "比利时",
+        "en": "Belgium"
+      },
+      "national_team_stats": {
+        "caps": 105,
+        "goals": 32
+      },
+      "highlights_zh": [
+        "当今最佳组织中场",
+        "曼城核心",
+        "传球视野顶级"
+      ],
+      "highlights_en": [
+        "Best playmaker today",
+        "Manchester City core",
+        "Top-tier passing vision"
+      ],
+      "ai_impact": {
+        "score": 93,
+        "description_zh": "世界最佳中场之一",
+        "description_en": "One of the world's best midfielders"
+      }
+    },
+    "rodri": {
+      "id": "rodri",
+      "names": {
+        "zh": "罗德里戈·埃尔南德斯",
+        "en": "Rodri Hernández"
+      },
+      "team_id": "spain",
+      "position": "Midfielder",
+      "position_short": "MF",
+      "position_zh": "中场",
+      "age": 28,
+      "club": "Manchester City",
+      "nationality": {
+        "zh": "西班牙",
+        "en": "Spain"
+      },
+      "national_team_stats": {
+        "caps": 52,
+        "goals": 8
+      },
+      "highlights_zh": [
+        "2024年金球奖得主",
+        "曼城节拍器",
+        "西班牙中场核心"
+      ],
+      "highlights_en": [
+        "2024 Ballon d'Or winner",
+        "Manchester City metronome",
+        "Spain's midfield anchor"
+      ],
+      "ai_impact": {
+        "score": 93,
+        "description_zh": "当今最佳后腰，西班牙核心",
+        "description_en": "Best defensive midfielder today, Spain's core"
+      }
+    },
+    "vandijk": {
+      "id": "vandijk",
+      "names": {
+        "zh": "维吉尔·范戴克",
+        "en": "Virgil van Dijk"
+      },
+      "team_id": "netherlands",
+      "position": "Defender",
+      "position_short": "DF",
+      "position_zh": "后卫",
+      "age": 33,
+      "club": "Liverpool",
+      "nationality": {
+        "zh": "荷兰",
+        "en": "Netherlands"
+      },
+      "national_team_stats": {
+        "caps": 58,
+        "goals": 8
+      },
+      "highlights_zh": [
+        "2019年欧冠冠军",
+        "世界最佳中后卫之一",
+        "荷兰后防核心"
+      ],
+      "highlights_en": [
+        "2019 Champions League winner",
+        "One of world's best center-backs",
+        "Netherlands' defensive core"
+      ],
+      "ai_impact": {
+        "score": 91,
+        "description_zh": "世界级中卫，防守核心",
+        "description_en": "World-class defender, defensive anchor"
+      }
+    },
+    "bellingham": {
+      "id": "bellingham",
+      "names": {
+        "zh": "祖德·贝林厄姆",
+        "en": "Jude Bellingham"
+      },
+      "team_id": "england",
+      "position": "Midfielder",
+      "position_short": "MF",
+      "position_zh": "中场",
+      "age": 21,
+      "club": "Real Madrid",
+      "nationality": {
+        "zh": "英格兰",
+        "en": "England"
+      },
+      "national_team_stats": {
+        "caps": 35,
+        "goals": 5
+      },
+      "highlights_zh": [
+        "2024年金球奖提名",
+        "皇马新星",
+        "英格兰未来核心"
+      ],
+      "highlights_en": [
+        "2024 Ballon d'Or nominee",
+        "Real Madrid rising star",
+        "England's future core"
+      ],
+      "ai_impact": {
+        "score": 90,
+        "description_zh": "英格兰新星，进攻中场",
+        "description_en": "England's rising star, attacking midfielder"
+      }
+    },
+    "vinicius": {
+      "id": "vinicius",
+      "names": {
+        "zh": "维尼修斯·儒尼奥尔",
+        "en": "Vinícius Júnior"
+      },
+      "team_id": "brazil",
+      "position": "Forward",
+      "position_short": "FW",
+      "position_zh": "前锋",
+      "age": 24,
+      "club": "Real Madrid",
+      "nationality": {
+        "zh": "巴西",
+        "en": "Brazil"
+      },
+      "national_team_stats": {
+        "caps": 35,
+        "goals": 8
+      },
+      "highlights_zh": [
+        "皇马核心球员",
+        "2024欧冠冠军",
+        "突破能力顶级"
+      ],
+      "highlights_en": [
+        "Real Madrid core player",
+        "2024 Champions League winner",
+        "Top-tier dribbling ability"
+      ],
+      "ai_impact": {
+        "score": 92,
+        "description_zh": "巴西边路突破高手",
+        "description_en": "Brazil's winger with elite dribbling"
+      }
+    },
+    "son": {
+      "id": "son",
+      "names": {
+        "zh": "孙兴慜",
+        "en": "Son Heung-min"
+      },
+      "team_id": "south_korea",
+      "position": "Forward",
+      "position_short": "FW",
+      "position_zh": "前锋",
+      "age": 32,
+      "club": "Tottenham Hotspur",
+      "nationality": {
+        "zh": "韩国",
+        "en": "South Korea"
+      },
+      "national_team_stats": {
+        "caps": 118,
+        "goals": 51
+      },
+      "highlights_zh": [
+        "英超金靴（2021-22）",
+        "韩国队史最佳射手之一",
+        "技术全面的前锋"
+      ],
+      "highlights_en": [
+        "Premier League Golden Boot (2021-22)",
+        "One of Korea's all-time top scorers",
+        "Complete technical forward"
+      ],
+      "ai_impact": {
+        "score": 89,
+        "description_zh": "亚洲足球骄傲，世界级前锋",
+        "description_en": "Pride of Asian football, world-class forward"
+      }
+    },
+    "salah": {
+      "id": "salah",
+      "names": {
+        "zh": "穆罕默德·萨拉赫",
+        "en": "Mohamed Salah"
+      },
+      "team_id": "egypt",
+      "position": "Forward",
+      "position_short": "FW",
+      "position_zh": "前锋",
+      "age": 32,
+      "club": "Liverpool",
+      "nationality": {
+        "zh": "埃及",
+        "en": "Egypt"
+      },
+      "national_team_stats": {
+        "caps": 98,
+        "goals": 59
+      },
+      "highlights_zh": [
+        "英超金靴（2021-22, 2023-24）",
+        "埃及队史最佳射手",
+        "非洲最佳球员之一"
+      ],
+      "highlights_en": [
+        "Premier League Golden Boot (2021-22, 2023-24)",
+        "Egypt's all-time top scorer",
+        "One of Africa's best players"
+      ],
+      "ai_impact": {
+        "score": 90,
+        "description_zh": "埃及核心，世界级边锋",
+        "description_en": "Egypt's core, world-class winger"
+      }
+    },
+    "osimhen": {
+      "id": "osimhen",
+      "names": {
+        "zh": "维克托·奥西姆亨",
+        "en": "Victor Osimhen"
+      },
+      "team_id": "nigeria",
+      "position": "Forward",
+      "position_short": "FW",
+      "position_zh": "前锋",
+      "age": 25,
+      "club": "Galatasaray",
+      "nationality": {
+        "zh": "尼日利亚",
+        "en": "Nigeria"
+      },
+      "national_team_stats": {
+        "caps": 32,
+        "goals": 17
+      },
+      "highlights_zh": [
+        "2023非洲杯金靴",
+        "意甲最佳前锋之一",
+        "尼日利亚锋线核心"
+      ],
+      "highlights_en": [
+        "2023 AFCON Golden Boot",
+        "One of Serie A's best forwards",
+        "Nigeria's attacking core"
+      ],
+      "ai_impact": {
+        "score": 88,
+        "description_zh": "非洲最佳前锋之一",
+        "description_en": "One of Africa's best forwards"
+      }
+    },
+    "davies": {
+      "id": "davies",
+      "names": {
+        "zh": "阿方索·戴维斯",
+        "en": "Alphonso Davies"
+      },
+      "team_id": "canada",
+      "position": "Defender",
+      "position_short": "DF",
+      "position_zh": "后卫",
+      "age": 24,
+      "club": "Bayern Munich",
+      "nationality": {
+        "zh": "加拿大",
+        "en": "Canada"
+      },
+      "national_team_stats": {
+        "caps": 45,
+        "goals": 14
+      },
+      "highlights_zh": [
+        "德甲最佳左后卫",
+        "加拿大队史出场纪录",
+        "速度极快"
+      ],
+      "highlights_en": [
+        "Best left-back in Bundesliga",
+        "Canada's most capped player",
+        "Extremely fast"
+      ],
+      "ai_impact": {
+        "score": 88,
+        "description_zh": "加拿大核心，世界级左后卫",
+        "description_en": "Canada's core, world-class left-back"
+      }
+    },
+    "alvarez": {
+      "id": "alvarez",
+      "names": {
+        "zh": "朱利安·阿尔瓦雷斯",
+        "en": "Julian Alvarez"
+      },
+      "team_id": "argentina",
+      "position": "Forward",
+      "position_short": "FW",
+      "position_zh": "前锋",
+      "age": 24,
+      "club": "Atletico Madrid",
+      "nationality": {
+        "zh": "阿根廷",
+        "en": "Argentina"
+      },
+      "national_team_stats": {
+        "caps": 35,
+        "goals": 8
+      },
+      "highlights_zh": [
+        "2022年世界杯冠军成员",
+        "曼城冠军成员",
+        "跑动覆盖面积大"
+      ],
+      "highlights_en": [
+        "2022 World Cup Champion",
+        "Manchester City champion",
+        "Covers a lot of ground"
+      ],
+      "ai_impact": {
+        "score": 87,
+        "description_zh": "阿根廷锋线活力来源",
+        "description_en": "Argentina's attacking energy source"
+      }
+    },
+    "macallister": {
+      "id": "macallister",
+      "names": {
+        "zh": "亚历克西斯·麦卡利斯特",
+        "en": "Alexis Mac Allister"
+      },
+      "team_id": "argentina",
+      "position": "Midfielder",
+      "position_short": "MF",
+      "position_zh": "中场",
+      "age": 25,
+      "club": "Liverpool",
+      "nationality": {
+        "zh": "阿根廷",
+        "en": "Argentina"
+      },
+      "national_team_stats": {
+        "caps": 28,
+        "goals": 4
+      },
+      "highlights_zh": [
+        "2022年世界杯冠军成员",
+        "利物浦中场核心",
+        "2024足总杯冠军"
+      ],
+      "highlights_en": [
+        "2022 World Cup Champion",
+        "Liverpool's midfield core",
+        "2024 FA Cup winner"
+      ],
+      "ai_impact": {
+        "score": 85,
+        "description_zh": "阿根廷中场节拍器",
+        "description_en": "Argentina's midfield metronome"
+      }
+    },
+    "gavi": {
+      "id": "gavi",
+      "names": {
+        "zh": "加维",
+        "en": "Gavi"
+      },
+      "team_id": "spain",
+      "position": "Midfielder",
+      "position_short": "MF",
+      "position_zh": "中场",
+      "age": 20,
+      "club": "Barcelona",
+      "nationality": {
+        "zh": "西班牙",
+        "en": "Spain"
+      },
+      "national_team_stats": {
+        "caps": 25,
+        "goals": 3
+      },
+      "highlights_zh": [
+        "2022年科帕奖得主",
+        "西班牙未来中场核心",
+        "年轻有活力"
+      ],
+      "highlights_en": [
+        "2022 Kopa Trophy winner",
+        "Spain's future midfield core",
+        "Youthful and energetic"
+      ],
+      "ai_impact": {
+        "score": 86,
+        "description_zh": "西班牙新星，中场活力",
+        "description_en": "Spain's rising star, midfield energy"
+      }
+    },
+    "pedri": {
+      "id": "pedri",
+      "names": {
+        "zh": "佩德里",
+        "en": "Pedri"
+      },
+      "team_id": "spain",
+      "position": "Midfielder",
+      "position_short": "MF",
+      "position_zh": "中场",
+      "age": 22,
+      "club": "Barcelona",
+      "nationality": {
+        "zh": "西班牙",
+        "en": "Spain"
+      },
+      "national_team_stats": {
+        "caps": 32,
+        "goals": 2
+      },
+      "highlights_zh": [
+        "2021年科帕奖得主",
+        "西班牙中场节拍器",
+        "技术精湛"
+      ],
+      "highlights_en": [
+        "2021 Kopa Trophy winner",
+        "Spain's midfield metronome",
+        "Excellent technique"
+      ],
+      "ai_impact": {
+        "score": 87,
+        "description_zh": "西班牙中场控制核心",
+        "description_en": "Spain's midfield control core"
+      }
+    },
+    "griezmann": {
+      "id": "griezmann",
+      "names": {
+        "zh": "安托万·格里兹曼",
+        "en": "Antoine Griezmann"
+      },
+      "team_id": "france",
+      "position": "Forward",
+      "position_short": "FW",
+      "position_zh": "前锋",
+      "age": 33,
+      "club": "Atletico Madrid",
+      "nationality": {
+        "zh": "法国",
+        "en": "France"
+      },
+      "national_team_stats": {
+        "caps": 128,
+        "goals": 54
+      },
+      "highlights_zh": [
+        "2018年世界杯冠军成员",
+        "法国历史最佳射手之一",
+        "全能前锋"
+      ],
+      "highlights_en": [
+        "2018 World Cup Champion",
+        "One of France's all-time top scorers",
+        "Complete forward"
+      ],
+      "ai_impact": {
+        "score": 87,
+        "description_zh": "法国进攻核心之一",
+        "description_en": "One of France's attacking cores"
+      }
+    },
+    "kante": {
+      "id": "kante",
+      "names": {
+        "zh": "恩戈洛·坎特",
+        "en": "N'Golo Kanté"
+      },
+      "team_id": "france",
+      "position": "Midfielder",
+      "position_short": "MF",
+      "position_zh": "中场",
+      "age": 33,
+      "club": "Al-Ittihad",
+      "nationality": {
+        "zh": "法国",
+        "en": "France"
+      },
+      "national_team_stats": {
+        "caps": 106,
+        "goals": 2
+      },
+      "highlights_zh": [
+        "2018年世界杯冠军成员",
+        "2021年欧冠冠军",
+        "拦截机器"
+      ],
+      "highlights_en": [
+        "2018 World Cup Champion",
+        "2021 Champions League winner",
+        "Interception machine"
+      ],
+      "ai_impact": {
+        "score": 85,
+        "description_zh": "法国中场屏障",
+        "description_en": "France's midfield shield"
+      }
+    },
+    "lewandowski": {
+      "id": "lewandowski",
+      "names": {
+        "zh": "罗伯特·莱万多夫斯基",
+        "en": "Robert Lewandowski"
+      },
+      "team_id": "poland",
+      "position": "Forward",
+      "position_short": "FW",
+      "position_zh": "前锋",
+      "age": 36,
+      "club": "Barcelona",
+      "nationality": {
+        "zh": "波兰",
+        "en": "Poland"
+      },
+      "national_team_stats": {
+        "caps": 155,
+        "goals": 86
+      },
+      "highlights_zh": [
+        "波兰队史最佳射手",
+        "两届德甲最佳射手",
+        "禁区终结者"
+      ],
+      "highlights_en": [
+        "Poland's all-time top scorer",
+        "Two-time Bundesliga top scorer",
+        "Penalty box predator"
+      ],
+      "ai_impact": {
+        "score": 88,
+        "description_zh": "波兰绝对核心",
+        "description_en": "Poland's absolute core"
+      }
+    },
+    "szczesny": {
+      "id": "szczesny",
+      "names": {
+        "zh": "沃伊切赫·什琴斯尼",
+        "en": "Wojciech Szczęsny"
+      },
+      "team_id": "poland",
+      "position": "Goalkeeper",
+      "position_short": "GK",
+      "position_zh": "门将",
+      "age": 34,
+      "club": "Barcelona",
+      "nationality": {
+        "zh": "波兰",
+        "en": "Poland"
+      },
+      "national_team_stats": {
+        "caps": 84,
+        "goals": 0
+      },
+      "highlights_zh": [
+        "波兰主力门将",
+        "意甲最佳门将",
+        "关键扑救能力"
+      ],
+      "highlights_en": [
+        "Poland's main goalkeeper",
+        "Best Serie A goalkeeper",
+        "Key saves ability"
+      ],
+      "ai_impact": {
+        "score": 83,
+        "description_zh": "波兰最后一道防线",
+        "description_en": "Poland's last line of defense"
+      }
+    },
+    "mitrovic": {
+      "id": "mitrovic",
+      "names": {
+        "zh": "亚历山大·米特洛维奇",
+        "en": "Aleksandar Mitrović"
+      },
+      "team_id": "serbia",
+      "position": "Forward",
+      "position_short": "FW",
+      "position_zh": "前锋",
+      "age": 30,
+      "club": "Al-Hilal",
+      "nationality": {
+        "zh": "塞尔维亚",
+        "en": "Serbia"
+      },
+      "national_team_stats": {
+        "caps": 92,
+        "goals": 63
+      },
+      "highlights_zh": [
+        "塞尔维亚队史最佳射手",
+        "头球能力出众",
+        "禁区支点"
+      ],
+      "highlights_en": [
+        "Serbia's all-time top scorer",
+        "Excellent heading ability",
+        "Penalty box target man"
+      ],
+      "ai_impact": {
+        "score": 84,
+        "description_zh": "塞尔维亚进攻支点",
+        "description_en": "Serbia's attacking pivot"
+      }
+    },
+    "tadic": {
+      "id": "tadic",
+      "names": {
+        "zh": "杜桑·塔迪奇",
+        "en": "Dušan Tadić"
+      },
+      "team_id": "serbia",
+      "position": "Forward",
+      "position_short": "FW",
+      "position_zh": "前锋",
+      "age": 35,
+      "club": "Fenerbahçe",
+      "nationality": {
+        "zh": "塞尔维亚",
+        "en": "Serbia"
+      },
+      "national_team_stats": {
+        "caps": 114,
+        "goals": 21
+      },
+      "highlights_zh": [
+        "塞尔维亚进攻核心",
+        "阿贾克斯传奇",
+        "组织能力"
+      ],
+      "highlights_en": [
+        "Serbia's attacking core",
+        "Ajax legend",
+        "Playmaking ability"
+      ],
+      "ai_impact": {
+        "score": 82,
+        "description_zh": "塞尔维亚老将核心",
+        "description_en": "Serbia's veteran core"
+      }
+    },
+    "valencia": {
+      "id": "valencia",
+      "names": {
+        "zh": "恩纳·瓦伦西亚",
+        "en": "Enner Valencia"
+      },
+      "team_id": "ecuador",
+      "position": "Forward",
+      "position_short": "FW",
+      "position_zh": "前锋",
+      "age": 35,
+      "club": "Internacional",
+      "nationality": {
+        "zh": "厄瓜多尔",
+        "en": "Ecuador"
+      },
+      "national_team_stats": {
+        "caps": 62,
+        "goals": 42
+      },
+      "highlights_zh": [
+        "厄瓜多尔队史最佳射手",
+        "三届世界杯球员",
+        "核心领袖"
+      ],
+      "highlights_en": [
+        "Ecuador's all-time top scorer",
+        "Three-time World Cup player",
+        "Core leader"
+      ],
+      "ai_impact": {
+        "score": 82,
+        "description_zh": "厄瓜多尔灵魂人物",
+        "description_en": "Ecuador's soul player"
+      }
+    },
+    "nunez": {
+      "id": "nunez",
+      "names": {
+        "zh": "达尔文·努涅斯",
+        "en": "Darwin Núñez"
+      },
+      "team_id": "uruguay",
+      "position": "Forward",
+      "position_short": "FW",
+      "position_zh": "前锋",
+      "age": 25,
+      "club": "Liverpool",
+      "nationality": {
+        "zh": "乌拉圭",
+        "en": "Uruguay"
+      },
+      "national_team_stats": {
+        "caps": 25,
+        "goals": 7
+      },
+      "highlights_zh": [
+        "乌拉圭新生代前锋",
+        "利物浦进攻选项",
+        "速度与力量"
+      ],
+      "highlights_en": [
+        "Uruguay's new generation striker",
+        "Liverpool's attacking option",
+        "Speed and power"
+      ],
+      "ai_impact": {
+        "score": 83,
+        "description_zh": "乌拉圭锋线新希望",
+        "description_en": "Uruguay's new attacking hope"
+      }
+    },
+    "valverde": {
+      "id": "valverde",
+      "names": {
+        "zh": "费德里科·巴尔韦德",
+        "en": "Federico Valverde"
+      },
+      "team_id": "uruguay",
+      "position": "Midfielder",
+      "position_short": "MF",
+      "position_zh": "中场",
+      "age": 26,
+      "club": "Real Madrid",
+      "nationality": {
+        "zh": "乌拉圭",
+        "en": "Uruguay"
+      },
+      "national_team_stats": {
+        "caps": 32,
+        "goals": 5
+      },
+      "highlights_zh": [
+        "皇马中场主力",
+        "2024欧冠冠军",
+        "攻守兼备"
+      ],
+      "highlights_en": [
+        "Real Madrid's midfield starter",
+        "2024 Champions League winner",
+        "Balanced attack and defense"
+      ],
+      "ai_impact": {
+        "score": 86,
+        "description_zh": "乌拉圭中场核心",
+        "description_en": "Uruguay's midfield core"
+      }
+    },
+    "james": {
+      "id": "james",
+      "names": {
+        "zh": "哈梅斯·罗德里格斯",
+        "en": "James Rodríguez"
+      },
+      "team_id": "colombia",
+      "position": "Midfielder",
+      "position_short": "MF",
+      "position_zh": "中场",
+      "age": 33,
+      "club": "Olympiacos",
+      "nationality": {
+        "zh": "哥伦比亚",
+        "en": "Colombia"
+      },
+      "national_team_stats": {
+        "caps": 85,
+        "goals": 25
+      },
+      "highlights_zh": [
+        "2014年世界杯金靴",
+        "哥伦比亚标志性人物",
+        "组织进攻能力"
+      ],
+      "highlights_en": [
+        "2014 World Cup Golden Boot",
+        "Colombia's iconic player",
+        "Playmaking ability"
+      ],
+      "ai_impact": {
+        "score": 81,
+        "description_zh": "哥伦比亚精神领袖",
+        "description_en": "Colombia's spiritual leader"
+      }
+    },
+    "lozano": {
+      "id": "lozano",
+      "names": {
+        "zh": "哈维尔·洛萨诺",
+        "en": "Hirving Lozano"
+      },
+      "team_id": "mexico",
+      "position": "Forward",
+      "position_short": "FW",
+      "position_zh": "前锋",
+      "age": 29,
+      "club": "PSV Eindhoven",
+      "nationality": {
+        "zh": "墨西哥",
+        "en": "Mexico"
+      },
+      "national_team_stats": {
+        "caps": 68,
+        "goals": 18
+      },
+      "highlights_zh": [
+        "墨西哥进攻核心",
+        "PSV最佳射手",
+        "速度型边锋"
+      ],
+      "highlights_en": [
+        "Mexico's attacking core",
+        "PSV's top scorer",
+        "Speed winger"
+      ],
+      "ai_impact": {
+        "score": 81,
+        "description_zh": "墨西哥边路突破手",
+        "description_en": "Mexico's winger with breakthrough ability"
+      }
+    },
+    "pulisic": {
+      "id": "pulisic",
+      "names": {
+        "zh": "克里斯蒂安·普利西奇",
+        "en": "Christian Pulisic"
+      },
+      "team_id": "usa",
+      "position": "Forward",
+      "position_short": "FW",
+      "position_zh": "前锋",
+      "age": 26,
+      "club": "AC Milan",
+      "nationality": {
+        "zh": "美国",
+        "en": "United States"
+      },
+      "national_team_stats": {
+        "caps": 72,
+        "goals": 28
+      },
+      "highlights_zh": [
+        "美国队史最佳射手之一",
+        "AC米兰核心",
+        "进攻多样性"
+      ],
+      "highlights_en": [
+        "One of USMNT's top scorers",
+        "AC Milan's core",
+        "Versatile attack"
+      ],
+      "ai_impact": {
+        "score": 83,
+        "description_zh": "美国进攻核心",
+        "description_en": "USA's attacking core"
+      }
+    },
+    "donnarumma": {
+      "id": "donnarumma",
+      "names": {
+        "zh": "詹路易吉·多纳鲁马",
+        "en": "Gianluigi Donnarumma"
+      },
+      "team_id": "italy",
+      "position": "Goalkeeper",
+      "position_short": "GK",
+      "position_zh": "门将",
+      "age": 25,
+      "club": "PSG",
+      "nationality": {
+        "zh": "意大利",
+        "en": "Italy"
+      },
+      "national_team_stats": {
+        "caps": 62,
+        "goals": 0
+      },
+      "highlights_zh": [
+        "2021年欧洲杯金手套",
+        "意大利主力门将",
+        "世界级扑救"
+      ],
+      "highlights_en": [
+        "2021 Euro Golden Glove",
+        "Italy's main goalkeeper",
+        "World-class saves"
+      ],
+      "ai_impact": {
+        "score": 88,
+        "description_zh": "意大利门神",
+        "description_en": "Italy's guardian"
+      }
+    },
+    "chiesa": {
+      "id": "chiesa",
+      "names": {
+        "zh": "费德里科·基耶萨",
+        "en": "Federico Chiesa"
+      },
+      "team_id": "italy",
+      "position": "Forward",
+      "position_short": "FW",
+      "position_zh": "前锋",
+      "age": 27,
+      "club": "Liverpool",
+      "nationality": {
+        "zh": "意大利",
+        "en": "Italy"
+      },
+      "national_team_stats": {
+        "caps": 45,
+        "goals": 8
+      },
+      "highlights_zh": [
+        "2021年欧洲杯冠军成员",
+        "意大利进攻核心",
+        "突破能力"
+      ],
+      "highlights_en": [
+        "2021 Euro Champion",
+        "Italy's attacking core",
+        "Dribbling ability"
+      ],
+      "ai_impact": {
+        "score": 84,
+        "description_zh": "意大利边路利器",
+        "description_en": "Italy's wing weapon"
+      }
+    },
+    "gvardiol": {
+      "id": "gvardiol",
+      "names": {
+        "zh": "约什科·格瓦迪奥尔",
+        "en": "Joško Gvardiol"
+      },
+      "team_id": "croatia",
+      "position": "Defender",
+      "position_short": "DF",
+      "position_zh": "后卫",
+      "age": 23,
+      "club": "Manchester City",
+      "nationality": {
+        "zh": "克罗地亚",
+        "en": "Croatia"
+      },
+      "national_team_stats": {
+        "caps": 28,
+        "goals": 2
+      },
+      "highlights_zh": [
+        "曼城后防核心",
+        "克罗地亚新生代",
+        "出球能力"
+      ],
+      "highlights_en": [
+        "Man City's defensive core",
+        "Croatia's new generation",
+        "Ball-playing ability"
+      ],
+      "ai_impact": {
+        "score": 85,
+        "description_zh": "克罗地亚未来防线核心",
+        "description_en": "Croatia's future defensive core"
+      }
+    },
+    "livakovic": {
+      "id": "livakovic",
+      "names": {
+        "zh": "多米尼克·利瓦科维奇",
+        "en": "Dominik Livaković"
+      },
+      "team_id": "croatia",
+      "position": "Goalkeeper",
+      "position_short": "GK",
+      "position_zh": "门将",
+      "age": 29,
+      "club": "Dinamo Zagreb",
+      "nationality": {
+        "zh": "克罗地亚",
+        "en": "Croatia"
+      },
+      "national_team_stats": {
+        "caps": 42,
+        "goals": 0
+      },
+      "highlights_zh": [
+        "2022年世界杯点球英雄",
+        "克罗地亚主力门将",
+        "扑点专家"
+      ],
+      "highlights_en": [
+        "2022 World Cup penalty hero",
+        "Croatia's main goalkeeper",
+        "Penalty save specialist"
+      ],
+      "ai_impact": {
+        "score": 84,
+        "description_zh": "克罗地亚最后防线",
+        "description_en": "Croatia's last line"
+      }
+    },
+    "hakimi": {
+      "id": "hakimi",
+      "names": {
+        "zh": "阿什拉夫·哈基米",
+        "en": "Achraf Hakimi"
+      },
+      "team_id": "morocco",
+      "position": "Defender",
+      "position_short": "DF",
+      "position_zh": "后卫",
+      "age": 26,
+      "club": "PSG",
+      "nationality": {
+        "zh": "摩洛哥",
+        "en": "Morocco"
+      },
+      "national_team_stats": {
+        "caps": 58,
+        "goals": 10
+      },
+      "highlights_zh": [
+        "2022年世界杯最佳右后卫",
+        "PSG主力",
+        "进攻型边后卫"
+      ],
+      "highlights_en": [
+        "2022 World Cup best right-back",
+        "PSG starter",
+        "Attacking full-back"
+      ],
+      "ai_impact": {
+        "score": 87,
+        "description_zh": "摩洛哥边路核心",
+        "description_en": "Morocco's flank core"
+      }
+    },
+    "ziyech": {
+      "id": "ziyech",
+      "names": {
+        "zh": "哈基姆·齐耶赫",
+        "en": "Hakim Ziyech"
+      },
+      "team_id": "morocco",
+      "position": "Midfielder",
+      "position_short": "MF",
+      "position_zh": "中场",
+      "age": 31,
+      "club": "Galatasaray",
+      "nationality": {
+        "zh": "摩洛哥",
+        "en": "Morocco"
+      },
+      "national_team_stats": {
+        "caps": 55,
+        "goals": 19
+      },
+      "highlights_zh": [
+        "摩洛哥进攻核心",
+        "任意球专家",
+        "组织能力"
+      ],
+      "highlights_en": [
+        "Morocco's attacking core",
+        "Free kick specialist",
+        "Playmaking ability"
+      ],
+      "ai_impact": {
+        "score": 83,
+        "description_zh": "摩洛哥中场指挥官",
+        "description_en": "Morocco's midfield commander"
+      }
+    },
+    "mane": {
+      "id": "mane",
+      "names": {
+        "zh": "萨迪奥·马内",
+        "en": "Sadio Mané"
+      },
+      "team_id": "senegal",
+      "position": "Forward",
+      "position_short": "FW",
+      "position_zh": "前锋",
+      "age": 33,
+      "club": "Al-Ettifaq",
+      "nationality": {
+        "zh": "塞内加尔",
+        "en": "Senegal"
+      },
+      "national_team_stats": {
+        "caps": 107,
+        "goals": 38
+      },
+      "highlights_zh": [
+        "2021非洲杯冠军核心",
+        "塞内加尔队史最佳射手",
+        "拜仁冠军成员"
+      ],
+      "highlights_en": [
+        "2021 AFCON Champion core",
+        "Senegal's all-time top scorer",
+        "Bayern champion"
+      ],
+      "ai_impact": {
+        "score": 84,
+        "description_zh": "塞内加尔灵魂人物",
+        "description_en": "Senegal's soul player"
+      }
+    },
+    "amrabat": {
+      "id": "amrabat",
+      "names": {
+        "zh": "阿姆拉巴特",
+        "en": "Sofyan Amrabat"
+      },
+      "team_id": "morocco",
+      "position": "Midfielder",
+      "position_short": "MF",
+      "position_zh": "中场",
+      "age": 28,
+      "club": "Manchester United",
+      "nationality": {
+        "zh": "摩洛哥",
+        "en": "Morocco"
+      },
+      "national_team_stats": {
+        "caps": 45,
+        "goals": 4
+      },
+      "highlights_zh": [
+        "摩洛哥中场屏障",
+        "2022世界杯表现出色",
+        "防守型中场"
+      ],
+      "highlights_en": [
+        "Morocco's midfield shield",
+        "Excellent in 2022 World Cup",
+        "Defensive midfielder"
+      ],
+      "ai_impact": {
+        "score": 81,
+        "description_zh": "摩洛哥防守中场",
+        "description_en": "Morocco's defensive midfielder"
+      }
+    },
+    "rice": {
+      "id": "rice",
+      "names": {
+        "zh": "德克兰·赖斯",
+        "en": "Declan Rice"
+      },
+      "team_id": "england",
+      "position": "Midfielder",
+      "position_short": "MF",
+      "position_zh": "中场",
+      "age": 26,
+      "club": "Arsenal",
+      "nationality": {
+        "zh": "英格兰",
+        "en": "England"
+      },
+      "national_team_stats": {
+        "caps": 55,
+        "goals": 5
+      },
+      "highlights_zh": [
+        "阿森纳核心",
+        "英格兰中场屏障",
+        "攻守兼备"
+      ],
+      "highlights_en": [
+        "Arsenal's core",
+        "England's midfield shield",
+        "Balanced attack and defense"
+      ],
+      "ai_impact": {
+        "score": 87,
+        "description_zh": "英格兰中场核心",
+        "description_en": "England's midfield core"
+      }
+    },
+    "saka": {
+      "id": "saka",
+      "names": {
+        "zh": "布卡约·萨卡",
+        "en": "Bukayo Saka"
+      },
+      "team_id": "england",
+      "position": "Forward",
+      "position_short": "FW",
+      "position_zh": "前锋",
+      "age": 23,
+      "club": "Arsenal",
+      "nationality": {
+        "zh": "英格兰",
+        "en": "England"
+      },
+      "national_team_stats": {
+        "caps": 38,
+        "goals": 12
+      },
+      "highlights_zh": [
+        "阿森纳核心",
+        "英格兰右边锋",
+        "年轻有潜力"
+      ],
+      "highlights_en": [
+        "Arsenal's core",
+        "England's right winger",
+        "Young with potential"
+      ],
+      "ai_impact": {
+        "score": 87,
+        "description_zh": "英格兰边路希望",
+        "description_en": "England's winger hope"
+      }
+    },
+    "kroos": {
+      "id": "kroos",
+      "names": {
+        "zh": "托尼·克罗斯",
+        "en": "Toni Kroos"
+      },
+      "team_id": "germany",
+      "position": "Midfielder",
+      "position_short": "MF",
+      "position_zh": "中场",
+      "age": 34,
+      "club": "Real Madrid",
+      "nationality": {
+        "zh": "德国",
+        "en": "Germany"
+      },
+      "national_team_stats": {
+        "caps": 113,
+        "goals": 17
+      },
+      "highlights_zh": [
+        "皇马传奇",
+        "中场大师",
+        "传球精准"
+      ],
+      "highlights_en": [
+        "Real Madrid legend",
+        "Midfield maestro",
+        "Precise passing"
+      ],
+      "ai_impact": {
+        "score": 87,
+        "description_zh": "德国中场控制者",
+        "description_en": "Germany's midfield controller"
+      }
+    },
+    "havertz": {
+      "id": "havertz",
+      "names": {
+        "zh": "凯·哈弗茨",
+        "en": "Kai Havertz"
+      },
+      "team_id": "germany",
+      "position": "Forward",
+      "position_short": "FW",
+      "position_zh": "前锋",
+      "age": 25,
+      "club": "Arsenal",
+      "nationality": {
+        "zh": "德国",
+        "en": "Germany"
+      },
+      "national_team_stats": {
+        "caps": 38,
+        "goals": 15
+      },
+      "highlights_zh": [
+        "2024欧冠冠军成员",
+        "德国进攻选项",
+        "多功能前锋"
+      ],
+      "highlights_en": [
+        "2024 Champions League winner",
+        "Germany's attacking option",
+        "Versatile forward"
+      ],
+      "ai_impact": {
+        "score": 82,
+        "description_zh": "德国锋线选择",
+        "description_en": "Germany's forward option"
+      }
+    },
+    "neuer": {
+      "id": "neuer",
+      "names": {
+        "zh": "曼努埃尔·诺伊尔",
+        "en": "Manuel Neuer"
+      },
+      "team_id": "germany",
+      "position": "Goalkeeper",
+      "position_short": "GK",
+      "position_zh": "门将",
+      "age": 39,
+      "club": "Bayern Munich",
+      "nationality": {
+        "zh": "德国",
+        "en": "Germany"
+      },
+      "national_team_stats": {
+        "caps": 124,
+        "goals": 0
+      },
+      "highlights_zh": [
+        "2014年世界杯冠军成员",
+        "门卫战术开创者",
+        "世界最佳门将"
+      ],
+      "highlights_en": [
+        "2014 World Cup Champion",
+        "Sweeper-keeper pioneer",
+        "One of best goalkeepers ever"
+      ],
+      "ai_impact": {
+        "score": 86,
+        "description_zh": "德国门神",
+        "description_en": "Germany's guardian"
+      }
+    },
+    "williams": {
+      "id": "williams",
+      "names": {
+        "zh": "尼科·威廉姆斯",
+        "en": "Nico Williams"
+      },
+      "team_id": "spain",
+      "position": "Forward",
+      "position_short": "FW",
+      "position_zh": "前锋",
+      "age": 22,
+      "club": "Athletic Bilbao",
+      "nationality": {
+        "zh": "西班牙",
+        "en": "Spain"
+      },
+      "national_team_stats": {
+        "caps": 18,
+        "goals": 2
+      },
+      "highlights_zh": [
+        "西班牙边路新星",
+        "突破能力强",
+        "年轻有活力"
+      ],
+      "highlights_en": [
+        "Spain's wing prodigy",
+        "Strong dribbling",
+        "Young and energetic"
+      ],
+      "ai_impact": {
+        "score": 85,
+        "description_zh": "西班牙边路突破手",
+        "description_en": "Spain's winger with breakthrough ability"
+      }
+    },
+    "carlos": {
+      "id": "carlos",
+      "names": {
+        "zh": "达尼·卡沃利",
+        "en": "Dani Carvajal"
+      },
+      "team_id": "spain",
+      "position": "Defender",
+      "position_short": "DF",
+      "position_zh": "后卫",
+      "age": 32,
+      "club": "Real Madrid",
+      "nationality": {
+        "zh": "西班牙",
+        "en": "Spain"
+      },
+      "national_team_stats": {
+        "caps": 48,
+        "goals": 1
+      },
+      "highlights_zh": [
+        "皇马右后卫核心",
+        "2024欧冠冠军",
+        "攻守兼备"
+      ],
+      "highlights_en": [
+        "Real Madrid's right-back core",
+        "2024 Champions League winner",
+        "Balanced attack and defense"
+      ],
+      "ai_impact": {
+        "score": 86,
+        "description_zh": "西班牙右路铁闸",
+        "description_en": "Spain's right flank anchor"
+      }
+    },
+    "fernandes": {
+      "id": "fernandes",
+      "names": {
+        "zh": "布鲁诺·费尔南德斯",
+        "en": "Bruno Fernandes"
+      },
+      "team_id": "portugal",
+      "position": "Midfielder",
+      "position_short": "MF",
+      "position_zh": "中场",
+      "age": 30,
+      "club": "Manchester United",
+      "nationality": {
+        "zh": "葡萄牙",
+        "en": "Portugal"
+      },
+      "national_team_stats": {
+        "caps": 62,
+        "goals": 18
+      },
+      "highlights_zh": [
+        "曼联核心",
+        "葡萄牙中场组织者",
+        "创造力十足"
+      ],
+      "highlights_en": [
+        "Manchester United's core",
+        "Portugal's playmaker",
+        "Extremely creative"
+      ],
+      "ai_impact": {
+        "score": 85,
+        "description_zh": "葡萄牙中场发动机",
+        "description_en": "Portugal's midfield engine"
+      }
+    },
+    "bruno": {
+      "id": "bruno",
+      "names": {
+        "zh": "贝尔纳多·席尔瓦",
+        "en": "Bernardo Silva"
+      },
+      "team_id": "portugal",
+      "position": "Midfielder",
+      "position_short": "MF",
+      "position_zh": "中场",
+      "age": 30,
+      "club": "Manchester City",
+      "nationality": {
+        "zh": "葡萄牙",
+        "en": "Portugal"
+      },
+      "national_team_stats": {
+        "caps": 88,
+        "goals": 12
+      },
+      "highlights_zh": [
+        "曼城核心球员",
+        "葡萄牙技术代表",
+        "多位置能力"
+      ],
+      "highlights_en": [
+        "Manchester City's core player",
+        "Portugal's technical representative",
+        "Multi-position ability"
+      ],
+      "ai_impact": {
+        "score": 86,
+        "description_zh": "葡萄牙技术中场",
+        "description_en": "Portugal's technical midfielder"
+      }
+    },
+    "dias": {
+      "id": "dias",
+      "names": {
+        "zh": "鲁本·迪亚斯",
+        "en": "Rúben Dias"
+      },
+      "team_id": "portugal",
+      "position": "Defender",
+      "position_short": "DF",
+      "position_zh": "后卫",
+      "age": 27,
+      "club": "Manchester City",
+      "nationality": {
+        "zh": "葡萄牙",
+        "en": "Portugal"
+      },
+      "national_team_stats": {
+        "caps": 58,
+        "goals": 3
+      },
+      "highlights_zh": [
+        "曼城后防核心",
+        "2024欧冠冠军",
+        "领袖气质"
+      ],
+      "highlights_en": [
+        "Man City's defensive core",
+        "2024 Champions League winner",
+        "Leadership quality"
+      ],
+      "ai_impact": {
+        "score": 86,
+        "description_zh": "葡萄牙后防领袖",
+        "description_en": "Portugal's defensive leader"
+      }
+    },
+    "lukaku": {
+      "id": "lukaku",
+      "names": {
+        "zh": "罗梅卢·卢卡库",
+        "en": "Romelu Lukaku"
+      },
+      "team_id": "belgium",
+      "position": "Forward",
+      "position_short": "FW",
+      "position_zh": "前锋",
+      "age": 31,
+      "club": "Napoli",
+      "nationality": {
+        "zh": "比利时",
+        "en": "Belgium"
+      },
+      "national_team_stats": {
+        "caps": 112,
+        "goals": 85
+      },
+      "highlights_zh": [
+        "比利时队史最佳射手",
+        "强力中锋",
+        "禁区支点"
+      ],
+      "highlights_en": [
+        "Belgium's all-time top scorer",
+        "Powerful striker",
+        "Penalty box target"
+      ],
+      "ai_impact": {
+        "score": 84,
+        "description_zh": "比利时禁区杀手",
+        "description_en": "Belgium's penalty box predator"
+      }
+    },
+    "doku": {
+      "id": "doku",
+      "names": {
+        "zh": "杰里米·多库",
+        "en": "Jeremy Doku"
+      },
+      "team_id": "belgium",
+      "position": "Forward",
+      "position_short": "FW",
+      "position_zh": "前锋",
+      "age": 22,
+      "club": "Manchester City",
+      "nationality": {
+        "zh": "比利时",
+        "en": "Belgium"
+      },
+      "national_team_stats": {
+        "caps": 22,
+        "goals": 3
+      },
+      "highlights_zh": [
+        "曼城边锋",
+        "速度型突破手",
+        "比利时新生代"
+      ],
+      "highlights_en": [
+        "Manchester City winger",
+        "Speed dribbler",
+        "Belgium's new generation"
+      ],
+      "ai_impact": {
+        "score": 81,
+        "description_zh": "比利时边路新星",
+        "description_en": "Belgium's flank prodigy"
+      }
+    },
+    "sane": {
+      "id": "sane",
+      "names": {
+        "zh": "勒鲁瓦·萨内",
+        "en": "Leroy Sané"
+      },
+      "team_id": "germany",
+      "position": "Forward",
+      "position_short": "FW",
+      "position_zh": "前锋",
+      "age": 28,
+      "club": "Bayern Munich",
+      "nationality": {
+        "zh": "德国",
+        "en": "Germany"
+      },
+      "national_team_stats": {
+        "caps": 58,
+        "goals": 13
+      },
+      "highlights_zh": [
+        "拜仁边锋",
+        "德国进攻选项",
+        "速度与技术"
+      ],
+      "highlights_en": [
+        "Bayern winger",
+        "Germany's attacking option",
+        "Speed and technique"
+      ],
+      "ai_impact": {
+        "score": 83,
+        "description_zh": "德国边路利器",
+        "description_en": "Germany's wing weapon"
+      }
+    },
+    "rüdiger": {
+      "id": "rüdiger",
+      "names": {
+        "zh": "安东尼奥·吕迪格",
+        "en": "Antonio Rüdiger"
+      },
+      "team_id": "germany",
+      "position": "Defender",
+      "position_short": "DF",
+      "position_zh": "后卫",
+      "age": 31,
+      "club": "Real Madrid",
+      "nationality": {
+        "zh": "德国",
+        "en": "Germany"
+      },
+      "national_team_stats": {
+        "caps": 72,
+        "goals": 5
+      },
+      "highlights_zh": [
+        "皇马中卫",
+        "2024欧冠冠军",
+        "防守凶悍"
+      ],
+      "highlights_en": [
+        "Real Madrid center-back",
+        "2024 Champions League winner",
+        "Tough defender"
+      ],
+      "ai_impact": {
+        "score": 84,
+        "description_zh": "德国后防硬汉",
+        "description_en": "Germany's defensive tough guy"
+      }
+    },
+    "upamecano": {
+      "id": "upamecano",
+      "names": {
+        "zh": "达约·于帕梅卡诺",
+        "en": "Dayot Upamecano"
+      },
+      "team_id": "france",
+      "position": "Defender",
+      "position_short": "DF",
+      "position_zh": "后卫",
+      "age": 26,
+      "club": "Bayern Munich",
+      "nationality": {
+        "zh": "法国",
+        "en": "France"
+      },
+      "national_team_stats": {
+        "caps": 12,
+        "goals": 0
+      },
+      "highlights_zh": [
+        "拜仁中卫",
+        "法国后防选项",
+        "速度型防守"
+      ],
+      "highlights_en": [
+        "Bayern center-back",
+        "France's defensive option",
+        "Speed defender"
+      ],
+      "ai_impact": {
+        "score": 82,
+        "description_zh": "法国后防选择",
+        "description_en": "France's defensive choice"
+      }
+    },
+    "pavard": {
+      "id": "pavard",
+      "names": {
+        "zh": "本杰明·帕瓦尔",
+        "en": "Benjamin Pavard"
+      },
+      "team_id": "france",
+      "position": "Defender",
+      "position_short": "DF",
+      "position_zh": "后卫",
+      "age": 28,
+      "club": "Inter Milan",
+      "nationality": {
+        "zh": "法国",
+        "en": "France"
+      },
+      "national_team_stats": {
+        "caps": 55,
+        "goals": 5
+      },
+      "highlights_zh": [
+        "2018年世界杯冠军成员",
+        "国米后卫",
+        "防守稳健"
+      ],
+      "highlights_en": [
+        "2018 World Cup Champion",
+        "Inter Milan defender",
+        "Solid defender"
+      ],
+      "ai_impact": {
+        "score": 82,
+        "description_zh": "法国后防选择",
+        "description_en": "France's defensive option"
+      }
+    },
+    "tonali": {
+      "id": "tonali",
+      "names": {
+        "zh": "桑德罗·托纳利",
+        "en": "Sandro Tonali"
+      },
+      "team_id": "italy",
+      "position": "Midfielder",
+      "position_short": "MF",
+      "position_zh": "中场",
+      "age": 24,
+      "club": "Newcastle United",
+      "nationality": {
+        "zh": "意大利",
+        "en": "Italy"
+      },
+      "national_team_stats": {
+        "caps": 18,
+        "goals": 2
+      },
+      "highlights_zh": [
+        "纽卡中场核心",
+        "意大利未来中场",
+        "攻守平衡"
+      ],
+      "highlights_en": [
+        "Newcastle's midfield core",
+        "Italy's future midfielder",
+        "Balanced player"
+      ],
+      "ai_impact": {
+        "score": 82,
+        "description_zh": "意大利中场新星",
+        "description_en": "Italy's midfield rising star"
+      }
+    },
+    "bastoni": {
+      "id": "bastoni",
+      "names": {
+        "zh": "亚历山德罗·巴斯托尼",
+        "en": "Alessandro Bastoni"
+      },
+      "team_id": "italy",
+      "position": "Defender",
+      "position_short": "DF",
+      "position_zh": "后卫",
+      "age": 25,
+      "club": "Inter Milan",
+      "nationality": {
+        "zh": "意大利",
+        "en": "Italy"
+      },
+      "national_team_stats": {
+        "caps": 22,
+        "goals": 3
+      },
+      "highlights_zh": [
+        "国米中卫",
+        "意大利后防核心",
+        "出球能力"
+      ],
+      "highlights_en": [
+        "Inter Milan center-back",
+        "Italy's defensive core",
+        "Ball-playing ability"
+      ],
+      "ai_impact": {
+        "score": 84,
+        "description_zh": "意大利后防核心",
+        "description_en": "Italy's defensive core"
+      }
+    },
+    "gimenez": {
+      "id": "gimenez",
+      "names": {
+        "zh": "何塞·希门尼斯",
+        "en": "José María Giménez"
+      },
+      "team_id": "uruguay",
+      "position": "Defender",
+      "position_short": "DF",
+      "position_zh": "后卫",
+      "age": 29,
+      "club": "Atletico Madrid",
+      "nationality": {
+        "zh": "乌拉圭",
+        "en": "Uruguay"
+      },
+      "national_team_stats": {
+        "caps": 42,
+        "goals": 5
+      },
+      "highlights_zh": [
+        "马竞中卫",
+        "乌拉圭后防核心",
+        "防守凶悍"
+      ],
+      "highlights_en": [
+        "Atletico Madrid center-back",
+        "Uruguay's defensive core",
+        "Tough defender"
+      ],
+      "ai_impact": {
+        "score": 83,
+        "description_zh": "乌拉圭后防铁闸",
+        "description_en": "Uruguay's defensive anchor"
+      }
+    },
+    "rochet": {
+      "id": "rochet",
+      "names": {
+        "zh": "塞尔吉奥·罗切特",
+        "en": "Sergio Rochet"
+      },
+      "team_id": "uruguay",
+      "position": "Goalkeeper",
+      "position_short": "GK",
+      "position_zh": "门将",
+      "age": 31,
+      "club": "Inter Miami",
+      "nationality": {
+        "zh": "乌拉圭",
+        "en": "Uruguay"
+      },
+      "national_team_stats": {
+        "caps": 18,
+        "goals": 0
+      },
+      "highlights_zh": [
+        "乌拉圭门将",
+        "美职联表现",
+        "稳定发挥"
+      ],
+      "highlights_en": [
+        "Uruguay's goalkeeper",
+        "MLS performance",
+        "Consistent"
+      ],
+      "ai_impact": {
+        "score": 78,
+        "description_zh": "乌拉圭最后防线",
+        "description_en": "Uruguay's last line"
+      }
+    },
+    "saka": {
+      "id": "saka",
+      "names": {
+        "zh": "布卡约·萨卡",
+        "en": "Bukayo Saka"
+      },
+      "team_id": "england",
+      "position": "Forward",
+      "position_short": "FW",
+      "position_zh": "前锋",
+      "age": 23,
+      "club": "Arsenal",
+      "nationality": {
+        "zh": "英格兰",
+        "en": "England"
+      },
+      "national_team_stats": {
+        "caps": 38,
+        "goals": 12
+      },
+      "highlights_zh": [
+        "阿森纳核心",
+        "英格兰右边锋",
+        "年轻有潜力"
+      ],
+      "highlights_en": [
+        "Arsenal's core",
+        "England's right winger",
+        "Young with potential"
+      ],
+      "ai_impact": {
+        "score": 87,
+        "description_zh": "英格兰边路希望",
+        "description_en": "England's winger hope"
+      }
+    }
+  }
+}

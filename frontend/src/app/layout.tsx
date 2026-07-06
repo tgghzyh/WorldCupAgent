@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "@/styles/globals.css";
+import { Providers } from "@/components/Providers";
 
 export const metadata: Metadata = {
   title: "World Cup 2026 AI Prediction | Explainable Tournament Analysis",
@@ -22,7 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="h-full antialiased">
       <body className="min-h-full flex flex-col bg-bg text-text">
-        {children}
+        <Providers>{children}</Providers>
       </body>
     </html>
   );
