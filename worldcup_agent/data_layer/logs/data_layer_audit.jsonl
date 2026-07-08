@@ -1,0 +1,164 @@
+{"ts": "2026-07-04T11:36:49.772427+00:00", "step": "intl.run", "status": "start"}
+{"ts": "2026-07-04T11:36:49.773464+00:00", "step": "intl.download", "status": "start", "url": "https://raw.githubusercontent.com/martj42/international_results/master/results.csv"}
+{"ts": "2026-07-04T11:36:51.884948+00:00", "step": "intl.download", "status": "ok", "bytes": 3726085, "rows_est": 49501}
+{"ts": "2026-07-04T11:36:52.642660+00:00", "step": "intl.cleaned", "status": "ok", "rows": 49501, "path": "intl_results.parquet"}
+{"ts": "2026-07-04T11:36:52.709689+00:00", "step": "intl.summary", "status": "ok", "total_rows": 49501, "unique_teams": 336, "wc_rows": 1060, "of_2026_match": 47}
+{"ts": "2026-07-04T11:36:52.723064+00:00", "step": "intl.wc_only", "status": "ok", "rows": 1060, "path": "world_cup_finals_only.csv"}
+{"ts": "2026-07-04T11:36:53.759753+00:00", "step": "intl.features.team_counts", "status": "ok", "teams": 336, "path": "team_match_counts.csv"}
+{"ts": "2026-07-04T11:36:53.883371+00:00", "step": "intl.features.recent_form", "status": "ok", "teams": 336, "path": "team_recent_form.csv"}
+{"ts": "2026-07-04T11:36:53.888094+00:00", "step": "intl.features.coverage_2026", "status": "ok", "teams_in_dataset": 47, "of_48": 48, "path": "team_2026_history_coverage.csv"}
+{"ts": "2026-07-04T11:36:53.891572+00:00", "step": "intl.run", "status": "ok", "raw_bytes": 3726085, "cleaned_parquet": "C:\\Users\\43021\\Desktop\\ART\\WorldCupAgent\\worldcup_agent\\data_layer\\cleaned\\intl_results.parquet", "feature_tables": 3}
+{"ts": "2026-07-04T11:39:07.332478+00:00", "step": "sb.competitions", "status": "start", "url": "https://raw.githubusercontent.com/statsbomb/open-data/master/data/competitions.json"}
+{"ts": "2026-07-04T11:39:08.921772+00:00", "step": "sb.competitions", "status": "ok", "total": 80, "path": "sb_competitions.json"}
+{"ts": "2026-07-04T11:39:08.921772+00:00", "step": "sb.matches", "status": "start", "url": "https://raw.githubusercontent.com/statsbomb/open-data/master/data/matches/43/106.json"}
+{"ts": "2026-07-04T11:39:10.230252+00:00", "step": "sb.matches", "status": "ok", "comp": 43, "season": 106, "total": 64, "path": "sb_matches_43_106.json"}
+{"ts": "2026-07-04T11:39:59.960656+00:00", "step": "sb.run", "status": "start", "target_cups": ["2022 FIFA World Cup", "2018 FIFA World Cup"]}
+{"ts": "2026-07-04T11:39:59.983651+00:00", "step": "sb.competitions", "status": "ok", "cached": true, "total": 80, "path": "sb_competitions.json"}
+{"ts": "2026-07-04T11:40:00.001297+00:00", "step": "sb.matches", "status": "ok", "cached": true, "comp": 43, "season": 106, "total": 64, "path": "sb_matches_43_106.json"}
+{"ts": "2026-07-04T11:40:00.002372+00:00", "step": "sb.matches", "status": "start", "url": "https://raw.githubusercontent.com/statsbomb/open-data/master/data/matches/43/3.json"}
+{"ts": "2026-07-04T11:40:01.464980+00:00", "step": "sb.matches", "status": "ok", "comp": 43, "season": 3, "total": 64, "path": "sb_matches_43_3.json"}
+{"ts": "2026-07-04T11:40:01.464980+00:00", "step": "sb.matches.total", "status": "ok", "total_matches": 128}
+{"ts": "2026-07-04T11:40:01.465928+00:00", "step": "sb.events.fetch", "status": "start", "total_matches": 128, "target": "2018+2022 WC"}
+{"ts": "2026-07-04T11:40:01.465928+00:00", "step": "sb.events.parallel", "status": "start", "total": 128, "concurrency": 6}
+{"ts": "2026-07-04T11:40:24.881910+00:00", "step": "sb.events.parallel", "status": "ok", "total": 128, "ok": 128, "failed": 0}
+{"ts": "2026-07-04T11:40:25.019736+00:00", "step": "sb.events.progress", "status": "ok", "processed": 16, "total": 128, "shots_so_far": 312, "passes_so_far": 16768, "failures": 0}
+{"ts": "2026-07-04T11:40:25.113878+00:00", "step": "sb.events.progress", "status": "ok", "processed": 32, "total": 128, "shots_so_far": 724, "passes_so_far": 34505, "failures": 0}
+{"ts": "2026-07-04T11:40:26.990078+00:00", "step": "sb.events.progress", "status": "ok", "processed": 48, "total": 128, "shots_so_far": 1123, "passes_so_far": 51729, "failures": 0}
+{"ts": "2026-07-04T11:40:27.069574+00:00", "step": "sb.events.progress", "status": "ok", "processed": 64, "total": 128, "shots_so_far": 1494, "passes_so_far": 68515, "failures": 0}
+{"ts": "2026-07-04T11:40:27.171952+00:00", "step": "sb.events.progress", "status": "ok", "processed": 80, "total": 128, "shots_so_far": 1931, "passes_so_far": 84266, "failures": 0}
+{"ts": "2026-07-04T11:40:27.258095+00:00", "step": "sb.events.progress", "status": "ok", "processed": 96, "total": 128, "shots_so_far": 2354, "passes_so_far": 100270, "failures": 0}
+{"ts": "2026-07-04T11:40:27.359485+00:00", "step": "sb.events.progress", "status": "ok", "processed": 112, "total": 128, "shots_so_far": 2775, "passes_so_far": 115765, "failures": 0}
+{"ts": "2026-07-04T11:40:27.460927+00:00", "step": "sb.events.progress", "status": "ok", "processed": 128, "total": 128, "shots_so_far": 3200, "passes_so_far": 131396, "failures": 0}
+{"ts": "2026-07-04T11:40:27.676808+00:00", "step": "sb.shots", "status": "ok", "rows": 3200, "path": "statsbomb_shots.parquet"}
+{"ts": "2026-07-04T11:40:28.453641+00:00", "step": "sb.passes", "status": "ok", "rows": 131396, "path": "statsbomb_passes.parquet"}
+{"ts": "2026-07-04T11:40:28.526504+00:00", "step": "sb.features.team_xg", "status": "ok", "teams": 40, "path": "team_xg_summary_2018_2022.csv", "total_shots": 3200, "total_xg": 391.33}
+{"ts": "2026-07-04T11:47:54.708383+00:00", "step": "pipeline.run", "status": "start", "started_at": "2026-07-04T11:47:54.708383+00:00"}
+{"ts": "2026-07-04T11:47:54.708383+00:00", "step": "intl.run", "status": "start"}
+{"ts": "2026-07-04T11:47:54.709623+00:00", "step": "intl.download", "status": "ok", "cached": true, "bytes": 3726085, "path": "intl_results_raw.csv"}
+{"ts": "2026-07-04T11:47:55.142945+00:00", "step": "intl.cleaned", "status": "ok", "rows": 49501, "path": "intl_results.parquet"}
+{"ts": "2026-07-04T11:47:55.164598+00:00", "step": "intl.summary", "status": "ok", "total_rows": 49501, "unique_teams": 336, "wc_rows": 1060, "of_2026_match": 48}
+{"ts": "2026-07-04T11:47:55.173234+00:00", "step": "intl.wc_only", "status": "ok", "rows": 1060, "path": "world_cup_finals_only.csv"}
+{"ts": "2026-07-04T11:47:55.947290+00:00", "step": "intl.features.team_counts", "status": "ok", "teams": 336, "path": "team_match_counts.csv"}
+{"ts": "2026-07-04T11:47:56.026402+00:00", "step": "intl.features.recent_form", "status": "ok", "teams": 336, "path": "team_recent_form.csv"}
+{"ts": "2026-07-04T11:47:56.028421+00:00", "step": "intl.features.coverage_2026", "status": "ok", "teams_in_dataset": 48, "of_48": 48, "path": "team_2026_history_coverage.csv"}
+{"ts": "2026-07-04T11:47:56.030748+00:00", "step": "intl.run", "status": "ok", "raw_bytes": 3726085, "cleaned_parquet": "C:\\Users\\43021\\Desktop\\ART\\WorldCupAgent\\worldcup_agent\\data_layer\\cleaned\\intl_results.parquet", "feature_tables": 3}
+{"ts": "2026-07-04T11:47:56.032800+00:00", "step": "fd.run", "status": "start"}
+{"ts": "2026-07-04T11:47:56.032800+00:00", "step": "fd.fixtures", "status": "start", "url": "https://www.football-data.co.uk/fixtures.csv"}
+{"ts": "2026-07-04T11:47:58.280840+00:00", "step": "fd.fixtures", "status": "ok", "bytes": 4401, "rows": 12, "path": "footballdata_fixtures.csv"}
+{"ts": "2026-07-04T11:47:58.368383+00:00", "step": "fd.cleaned", "status": "ok", "rows": 12, "path": "footballdata_fixtures.parquet"}
+{"ts": "2026-07-04T11:47:58.370904+00:00", "step": "fd.summary", "status": "ok", "total": 12, "divisions": 2}
+{"ts": "2026-07-04T11:47:58.371908+00:00", "step": "fd.run", "status": "ok", "raw_bytes": 4401, "rows": 12}
+{"ts": "2026-07-04T11:47:58.372914+00:00", "step": "wiki.run", "status": "start"}
+{"ts": "2026-07-04T11:47:58.378446+00:00", "step": "sb.run", "status": "start", "target_cups": ["2022 FIFA World Cup", "2018 FIFA World Cup"]}
+{"ts": "2026-07-04T11:47:58.379442+00:00", "step": "sb.competitions", "status": "ok", "cached": true, "total": 80, "path": "sb_competitions.json"}
+{"ts": "2026-07-04T11:47:58.384855+00:00", "step": "sb.matches", "status": "ok", "cached": true, "comp": 43, "season": 106, "total": 64, "path": "sb_matches_43_106.json"}
+{"ts": "2026-07-04T11:47:58.390101+00:00", "step": "sb.matches", "status": "ok", "cached": true, "comp": 43, "season": 3, "total": 64, "path": "sb_matches_43_3.json"}
+{"ts": "2026-07-04T11:47:58.391160+00:00", "step": "sb.matches.total", "status": "ok", "total_matches": 128}
+{"ts": "2026-07-04T11:47:58.392174+00:00", "step": "sb.events.fetch", "status": "start", "total_matches": 128, "target": "2018+2022 WC"}
+{"ts": "2026-07-04T11:47:58.393481+00:00", "step": "sb.events.parallel", "status": "start", "total": 128, "concurrency": 6}
+{"ts": "2026-07-04T11:47:59.649824+00:00", "step": "pdf.run", "status": "skip", "reason": "no PDF in raw/fifa_reports/"}
+{"ts": "2026-07-04T11:47:59.651927+00:00", "step": "text.run", "status": "start"}
+{"ts": "2026-07-04T11:47:59.654160+00:00", "step": "text.run", "status": "skip", "reason": "no .txt/.md in raw/tactical_corpus/"}
+{"ts": "2026-07-04T11:47:59.656402+00:00", "step": "pipeline.run", "status": "ok", "elapsed": 4.95, "steps": 6, "report": "pipeline_run.json"}
+{"ts": "2026-07-04T11:48:50.389184+00:00", "step": "pipeline.run", "status": "start", "started_at": "2026-07-04T11:48:50.389184+00:00"}
+{"ts": "2026-07-04T11:48:50.390189+00:00", "step": "intl.run", "status": "start"}
+{"ts": "2026-07-04T11:48:50.390189+00:00", "step": "intl.download", "status": "ok", "cached": true, "bytes": 3726085, "path": "intl_results_raw.csv"}
+{"ts": "2026-07-04T11:48:50.855021+00:00", "step": "intl.cleaned", "status": "ok", "rows": 49501, "path": "intl_results.parquet"}
+{"ts": "2026-07-04T11:48:50.874266+00:00", "step": "intl.summary", "status": "ok", "total_rows": 49501, "unique_teams": 336, "wc_rows": 1060, "of_2026_match": 48}
+{"ts": "2026-07-04T11:48:50.881473+00:00", "step": "intl.wc_only", "status": "ok", "rows": 1060, "path": "world_cup_finals_only.csv"}
+{"ts": "2026-07-04T11:48:51.734960+00:00", "step": "intl.features.team_counts", "status": "ok", "teams": 336, "path": "team_match_counts.csv"}
+{"ts": "2026-07-04T11:48:51.816156+00:00", "step": "intl.features.recent_form", "status": "ok", "teams": 336, "path": "team_recent_form.csv"}
+{"ts": "2026-07-04T11:48:51.819609+00:00", "step": "intl.features.coverage_2026", "status": "ok", "teams_in_dataset": 48, "of_48": 48, "path": "team_2026_history_coverage.csv"}
+{"ts": "2026-07-04T11:48:51.821948+00:00", "step": "intl.run", "status": "ok", "raw_bytes": 3726085, "cleaned_parquet": "C:\\Users\\43021\\Desktop\\ART\\WorldCupAgent\\worldcup_agent\\data_layer\\cleaned\\intl_results.parquet", "feature_tables": 3}
+{"ts": "2026-07-04T11:48:51.823388+00:00", "step": "fd.run", "status": "start"}
+{"ts": "2026-07-04T11:48:51.824789+00:00", "step": "fd.fixtures", "status": "ok", "cached": true, "bytes": 4401, "path": "footballdata_fixtures.csv"}
+{"ts": "2026-07-04T11:48:51.841245+00:00", "step": "fd.cleaned", "status": "ok", "rows": 12, "path": "footballdata_fixtures.parquet"}
+{"ts": "2026-07-04T11:48:51.843230+00:00", "step": "fd.summary", "status": "ok", "total": 12, "divisions": 2}
+{"ts": "2026-07-04T11:48:51.843230+00:00", "step": "fd.run", "status": "ok", "raw_bytes": 4401, "rows": 12}
+{"ts": "2026-07-04T11:48:51.844262+00:00", "step": "wiki.run", "status": "start"}
+{"ts": "2026-07-04T11:48:51.845310+00:00", "step": "wiki.team_summaries", "status": "start", "total": 48}
+{"ts": "2026-07-04T11:48:53.400643+00:00", "step": "wiki.team_summaries.batch", "status": "ok", "batch": 1, "ok": 8}
+{"ts": "2026-07-04T11:48:53.844914+00:00", "step": "wiki.team_summaries.batch", "status": "ok", "batch": 2, "ok": 8}
+{"ts": "2026-07-04T11:48:54.064235+00:00", "step": "wiki.team_summaries.batch", "status": "ok", "batch": 3, "ok": 8}
+{"ts": "2026-07-04T11:48:54.510205+00:00", "step": "wiki.team_summaries.batch", "status": "ok", "batch": 4, "ok": 8}
+{"ts": "2026-07-04T11:48:54.950938+00:00", "step": "wiki.team_summaries.batch", "status": "ok", "batch": 5, "ok": 8}
+{"ts": "2026-07-04T11:48:55.168579+00:00", "step": "wiki.team_summaries.batch", "status": "ok", "batch": 6, "ok": 8}
+{"ts": "2026-07-04T11:48:55.169930+00:00", "step": "wiki.team_summaries", "status": "ok", "total_fetched": 48}
+{"ts": "2026-07-04T11:48:55.171506+00:00", "step": "wiki.wc_2026", "status": "start", "page": "2026_FIFA_World_Cup"}
+{"ts": "2026-07-04T11:48:57.648369+00:00", "step": "wiki.wc_2026", "status": "ok", "bytes": 187704, "path": "wiki_worldcup_2026.txt"}
+{"ts": "2026-07-04T11:48:57.650794+00:00", "step": "wiki.rankings", "status": "start", "page": "FIFA_World_Rankings"}
+{"ts": "2026-07-04T11:48:59.219129+00:00", "step": "wiki.rankings", "status": "ok", "bytes": 85, "path": "wiki_fifa_rankings.txt"}
+{"ts": "2026-07-04T11:48:59.229798+00:00", "step": "wiki.fifa_ranks_parsed", "status": "warn", "entries_found": 0}
+{"ts": "2026-07-04T11:48:59.232914+00:00", "step": "wiki.enriched_json", "status": "ok", "total": 48, "path": "teams_2026_enriched.json"}
+{"ts": "2026-07-04T11:48:59.235142+00:00", "step": "wiki.descriptions_csv", "status": "ok", "path": "wiki_team_descriptions.csv"}
+{"ts": "2026-07-04T11:48:59.236214+00:00", "step": "wiki.run", "status": "ok", "teams": 48, "fifa_ranks": 0, "wc_groups": 12}
+{"ts": "2026-07-04T11:48:59.236214+00:00", "step": "sb.run", "status": "start", "target_cups": ["2022 FIFA World Cup", "2018 FIFA World Cup"]}
+{"ts": "2026-07-04T11:48:59.237359+00:00", "step": "sb.competitions", "status": "ok", "cached": true, "total": 80, "path": "sb_competitions.json"}
+{"ts": "2026-07-04T11:48:59.242400+00:00", "step": "sb.matches", "status": "ok", "cached": true, "comp": 43, "season": 106, "total": 64, "path": "sb_matches_43_106.json"}
+{"ts": "2026-07-04T11:48:59.244794+00:00", "step": "sb.matches", "status": "ok", "cached": true, "comp": 43, "season": 3, "total": 64, "path": "sb_matches_43_3.json"}
+{"ts": "2026-07-04T11:48:59.245896+00:00", "step": "sb.matches.total", "status": "ok", "total_matches": 128}
+{"ts": "2026-07-04T11:48:59.245896+00:00", "step": "sb.events.fetch", "status": "start", "total_matches": 128, "target": "2018+2022 WC"}
+{"ts": "2026-07-04T11:48:59.245896+00:00", "step": "sb.events.parallel", "status": "start", "total": 128, "concurrency": 6}
+{"ts": "2026-07-04T11:49:08.146950+00:00", "step": "sb.events.parallel", "status": "ok", "total": 128, "ok": 128, "failed": 0}
+{"ts": "2026-07-04T11:49:08.269803+00:00", "step": "sb.events.progress", "status": "ok", "processed": 16, "total": 128, "shots_so_far": 312, "passes_so_far": 16768, "failures": 0}
+{"ts": "2026-07-04T11:49:08.405940+00:00", "step": "sb.events.progress", "status": "ok", "processed": 32, "total": 128, "shots_so_far": 724, "passes_so_far": 34505, "failures": 0}
+{"ts": "2026-07-04T11:49:09.925427+00:00", "step": "sb.events.progress", "status": "ok", "processed": 48, "total": 128, "shots_so_far": 1123, "passes_so_far": 51729, "failures": 0}
+{"ts": "2026-07-04T11:49:09.974170+00:00", "step": "sb.events.progress", "status": "ok", "processed": 64, "total": 128, "shots_so_far": 1494, "passes_so_far": 68515, "failures": 0}
+{"ts": "2026-07-04T11:49:10.019045+00:00", "step": "sb.events.progress", "status": "ok", "processed": 80, "total": 128, "shots_so_far": 1931, "passes_so_far": 84266, "failures": 0}
+{"ts": "2026-07-04T11:49:10.062095+00:00", "step": "sb.events.progress", "status": "ok", "processed": 96, "total": 128, "shots_so_far": 2354, "passes_so_far": 100270, "failures": 0}
+{"ts": "2026-07-04T11:49:10.103984+00:00", "step": "sb.events.progress", "status": "ok", "processed": 112, "total": 128, "shots_so_far": 2775, "passes_so_far": 115765, "failures": 0}
+{"ts": "2026-07-04T11:49:10.141020+00:00", "step": "sb.events.progress", "status": "ok", "processed": 128, "total": 128, "shots_so_far": 3200, "passes_so_far": 131396, "failures": 0}
+{"ts": "2026-07-04T11:49:10.217985+00:00", "step": "sb.shots", "status": "ok", "rows": 3200, "path": "statsbomb_shots.parquet"}
+{"ts": "2026-07-04T11:49:10.601072+00:00", "step": "sb.passes", "status": "ok", "rows": 131396, "path": "statsbomb_passes.parquet"}
+{"ts": "2026-07-04T11:49:10.630866+00:00", "step": "sb.features.team_xg", "status": "ok", "teams": 40, "path": "team_xg_summary_2018_2022.csv", "total_shots": 3200, "total_xg": 391.33}
+{"ts": "2026-07-04T11:49:10.647866+00:00", "step": "sb.features.coverage_2026", "status": "ok", "teams_with_xg": 36, "of_48": 48, "path": "team_2026_xg_coverage.csv"}
+{"ts": "2026-07-04T11:49:11.195628+00:00", "step": "pdf.run", "status": "skip", "reason": "no PDF in raw/fifa_reports/"}
+{"ts": "2026-07-04T11:49:11.195628+00:00", "step": "text.run", "status": "start"}
+{"ts": "2026-07-04T11:49:11.196673+00:00", "step": "text.run", "status": "skip", "reason": "no .txt/.md in raw/tactical_corpus/"}
+{"ts": "2026-07-04T11:49:11.197736+00:00", "step": "pipeline.run", "status": "ok", "elapsed": 20.81, "steps": 6, "report": "pipeline_run.json"}
+{"ts": "2026-07-04T12:04:50.211762+00:00", "step": "text.run", "status": "start"}
+{"ts": "2026-07-04T12:04:50.213075+00:00", "step": "text.run", "status": "skip", "reason": "no .txt/.md in raw/tactical_corpus/"}
+{"ts": "2026-07-04T12:05:11.325206+00:00", "step": "pdf.run", "status": "skip", "reason": "no PDF in raw/fifa_reports/"}
+{"ts": "2026-07-04T12:14:21.451226+00:00", "step": "pdf.run", "status": "skip", "reason": "no PDF in raw/fifa_reports/"}
+{"ts": "2026-07-04T12:18:58.105541+00:00", "step": "pdf.llm", "status": "skip", "reason": "no API key (set OPENAI_API_KEY or DASHSCOPE_API_KEY)"}
+{"ts": "2026-07-04T12:19:27.522960+00:00", "step": "pdf.llm", "status": "skip", "reason": "no API key (set OPENAI_API_KEY or DASHSCOPE_API_KEY)"}
+{"ts": "2026-07-04T12:24:16.537284+00:00", "step": "elo.fetch", "status": "start", "url": "https://www.eloratings.net/World.tsv"}
+{"ts": "2026-07-04T12:24:18.358403+00:00", "step": "elo.fetch", "status": "ok", "bytes": 30312, "lines": 244}
+{"ts": "2026-07-04T12:24:18.364897+00:00", "step": "elo.parse", "status": "ok", "teams": 244, "ranks": "1-244"}
+{"ts": "2026-07-04T12:24:18.367300+00:00", "step": "elo.map", "status": "warn", "unmapped_codes": ["CH", "NO", "TR", "UA", "RU", "SQ", "VE", "CL", "KO", "HU", "CD", "IE", "SI", "CZ", "SK", "GE", "IL", "RO", "UZ", "JO", "CV", "AL", "EI", "BA", "SA", "NM", "ML", "HN", "IS", "IQ", "AO", "AE", "FI", "BY", "HT", "GT", "SY", "OM", "PS", "GN", "ME", "BG", "LU", "NS", "CW", "SR", "KZ", "CN", "KD", "LY", "GM", "BH", "BJ", "GA", "UG", "TT", "FO", "NE", "MG", "GQ", "TG", "TH", "KP", "KM", "AM", "ZW", "ID", "KE", "EE", "VN", "SD", "RE", "SV", "MZ", "SL", "GP", "RW", "NI", "KW", "MR", "AZ", "ZN", "CY", "TZ", "MQ", "LR", "NA", "KG", "MY", "GY", "LB", "LV", "ET", "NC", "TJ", "BI", "DO", "LT", "MD", "BW", "MT", "GW", "CU", "MW", "CF", "GF", "YT", "TM", "CG", "ER", "LS", "YE", "PH", "TI", "SW", "VC", "PG", "PR", "SG", "IN", "BM", "VU", "SS", "FJ", "HK", "GD", "AD", "MU", "TD", "BZ", "SB", "MF", "ST", "KN", "GI", "JS", "LC", "EH", "MM", "AW", "SO", "SX", "MS", "AF", "GL", "BD", "DJ", "DM", "PK", "MC", "BB", "AG", "LI", "NP", "KH", "SC", "LK", "SM", "TW", "BQ", "MV", "KY", "HG", "TV", "VG", "EU", "LA", "TL", "WS", "MN", "BL", "GU", "WF", "VA", "AB", "BS", "PM", "TC", "AI", "TE", "VI", "BT", "CK", "MO", "CX", "BN", "FK", "FM", "MH", "KI", "TO", "NU", "MP", "CC", "PW", "AS"]}
+{"ts": "2026-07-04T12:24:18.372366+00:00", "step": "elo.coverage", "status": "ok", "matched": 49, "expected": 48, "missing": null}
+{"ts": "2026-07-04T12:24:18.378503+00:00", "step": "elo.persist", "status": "ok", "path": "C:\\Users\\43021\\Desktop\\ART\\WorldCupAgent\\worldcup_agent\\data_layer\\features\\team_elo_rankings.csv"}
+{"ts": "2026-07-04T12:24:18.383402+00:00", "step": "elo.enriched_patch", "status": "ok", "patched": 48, "path": "C:\\Users\\43021\\Desktop\\ART\\WorldCupAgent\\worldcup_agent\\data_layer\\cleaned\\teams_2026_enriched.json"}
+{"ts": "2026-07-04T12:26:39.385797+00:00", "step": "elo.fetch", "status": "start", "url": "https://www.eloratings.net/World.tsv"}
+{"ts": "2026-07-04T12:26:41.187836+00:00", "step": "elo.fetch", "status": "ok", "bytes": 30312, "lines": 244}
+{"ts": "2026-07-04T12:26:41.192471+00:00", "step": "elo.parse", "status": "ok", "teams": 244, "ranks": "1-244"}
+{"ts": "2026-07-04T12:26:41.194687+00:00", "step": "elo.map", "status": "warn", "unmapped_codes": ["CH", "NO", "TR", "UA", "RU", "SQ", "VE", "CL", "KO", "HU", "CD", "IE", "SI", "CZ", "SK", "GE", "IL", "RO", "UZ", "JO", "CV", "AL", "EI", "BA", "SA", "NM", "ML", "HN", "IS", "IQ", "AO", "AE", "FI", "BY", "HT", "GT", "SY", "OM", "PS", "GN", "ME", "BG", "LU", "NS", "CW", "SR", "KZ", "CN", "KD", "LY", "GM", "BH", "BJ", "GA", "UG", "TT", "FO", "NE", "MG", "GQ", "TG", "TH", "KP", "KM", "AM", "ZW", "ID", "KE", "EE", "VN", "SD", "RE", "SV", "MZ", "SL", "GP", "RW", "NI", "KW", "MR", "AZ", "ZN", "CY", "TZ", "MQ", "LR", "NA", "KG", "MY", "GY", "LB", "LV", "ET", "NC", "TJ", "BI", "DO", "LT", "MD", "BW", "MT", "GW", "CU", "MW", "CF", "GF", "YT", "TM", "CG", "ER", "LS", "YE", "PH", "TI", "SW", "VC", "PG", "PR", "SG", "IN", "BM", "VU", "SS", "FJ", "HK", "GD", "AD", "MU", "TD", "BZ", "SB", "MF", "ST", "KN", "GI", "JS", "LC", "EH", "MM", "AW", "SO", "SX", "MS", "AF", "GL", "BD", "DJ", "DM", "PK", "MC", "BB", "AG", "LI", "NP", "KH", "SC", "LK", "SM", "TW", "BQ", "MV", "KY", "HG", "TV", "VG", "EU", "LA", "TL", "WS", "MN", "BL", "GU", "WF", "VA", "AB", "BS", "PM", "TC", "AI", "TE", "VI", "BT", "CK", "MO", "CX", "BN", "FK", "FM", "MH", "KI", "TO", "NU", "MP", "CC", "PW", "AS"]}
+{"ts": "2026-07-04T12:26:41.201875+00:00", "step": "elo.coverage", "status": "ok", "matched": 49, "expected": 48, "missing": null}
+{"ts": "2026-07-04T12:26:41.207878+00:00", "step": "elo.persist", "status": "ok", "path": "C:\\Users\\43021\\Desktop\\ART\\WorldCupAgent\\worldcup_agent\\data_layer\\features\\team_elo_rankings.csv"}
+{"ts": "2026-07-04T12:26:41.221041+00:00", "step": "elo.enriched_patch", "status": "ok", "patched": 48, "path": "C:\\Users\\43021\\Desktop\\ART\\WorldCupAgent\\worldcup_agent\\data_layer\\cleaned\\teams_2026_enriched.json"}
+{"ts": "2026-07-04T12:27:07.696999+00:00", "step": "elo.fetch", "status": "start", "url": "https://www.eloratings.net/World.tsv"}
+{"ts": "2026-07-04T12:27:09.515636+00:00", "step": "elo.fetch", "status": "ok", "bytes": 30312, "lines": 244}
+{"ts": "2026-07-04T12:27:09.520942+00:00", "step": "elo.parse", "status": "ok", "teams": 244, "ranks": "1-244"}
+{"ts": "2026-07-04T12:27:09.522958+00:00", "step": "elo.map", "status": "warn", "unmapped_codes": ["CH", "NO", "TR", "UA", "RU", "SQ", "VE", "CL", "KO", "HU", "CD", "IE", "SI", "CZ", "SK", "GE", "IL", "RO", "UZ", "JO", "CV", "AL", "EI", "BA", "SA", "NM", "ML", "HN", "IS", "IQ", "AO", "AE", "FI", "BY", "HT", "GT", "SY", "OM", "PS", "GN", "ME", "BG", "LU", "NS", "CW", "SR", "KZ", "CN", "KD", "LY", "GM", "BH", "BJ", "GA", "UG", "TT", "FO", "NE", "MG", "GQ", "TG", "TH", "KP", "KM", "AM", "ZW", "ID", "KE", "EE", "VN", "SD", "RE", "SV", "MZ", "SL", "GP", "RW", "NI", "KW", "MR", "AZ", "ZN", "CY", "TZ", "MQ", "LR", "NA", "KG", "MY", "GY", "LB", "LV", "ET", "NC", "TJ", "BI", "DO", "LT", "MD", "BW", "MT", "GW", "CU", "MW", "CF", "GF", "YT", "TM", "CG", "ER", "LS", "YE", "PH", "TI", "SW", "VC", "PG", "PR", "SG", "IN", "BM", "VU", "SS", "FJ", "HK", "GD", "AD", "MU", "TD", "BZ", "SB", "MF", "ST", "KN", "GI", "JS", "LC", "EH", "MM", "AW", "SO", "SX", "MS", "AF", "GL", "BD", "DJ", "DM", "PK", "MC", "BB", "AG", "LI", "NP", "KH", "SC", "LK", "SM", "TW", "BQ", "MV", "KY", "HG", "TV", "VG", "EU", "LA", "TL", "WS", "MN", "BL", "GU", "WF", "VA", "AB", "BS", "PM", "TC", "AI", "TE", "VI", "BT", "CK", "MO", "CX", "BN", "FK", "FM", "MH", "KI", "TO", "NU", "MP", "CC", "PW", "AS"]}
+{"ts": "2026-07-04T12:27:09.528584+00:00", "step": "elo.coverage", "status": "ok", "matched": 48, "expected": 48, "missing": null}
+{"ts": "2026-07-04T12:27:09.533050+00:00", "step": "elo.persist", "status": "ok", "path": "C:\\Users\\43021\\Desktop\\ART\\WorldCupAgent\\worldcup_agent\\data_layer\\features\\team_elo_rankings.csv"}
+{"ts": "2026-07-04T12:27:09.545786+00:00", "step": "elo.enriched_patch", "status": "ok", "patched": 48, "path": "C:\\Users\\43021\\Desktop\\ART\\WorldCupAgent\\worldcup_agent\\data_layer\\cleaned\\teams_2026_enriched.json"}
+{"ts": "2026-07-04T12:28:00.501682+00:00", "step": "pdf.llm", "status": "skip", "reason": "no API key (set OPENAI_API_KEY or DASHSCOPE_API_KEY)"}
+{"ts": "2026-07-04T12:53:10.773212+00:00", "step": "wiki.run", "status": "start"}
+{"ts": "2026-07-04T12:53:10.775718+00:00", "step": "wiki.team_summaries", "status": "start", "total": 48}
+{"ts": "2026-07-04T12:53:12.463658+00:00", "step": "wiki.team_summaries.batch", "status": "ok", "batch": 1, "ok": 8}
+{"ts": "2026-07-04T12:53:12.923991+00:00", "step": "wiki.team_summaries.batch", "status": "ok", "batch": 2, "ok": 8}
+{"ts": "2026-07-04T12:53:13.373377+00:00", "step": "wiki.team_summaries.batch", "status": "ok", "batch": 3, "ok": 8}
+{"ts": "2026-07-04T12:53:13.931876+00:00", "step": "wiki.team_summaries.batch", "status": "ok", "batch": 4, "ok": 8}
+{"ts": "2026-07-04T12:53:14.377043+00:00", "step": "wiki.team_summaries.batch", "status": "ok", "batch": 5, "ok": 8}
+{"ts": "2026-07-04T12:53:14.828830+00:00", "step": "wiki.team_summaries.batch", "status": "ok", "batch": 6, "ok": 8}
+{"ts": "2026-07-04T12:53:14.830023+00:00", "step": "wiki.team_summaries", "status": "ok", "total_fetched": 48}
+{"ts": "2026-07-04T12:53:14.833391+00:00", "step": "wiki.wc_2026", "status": "ok", "cached": true, "bytes": 189143, "path": "wiki_worldcup_2026.txt"}
+{"ts": "2026-07-04T12:53:14.836419+00:00", "step": "wiki.rankings", "status": "start", "page": "FIFA_World_Rankings"}
+{"ts": "2026-07-04T12:53:16.364775+00:00", "step": "wiki.rankings", "status": "ok", "bytes": 85, "path": "wiki_fifa_rankings.txt"}
+{"ts": "2026-07-04T12:53:16.374869+00:00", "step": "wiki.fifa_ranks_parsed", "status": "warn", "entries_found": 0}
+{"ts": "2026-07-04T12:53:16.383429+00:00", "step": "wiki.enriched_json", "status": "ok", "total": 48, "path": "teams_2026_enriched.json"}
+{"ts": "2026-07-04T12:53:16.392802+00:00", "step": "wiki.descriptions_csv", "status": "ok", "path": "wiki_team_descriptions.csv"}
+{"ts": "2026-07-04T12:53:16.394053+00:00", "step": "wiki.run", "status": "ok", "teams": 48, "fifa_ranks": 0, "wc_groups": 12}
+{"ts": "2026-07-04T12:53:35.018510+00:00", "step": "elo.cache", "status": "hit", "age_hours": 0.4, "ttl_hours": 168}
+{"ts": "2026-07-04T12:53:35.044277+00:00", "step": "elo.enriched_patch", "status": "ok", "patched": 48, "path": "C:\\Users\\43021\\Desktop\\ART\\WorldCupAgent\\worldcup_agent\\data_layer\\cleaned\\teams_2026_enriched.json"}

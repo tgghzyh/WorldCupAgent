@@ -1,0 +1,370 @@
+{
+  "raw": [
+    {
+      "name": "footballdata_fixtures.csv",
+      "bytes": 4401,
+      "modified": "2026-07-04T11:47:58.279088+00:00"
+    },
+    {
+      "name": "intl_results_raw.csv",
+      "bytes": 3726085,
+      "modified": "2026-07-04T11:36:51.871123+00:00"
+    },
+    {
+      "name": "sb_competitions.json",
+      "bytes": 37288,
+      "modified": "2026-07-04T11:39:08.921773+00:00"
+    },
+    {
+      "name": "sb_matches_43_106.json",
+      "bytes": 135627,
+      "modified": "2026-07-04T11:39:10.230253+00:00"
+    },
+    {
+      "name": "sb_matches_43_3.json",
+      "bytes": 130784,
+      "modified": "2026-07-04T11:40:01.464981+00:00"
+    },
+    {
+      "name": "wiki_fifa_rankings.txt",
+      "bytes": 89,
+      "modified": "2026-07-04T11:48:59.219129+00:00"
+    },
+    {
+      "name": "wiki_team_algeria.json",
+      "bytes": 2610,
+      "modified": "2026-07-04T11:48:54.949939+00:00"
+    },
+    {
+      "name": "wiki_team_argentina.json",
+      "bytes": 3368,
+      "modified": "2026-07-04T11:48:53.395657+00:00"
+    },
+    {
+      "name": "wiki_team_australia.json",
+      "bytes": 2860,
+      "modified": "2026-07-04T11:48:54.510206+00:00"
+    },
+    {
+      "name": "wiki_team_austria.json",
+      "bytes": 2435,
+      "modified": "2026-07-04T11:48:55.165486+00:00"
+    },
+    {
+      "name": "wiki_team_belgium.json",
+      "bytes": 3279,
+      "modified": "2026-07-04T11:48:54.061246+00:00"
+    },
+    {
+      "name": "wiki_team_bolivia.json",
+      "bytes": 2564,
+      "modified": "2026-07-04T11:48:54.947929+00:00"
+    },
+    {
+      "name": "wiki_team_brazil.json",
+      "bytes": 2973,
+      "modified": "2026-07-04T11:48:53.841739+00:00"
+    },
+    {
+      "name": "wiki_team_burkina_faso.json",
+      "bytes": 2577,
+      "modified": "2026-07-04T11:48:54.950938+00:00"
+    },
+    {
+      "name": "wiki_team_cameroon.json",
+      "bytes": 2484,
+      "modified": "2026-07-04T11:48:53.399166+00:00"
+    },
+    {
+      "name": "wiki_team_canada.json",
+      "bytes": 2911,
+      "modified": "2026-07-04T11:48:54.064235+00:00"
+    },
+    {
+      "name": "wiki_team_colombia.json",
+      "bytes": 3329,
+      "modified": "2026-07-04T11:48:54.944321+00:00"
+    },
+    {
+      "name": "wiki_team_costa_rica.json",
+      "bytes": 3468,
+      "modified": "2026-07-04T11:48:54.060249+00:00"
+    },
+    {
+      "name": "wiki_team_croatia.json",
+      "bytes": 3031,
+      "modified": "2026-07-04T11:48:54.062242+00:00"
+    },
+    {
+      "name": "wiki_team_denmark.json",
+      "bytes": 2775,
+      "modified": "2026-07-04T11:48:54.505845+00:00"
+    },
+    {
+      "name": "wiki_team_ecuador.json",
+      "bytes": 2664,
+      "modified": "2026-07-04T11:48:53.397076+00:00"
+    },
+    {
+      "name": "wiki_team_egypt.json",
+      "bytes": 2482,
+      "modified": "2026-07-04T11:48:55.165486+00:00"
+    },
+    {
+      "name": "wiki_team_england.json",
+      "bytes": 3075,
+      "modified": "2026-07-04T11:48:53.835601+00:00"
+    },
+    {
+      "name": "wiki_team_france.json",
+      "bytes": 3193,
+      "modified": "2026-07-04T11:48:54.503851+00:00"
+    },
+    {
+      "name": "wiki_team_germany.json",
+      "bytes": 3636,
+      "modified": "2026-07-04T11:48:54.057258+00:00"
+    },
+    {
+      "name": "wiki_team_ghana.json",
+      "bytes": 2664,
+      "modified": "2026-07-04T11:48:53.844390+00:00"
+    },
+    {
+      "name": "wiki_team_greece.json",
+      "bytes": 2618,
+      "modified": "2026-07-04T11:48:55.168580+00:00"
+    },
+    {
+      "name": "wiki_team_iran.json",
+      "bytes": 2765,
+      "modified": "2026-07-04T11:48:53.840308+00:00"
+    },
+    {
+      "name": "wiki_team_italy.json",
+      "bytes": 3033,
+      "modified": "2026-07-04T11:48:54.507838+00:00"
+    },
+    {
+      "name": "wiki_team_ivory_coast.json",
+      "bytes": 2855,
+      "modified": "2026-07-04T11:48:55.167504+00:00"
+    },
+    {
+      "name": "wiki_team_jamaica.json",
+      "bytes": 2648,
+      "modified": "2026-07-04T11:48:53.398145+00:00"
+    },
+    {
+      "name": "wiki_team_japan.json",
+      "bytes": 2604,
+      "modified": "2026-07-04T11:48:54.059252+00:00"
+    },
+    {
+      "name": "wiki_team_mexico.json",
+      "bytes": 3190,
+      "modified": "2026-07-04T11:48:53.397076+00:00"
+    },
+    {
+      "name": "wiki_team_morocco.json",
+      "bytes": 3263,
+      "modified": "2026-07-04T11:48:54.063239+00:00"
+    },
+    {
+      "name": "wiki_team_netherlands.json",
+      "bytes": 3110,
+      "modified": "2026-07-04T11:48:53.399166+00:00"
+    },
+    {
+      "name": "wiki_team_new_zealand.json",
+      "bytes": 2306,
+      "modified": "2026-07-04T11:48:54.060249+00:00"
+    },
+    {
+      "name": "wiki_team_nigeria.json",
+      "bytes": 3327,
+      "modified": "2026-07-04T11:48:55.166497+00:00"
+    },
+    {
+      "name": "wiki_team_panama.json",
+      "bytes": 2825,
+      "modified": "2026-07-04T11:48:54.946827+00:00"
+    },
+    {
+      "name": "wiki_team_paraguay.json",
+      "bytes": 3560,
+      "modified": "2026-07-04T11:48:54.945827+00:00"
+    },
+    {
+      "name": "wiki_team_peru.json",
+      "bytes": 2702,
+      "modified": "2026-07-04T11:48:54.506843+00:00"
+    },
+    {
+      "name": "wiki_team_poland.json",
+      "bytes": 3017,
+      "modified": "2026-07-04T11:48:55.163441+00:00"
+    },
+    {
+      "name": "wiki_team_portugal.json",
+      "bytes": 3452,
+      "modified": "2026-07-04T11:48:53.843325+00:00"
+    },
+    {
+      "name": "wiki_team_qatar.json",
+      "bytes": 2710,
+      "modified": "2026-07-04T11:48:53.400644+00:00"
+    },
+    {
+      "name": "wiki_team_senegal.json",
+      "bytes": 2032,
+      "modified": "2026-07-04T11:48:54.948929+00:00"
+    },
+    {
+      "name": "wiki_team_serbia.json",
+      "bytes": 2409,
+      "modified": "2026-07-04T11:48:53.843859+00:00"
+    },
+    {
+      "name": "wiki_team_south_africa.json",
+      "bytes": 3103,
+      "modified": "2026-07-04T11:48:54.949939+00:00"
+    },
+    {
+      "name": "wiki_team_south_korea.json",
+      "bytes": 2500,
+      "modified": "2026-07-04T11:48:54.509206+00:00"
+    },
+    {
+      "name": "wiki_team_spain.json",
+      "bytes": 2478,
+      "modified": "2026-07-04T11:48:53.398145+00:00"
+    },
+    {
+      "name": "wiki_team_sweden.json",
+      "bytes": 1908,
+      "modified": "2026-07-04T11:48:55.164445+00:00"
+    },
+    {
+      "name": "wiki_team_tunisia.json",
+      "bytes": 3940,
+      "modified": "2026-07-04T11:48:54.505845+00:00"
+    },
+    {
+      "name": "wiki_team_uruguay.json",
+      "bytes": 2839,
+      "modified": "2026-07-04T11:48:54.506843+00:00"
+    },
+    {
+      "name": "wiki_team_usa.json",
+      "bytes": 3395,
+      "modified": "2026-07-04T11:48:53.839264+00:00"
+    },
+    {
+      "name": "wiki_team_wales.json",
+      "bytes": 2598,
+      "modified": "2026-07-04T11:48:53.841212+00:00"
+    },
+    {
+      "name": "wiki_team_zambia.json",
+      "bytes": 3132,
+      "modified": "2026-07-04T11:48:55.168580+00:00"
+    },
+    {
+      "name": "wiki_worldcup_2026.txt",
+      "bytes": 189143,
+      "modified": "2026-07-04T11:48:57.648369+00:00"
+    }
+  ],
+  "cleaned": [
+    {
+      "name": "footballdata_fixtures.parquet",
+      "bytes": 67094,
+      "modified": "2026-07-04T11:48:51.840240+00:00"
+    },
+    {
+      "name": "footballdata_summary.json",
+      "bytes": 214,
+      "modified": "2026-07-04T11:48:51.842243+00:00"
+    },
+    {
+      "name": "intl_results.parquet",
+      "bytes": 652325,
+      "modified": "2026-07-04T11:48:50.853998+00:00"
+    },
+    {
+      "name": "intl_results_summary.json",
+      "bytes": 828,
+      "modified": "2026-07-04T11:48:50.872530+00:00"
+    },
+    {
+      "name": "statsbomb_failures.json",
+      "bytes": 2,
+      "modified": "2026-07-04T11:49:10.648952+00:00"
+    },
+    {
+      "name": "statsbomb_passes.parquet",
+      "bytes": 1212199,
+      "modified": "2026-07-04T11:49:10.597987+00:00"
+    },
+    {
+      "name": "statsbomb_shots.parquet",
+      "bytes": 83446,
+      "modified": "2026-07-04T11:49:10.217985+00:00"
+    },
+    {
+      "name": "teams_2026_enriched.json",
+      "bytes": 51561,
+      "modified": "2026-07-04T11:48:59.232914+00:00"
+    },
+    {
+      "name": "wiki_extraction_summary.json",
+      "bytes": 363,
+      "modified": "2026-07-04T11:48:59.236214+00:00"
+    },
+    {
+      "name": "world_cup_finals_only.csv",
+      "bytes": 96068,
+      "modified": "2026-07-04T11:48:50.881473+00:00"
+    }
+  ],
+  "features": [
+    {
+      "name": "team_2026_history_coverage.csv",
+      "bytes": 4025,
+      "modified": "2026-07-04T11:48:51.819610+00:00"
+    },
+    {
+      "name": "team_2026_xg_coverage.csv",
+      "bytes": 3113,
+      "modified": "2026-07-04T11:49:10.647866+00:00"
+    },
+    {
+      "name": "team_match_counts.csv",
+      "bytes": 23568,
+      "modified": "2026-07-04T11:48:51.734960+00:00"
+    },
+    {
+      "name": "team_recent_form.csv",
+      "bytes": 10377,
+      "modified": "2026-07-04T11:48:51.816156+00:00"
+    },
+    {
+      "name": "team_xg_summary_2018_2022.csv",
+      "bytes": 1717,
+      "modified": "2026-07-04T11:49:10.630867+00:00"
+    },
+    {
+      "name": "wiki_team_descriptions.csv",
+      "bytes": 4663,
+      "modified": "2026-07-04T11:48:59.235142+00:00"
+    }
+  ],
+  "logs": [
+    {
+      "name": "data_layer_audit.jsonl",
+      "bytes": 17014,
+      "modified": "2026-07-04T11:49:11.197737+00:00"
+    }
+  ]
+}

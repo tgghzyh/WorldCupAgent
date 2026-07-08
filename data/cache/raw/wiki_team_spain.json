@@ -1,0 +1,49 @@
+{
+  "type": "standard",
+  "title": "Spain national football team",
+  "displaytitle": "<span lang=\"en\" dir=\"ltr\"><span class=\"mw-page-title-main\">Spain national football team</span></span>",
+  "namespace": {
+    "id": 0,
+    "text": ""
+  },
+  "wikibase_item": "Q42267",
+  "titles": {
+    "canonical": "Spain_national_football_team",
+    "normalized": "Spain national football team",
+    "display": "<span lang=\"en\" dir=\"ltr\"><span class=\"mw-page-title-main\">Spain national football team</span></span>"
+  },
+  "pageid": 609825,
+  "thumbnail": {
+    "source": "https://upload.wikimedia.org/wikipedia/en/thumb/3/39/Spain_national_football_team_crest.svg/330px-Spain_national_football_team_crest.svg.png",
+    "width": 330,
+    "height": 557
+  },
+  "originalimage": {
+    "source": "https://upload.wikimedia.org/wikipedia/en/thumb/3/39/Spain_national_football_team_crest.svg/250px-Spain_national_football_team_crest.svg.png",
+    "width": 148,
+    "height": 250
+  },
+  "lang": "en",
+  "dir": "ltr",
+  "revision": "1362431830",
+  "tid": "13d322e7-772e-11f1-b19a-f3a15ac2e02d",
+  "timestamp": "2026-07-03T22:25:21Z",
+  "description": "Men's association football team",
+  "description_source": "local",
+  "content_urls": {
+    "desktop": {
+      "page": "https://en.wikipedia.org/wiki/Spain_national_football_team",
+      "revisions": "https://en.wikipedia.org/wiki/Spain_national_football_team?action=history",
+      "edit": "https://en.wikipedia.org/wiki/Spain_national_football_team?action=edit",
+      "talk": "https://en.wikipedia.org/wiki/Talk:Spain_national_football_team"
+    },
+    "mobile": {
+      "page": "https://en.wikipedia.org/wiki/Spain_national_football_team",
+      "revisions": "https://en.wikipedia.org/wiki/Special:History/Spain_national_football_team",
+      "edit": "https://en.wikipedia.org/wiki/Spain_national_football_team?action=edit",
+      "talk": "https://en.wikipedia.org/wiki/Talk:Spain_national_football_team"
+    }
+  },
+  "extract": "The Spain national football team has represented Spain in men's international football competition since 1920. It is governed by the Royal Spanish Football Federation, the governing body for football in Spain.",
+  "extract_html": "<p>The <b>Spain national football team</b> has represented Spain in men's international football competition since 1920. It is governed by the Royal Spanish Football Federation, the governing body for football in Spain.</p>"
+}

@@ -1,0 +1,49 @@
+{
+  "type": "standard",
+  "title": "Ecuador national football team",
+  "displaytitle": "<span lang=\"en\" dir=\"ltr\"><span class=\"mw-page-title-main\">Ecuador national football team</span></span>",
+  "namespace": {
+    "id": 0,
+    "text": ""
+  },
+  "wikibase_item": "Q987584",
+  "titles": {
+    "canonical": "Ecuador_national_football_team",
+    "normalized": "Ecuador national football team",
+    "display": "<span lang=\"en\" dir=\"ltr\"><span class=\"mw-page-title-main\">Ecuador national football team</span></span>"
+  },
+  "pageid": 1016797,
+  "thumbnail": {
+    "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Logo_de_la_Federaci%C3%B3n_Ecuatoriana_de_F%C3%BAtbol_%282%29.svg/330px-Logo_de_la_Federaci%C3%B3n_Ecuatoriana_de_F%C3%BAtbol_%282%29.svg.png",
+    "width": 330,
+    "height": 405
+  },
+  "originalimage": {
+    "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Logo_de_la_Federaci%C3%B3n_Ecuatoriana_de_F%C3%BAtbol_%282%29.svg/330px-Logo_de_la_Federaci%C3%B3n_Ecuatoriana_de_F%C3%BAtbol_%282%29.svg.png",
+    "width": 285,
+    "height": 350
+  },
+  "lang": "en",
+  "dir": "ltr",
+  "revision": "1362475647",
+  "tid": "25d0b49b-7766-11f1-91ed-79d9c63b58e2",
+  "timestamp": "2026-07-04T05:06:43Z",
+  "description": "Men's association football team",
+  "description_source": "local",
+  "content_urls": {
+    "desktop": {
+      "page": "https://en.wikipedia.org/wiki/Ecuador_national_football_team",
+      "revisions": "https://en.wikipedia.org/wiki/Ecuador_national_football_team?action=history",
+      "edit": "https://en.wikipedia.org/wiki/Ecuador_national_football_team?action=edit",
+      "talk": "https://en.wikipedia.org/wiki/Talk:Ecuador_national_football_team"
+    },
+    "mobile": {
+      "page": "https://en.wikipedia.org/wiki/Ecuador_national_football_team",
+      "revisions": "https://en.wikipedia.org/wiki/Special:History/Ecuador_national_football_team",
+      "edit": "https://en.wikipedia.org/wiki/Ecuador_national_football_team?action=edit",
+      "talk": "https://en.wikipedia.org/wiki/Talk:Ecuador_national_football_team"
+    }
+  },
+  "extract": "The Ecuador national football team, nicknamed La Tricolor, represents Ecuador in men's international football and is controlled by the Federación Ecuatoriana de Fútbol. They joined FIFA in 1926 and CONMEBOL a year later.",
+  "extract_html": "<p>The <b>Ecuador national football team</b>, nicknamed <i><b>La Tricolor</b></i>, represents Ecuador in men's international football and is controlled by the Federación Ecuatoriana de Fútbol. They joined FIFA in 1926 and CONMEBOL a year later.</p>"
+}

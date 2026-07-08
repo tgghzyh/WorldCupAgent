@@ -1,0 +1,39 @@
+{
+  "type": "disambiguation",
+  "title": "New Zealand national football team",
+  "displaytitle": "<span lang=\"en\" dir=\"ltr\"><span class=\"mw-page-title-main\">New Zealand national football team</span></span>",
+  "namespace": {
+    "id": 0,
+    "text": ""
+  },
+  "wikibase_item": "Q136682891",
+  "titles": {
+    "canonical": "New_Zealand_national_football_team",
+    "normalized": "New Zealand national football team",
+    "display": "<span lang=\"en\" dir=\"ltr\"><span class=\"mw-page-title-main\">New Zealand national football team</span></span>"
+  },
+  "pageid": 74415661,
+  "lang": "en",
+  "dir": "ltr",
+  "revision": "1318547631",
+  "tid": "e6d36620-b0e8-11f0-bb0a-93738f9483f2",
+  "timestamp": "2025-10-24T14:51:20Z",
+  "description": "Topics referred to by the same term",
+  "description_source": "local",
+  "content_urls": {
+    "desktop": {
+      "page": "https://en.wikipedia.org/wiki/New_Zealand_national_football_team",
+      "revisions": "https://en.wikipedia.org/wiki/New_Zealand_national_football_team?action=history",
+      "edit": "https://en.wikipedia.org/wiki/New_Zealand_national_football_team?action=edit",
+      "talk": "https://en.wikipedia.org/wiki/Talk:New_Zealand_national_football_team"
+    },
+    "mobile": {
+      "page": "https://en.wikipedia.org/wiki/New_Zealand_national_football_team",
+      "revisions": "https://en.wikipedia.org/wiki/Special:History/New_Zealand_national_football_team",
+      "edit": "https://en.wikipedia.org/wiki/New_Zealand_national_football_team?action=edit",
+      "talk": "https://en.wikipedia.org/wiki/Talk:New_Zealand_national_football_team"
+    }
+  },
+  "extract": "New Zealand national football team might refer to:New Zealand men's national football team\nNew Zealand women's national football team\nNew Zealand national American football team\nNew Zealand national Australian rules football team\nNew Zealand national beach soccer team",
+  "extract_html": "<p><b>New Zealand national football team</b> might refer to:</p><ul><li>New Zealand men's national football team</li>\n<li>New Zealand women's national football team</li>\n<li>New Zealand national American football team</li>\n<li>New Zealand national Australian rules football team</li>\n<li>New Zealand national beach soccer team</li></ul>"
+}

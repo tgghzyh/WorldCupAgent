@@ -1,0 +1,49 @@
+{
+  "type": "standard",
+  "title": "Austria national football team",
+  "displaytitle": "<span lang=\"en\" dir=\"ltr\"><span class=\"mw-page-title-main\">Austria national football team</span></span>",
+  "namespace": {
+    "id": 0,
+    "text": ""
+  },
+  "wikibase_item": "Q163534",
+  "titles": {
+    "canonical": "Austria_national_football_team",
+    "normalized": "Austria national football team",
+    "display": "<span lang=\"en\" dir=\"ltr\"><span class=\"mw-page-title-main\">Austria national football team</span></span>"
+  },
+  "pageid": 695226,
+  "thumbnail": {
+    "source": "https://upload.wikimedia.org/wikipedia/en/thumb/b/b7/Austria_national_football_team_crest.svg/330px-Austria_national_football_team_crest.svg.png",
+    "width": 330,
+    "height": 432
+  },
+  "originalimage": {
+    "source": "https://upload.wikimedia.org/wikipedia/en/thumb/b/b7/Austria_national_football_team_crest.svg/250px-Austria_national_football_team_crest.svg.png",
+    "width": 200,
+    "height": 262
+  },
+  "lang": "en",
+  "dir": "ltr",
+  "revision": "1362476799",
+  "tid": "b0fe7b98-7767-11f1-9cd8-f2a0fdd54079",
+  "timestamp": "2026-07-04T05:17:46Z",
+  "description": "Men's national association football team representing Austria",
+  "description_source": "local",
+  "content_urls": {
+    "desktop": {
+      "page": "https://en.wikipedia.org/wiki/Austria_national_football_team",
+      "revisions": "https://en.wikipedia.org/wiki/Austria_national_football_team?action=history",
+      "edit": "https://en.wikipedia.org/wiki/Austria_national_football_team?action=edit",
+      "talk": "https://en.wikipedia.org/wiki/Talk:Austria_national_football_team"
+    },
+    "mobile": {
+      "page": "https://en.wikipedia.org/wiki/Austria_national_football_team",
+      "revisions": "https://en.wikipedia.org/wiki/Special:History/Austria_national_football_team",
+      "edit": "https://en.wikipedia.org/wiki/Austria_national_football_team?action=edit",
+      "talk": "https://en.wikipedia.org/wiki/Talk:Austria_national_football_team"
+    }
+  },
+  "extract": "The Austria national football team represents Austria in men's international football competitions, and is controlled by the Austrian Football Association.",
+  "extract_html": "<p>The <b>Austria national football team</b> represents Austria in men's international football competitions, and is controlled by the Austrian Football Association.</p>"
+}

@@ -1,0 +1,49 @@
+{
+  "type": "standard",
+  "title": "Canada men's national soccer team",
+  "displaytitle": "<span lang=\"en\" dir=\"ltr\"><span class=\"mw-page-title-main\">Canada men&#039;s national soccer team</span></span>",
+  "namespace": {
+    "id": 0,
+    "text": ""
+  },
+  "wikibase_item": "Q208635",
+  "titles": {
+    "canonical": "Canada_men's_national_soccer_team",
+    "normalized": "Canada men's national soccer team",
+    "display": "<span lang=\"en\" dir=\"ltr\"><span class=\"mw-page-title-main\">Canada men&#039;s national soccer team</span></span>"
+  },
+  "pageid": 723688,
+  "thumbnail": {
+    "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Canadian_Soccer_Association_logo.svg/330px-Canadian_Soccer_Association_logo.svg.png",
+    "width": 330,
+    "height": 334
+  },
+  "originalimage": {
+    "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Canadian_Soccer_Association_logo.svg/330px-Canadian_Soccer_Association_logo.svg.png",
+    "width": 314,
+    "height": 318
+  },
+  "lang": "en",
+  "dir": "ltr",
+  "revision": "1362440497",
+  "tid": "15551786-7737-11f1-b5e0-7a3e9dbad4dc",
+  "timestamp": "2026-07-03T23:29:49Z",
+  "description": "Men's national football team representing Canada",
+  "description_source": "local",
+  "content_urls": {
+    "desktop": {
+      "page": "https://en.wikipedia.org/wiki/Canada_men's_national_soccer_team",
+      "revisions": "https://en.wikipedia.org/wiki/Canada_men's_national_soccer_team?action=history",
+      "edit": "https://en.wikipedia.org/wiki/Canada_men's_national_soccer_team?action=edit",
+      "talk": "https://en.wikipedia.org/wiki/Talk:Canada_men's_national_soccer_team"
+    },
+    "mobile": {
+      "page": "https://en.wikipedia.org/wiki/Canada_men's_national_soccer_team",
+      "revisions": "https://en.wikipedia.org/wiki/Special:History/Canada_men's_national_soccer_team",
+      "edit": "https://en.wikipedia.org/wiki/Canada_men's_national_soccer_team?action=edit",
+      "talk": "https://en.wikipedia.org/wiki/Talk:Canada_men's_national_soccer_team"
+    }
+  },
+  "extract": "The Canada men's national soccer team represents Canada in men's international soccer, which is governed by the Canadian Soccer Association, the governing body for soccer in Canada founded in 1912. It has been an affiliate member of FIFA since 1912 and a founding affiliate member of CONCACAF since 1961. Regionally, it is an affiliate member of NAFU in the North American Zone.",
+  "extract_html": "<p>The <b>Canada men's national soccer team</b> represents Canada in men's international soccer, which is governed by the Canadian Soccer Association, the governing body for soccer in Canada founded in 1912. It has been an affiliate member of FIFA since 1912 and a founding affiliate member of CONCACAF since 1961. Regionally, it is an affiliate member of NAFU in the North American Zone.</p>"
+}

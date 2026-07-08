@@ -1,0 +1,49 @@
+{
+  "type": "standard",
+  "title": "Cameroon national football team",
+  "displaytitle": "<span lang=\"en\" dir=\"ltr\"><span class=\"mw-page-title-main\">Cameroon national football team</span></span>",
+  "namespace": {
+    "id": 0,
+    "text": ""
+  },
+  "wikibase_item": "Q175309",
+  "titles": {
+    "canonical": "Cameroon_national_football_team",
+    "normalized": "Cameroon national football team",
+    "display": "<span lang=\"en\" dir=\"ltr\"><span class=\"mw-page-title-main\">Cameroon national football team</span></span>"
+  },
+  "pageid": 1005798,
+  "thumbnail": {
+    "source": "https://upload.wikimedia.org/wikipedia/en/thumb/e/e8/Cameroon_2010crest.png/330px-Cameroon_2010crest.png",
+    "width": 330,
+    "height": 370
+  },
+  "originalimage": {
+    "source": "https://upload.wikimedia.org/wikipedia/en/e/e8/Cameroon_2010crest.png",
+    "width": 914,
+    "height": 1024
+  },
+  "lang": "en",
+  "dir": "ltr",
+  "revision": "1362216964",
+  "tid": "b657a9f0-762d-11f1-923b-91730bf62899",
+  "timestamp": "2026-07-02T15:50:13Z",
+  "description": "Men's association football team",
+  "description_source": "local",
+  "content_urls": {
+    "desktop": {
+      "page": "https://en.wikipedia.org/wiki/Cameroon_national_football_team",
+      "revisions": "https://en.wikipedia.org/wiki/Cameroon_national_football_team?action=history",
+      "edit": "https://en.wikipedia.org/wiki/Cameroon_national_football_team?action=edit",
+      "talk": "https://en.wikipedia.org/wiki/Talk:Cameroon_national_football_team"
+    },
+    "mobile": {
+      "page": "https://en.wikipedia.org/wiki/Cameroon_national_football_team",
+      "revisions": "https://en.wikipedia.org/wiki/Special:History/Cameroon_national_football_team",
+      "edit": "https://en.wikipedia.org/wiki/Cameroon_national_football_team?action=edit",
+      "talk": "https://en.wikipedia.org/wiki/Talk:Cameroon_national_football_team"
+    }
+  },
+  "extract": "The Cameroon national football team, also known as the Indomitable Lions, represents Cameroon in men's international football. It is controlled by the Fédération Camerounaise de Football, a member of FIFA and its African confederation CAF.",
+  "extract_html": "<p>The <b>Cameroon national football team</b>, also known as the <b>Indomitable Lions</b>, represents Cameroon in men's international football. It is controlled by the Fédération Camerounaise de Football, a member of FIFA and its African confederation CAF.</p>"
+}

@@ -1,0 +1,49 @@
+{
+  "type": "standard",
+  "title": "Germany national football team",
+  "displaytitle": "<span lang=\"en\" dir=\"ltr\"><span class=\"mw-page-title-main\">Germany national football team</span></span>",
+  "namespace": {
+    "id": 0,
+    "text": ""
+  },
+  "wikibase_item": "Q43310",
+  "titles": {
+    "canonical": "Germany_national_football_team",
+    "normalized": "Germany national football team",
+    "display": "<span lang=\"en\" dir=\"ltr\"><span class=\"mw-page-title-main\">Germany national football team</span></span>"
+  },
+  "pageid": 250204,
+  "thumbnail": {
+    "source": "https://upload.wikimedia.org/wikipedia/en/thumb/e/e3/DFBEagle.svg/330px-DFBEagle.svg.png",
+    "width": 330,
+    "height": 409
+  },
+  "originalimage": {
+    "source": "https://upload.wikimedia.org/wikipedia/en/thumb/e/e3/DFBEagle.svg/330px-DFBEagle.svg.png",
+    "width": 284,
+    "height": 352
+  },
+  "lang": "en",
+  "dir": "ltr",
+  "revision": "1362370833",
+  "tid": "33e0ef58-76ea-11f1-b682-f2cfdf5916c1",
+  "timestamp": "2026-07-03T14:19:29Z",
+  "description": "Men's association football team",
+  "description_source": "local",
+  "content_urls": {
+    "desktop": {
+      "page": "https://en.wikipedia.org/wiki/Germany_national_football_team",
+      "revisions": "https://en.wikipedia.org/wiki/Germany_national_football_team?action=history",
+      "edit": "https://en.wikipedia.org/wiki/Germany_national_football_team?action=edit",
+      "talk": "https://en.wikipedia.org/wiki/Talk:Germany_national_football_team"
+    },
+    "mobile": {
+      "page": "https://en.wikipedia.org/wiki/Germany_national_football_team",
+      "revisions": "https://en.wikipedia.org/wiki/Special:History/Germany_national_football_team",
+      "edit": "https://en.wikipedia.org/wiki/Germany_national_football_team?action=edit",
+      "talk": "https://en.wikipedia.org/wiki/Talk:Germany_national_football_team"
+    }
+  },
+  "extract": "The Germany national football team represents Germany in men's international football and played its first match in 1908. The team is governed by the German Football Association, founded in 1900, by members the single largest national sports federation in the world. Between 1949 and 1990, separate German national teams were recognised by FIFA due to Allied occupation and division: the DFB's team representing the Federal Republic of Germany, the Saarland team representing the Saar Protectorate (1950–1956) and the East Germany team representing the German Democratic Republic (1952–1990). The latter two were absorbed along with their records; the present team represents the reunified Federal Republic. The official name and code \"Germany FR (FRG)\" was shortened to \"Germany (GER)\" following reunification in 1990.",
+  "extract_html": "<p>The <b>Germany national football team</b> represents Germany in men's international football and played its first match in 1908. The team is governed by the German Football Association, founded in 1900, by members the single largest national sports federation in the world. Between 1949 and 1990, separate German national teams were recognised by FIFA due to Allied occupation and division: the DFB's team representing the Federal Republic of Germany, the Saarland team representing the Saar Protectorate (1950–1956) and the East Germany team representing the German Democratic Republic (1952–1990). The latter two were absorbed along with their records; the present team represents the reunified Federal Republic. The official name and code \"Germany FR (FRG)\" was shortened to \"Germany (GER)\" following reunification in 1990.</p>"
+}

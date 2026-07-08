@@ -1,0 +1,49 @@
+{
+  "type": "standard",
+  "title": "Italy national football team",
+  "displaytitle": "<span lang=\"en\" dir=\"ltr\"><span class=\"mw-page-title-main\">Italy national football team</span></span>",
+  "namespace": {
+    "id": 0,
+    "text": ""
+  },
+  "wikibase_item": "Q676899",
+  "titles": {
+    "canonical": "Italy_national_football_team",
+    "normalized": "Italy national football team",
+    "display": "<span lang=\"en\" dir=\"ltr\"><span class=\"mw-page-title-main\">Italy national football team</span></span>"
+  },
+  "pageid": 362466,
+  "thumbnail": {
+    "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Logo_Italy_National_Football_Team_-_2023.svg/330px-Logo_Italy_National_Football_Team_-_2023.svg.png",
+    "width": 330,
+    "height": 578
+  },
+  "originalimage": {
+    "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Logo_Italy_National_Football_Team_-_2023.svg/500px-Logo_Italy_National_Football_Team_-_2023.svg.png",
+    "width": 428,
+    "height": 750
+  },
+  "lang": "en",
+  "dir": "ltr",
+  "revision": "1362344611",
+  "tid": "f1f181f2-76c4-11f1-9b0f-4bf347a928e5",
+  "timestamp": "2026-07-03T09:52:47Z",
+  "description": "Men's association football team",
+  "description_source": "local",
+  "content_urls": {
+    "desktop": {
+      "page": "https://en.wikipedia.org/wiki/Italy_national_football_team",
+      "revisions": "https://en.wikipedia.org/wiki/Italy_national_football_team?action=history",
+      "edit": "https://en.wikipedia.org/wiki/Italy_national_football_team?action=edit",
+      "talk": "https://en.wikipedia.org/wiki/Talk:Italy_national_football_team"
+    },
+    "mobile": {
+      "page": "https://en.wikipedia.org/wiki/Italy_national_football_team",
+      "revisions": "https://en.wikipedia.org/wiki/Special:History/Italy_national_football_team",
+      "edit": "https://en.wikipedia.org/wiki/Italy_national_football_team?action=edit",
+      "talk": "https://en.wikipedia.org/wiki/Talk:Italy_national_football_team"
+    }
+  },
+  "extract": "The Italy national football team has represented Italy in men's international football since its first match in 1910. The national team is controlled by the Italian Football Federation (FIGC), the governing body for football in Italy, which is a co-founder and member of UEFA. Italy's home matches are played at various stadiums throughout Italy, and its primary training ground and technical headquarters, Centro Tecnico Federale di Coverciano, is located in Florence.",
+  "extract_html": "<p>The <b>Italy national football team</b> has represented Italy in men's international football since its first match in 1910. The national team is controlled by the Italian Football Federation (FIGC), the governing body for football in Italy, which is a co-founder and member of UEFA. Italy's home matches are played at various stadiums throughout Italy, and its primary training ground and technical headquarters, Centro Tecnico Federale di Coverciano, is located in Florence.</p>"
+}

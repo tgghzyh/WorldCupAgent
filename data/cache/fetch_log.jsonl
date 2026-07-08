@@ -1,0 +1,15 @@
+{"ts": "2026-07-04T11:16:29.965970+00:00", "step": "session", "status": "start", "version": "1.0"}
+{"ts": "2026-07-04T11:16:29.966845+00:00", "step": "fetch_team_summaries", "status": "start", "total": 48}
+{"ts": "2026-07-04T11:16:31.255424+00:00", "step": "fetch_team_summaries.batch", "status": "ok", "batch": 1, "fetched": 8, "elapsed_ms": 873}
+{"ts": "2026-07-04T11:16:31.699692+00:00", "step": "fetch_team_summaries.batch", "status": "ok", "batch": 2, "fetched": 8, "elapsed_ms": 438}
+{"ts": "2026-07-04T11:16:31.921522+00:00", "step": "fetch_team_summaries.batch", "status": "ok", "batch": 3, "fetched": 8, "elapsed_ms": 213}
+{"ts": "2026-07-04T11:16:32.141615+00:00", "step": "fetch_team_summaries.batch", "status": "ok", "batch": 4, "fetched": 8, "elapsed_ms": 214}
+{"ts": "2026-07-04T11:16:32.360158+00:00", "step": "fetch_team_summaries.batch", "status": "ok", "batch": 5, "fetched": 8, "elapsed_ms": 213}
+{"ts": "2026-07-04T11:16:32.585766+00:00", "step": "fetch_team_summaries.batch", "status": "ok", "batch": 6, "fetched": 8, "elapsed_ms": 214}
+{"ts": "2026-07-04T11:16:32.586881+00:00", "step": "fetch_team_summaries", "status": "ok", "total_fetched": 48}
+{"ts": "2026-07-04T11:16:32.589642+00:00", "step": "fetch_worldcup_meta", "status": "start"}
+{"ts": "2026-07-04T11:16:35.146128+00:00", "step": "fetch_worldcup_meta", "status": "ok", "bytes": 187704}
+{"ts": "2026-07-04T11:16:35.149620+00:00", "step": "fetch_worldcup_meta.parsed", "status": "ok", "groups": 12, "venues": 11, "match_dates": 0}
+{"ts": "2026-07-04T11:16:35.152683+00:00", "step": "fetch_fifa_rankings", "status": "start"}
+{"ts": "2026-07-04T11:16:36.691272+00:00", "step": "fetch_fifa_rankings", "status": "ok", "entries_found": 0}
+{"ts": "2026-07-04T11:16:36.720877+00:00", "step": "cleaning", "status": "ok", "total": 48, "with_wiki": 48, "with_fifa": 48}

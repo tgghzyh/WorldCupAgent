@@ -1,0 +1,49 @@
+{
+  "type": "standard",
+  "title": "Jamaica national football team",
+  "displaytitle": "<span lang=\"en\" dir=\"ltr\"><span class=\"mw-page-title-main\">Jamaica national football team</span></span>",
+  "namespace": {
+    "id": 0,
+    "text": ""
+  },
+  "wikibase_item": "Q235399",
+  "titles": {
+    "canonical": "Jamaica_national_football_team",
+    "normalized": "Jamaica national football team",
+    "display": "<span lang=\"en\" dir=\"ltr\"><span class=\"mw-page-title-main\">Jamaica national football team</span></span>"
+  },
+  "pageid": 1014556,
+  "thumbnail": {
+    "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Jamaica_FA.svg/330px-Jamaica_FA.svg.png",
+    "width": 330,
+    "height": 292
+  },
+  "originalimage": {
+    "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Jamaica_FA.svg/960px-Jamaica_FA.svg.png",
+    "width": 756,
+    "height": 668
+  },
+  "lang": "en",
+  "dir": "ltr",
+  "revision": "1362090764",
+  "tid": "7ba23421-7595-11f1-b73a-11704f2e5983",
+  "timestamp": "2026-07-01T21:40:31Z",
+  "description": "Men's association football team",
+  "description_source": "local",
+  "content_urls": {
+    "desktop": {
+      "page": "https://en.wikipedia.org/wiki/Jamaica_national_football_team",
+      "revisions": "https://en.wikipedia.org/wiki/Jamaica_national_football_team?action=history",
+      "edit": "https://en.wikipedia.org/wiki/Jamaica_national_football_team?action=edit",
+      "talk": "https://en.wikipedia.org/wiki/Talk:Jamaica_national_football_team"
+    },
+    "mobile": {
+      "page": "https://en.wikipedia.org/wiki/Jamaica_national_football_team",
+      "revisions": "https://en.wikipedia.org/wiki/Special:History/Jamaica_national_football_team",
+      "edit": "https://en.wikipedia.org/wiki/Jamaica_national_football_team?action=edit",
+      "talk": "https://en.wikipedia.org/wiki/Talk:Jamaica_national_football_team"
+    }
+  },
+  "extract": "The Jamaica national football team represents Jamaica in men's international football, which is governed by the Jamaica Football Federation founded in 1910. It has been an affiliate member of FIFA since 1962 and an affiliate member of CONCACAF since 1963. Regionally, it is an affiliate member of CFU in the Caribbean Zone.",
+  "extract_html": "<p>The <b>Jamaica national football team</b> represents Jamaica in men's international football, which is governed by the Jamaica Football Federation founded in 1910. It has been an affiliate member of FIFA since 1962 and an affiliate member of CONCACAF since 1963. Regionally, it is an affiliate member of CFU in the Caribbean Zone.</p>"
+}

@@ -1,0 +1,39 @@
+{
+  "type": "standard",
+  "title": "Panama national football team",
+  "displaytitle": "<span lang=\"en\" dir=\"ltr\"><span class=\"mw-page-title-main\">Panama national football team</span></span>",
+  "namespace": {
+    "id": 0,
+    "text": ""
+  },
+  "wikibase_item": "Q223748",
+  "titles": {
+    "canonical": "Panama_national_football_team",
+    "normalized": "Panama national football team",
+    "display": "<span lang=\"en\" dir=\"ltr\"><span class=\"mw-page-title-main\">Panama national football team</span></span>"
+  },
+  "pageid": 1028241,
+  "lang": "en",
+  "dir": "ltr",
+  "revision": "1362433439",
+  "tid": "c2c42af9-772f-11f1-8318-7d5bece44488",
+  "timestamp": "2026-07-03T22:37:24Z",
+  "description": "Men's association football team",
+  "description_source": "local",
+  "content_urls": {
+    "desktop": {
+      "page": "https://en.wikipedia.org/wiki/Panama_national_football_team",
+      "revisions": "https://en.wikipedia.org/wiki/Panama_national_football_team?action=history",
+      "edit": "https://en.wikipedia.org/wiki/Panama_national_football_team?action=edit",
+      "talk": "https://en.wikipedia.org/wiki/Talk:Panama_national_football_team"
+    },
+    "mobile": {
+      "page": "https://en.wikipedia.org/wiki/Panama_national_football_team",
+      "revisions": "https://en.wikipedia.org/wiki/Special:History/Panama_national_football_team",
+      "edit": "https://en.wikipedia.org/wiki/Panama_national_football_team?action=edit",
+      "talk": "https://en.wikipedia.org/wiki/Talk:Panama_national_football_team"
+    }
+  },
+  "extract": "The Panama national football team represents Panama in men's international football, which is governed by the Federación Panameña de Fútbol founded in 1937. It has been an affiliate member of FIFA since 1938 and a founding affiliate member of CONCACAF since 1961. Regionally, it is an affiliate member of UNCAF in the Central American Zone. From 1938 to 1961, it was a member of CCCF, the former governing body of football in Central America and Caribbean and a predecessor confederation of CONCACAF, and also a member of PFC, the former unified confederation of the Americas, from 1946 to 1961.",
+  "extract_html": "<p>The <b>Panama national football team</b> represents Panama in men's international football, which is governed by the Federación Panameña de Fútbol founded in 1937. It has been an affiliate member of FIFA since 1938 and a founding affiliate member of CONCACAF since 1961. Regionally, it is an affiliate member of UNCAF in the Central American Zone. From 1938 to 1961, it was a member of CCCF, the former governing body of football in Central America and Caribbean and a predecessor confederation of CONCACAF, and also a member of PFC, the former unified confederation of the Americas, from 1946 to 1961.</p>"
+}

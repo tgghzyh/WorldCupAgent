@@ -1,0 +1,39 @@
+{
+  "type": "standard",
+  "title": "Burkina Faso national football team",
+  "displaytitle": "<span lang=\"en\" dir=\"ltr\"><span class=\"mw-page-title-main\">Burkina Faso national football team</span></span>",
+  "namespace": {
+    "id": 0,
+    "text": ""
+  },
+  "wikibase_item": "Q44270",
+  "titles": {
+    "canonical": "Burkina_Faso_national_football_team",
+    "normalized": "Burkina Faso national football team",
+    "display": "<span lang=\"en\" dir=\"ltr\"><span class=\"mw-page-title-main\">Burkina Faso national football team</span></span>"
+  },
+  "pageid": 1090020,
+  "lang": "en",
+  "dir": "ltr",
+  "revision": "1362170682",
+  "tid": "437f0b17-75f6-11f1-9507-b24a05136e92",
+  "timestamp": "2026-07-02T09:13:18Z",
+  "description": "Men's association football team",
+  "description_source": "local",
+  "content_urls": {
+    "desktop": {
+      "page": "https://en.wikipedia.org/wiki/Burkina_Faso_national_football_team",
+      "revisions": "https://en.wikipedia.org/wiki/Burkina_Faso_national_football_team?action=history",
+      "edit": "https://en.wikipedia.org/wiki/Burkina_Faso_national_football_team?action=edit",
+      "talk": "https://en.wikipedia.org/wiki/Talk:Burkina_Faso_national_football_team"
+    },
+    "mobile": {
+      "page": "https://en.wikipedia.org/wiki/Burkina_Faso_national_football_team",
+      "revisions": "https://en.wikipedia.org/wiki/Special:History/Burkina_Faso_national_football_team",
+      "edit": "https://en.wikipedia.org/wiki/Burkina_Faso_national_football_team?action=edit",
+      "talk": "https://en.wikipedia.org/wiki/Talk:Burkina_Faso_national_football_team"
+    }
+  },
+  "extract": "The Burkina Faso national football team represents Burkina Faso in men's international football and is controlled by the Burkinabé Football Federation. They were known as the Upper Volta national football team until 1984, when Upper Volta became Burkina Faso. They finished fourth in the 1998 Africa Cup of Nations, when they hosted the tournament. Their best ever finish in the tournament was the 2013 edition, reaching the final.",
+  "extract_html": "<p>The <b>Burkina Faso national football team</b> represents Burkina Faso in men's international football and is controlled by the Burkinabé Football Federation. They were known as the <b>Upper Volta national football team</b> until 1984, when Upper Volta became Burkina Faso. They finished fourth in the 1998 Africa Cup of Nations, when they hosted the tournament. Their best ever finish in the tournament was the 2013 edition, reaching the final.</p>"
+}

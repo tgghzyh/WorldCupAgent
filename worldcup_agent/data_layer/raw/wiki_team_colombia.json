@@ -1,0 +1,49 @@
+{
+  "type": "standard",
+  "title": "Colombia national football team",
+  "displaytitle": "<span lang=\"en\" dir=\"ltr\"><span class=\"mw-page-title-main\">Colombia national football team</span></span>",
+  "namespace": {
+    "id": 0,
+    "text": ""
+  },
+  "wikibase_item": "Q212564",
+  "titles": {
+    "canonical": "Colombia_national_football_team",
+    "normalized": "Colombia national football team",
+    "display": "<span lang=\"en\" dir=\"ltr\"><span class=\"mw-page-title-main\">Colombia national football team</span></span>"
+  },
+  "pageid": 680175,
+  "thumbnail": {
+    "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/FCF-Logo-2023.svg/330px-FCF-Logo-2023.svg.png",
+    "width": 330,
+    "height": 334
+  },
+  "originalimage": {
+    "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/FCF-Logo-2023.svg/960px-FCF-Logo-2023.svg.png",
+    "width": 512,
+    "height": 518
+  },
+  "lang": "en",
+  "dir": "ltr",
+  "revision": "1362479444",
+  "tid": "2e2bf0e0-776c-11f1-936e-94286ebd76b7",
+  "timestamp": "2026-07-04T05:49:54Z",
+  "description": "Men's association football team",
+  "description_source": "local",
+  "content_urls": {
+    "desktop": {
+      "page": "https://en.wikipedia.org/wiki/Colombia_national_football_team",
+      "revisions": "https://en.wikipedia.org/wiki/Colombia_national_football_team?action=history",
+      "edit": "https://en.wikipedia.org/wiki/Colombia_national_football_team?action=edit",
+      "talk": "https://en.wikipedia.org/wiki/Talk:Colombia_national_football_team"
+    },
+    "mobile": {
+      "page": "https://en.wikipedia.org/wiki/Colombia_national_football_team",
+      "revisions": "https://en.wikipedia.org/wiki/Special:History/Colombia_national_football_team",
+      "edit": "https://en.wikipedia.org/wiki/Colombia_national_football_team?action=edit",
+      "talk": "https://en.wikipedia.org/wiki/Talk:Colombia_national_football_team"
+    }
+  },
+  "extract": "The Colombia national football team, nicknamed Los Cafeteros, represents Colombia in men's international football and is managed by the Federación Colombiana de Fútbol, the governing body for football in Colombia. It has been a member of FIFA and CONMEBOL since 1936. Currently ranked 13th on the FIFA World Ranking as of June 2026, Colombia has participated in seven FIFA World Cups, most recently in the 2026 edition. The team are nicknamed Los Cafeteros due to the country's high coffee production. Colombia is known for having a passionate fanbase, and has been a symbol of nationalism, pride and passion for many Colombians worldwide.",
+  "extract_html": "<p>The <b>Colombia national football team</b>, nicknamed <i><b>Los Cafeteros</b>,</i> represents Colombia in men's international football and is managed by the Federación Colombiana de Fútbol, the governing body for football in Colombia. It has been a member of FIFA and CONMEBOL since 1936. Currently ranked 13th on the FIFA World Ranking as of June 2026, Colombia has participated in seven FIFA World Cups, most recently in the 2026 edition. The team are nicknamed <i>Los Cafeteros</i> due to the country's high coffee production. Colombia is known for having a passionate fanbase, and has been a symbol of nationalism, pride and passion for many Colombians worldwide.</p>"
+}

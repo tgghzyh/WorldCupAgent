@@ -1,0 +1,49 @@
+{
+  "type": "standard",
+  "title": "Serbia national football team",
+  "displaytitle": "<span lang=\"en\" dir=\"ltr\"><span class=\"mw-page-title-main\">Serbia national football team</span></span>",
+  "namespace": {
+    "id": 0,
+    "text": ""
+  },
+  "wikibase_item": "Q182740",
+  "titles": {
+    "canonical": "Serbia_national_football_team",
+    "normalized": "Serbia national football team",
+    "display": "<span lang=\"en\" dir=\"ltr\"><span class=\"mw-page-title-main\">Serbia national football team</span></span>"
+  },
+  "pageid": 1011001,
+  "thumbnail": {
+    "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Flag_of_Serbia.svg/330px-Flag_of_Serbia.svg.png",
+    "width": 330,
+    "height": 220
+  },
+  "originalimage": {
+    "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Flag_of_Serbia.svg/1920px-Flag_of_Serbia.svg.png",
+    "width": 1350,
+    "height": 900
+  },
+  "lang": "en",
+  "dir": "ltr",
+  "revision": "1362351656",
+  "tid": "73014a26-76ce-11f1-ba87-71f956dd4183",
+  "timestamp": "2026-07-03T11:00:49Z",
+  "description": "Men's association football team",
+  "description_source": "local",
+  "content_urls": {
+    "desktop": {
+      "page": "https://en.wikipedia.org/wiki/Serbia_national_football_team",
+      "revisions": "https://en.wikipedia.org/wiki/Serbia_national_football_team?action=history",
+      "edit": "https://en.wikipedia.org/wiki/Serbia_national_football_team?action=edit",
+      "talk": "https://en.wikipedia.org/wiki/Talk:Serbia_national_football_team"
+    },
+    "mobile": {
+      "page": "https://en.wikipedia.org/wiki/Serbia_national_football_team",
+      "revisions": "https://en.wikipedia.org/wiki/Special:History/Serbia_national_football_team",
+      "edit": "https://en.wikipedia.org/wiki/Serbia_national_football_team?action=edit",
+      "talk": "https://en.wikipedia.org/wiki/Talk:Serbia_national_football_team"
+    }
+  },
+  "extract": "The Serbia men's national football team represents Serbia in men's international football competition. It is controlled by the Football Association of Serbia, the governing body for football in Serbia.",
+  "extract_html": "<p>The <b>Serbia men's national football team</b> represents Serbia in men's international football competition. It is controlled by the Football Association of Serbia, the governing body for football in Serbia.</p>"
+}

@@ -1,0 +1,39 @@
+{
+  "type": "disambiguation",
+  "title": "Sweden national football team",
+  "displaytitle": "<span lang=\"en\" dir=\"ltr\"><span class=\"mw-page-title-main\">Sweden national football team</span></span>",
+  "namespace": {
+    "id": 0,
+    "text": ""
+  },
+  "wikibase_item": "Q127925698",
+  "titles": {
+    "canonical": "Sweden_national_football_team",
+    "normalized": "Sweden national football team",
+    "display": "<span lang=\"en\" dir=\"ltr\"><span class=\"mw-page-title-main\">Sweden national football team</span></span>"
+  },
+  "pageid": 77180303,
+  "lang": "en",
+  "dir": "ltr",
+  "revision": "1237440048",
+  "tid": "b6b6ec4c-4de7-11ef-bb11-8a8dc55ad445",
+  "timestamp": "2024-07-29T20:18:27Z",
+  "description": "Topics referred to by the same term",
+  "description_source": "local",
+  "content_urls": {
+    "desktop": {
+      "page": "https://en.wikipedia.org/wiki/Sweden_national_football_team",
+      "revisions": "https://en.wikipedia.org/wiki/Sweden_national_football_team?action=history",
+      "edit": "https://en.wikipedia.org/wiki/Sweden_national_football_team?action=edit",
+      "talk": "https://en.wikipedia.org/wiki/Talk:Sweden_national_football_team"
+    },
+    "mobile": {
+      "page": "https://en.wikipedia.org/wiki/Sweden_national_football_team",
+      "revisions": "https://en.wikipedia.org/wiki/Special:History/Sweden_national_football_team",
+      "edit": "https://en.wikipedia.org/wiki/Sweden_national_football_team?action=edit",
+      "talk": "https://en.wikipedia.org/wiki/Talk:Sweden_national_football_team"
+    }
+  },
+  "extract": "Sweden national football team might refer to:Sweden men's national football team\nSweden women's national football team",
+  "extract_html": "<p><b>Sweden national football team</b> might refer to:</p><ul><li>Sweden men's national football team</li>\n<li>Sweden women's national football team</li></ul>"
+}

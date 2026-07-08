@@ -1,0 +1,826 @@
+{
+  "generated_at": "2026-07-04T11:16:36.718884+00:00",
+  "total_teams": 48,
+  "teams_with_wiki_extract": 48,
+  "teams_with_fifa_rank": 48,
+  "source_url_wikipedia": "https://en.wikipedia.org/api/rest_v1",
+  "source_url_rankings": "https://en.wikipedia.org/w/api.php?page=FIFA_World_Rankings",
+  "teams": [
+    {
+      "id": "argentina",
+      "name": "Argentina",
+      "short_name": "ARG",
+      "country_code": "AR",
+      "group": "A",
+      "fifa_ranking": 1,
+      "elo": 1865,
+      "wiki_extract": "The Argentina national football team, nicknamed la Albiceleste,  represents Argentina in men's international football and is administered by the Argentine Football Association, the governing body of football in Argentina. It has been a member of FIFA since 1912 and was a founding member of CONMEBOL in 1916. It was also a member of PFC, the unified confederation of the Americas, from 1946 to 1961. Argentina is the current FIFA World Cup champion, having won the most recent World Cup in 2022. The ",
+      "wiki_url": "https://en.wikipedia.org/wiki/Argentina_national_football_team",
+      "wiki_source": "https://en.wikipedia.org/wiki/Argentina_national_football_team",
+      "data_sources": {
+        "wikipedia": true,
+        "fifa_ranking": true
+      },
+      "cleaned_at": "2026-07-04T11:16:36.708090+00:00"
+    },
+    {
+      "id": "mexico",
+      "name": "Mexico",
+      "short_name": "MEX",
+      "country_code": "ME",
+      "group": "A",
+      "fifa_ranking": 11,
+      "elo": 1680,
+      "wiki_extract": "The Mexico national football team represents Mexico in men's international football, which is governed by the Mexican Football Federation founded in 1927. It has been an affiliate member of FIFA since 1929 and a founding affiliate member of CONCACAF since 1961. Regionally, it is an affiliate member of NAFU in the North American Zone.\nFrom 1946 to 1961, it was a member of NAFC, the former governing body of football in North America and a predecessor confederation of CONCACAF, and also a member of",
+      "wiki_url": "https://en.wikipedia.org/wiki/Mexico_national_football_team",
+      "wiki_source": "https://en.wikipedia.org/wiki/Mexico_national_football_team",
+      "data_sources": {
+        "wikipedia": true,
+        "fifa_ranking": true
+      },
+      "cleaned_at": "2026-07-04T11:16:36.708090+00:00"
+    },
+    {
+      "id": "ecuador",
+      "name": "Ecuador",
+      "short_name": "ECU",
+      "country_code": "EC",
+      "group": "A",
+      "fifa_ranking": 30,
+      "elo": 1600,
+      "wiki_extract": "The Ecuador national football team, nicknamed La Tricolor, represents Ecuador in men's international football and is controlled by the Federación Ecuatoriana de Fútbol. They joined FIFA in 1926 and CONMEBOL a year later.",
+      "wiki_url": "https://en.wikipedia.org/wiki/Ecuador_national_football_team",
+      "wiki_source": "https://en.wikipedia.org/wiki/Ecuador_national_football_team",
+      "data_sources": {
+        "wikipedia": true,
+        "fifa_ranking": true
+      },
+      "cleaned_at": "2026-07-04T11:16:36.708090+00:00"
+    },
+    {
+      "id": "jamaica",
+      "name": "Jamaica",
+      "short_name": "JAM",
+      "country_code": "JA",
+      "group": "A",
+      "fifa_ranking": 55,
+      "elo": 1500,
+      "wiki_extract": "The Jamaica national football team represents Jamaica in men's international football, which is governed by the Jamaica Football Federation founded in 1910. It has been an affiliate member of FIFA since 1962 and an affiliate member of CONCACAF since 1963. Regionally, it is an affiliate member of CFU in the Caribbean Zone.",
+      "wiki_url": "https://en.wikipedia.org/wiki/Jamaica_national_football_team",
+      "wiki_source": "https://en.wikipedia.org/wiki/Jamaica_national_football_team",
+      "data_sources": {
+        "wikipedia": true,
+        "fifa_ranking": true
+      },
+      "cleaned_at": "2026-07-04T11:16:36.708090+00:00"
+    },
+    {
+      "id": "spain",
+      "name": "Spain",
+      "short_name": "ESP",
+      "country_code": "ES",
+      "group": "B",
+      "fifa_ranking": 8,
+      "elo": 1780,
+      "wiki_extract": "The Spain national football team has represented Spain in men's international football competition since 1920. It is governed by the Royal Spanish Football Federation, the governing body for football in Spain.",
+      "wiki_url": "https://en.wikipedia.org/wiki/Spain_national_football_team",
+      "wiki_source": "https://en.wikipedia.org/wiki/Spain_national_football_team",
+      "data_sources": {
+        "wikipedia": true,
+        "fifa_ranking": true
+      },
+      "cleaned_at": "2026-07-04T11:16:36.708090+00:00"
+    },
+    {
+      "id": "netherlands",
+      "name": "Netherlands",
+      "short_name": "NED",
+      "country_code": "NE",
+      "group": "B",
+      "fifa_ranking": 7,
+      "elo": 1775,
+      "wiki_extract": "The Netherlands national football team or simply Het Nederlands elftal has represented the Netherlands in international men's football matches since 1905. The men's national team is controlled by the Royal Dutch Football Association (KNVB), the governing body for football in the Netherlands, which is a part of UEFA, under the jurisdiction of FIFA. Most of the Netherlands home matches are played at the Johan Cruyff Arena, De Kuip, Philips Stadion, and De Grolsch Veste.",
+      "wiki_url": "https://en.wikipedia.org/wiki/Netherlands_national_football_team",
+      "wiki_source": "https://en.wikipedia.org/wiki/Netherlands_national_football_team",
+      "data_sources": {
+        "wikipedia": true,
+        "fifa_ranking": true
+      },
+      "cleaned_at": "2026-07-04T11:16:36.708090+00:00"
+    },
+    {
+      "id": "cameroon",
+      "name": "Cameroon",
+      "short_name": "CMR",
+      "country_code": "CM",
+      "group": "B",
+      "fifa_ranking": 50,
+      "elo": 1550,
+      "wiki_extract": "The Cameroon national football team, also known as the Indomitable Lions, represents Cameroon in men's international football. It is controlled by the Fédération Camerounaise de Football, a member of FIFA and its African confederation CAF.",
+      "wiki_url": "https://en.wikipedia.org/wiki/Cameroon_national_football_team",
+      "wiki_source": "https://en.wikipedia.org/wiki/Cameroon_national_football_team",
+      "data_sources": {
+        "wikipedia": true,
+        "fifa_ranking": true
+      },
+      "cleaned_at": "2026-07-04T11:16:36.708090+00:00"
+    },
+    {
+      "id": "qatar",
+      "name": "Qatar",
+      "short_name": "QAT",
+      "country_code": "QA",
+      "group": "B",
+      "fifa_ranking": 58,
+      "elo": 1480,
+      "wiki_extract": "The Qatar national football team, nicknamed \"The Maroons\", represents Qatar in international football, and is controlled by the Qatar Football Association, which is affiliated with the Asian Football Confederation (AFC) and comes under the global jurisdiction of world football’s governing body FIFA. They play their home games at Jassim bin Hamad Stadium.",
+      "wiki_url": "https://en.wikipedia.org/wiki/Qatar_national_football_team",
+      "wiki_source": "https://en.wikipedia.org/wiki/Qatar_national_football_team",
+      "data_sources": {
+        "wikipedia": true,
+        "fifa_ranking": true
+      },
+      "cleaned_at": "2026-07-04T11:16:36.708090+00:00"
+    },
+    {
+      "id": "england",
+      "name": "England",
+      "short_name": "ENG",
+      "country_code": "GB",
+      "group": "C",
+      "fifa_ranking": 4,
+      "elo": 1820,
+      "wiki_extract": "The England national football team have represented England in men's international football since the first international match in 1872. It is controlled by the Football Association (FA), the governing body for football in England, which is affiliated with UEFA and comes under the global jurisdiction of world football's governing body FIFA. England competes in the three major international tournaments contested by European nations: the FIFA World Cup, UEFA European Championship and UEFA Nations ",
+      "wiki_url": "https://en.wikipedia.org/wiki/England_national_football_team",
+      "wiki_source": "https://en.wikipedia.org/wiki/England_national_football_team",
+      "data_sources": {
+        "wikipedia": true,
+        "fifa_ranking": true
+      },
+      "cleaned_at": "2026-07-04T11:16:36.708090+00:00"
+    },
+    {
+      "id": "usa",
+      "name": "USA",
+      "short_name": "USA",
+      "country_code": "US",
+      "group": "C",
+      "fifa_ranking": 16,
+      "elo": 1650,
+      "wiki_extract": "The United States men's national soccer team represents the United States in men's international soccer, which is governed by the United States Soccer Federation. The team has been an affiliate member of FIFA since 1914 and a founding affiliate member of CONCACAF since 1961. Regionally, it is an affiliate member of NAFU in the North American Zone. From 1946 to 1961, it was a member of NAFC, the former governing soccer body in North America and a predecessor confederation of CONCACAF, and also a ",
+      "wiki_url": "https://en.wikipedia.org/wiki/United_States_men's_national_soccer_team",
+      "wiki_source": "https://en.wikipedia.org/wiki/United_States_men's_national_soccer_team",
+      "data_sources": {
+        "wikipedia": true,
+        "fifa_ranking": true
+      },
+      "cleaned_at": "2026-07-04T11:16:36.708090+00:00"
+    },
+    {
+      "id": "iran",
+      "name": "Iran",
+      "short_name": "IRN",
+      "country_code": "IR",
+      "group": "C",
+      "fifa_ranking": 21,
+      "elo": 1610,
+      "wiki_extract": "The Iran national football team have represented Iran in men's international football since their first international match in 1941. It is administered by the Football Federation Islamic Republic of Iran (FFIRI), the governing body of football in Iran, which is affiliated with AFC and comes under the global jurisdiction of FIFA.",
+      "wiki_url": "https://en.wikipedia.org/wiki/Iran_national_football_team",
+      "wiki_source": "https://en.wikipedia.org/wiki/Iran_national_football_team",
+      "data_sources": {
+        "wikipedia": true,
+        "fifa_ranking": true
+      },
+      "cleaned_at": "2026-07-04T11:16:36.708629+00:00"
+    },
+    {
+      "id": "wales",
+      "name": "Wales",
+      "short_name": "WAL",
+      "country_code": "WA",
+      "group": "C",
+      "fifa_ranking": 26,
+      "elo": 1580,
+      "wiki_extract": "The Wales national football team represents Wales in men's international football. It is controlled by the Football Association of Wales (FAW), the governing body for football in Wales. They have been a member of FIFA since 1946 and a member of UEFA since 1954.",
+      "wiki_url": "https://en.wikipedia.org/wiki/Wales_national_football_team",
+      "wiki_source": "https://en.wikipedia.org/wiki/Wales_national_football_team",
+      "data_sources": {
+        "wikipedia": true,
+        "fifa_ranking": true
+      },
+      "cleaned_at": "2026-07-04T11:16:36.708629+00:00"
+    },
+    {
+      "id": "brazil",
+      "name": "Brazil",
+      "short_name": "BRA",
+      "country_code": "BR",
+      "group": "D",
+      "fifa_ranking": 3,
+      "elo": 1850,
+      "wiki_extract": "The Brazil national football team, nicknamed Canarinho, represents Brazil in men's international football and is administered by the Brazilian Football Confederation, the governing body of football in Brazil. It has been a member of FIFA since 1923 and was a founding member of CONMEBOL in 1916. It was also a member of PFC, the unified confederation of the Americas, from 1946 to 1961.",
+      "wiki_url": "https://en.wikipedia.org/wiki/Brazil_national_football_team",
+      "wiki_source": "https://en.wikipedia.org/wiki/Brazil_national_football_team",
+      "data_sources": {
+        "wikipedia": true,
+        "fifa_ranking": true
+      },
+      "cleaned_at": "2026-07-04T11:16:36.708629+00:00"
+    },
+    {
+      "id": "portugal",
+      "name": "Portugal",
+      "short_name": "POR",
+      "country_code": "PO",
+      "group": "D",
+      "fifa_ranking": 6,
+      "elo": 1790,
+      "wiki_extract": "The Portugal national football team has represented Portugal in men's international football competition since 1921. The national team is controlled by the Portuguese Football Federation (FPF), the governing body for football in Portugal. Portugal's home stadium is the Estádio Nacional in Oeiras, located next to its primary training ground and the FPF headquarters, but the team usually plays its home matches in more modern stadiums throughout the country, such as the Estádio da Luz, Estádio José",
+      "wiki_url": "https://en.wikipedia.org/wiki/Portugal_national_football_team",
+      "wiki_source": "https://en.wikipedia.org/wiki/Portugal_national_football_team",
+      "data_sources": {
+        "wikipedia": true,
+        "fifa_ranking": true
+      },
+      "cleaned_at": "2026-07-04T11:16:36.708629+00:00"
+    },
+    {
+      "id": "serbia",
+      "name": "Serbia",
+      "short_name": "SRB",
+      "country_code": "SR",
+      "group": "D",
+      "fifa_ranking": 25,
+      "elo": 1585,
+      "wiki_extract": "The Serbia men's national football team represents Serbia in men's international football competition. It is controlled by the Football Association of Serbia, the governing body for football in Serbia.",
+      "wiki_url": "https://en.wikipedia.org/wiki/Serbia_national_football_team",
+      "wiki_source": "https://en.wikipedia.org/wiki/Serbia_national_football_team",
+      "data_sources": {
+        "wikipedia": true,
+        "fifa_ranking": true
+      },
+      "cleaned_at": "2026-07-04T11:16:36.708629+00:00"
+    },
+    {
+      "id": "ghana",
+      "name": "Ghana",
+      "short_name": "GHA",
+      "country_code": "GH",
+      "group": "D",
+      "fifa_ranking": 60,
+      "elo": 1505,
+      "wiki_extract": "The Ghana men's national association football team represents Ghana in men's international association football. It is nicknamed the Black Stars after the Black Star of Africa in the flag of Ghana. The team is governed by the Ghana Football Association. Prior to 1957, it played as the Gold Coast.",
+      "wiki_url": "https://en.wikipedia.org/wiki/Ghana_national_football_team",
+      "wiki_source": "https://en.wikipedia.org/wiki/Ghana_national_football_team",
+      "data_sources": {
+        "wikipedia": true,
+        "fifa_ranking": true
+      },
+      "cleaned_at": "2026-07-04T11:16:36.708629+00:00"
+    },
+    {
+      "id": "germany",
+      "name": "Germany",
+      "short_name": "GER",
+      "country_code": "GE",
+      "group": "E",
+      "fifa_ranking": 13,
+      "elo": 1760,
+      "wiki_extract": "The Germany national football team represents Germany in men's international football and played its first match in 1908. The team is governed by the German Football Association, founded in 1900, by members the single largest national sports federation in the world. Between 1949 and 1990, separate German national teams were recognised by FIFA due to Allied occupation and division: the DFB's team representing the Federal Republic of Germany, the Saarland team representing the Saar Protectorate (1",
+      "wiki_url": "https://en.wikipedia.org/wiki/Germany_national_football_team",
+      "wiki_source": "https://en.wikipedia.org/wiki/Germany_national_football_team",
+      "data_sources": {
+        "wikipedia": true,
+        "fifa_ranking": true
+      },
+      "cleaned_at": "2026-07-04T11:16:36.708629+00:00"
+    },
+    {
+      "id": "japan",
+      "name": "Japan",
+      "short_name": "JPN",
+      "country_code": "JP",
+      "group": "E",
+      "fifa_ranking": 18,
+      "elo": 1670,
+      "wiki_extract": "The Japan national football team , also known by the nickname Samurai Blue , represents Japan in men's international football. It is controlled by the Japan Football Association (JFA), the governing body for football in Japan.",
+      "wiki_url": "https://en.wikipedia.org/wiki/Japan_national_football_team",
+      "wiki_source": "https://en.wikipedia.org/wiki/Japan_national_football_team",
+      "data_sources": {
+        "wikipedia": true,
+        "fifa_ranking": true
+      },
+      "cleaned_at": "2026-07-04T11:16:36.708629+00:00"
+    },
+    {
+      "id": "costa_rica",
+      "name": "Costa Rica",
+      "short_name": "CRC",
+      "country_code": "CR",
+      "group": "E",
+      "fifa_ranking": 52,
+      "elo": 1530,
+      "wiki_extract": "The Costa Rica national football team represents Costa Rica in men's international football, which is governed by the Federación Costarricense de Fútbol, the governing body for football in Costa Rica founded in 1921. It has been an affiliate member of FIFA since 1927 and a founding affiliate member of CONCACAF since 1961. Regionally, it is an affiliate member of UNCAF in the Central American Zone. \nFrom 1938 to 1961, it was a member of CCCF, the former governing body of football in Central Ameri",
+      "wiki_url": "https://en.wikipedia.org/wiki/Costa_Rica_national_football_team",
+      "wiki_source": "https://en.wikipedia.org/wiki/Costa_Rica_national_football_team",
+      "data_sources": {
+        "wikipedia": true,
+        "fifa_ranking": true
+      },
+      "cleaned_at": "2026-07-04T11:16:36.708629+00:00"
+    },
+    {
+      "id": "new_zealand",
+      "name": "New Zealand",
+      "short_name": "NZL",
+      "country_code": "NZ",
+      "group": "E",
+      "fifa_ranking": 26,
+      "elo": 1520,
+      "wiki_extract": "New Zealand national football team might refer to:New Zealand men's national football team\nNew Zealand women's national football team\nNew Zealand national American football team\nNew Zealand national Australian rules football team\nNew Zealand national beach soccer team",
+      "wiki_url": "https://en.wikipedia.org/wiki/New_Zealand_national_football_team",
+      "wiki_source": "https://en.wikipedia.org/wiki/New_Zealand_national_football_team",
+      "data_sources": {
+        "wikipedia": true,
+        "fifa_ranking": true
+      },
+      "cleaned_at": "2026-07-04T11:16:36.708629+00:00"
+    },
+    {
+      "id": "belgium",
+      "name": "Belgium",
+      "short_name": "BEL",
+      "country_code": "BE",
+      "group": "F",
+      "fifa_ranking": 15,
+      "elo": 1745,
+      "wiki_extract": "The Belgium national football team has represented Belgium in men's international football since their maiden match in 1904. The squad is under the global jurisdiction of FIFA and is governed in Europe by UEFA—both of which were co-founded by the Belgian team's supervising body, the Royal Belgian Football Association. Periods of regular Belgian representation at the highest international level, from 1920 to 1938, from 1980 to 2002 and again from 2014 onwards, have alternated with mostly unsucces",
+      "wiki_url": "https://en.wikipedia.org/wiki/Belgium_national_football_team",
+      "wiki_source": "https://en.wikipedia.org/wiki/Belgium_national_football_team",
+      "data_sources": {
+        "wikipedia": true,
+        "fifa_ranking": true
+      },
+      "cleaned_at": "2026-07-04T11:16:36.708629+00:00"
+    },
+    {
+      "id": "croatia",
+      "name": "Croatia",
+      "short_name": "CRO",
+      "country_code": "CR",
+      "group": "F",
+      "fifa_ranking": 10,
+      "elo": 1720,
+      "wiki_extract": "The Croatia national football team represents Croatia in men's international football matches. It is governed by the Croatian Football Federation (HNS), the governing body for football in Croatia. It is a member of UEFA in Europe and FIFA in global competition. The team's colours reference two national symbols: the Croatian checkerboard and the country's tricolour. They are colloquially known as the Vatreni (Blazers) and the Kockasti.",
+      "wiki_url": "https://en.wikipedia.org/wiki/Croatia_national_football_team",
+      "wiki_source": "https://en.wikipedia.org/wiki/Croatia_national_football_team",
+      "data_sources": {
+        "wikipedia": true,
+        "fifa_ranking": true
+      },
+      "cleaned_at": "2026-07-04T11:16:36.708629+00:00"
+    },
+    {
+      "id": "morocco",
+      "name": "Morocco",
+      "short_name": "MAR",
+      "country_code": "MA",
+      "group": "F",
+      "fifa_ranking": 12,
+      "elo": 1700,
+      "wiki_extract": "The Morocco national football team has represented Morocco in men's international football since their first international match in 1957. It is controlled by the Royal Moroccan Football Federation (FRMF), the governing body for football in Morocco. It has been affiliated with FIFA since 1960, with the Confederation of African Football since 1959, and with the Union of North African Football since 2005. The team, which is known as the Atlas Lions, plays home matches at the Prince Moulay Abdellah ",
+      "wiki_url": "https://en.wikipedia.org/wiki/Morocco_national_football_team",
+      "wiki_source": "https://en.wikipedia.org/wiki/Morocco_national_football_team",
+      "data_sources": {
+        "wikipedia": true,
+        "fifa_ranking": true
+      },
+      "cleaned_at": "2026-07-04T11:16:36.708629+00:00"
+    },
+    {
+      "id": "canada",
+      "name": "Canada",
+      "short_name": "CAN",
+      "country_code": "CA",
+      "group": "F",
+      "fifa_ranking": 48,
+      "elo": 1560,
+      "wiki_extract": "The Canada men's national soccer team represents Canada in men's international soccer, which is governed by the Canadian Soccer Association, the governing body for soccer in Canada founded in 1912. It has been an affiliate member of FIFA since 1912 and a founding affiliate member of CONCACAF since 1961. Regionally, it is an affiliate member of NAFU in the North American Zone.",
+      "wiki_url": "https://en.wikipedia.org/wiki/Canada_men's_national_soccer_team",
+      "wiki_source": "https://en.wikipedia.org/wiki/Canada_men's_national_soccer_team",
+      "data_sources": {
+        "wikipedia": true,
+        "fifa_ranking": true
+      },
+      "cleaned_at": "2026-07-04T11:16:36.708629+00:00"
+    },
+    {
+      "id": "france",
+      "name": "France",
+      "short_name": "FRA",
+      "country_code": "FR",
+      "group": "G",
+      "fifa_ranking": 2,
+      "elo": 1840,
+      "wiki_extract": "The France national football team represents France in men's international football. It is controlled by the French Football Federation, the governing body for football in France. It is a member of UEFA in Europe and FIFA in global competitions. The team's colours and imagery reference two national symbols: the French blue-white-red tricolour and Gallic rooster. The team is colloquially known as Les Bleus. They play home matches at the Stade de France in Saint-Denis and train at Centre National ",
+      "wiki_url": "https://en.wikipedia.org/wiki/France_national_football_team",
+      "wiki_source": "https://en.wikipedia.org/wiki/France_national_football_team",
+      "data_sources": {
+        "wikipedia": true,
+        "fifa_ranking": true
+      },
+      "cleaned_at": "2026-07-04T11:16:36.708629+00:00"
+    },
+    {
+      "id": "denmark",
+      "name": "Denmark",
+      "short_name": "DEN",
+      "country_code": "DE",
+      "group": "G",
+      "fifa_ranking": 19,
+      "elo": 1685,
+      "wiki_extract": "The Denmark national football team represents Denmark including Greenland, but not Faroe Islands, in men's international football competitions. It is controlled by the Danish Football Association (DBU), the governing body for the football clubs which are organised under DBU. Denmark's home stadium is Parken Stadium in the Østerbro district of Copenhagen.",
+      "wiki_url": "https://en.wikipedia.org/wiki/Denmark_national_football_team",
+      "wiki_source": "https://en.wikipedia.org/wiki/Denmark_national_football_team",
+      "data_sources": {
+        "wikipedia": true,
+        "fifa_ranking": true
+      },
+      "cleaned_at": "2026-07-04T11:16:36.708629+00:00"
+    },
+    {
+      "id": "tunisia",
+      "name": "Tunisia",
+      "short_name": "TUN",
+      "country_code": "TU",
+      "group": "G",
+      "fifa_ranking": 41,
+      "elo": 1545,
+      "wiki_extract": "The Tunisia national football team represents Tunisia in men's international association football competitions, and is controlled by the Tunisian Football Federation (TFF). The team competes under the Confederation of African Football (CAF) on the continental level, and is affiliated with FIFA for global competitions. Additionally, the team is a member of the Union of North African Football (UNAF) and the Union of Arab Football Associations (UAFA). The team is colloquially known as Eagles of Car",
+      "wiki_url": "https://en.wikipedia.org/wiki/Tunisia_national_football_team",
+      "wiki_source": "https://en.wikipedia.org/wiki/Tunisia_national_football_team",
+      "data_sources": {
+        "wikipedia": true,
+        "fifa_ranking": true
+      },
+      "cleaned_at": "2026-07-04T11:16:36.708629+00:00"
+    },
+    {
+      "id": "peru",
+      "name": "Peru",
+      "short_name": "PER",
+      "country_code": "PE",
+      "group": "G",
+      "fifa_ranking": 22,
+      "elo": 1605,
+      "wiki_extract": "The Peru national football team, nicknamed La Bicolor, represents Peru in men's international football. The national team has been organised, since 1927, by the Federación Peruana de Fútbol. It has been a member of FIFA since 1924 and a member of CONMEBOL since 1925. It was also a member of PFC, the attempt at a unified confederation of the Americas from 1946 to 1961.",
+      "wiki_url": "https://en.wikipedia.org/wiki/Peru_national_football_team",
+      "wiki_source": "https://en.wikipedia.org/wiki/Peru_national_football_team",
+      "data_sources": {
+        "wikipedia": true,
+        "fifa_ranking": true
+      },
+      "cleaned_at": "2026-07-04T11:16:36.709285+00:00"
+    },
+    {
+      "id": "uruguay",
+      "name": "Uruguay",
+      "short_name": "URU",
+      "country_code": "UR",
+      "group": "H",
+      "fifa_ranking": 14,
+      "elo": 1730,
+      "wiki_extract": "The Uruguay national football team, nicknamed la Celeste and los Charrúas, have represented Uruguay in international men's football since their first international match in 1902 and is administered by the Asociación Uruguaya de Fútbol, the governing body of football in Uruguay, which is a founding member of CONMEBOL since 1916 and a member of FIFA since 1923. It was also a member of PFC, which was the attempt at a unified confederation of the Americas from 1946 to 1961.\nUruguay's home stadium is",
+      "wiki_url": "https://en.wikipedia.org/wiki/Uruguay_national_football_team",
+      "wiki_source": "https://en.wikipedia.org/wiki/Uruguay_national_football_team",
+      "data_sources": {
+        "wikipedia": true,
+        "fifa_ranking": true
+      },
+      "cleaned_at": "2026-07-04T11:16:36.709285+00:00"
+    },
+    {
+      "id": "italy",
+      "name": "Italy",
+      "short_name": "ITA",
+      "country_code": "IT",
+      "group": "H",
+      "fifa_ranking": 9,
+      "elo": 1705,
+      "wiki_extract": "The Italy national football team has represented Italy in men's international football since its first match in 1910. The national team is controlled by the Italian Football Federation (FIGC), the governing body for football in Italy, which is a co-founder and member of UEFA. Italy's home matches are played at various stadiums throughout Italy, and its primary training ground and technical headquarters, Centro Tecnico Federale di Coverciano, is located in Florence.",
+      "wiki_url": "https://en.wikipedia.org/wiki/Italy_national_football_team",
+      "wiki_source": "https://en.wikipedia.org/wiki/Italy_national_football_team",
+      "data_sources": {
+        "wikipedia": true,
+        "fifa_ranking": true
+      },
+      "cleaned_at": "2026-07-04T11:16:36.709285+00:00"
+    },
+    {
+      "id": "south_korea",
+      "name": "South Korea",
+      "short_name": "KOR",
+      "country_code": "KO",
+      "group": "H",
+      "fifa_ranking": 24,
+      "elo": 1620,
+      "wiki_extract": "The South Korea national football team represents South Korea in men's international football and is governed by the Korea Football Association, a member of FIFA and the Asian Football Confederation (AFC).",
+      "wiki_url": "https://en.wikipedia.org/wiki/South_Korea_national_football_team",
+      "wiki_source": "https://en.wikipedia.org/wiki/South_Korea_national_football_team",
+      "data_sources": {
+        "wikipedia": true,
+        "fifa_ranking": true
+      },
+      "cleaned_at": "2026-07-04T11:16:36.709285+00:00"
+    },
+    {
+      "id": "australia",
+      "name": "Australia",
+      "short_name": "AUS",
+      "country_code": "AU",
+      "group": "H",
+      "fifa_ranking": 23,
+      "elo": 1595,
+      "wiki_extract": "The Australia men's national soccer team represents Australia in international men's soccer. Officially nicknamed the Socceroos, the team is controlled by the governing body for soccer in Australia, Football Australia, which is affiliated with the Asian Football Confederation (AFC) and the regional ASEAN Football Federation (AFF).",
+      "wiki_url": "https://en.wikipedia.org/wiki/Australia_men's_national_soccer_team",
+      "wiki_source": "https://en.wikipedia.org/wiki/Australia_men's_national_soccer_team",
+      "data_sources": {
+        "wikipedia": true,
+        "fifa_ranking": true
+      },
+      "cleaned_at": "2026-07-04T11:16:36.717881+00:00"
+    },
+    {
+      "id": "colombia",
+      "name": "Colombia",
+      "short_name": "COL",
+      "country_code": "CO",
+      "group": "I",
+      "fifa_ranking": 17,
+      "elo": 1650,
+      "wiki_extract": "The Colombia national football team, nicknamed Los Cafeteros, represents Colombia in men's international football and is managed by the Federación Colombiana de Fútbol, the governing body for football in Colombia. It has been a member of FIFA and CONMEBOL since 1936. Currently ranked 13th on the FIFA World Ranking as of June 2026, Colombia has participated in seven FIFA World Cups, most recently in the 2026 edition. The team are nicknamed Los Cafeteros due to the country's high coffee production",
+      "wiki_url": "https://en.wikipedia.org/wiki/Colombia_national_football_team",
+      "wiki_source": "https://en.wikipedia.org/wiki/Colombia_national_football_team",
+      "data_sources": {
+        "wikipedia": true,
+        "fifa_ranking": true
+      },
+      "cleaned_at": "2026-07-04T11:16:36.717881+00:00"
+    },
+    {
+      "id": "paraguay",
+      "name": "Paraguay",
+      "short_name": "PAR",
+      "country_code": "PA",
+      "group": "I",
+      "fifa_ranking": 35,
+      "elo": 1555,
+      "wiki_extract": "The Paraguay national football team, nicknamed La Albirroja, represents Paraguay in men's international football competitions, and are controlled by the Asociación Paraguaya de Fútbol. Paraguay is a member of CONMEBOL. The Albirroja has qualified for nine FIFA World Cup competitions, with their best performance coming in 2010 when they reached the quarter-finals. A regular participant at the Copa América, Paraguay have been crowned champions of the competition on two occasions. Paraguay's highes",
+      "wiki_url": "https://en.wikipedia.org/wiki/Paraguay_national_football_team",
+      "wiki_source": "https://en.wikipedia.org/wiki/Paraguay_national_football_team",
+      "data_sources": {
+        "wikipedia": true,
+        "fifa_ranking": true
+      },
+      "cleaned_at": "2026-07-04T11:16:36.717881+00:00"
+    },
+    {
+      "id": "panama",
+      "name": "Panama",
+      "short_name": "PAN",
+      "country_code": "PA",
+      "group": "I",
+      "fifa_ranking": 43,
+      "elo": 1500,
+      "wiki_extract": "The Panama national football team represents Panama in men's international football, which is governed by the Federación Panameña de Fútbol founded in 1937. It has been an affiliate member of FIFA since 1938 and a founding affiliate member of CONCACAF since 1961. Regionally, it is an affiliate member of UNCAF in the Central American Zone. From 1938 to 1961, it was a member of CCCF, the former governing body of football in Central America and Caribbean and a predecessor confederation of CONCACAF,",
+      "wiki_url": "https://en.wikipedia.org/wiki/Panama_national_football_team",
+      "wiki_source": "https://en.wikipedia.org/wiki/Panama_national_football_team",
+      "data_sources": {
+        "wikipedia": true,
+        "fifa_ranking": true
+      },
+      "cleaned_at": "2026-07-04T11:16:36.717881+00:00"
+    },
+    {
+      "id": "bolivia",
+      "name": "Bolivia",
+      "short_name": "BOL",
+      "country_code": "BO",
+      "group": "I",
+      "fifa_ranking": 85,
+      "elo": 1450,
+      "wiki_extract": "The Bolivia national football team, nicknamed La Verde, has represented Bolivia in men's international football since 1926. Organized by the Federación Boliviana de Fútbol, it is one of the ten members of FIFA's South American Football Confederation (CONMEBOL).",
+      "wiki_url": "https://en.wikipedia.org/wiki/Bolivia_national_football_team",
+      "wiki_source": "https://en.wikipedia.org/wiki/Bolivia_national_football_team",
+      "data_sources": {
+        "wikipedia": true,
+        "fifa_ranking": true
+      },
+      "cleaned_at": "2026-07-04T11:16:36.717881+00:00"
+    },
+    {
+      "id": "senegal",
+      "name": "Senegal",
+      "short_name": "SEN",
+      "country_code": "SE",
+      "group": "J",
+      "fifa_ranking": 20,
+      "elo": 1655,
+      "wiki_extract": "The Senegal national football team, nicknamed Les Lions de la Teranga, represents Senegal in men's international association football and is operated by the Senegalese Football Federation.",
+      "wiki_url": "https://en.wikipedia.org/wiki/Senegal_national_football_team",
+      "wiki_source": "https://en.wikipedia.org/wiki/Senegal_national_football_team",
+      "data_sources": {
+        "wikipedia": true,
+        "fifa_ranking": true
+      },
+      "cleaned_at": "2026-07-04T11:16:36.717881+00:00"
+    },
+    {
+      "id": "algeria",
+      "name": "Algeria",
+      "short_name": "ALG",
+      "country_code": "AL",
+      "group": "J",
+      "fifa_ranking": 33,
+      "elo": 1580,
+      "wiki_extract": "The Algeria national football team represents Algeria in men's international football, and is governed by the Algerian Football Federation. The team plays its home matches at Nelson Mandela Stadium in Algiers and Miloud Hadefi Stadium in Oran. Algeria joined FIFA on 1 January 1964, a year and a half after gaining independence.",
+      "wiki_url": "https://en.wikipedia.org/wiki/Algeria_national_football_team",
+      "wiki_source": "https://en.wikipedia.org/wiki/Algeria_national_football_team",
+      "data_sources": {
+        "wikipedia": true,
+        "fifa_ranking": true
+      },
+      "cleaned_at": "2026-07-04T11:16:36.717881+00:00"
+    },
+    {
+      "id": "south_africa",
+      "name": "South Africa",
+      "short_name": "RSA",
+      "country_code": "RS",
+      "group": "J",
+      "fifa_ranking": 57,
+      "elo": 1480,
+      "wiki_extract": "The South Africa national soccer team represents South Africa in men's international football and is run by the South African Football Association, the governing body for football in South Africa. Nicknamed Bafana Bafana, the team plays at various stadiums around the country. The team, a member of both FIFA and the Confederation of African Football (CAF), is one of the most well-supported national sides in Africa, and are recognised by their traditional green and gold kits.",
+      "wiki_url": "https://en.wikipedia.org/wiki/South_Africa_national_soccer_team",
+      "wiki_source": "https://en.wikipedia.org/wiki/South_Africa_national_soccer_team",
+      "data_sources": {
+        "wikipedia": true,
+        "fifa_ranking": true
+      },
+      "cleaned_at": "2026-07-04T11:16:36.717881+00:00"
+    },
+    {
+      "id": "burkina_faso",
+      "name": "Burkina Faso",
+      "short_name": "BFA",
+      "country_code": "BF",
+      "group": "J",
+      "fifa_ranking": 56,
+      "elo": 1490,
+      "wiki_extract": "The Burkina Faso national football team represents Burkina Faso in men's international football and is controlled by the Burkinabé Football Federation. They were known as the Upper Volta national football team until 1984, when Upper Volta became Burkina Faso. They finished fourth in the 1998 Africa Cup of Nations, when they hosted the tournament. Their best ever finish in the tournament was the 2013 edition, reaching the final.",
+      "wiki_url": "https://en.wikipedia.org/wiki/Burkina_Faso_national_football_team",
+      "wiki_source": "https://en.wikipedia.org/wiki/Burkina_Faso_national_football_team",
+      "data_sources": {
+        "wikipedia": true,
+        "fifa_ranking": true
+      },
+      "cleaned_at": "2026-07-04T11:16:36.717881+00:00"
+    },
+    {
+      "id": "poland",
+      "name": "Poland",
+      "short_name": "POL",
+      "country_code": "PO",
+      "group": "K",
+      "fifa_ranking": 31,
+      "elo": 1590,
+      "wiki_extract": "The Poland national football team represents Poland in men's international football competitions since their first match in 1921. It is governed by the Polish Football Association (PZPN), the governing body for football in Poland. They are known by the nicknames \"The White-Reds\" and \"The Eagles\", symbolized by their coat of arms featuring a white eagle on a red background. The team reached their peak World Ranking of 5th in 2017. Poland's home ground is the Kazimierz Górski National Stadium in W",
+      "wiki_url": "https://en.wikipedia.org/wiki/Poland_national_football_team",
+      "wiki_source": "https://en.wikipedia.org/wiki/Poland_national_football_team",
+      "data_sources": {
+        "wikipedia": true,
+        "fifa_ranking": true
+      },
+      "cleaned_at": "2026-07-04T11:16:36.717881+00:00"
+    },
+    {
+      "id": "sweden",
+      "name": "Sweden",
+      "short_name": "SWE",
+      "country_code": "SW",
+      "group": "K",
+      "fifa_ranking": 34,
+      "elo": 1585,
+      "wiki_extract": "Sweden national football team might refer to:Sweden men's national football team\nSweden women's national football team",
+      "wiki_url": "https://en.wikipedia.org/wiki/Sweden_national_football_team",
+      "wiki_source": "https://en.wikipedia.org/wiki/Sweden_national_football_team",
+      "data_sources": {
+        "wikipedia": true,
+        "fifa_ranking": true
+      },
+      "cleaned_at": "2026-07-04T11:16:36.717881+00:00"
+    },
+    {
+      "id": "austria",
+      "name": "Austria",
+      "short_name": "AUT",
+      "country_code": "AU",
+      "group": "K",
+      "fifa_ranking": 27,
+      "elo": 1610,
+      "wiki_extract": "The Austria national football team represents Austria in men's international football competitions, and is controlled by the Austrian Football Association.",
+      "wiki_url": "https://en.wikipedia.org/wiki/Austria_national_football_team",
+      "wiki_source": "https://en.wikipedia.org/wiki/Austria_national_football_team",
+      "data_sources": {
+        "wikipedia": true,
+        "fifa_ranking": true
+      },
+      "cleaned_at": "2026-07-04T11:16:36.717881+00:00"
+    },
+    {
+      "id": "egypt",
+      "name": "Egypt",
+      "short_name": "EGY",
+      "country_code": "EG",
+      "group": "K",
+      "fifa_ranking": 38,
+      "elo": 1570,
+      "wiki_extract": "The Egypt national football team, nicknamed The Pharaohs, represents Egypt in men's international football. It is governed by the Egyptian Football Association (EFA), the governing body of football in Egypt.",
+      "wiki_url": "https://en.wikipedia.org/wiki/Egypt_national_football_team",
+      "wiki_source": "https://en.wikipedia.org/wiki/Egypt_national_football_team",
+      "data_sources": {
+        "wikipedia": true,
+        "fifa_ranking": true
+      },
+      "cleaned_at": "2026-07-04T11:16:36.718884+00:00"
+    },
+    {
+      "id": "nigeria",
+      "name": "Nigeria",
+      "short_name": "NGA",
+      "country_code": "NG",
+      "group": "L",
+      "fifa_ranking": 28,
+      "elo": 1605,
+      "wiki_extract": "The Nigeria national football team represents Nigeria in international men's football. Governed by the Nigeria Football Federation (NFF), they are three-time Africa Cup of Nations (AFCON) winners, with their most recent title in 2013. In February 2024, the Nigerian national football team was ranked 28th in the FIFA rankings. The team has qualified for six of the last nine FIFA World Cups, missing only the 2006, 2022 and 2026 tournaments. They have reached the round of 16 on three occasions. Thei",
+      "wiki_url": "https://en.wikipedia.org/wiki/Nigeria_national_football_team",
+      "wiki_source": "https://en.wikipedia.org/wiki/Nigeria_national_football_team",
+      "data_sources": {
+        "wikipedia": true,
+        "fifa_ranking": true
+      },
+      "cleaned_at": "2026-07-04T11:16:36.718884+00:00"
+    },
+    {
+      "id": "ivory_coast",
+      "name": "Ivory Coast",
+      "short_name": "CIV",
+      "country_code": "CI",
+      "group": "L",
+      "fifa_ranking": 39,
+      "elo": 1575,
+      "wiki_extract": "The Ivory Coast national football team represents Ivory Coast in men's international football. Nicknamed the Elephants, the team is managed by the Ivorian Football Federation (FIF). The team has won the Africa Cup of Nations three times, in 1992, 2015 and 2023, and has qualified for the FIFA World Cup four times, in 2006, 2010, 2014 and 2026.",
+      "wiki_url": "https://en.wikipedia.org/wiki/Ivory_Coast_national_football_team",
+      "wiki_source": "https://en.wikipedia.org/wiki/Ivory_Coast_national_football_team",
+      "data_sources": {
+        "wikipedia": true,
+        "fifa_ranking": true
+      },
+      "cleaned_at": "2026-07-04T11:16:36.718884+00:00"
+    },
+    {
+      "id": "greece",
+      "name": "Greece",
+      "short_name": "GRE",
+      "country_code": "GR",
+      "group": "L",
+      "fifa_ranking": 46,
+      "elo": 1515,
+      "wiki_extract": "The Greece national football team represents Greece in men's international football matches, and is controlled by the Hellenic Football Federation, the governing body for football in Greece. Greece is one of only ten national teams to have been crowned UEFA European Champions.",
+      "wiki_url": "https://en.wikipedia.org/wiki/Greece_national_football_team",
+      "wiki_source": "https://en.wikipedia.org/wiki/Greece_national_football_team",
+      "data_sources": {
+        "wikipedia": true,
+        "fifa_ranking": true
+      },
+      "cleaned_at": "2026-07-04T11:16:36.718884+00:00"
+    },
+    {
+      "id": "zambia",
+      "name": "Zambia",
+      "short_name": "ZAM",
+      "country_code": "ZA",
+      "group": "L",
+      "fifa_ranking": 90,
+      "elo": 1430,
+      "wiki_extract": "The Zambia national football team represents Zambia in men's association football and is governed by the Football Association of Zambia (FAZ). During the 1980s, they were known as the KK 11, after founding president Dr. Kenneth Kaunda (\"KK\") who ruled Zambia from 1964 to 1991. After the country adopted multiparty politics, the side was nicknamed Chipolopolo, which means the \"Copper Bullets\". The team won an Africa Cup of Nations title in 2012. The team has also become the most successful team in",
+      "wiki_url": "https://en.wikipedia.org/wiki/Zambia_national_football_team",
+      "wiki_source": "https://en.wikipedia.org/wiki/Zambia_national_football_team",
+      "data_sources": {
+        "wikipedia": true,
+        "fifa_ranking": true
+      },
+      "cleaned_at": "2026-07-04T11:16:36.718884+00:00"
+    }
+  ]
+}

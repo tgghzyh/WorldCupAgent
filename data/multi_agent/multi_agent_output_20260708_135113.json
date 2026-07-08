@@ -1,0 +1,2099 @@
+{
+  "generated_at": "2026-07-08T13:51:13.827616+00:00",
+  "tournament": "FIFA World Cup 2026",
+  "quality_score": 1.0,
+  "state": {
+    "tournament_date": "2026-07-08T13:51:13.707484+00:00",
+    "tournament_stage": "group",
+    "teams": {
+      "Argentina": {
+        "name": "Argentina",
+        "group": "A",
+        "points": 9,
+        "goal_diff": 3,
+        "source": "prediction_snapshot",
+        "strength_score": 0.9062
+      },
+      "Mexico": {
+        "name": "Mexico",
+        "group": "A",
+        "points": 6,
+        "goal_diff": 1,
+        "source": "prediction_snapshot",
+        "strength_score": 0.2521
+      },
+      "Ecuador": {
+        "name": "Ecuador",
+        "group": "A",
+        "points": 3,
+        "goal_diff": -1,
+        "source": "prediction_snapshot",
+        "strength_score": 0.0979
+      },
+      "Jamaica": {
+        "name": "Jamaica",
+        "group": "A",
+        "points": 0,
+        "goal_diff": -3,
+        "source": "prediction_snapshot",
+        "strength_score": 0.0
+      },
+      "Spain": {
+        "name": "Spain",
+        "group": "B",
+        "points": 9,
+        "goal_diff": 3,
+        "source": "prediction_snapshot",
+        "strength_score": 0.4062
+      },
+      "Netherlands": {
+        "name": "Netherlands",
+        "group": "B",
+        "points": 6,
+        "goal_diff": 1,
+        "source": "prediction_snapshot",
+        "strength_score": 0.2521
+      },
+      "Cameroon": {
+        "name": "Cameroon",
+        "group": "B",
+        "points": 3,
+        "goal_diff": -1,
+        "source": "prediction_snapshot",
+        "strength_score": 0.0979
+      },
+      "Qatar": {
+        "name": "Qatar",
+        "group": "B",
+        "points": 0,
+        "goal_diff": -3,
+        "source": "prediction_snapshot",
+        "strength_score": 0.0
+      },
+      "England": {
+        "name": "England",
+        "group": "C",
+        "points": 9,
+        "goal_diff": 3,
+        "source": "prediction_snapshot",
+        "strength_score": 0.4062
+      },
+      "USA": {
+        "name": "USA",
+        "group": "C",
+        "points": 6,
+        "goal_diff": 1,
+        "source": "prediction_snapshot",
+        "strength_score": 0.2521
+      },
+      "Iran": {
+        "name": "Iran",
+        "group": "C",
+        "points": 3,
+        "goal_diff": -1,
+        "source": "prediction_snapshot",
+        "strength_score": 0.0979
+      },
+      "Wales": {
+        "name": "Wales",
+        "group": "C",
+        "points": 0,
+        "goal_diff": -3,
+        "source": "prediction_snapshot",
+        "strength_score": 0.0
+      },
+      "Brazil": {
+        "name": "Brazil",
+        "group": "D",
+        "points": 9,
+        "goal_diff": 3,
+        "source": "prediction_snapshot",
+        "strength_score": 0.4062
+      },
+      "Portugal": {
+        "name": "Portugal",
+        "group": "D",
+        "points": 6,
+        "goal_diff": 1,
+        "source": "prediction_snapshot",
+        "strength_score": 0.2521
+      },
+      "Serbia": {
+        "name": "Serbia",
+        "group": "D",
+        "points": 3,
+        "goal_diff": -1,
+        "source": "prediction_snapshot",
+        "strength_score": 0.0979
+      },
+      "Ghana": {
+        "name": "Ghana",
+        "group": "D",
+        "points": 0,
+        "goal_diff": -3,
+        "source": "prediction_snapshot",
+        "strength_score": 0.0
+      },
+      "Germany": {
+        "name": "Germany",
+        "group": "E",
+        "points": 9,
+        "goal_diff": 3,
+        "source": "prediction_snapshot",
+        "strength_score": 0.4062
+      },
+      "Japan": {
+        "name": "Japan",
+        "group": "E",
+        "points": 6,
+        "goal_diff": 1,
+        "source": "prediction_snapshot",
+        "strength_score": 0.2521
+      },
+      "Costa Rica": {
+        "name": "Costa Rica",
+        "group": "E",
+        "points": 3,
+        "goal_diff": -1,
+        "source": "prediction_snapshot",
+        "strength_score": 0.0979
+      },
+      "New Zealand": {
+        "name": "New Zealand",
+        "group": "E",
+        "points": 0,
+        "goal_diff": -3,
+        "source": "prediction_snapshot",
+        "strength_score": 0.0
+      },
+      "Belgium": {
+        "name": "Belgium",
+        "group": "F",
+        "points": 9,
+        "goal_diff": 3,
+        "source": "prediction_snapshot",
+        "strength_score": 0.4062
+      },
+      "Croatia": {
+        "name": "Croatia",
+        "group": "F",
+        "points": 6,
+        "goal_diff": 1,
+        "source": "prediction_snapshot",
+        "strength_score": 0.2521
+      },
+      "Morocco": {
+        "name": "Morocco",
+        "group": "F",
+        "points": 3,
+        "goal_diff": -1,
+        "source": "prediction_snapshot",
+        "strength_score": 0.0979
+      },
+      "Canada": {
+        "name": "Canada",
+        "group": "F",
+        "points": 0,
+        "goal_diff": -3,
+        "source": "prediction_snapshot",
+        "strength_score": 0.0
+      },
+      "France": {
+        "name": "France",
+        "group": "G",
+        "points": 9,
+        "goal_diff": 3,
+        "source": "prediction_snapshot",
+        "strength_score": 0.4062
+      },
+      "Denmark": {
+        "name": "Denmark",
+        "group": "G",
+        "points": 6,
+        "goal_diff": 1,
+        "source": "prediction_snapshot",
+        "strength_score": 0.2521
+      },
+      "Tunisia": {
+        "name": "Tunisia",
+        "group": "G",
+        "points": 3,
+        "goal_diff": -1,
+        "source": "prediction_snapshot",
+        "strength_score": 0.0979
+      },
+      "Peru": {
+        "name": "Peru",
+        "group": "G",
+        "points": 0,
+        "goal_diff": -3,
+        "source": "prediction_snapshot",
+        "strength_score": 0.0
+      },
+      "Uruguay": {
+        "name": "Uruguay",
+        "group": "H",
+        "points": 9,
+        "goal_diff": 3,
+        "source": "prediction_snapshot",
+        "strength_score": 0.4062
+      },
+      "Italy": {
+        "name": "Italy",
+        "group": "H",
+        "points": 6,
+        "goal_diff": 1,
+        "source": "prediction_snapshot",
+        "strength_score": 0.2521
+      },
+      "South Korea": {
+        "name": "South Korea",
+        "group": "H",
+        "points": 3,
+        "goal_diff": -1,
+        "source": "prediction_snapshot",
+        "strength_score": 0.0979
+      },
+      "Australia": {
+        "name": "Australia",
+        "group": "H",
+        "points": 0,
+        "goal_diff": -3,
+        "source": "prediction_snapshot",
+        "strength_score": 0.0
+      },
+      "Colombia": {
+        "name": "Colombia",
+        "group": "I",
+        "points": 9,
+        "goal_diff": 3,
+        "source": "prediction_snapshot",
+        "strength_score": 0.4062
+      },
+      "Paraguay": {
+        "name": "Paraguay",
+        "group": "I",
+        "points": 6,
+        "goal_diff": 1,
+        "source": "prediction_snapshot",
+        "strength_score": 0.2521
+      },
+      "Panama": {
+        "name": "Panama",
+        "group": "I",
+        "points": 3,
+        "goal_diff": -1,
+        "source": "prediction_snapshot",
+        "strength_score": 0.0979
+      },
+      "Bolivia": {
+        "name": "Bolivia",
+        "group": "I",
+        "points": 0,
+        "goal_diff": -3,
+        "source": "prediction_snapshot",
+        "strength_score": 0.0
+      },
+      "Senegal": {
+        "name": "Senegal",
+        "group": "J",
+        "points": 9,
+        "goal_diff": 3,
+        "source": "prediction_snapshot",
+        "strength_score": 0.4062
+      },
+      "Algeria": {
+        "name": "Algeria",
+        "group": "J",
+        "points": 6,
+        "goal_diff": 1,
+        "source": "prediction_snapshot",
+        "strength_score": 0.2521
+      },
+      "South Africa": {
+        "name": "South Africa",
+        "group": "J",
+        "points": 3,
+        "goal_diff": -1,
+        "source": "prediction_snapshot",
+        "strength_score": 0.0979
+      },
+      "Burkina Faso": {
+        "name": "Burkina Faso",
+        "group": "J",
+        "points": 0,
+        "goal_diff": -3,
+        "source": "prediction_snapshot",
+        "strength_score": 0.0
+      },
+      "Poland": {
+        "name": "Poland",
+        "group": "K",
+        "points": 9,
+        "goal_diff": 3,
+        "source": "prediction_snapshot",
+        "strength_score": 0.4062
+      },
+      "Sweden": {
+        "name": "Sweden",
+        "group": "K",
+        "points": 6,
+        "goal_diff": 1,
+        "source": "prediction_snapshot",
+        "strength_score": 0.2521
+      },
+      "Austria": {
+        "name": "Austria",
+        "group": "K",
+        "points": 3,
+        "goal_diff": -1,
+        "source": "prediction_snapshot",
+        "strength_score": 0.0979
+      },
+      "Egypt": {
+        "name": "Egypt",
+        "group": "K",
+        "points": 0,
+        "goal_diff": -3,
+        "source": "prediction_snapshot",
+        "strength_score": 0.0
+      },
+      "Nigeria": {
+        "name": "Nigeria",
+        "group": "L",
+        "points": 9,
+        "goal_diff": 3,
+        "source": "prediction_snapshot",
+        "strength_score": 0.4062
+      },
+      "Ivory Coast": {
+        "name": "Ivory Coast",
+        "group": "L",
+        "points": 6,
+        "goal_diff": 1,
+        "source": "prediction_snapshot",
+        "strength_score": 0.2521
+      },
+      "Greece": {
+        "name": "Greece",
+        "group": "L",
+        "points": 3,
+        "goal_diff": -1,
+        "source": "prediction_snapshot",
+        "strength_score": 0.0979
+      },
+      "Zambia": {
+        "name": "Zambia",
+        "group": "L",
+        "points": 0,
+        "goal_diff": -3,
+        "source": "prediction_snapshot",
+        "strength_score": 0.0
+      }
+    },
+    "match_results": [
+      {
+        "year": 1930,
+        "stage": "Group Stage",
+        "date": "1930-07-13",
+        "city": "Montevideo"
+      },
+      {
+        "year": 1930,
+        "stage": "Group Stage",
+        "date": "1930-07-14",
+        "city": "Montevideo"
+      },
+      {
+        "year": 1930,
+        "stage": "Group Stage",
+        "date": "1930-07-18",
+        "city": "Montevideo"
+      },
+      {
+        "year": 1930,
+        "stage": "Group Stage",
+        "date": "1930-07-26",
+        "city": "Montevideo"
+      },
+      {
+        "year": 1930,
+        "stage": "Semi-final",
+        "date": "1930-07-27",
+        "city": "Montevideo"
+      },
+      {
+        "year": 1930,
+        "stage": "Semi-final",
+        "date": "1930-07-26",
+        "city": "Montevideo"
+      },
+      {
+        "year": 1930,
+        "stage": "Final",
+        "date": "1930-07-30",
+        "city": "Montevideo"
+      },
+      {
+        "year": 1934,
+        "stage": "Round of 16",
+        "date": "1934-05-27",
+        "city": "Rome"
+      },
+      {
+        "year": 1934,
+        "stage": "Quarter-final",
+        "date": "1934-05-31",
+        "city": "Florence"
+      },
+      {
+        "year": 1934,
+        "stage": "Semi-final",
+        "date": "1934-06-03",
+        "city": "Milan"
+      },
+      {
+        "year": 1934,
+        "stage": "3rd Place",
+        "date": "1934-06-07",
+        "city": "Naples"
+      },
+      {
+        "year": 1934,
+        "stage": "Final",
+        "date": "1934-06-10",
+        "city": "Rome"
+      },
+      {
+        "year": 1938,
+        "stage": "Round of 16",
+        "date": "1938-06-05",
+        "city": "Strasbourg"
+      },
+      {
+        "year": 1938,
+        "stage": "Quarter-final",
+        "date": "1938-06-12",
+        "city": "Bordeaux"
+      },
+      {
+        "year": 1938,
+        "stage": "Semi-final",
+        "date": "1938-06-16",
+        "city": "Paris"
+      },
+      {
+        "year": 1938,
+        "stage": "3rd Place",
+        "date": "1938-06-19",
+        "city": "Bordeaux"
+      },
+      {
+        "year": 1938,
+        "stage": "Final",
+        "date": "1938-06-19",
+        "city": "Paris"
+      },
+      {
+        "year": 1950,
+        "stage": "Group Stage",
+        "date": "1950-06-24",
+        "city": "Rio de Janeiro"
+      },
+      {
+        "year": 1950,
+        "stage": "Group Stage",
+        "date": "1950-06-29",
+        "city": "Belo Horizonte"
+      },
+      {
+        "year": 1950,
+        "stage": "Final Round",
+        "date": "1950-07-09",
+        "city": "Rio de Janeiro"
+      },
+      {
+        "year": 1950,
+        "stage": "Final Round",
+        "date": "1950-07-16",
+        "city": "Rio de Janeiro"
+      },
+      {
+        "year": 1954,
+        "stage": "Group Stage",
+        "date": "1954-06-17",
+        "city": "Zürich"
+      },
+      {
+        "year": 1954,
+        "stage": "Group Stage",
+        "date": "1954-06-20",
+        "city": "Bern"
+      },
+      {
+        "year": 1954,
+        "stage": "Quarter-final",
+        "date": "1954-06-26",
+        "city": "Lausanne"
+      },
+      {
+        "year": 1954,
+        "stage": "Semi-final",
+        "date": "1954-06-30",
+        "city": "Basel"
+      },
+      {
+        "year": 1954,
+        "stage": "3rd Place",
+        "date": "1954-07-03",
+        "city": "Zürich"
+      },
+      {
+        "year": 1954,
+        "stage": "Final",
+        "date": "1954-07-04",
+        "city": "Bern"
+      },
+      {
+        "year": 1958,
+        "stage": "Group Stage",
+        "date": "1958-06-08",
+        "city": "Borås"
+      },
+      {
+        "year": 1958,
+        "stage": "Quarter-final",
+        "date": "1958-06-19",
+        "city": "Gothenburg"
+      },
+      {
+        "year": 1958,
+        "stage": "Semi-final",
+        "date": "1958-06-24",
+        "city": "Gothenburg"
+      },
+      {
+        "year": 1958,
+        "stage": "3rd Place",
+        "date": "1958-06-28",
+        "city": "Gothenburg"
+      },
+      {
+        "year": 1958,
+        "stage": "Final",
+        "date": "1958-06-29",
+        "city": "Stockholm"
+      },
+      {
+        "year": 1962,
+        "stage": "Group Stage",
+        "date": "1962-05-31",
+        "city": "Rancagua"
+      },
+      {
+        "year": 1962,
+        "stage": "Group Stage",
+        "date": "1962-06-02",
+        "city": "Santiago"
+      },
+      {
+        "year": 1962,
+        "stage": "Quarter-final",
+        "date": "1962-06-10",
+        "city": "Viña del Mar"
+      },
+      {
+        "year": 1962,
+        "stage": "Semi-final",
+        "date": "1962-06-13",
+        "city": "Santiago"
+      },
+      {
+        "year": 1962,
+        "stage": "3rd Place",
+        "date": "1962-06-16",
+        "city": "Santiago"
+      },
+      {
+        "year": 1962,
+        "stage": "Final",
+        "date": "1962-06-17",
+        "city": "Santiago"
+      },
+      {
+        "year": 1966,
+        "stage": "Group Stage",
+        "date": "1966-07-11",
+        "city": "London"
+      },
+      {
+        "year": 1966,
+        "stage": "Group Stage",
+        "date": "1966-07-19",
+        "city": "Middlesbrough"
+      },
+      {
+        "year": 1966,
+        "stage": "Quarter-final",
+        "date": "1966-07-23",
+        "city": "Liverpool"
+      },
+      {
+        "year": 1966,
+        "stage": "Semi-final",
+        "date": "1966-07-26",
+        "city": "London"
+      },
+      {
+        "year": 1966,
+        "stage": "Semi-final",
+        "date": "1966-07-25",
+        "city": "Liverpool"
+      },
+      {
+        "year": 1966,
+        "stage": "3rd Place",
+        "date": "1966-07-28",
+        "city": "London"
+      },
+      {
+        "year": 1966,
+        "stage": "Final",
+        "date": "1966-07-30",
+        "city": "London"
+      },
+      {
+        "year": 1970,
+        "stage": "Group Stage",
+        "date": "1970-06-03",
+        "city": "Guadalajara"
+      },
+      {
+        "year": 1970,
+        "stage": "Group Stage",
+        "date": "1970-06-02",
+        "city": "León"
+      },
+      {
+        "year": 1970,
+        "stage": "Quarter-final",
+        "date": "1970-06-14",
+        "city": "Guadalajara"
+      },
+      {
+        "year": 1970,
+        "stage": "Semi-final",
+        "date": "1970-06-17",
+        "city": "Mexico City"
+      },
+      {
+        "year": 1970,
+        "stage": "3rd Place",
+        "date": "1970-06-20",
+        "city": "Mexico City"
+      },
+      {
+        "year": 1970,
+        "stage": "Final",
+        "date": "1970-06-21",
+        "city": "Mexico City"
+      },
+      {
+        "year": 1974,
+        "stage": "Group Stage",
+        "date": "1974-06-22",
+        "city": "Hamburg"
+      },
+      {
+        "year": 1974,
+        "stage": "Group Stage",
+        "date": "1974-06-18",
+        "city": "Berlin"
+      },
+      {
+        "year": 1974,
+        "stage": "Semi-final Round",
+        "date": "1974-07-03",
+        "city": "Dortmund"
+      },
+      {
+        "year": 1974,
+        "stage": "3rd Place",
+        "date": "1974-07-06",
+        "city": "Munich"
+      },
+      {
+        "year": 1974,
+        "stage": "Final",
+        "date": "1974-07-07",
+        "city": "Munich"
+      },
+      {
+        "year": 1978,
+        "stage": "Group Stage",
+        "date": "1978-06-02",
+        "city": "Buenos Aires"
+      },
+      {
+        "year": 1978,
+        "stage": "Group Stage",
+        "date": "1978-06-10",
+        "city": "Buenos Aires"
+      },
+      {
+        "year": 1978,
+        "stage": "Group Stage",
+        "date": "1978-06-21",
+        "city": "Buenos Aires"
+      },
+      {
+        "year": 1978,
+        "stage": "3rd Place",
+        "date": "1978-06-24",
+        "city": "Buenos Aires"
+      },
+      {
+        "year": 1978,
+        "stage": "Final",
+        "date": "1978-06-25",
+        "city": "Buenos Aires"
+      },
+      {
+        "year": 1982,
+        "stage": "Group Stage",
+        "date": "1982-06-16",
+        "city": "Gijón"
+      },
+      {
+        "year": 1982,
+        "stage": "Group Stage",
+        "date": "1982-06-25",
+        "city": "Gijón"
+      },
+      {
+        "year": 1982,
+        "stage": "Group Stage",
+        "date": "1982-06-02",
+        "city": "Barcelona"
+      },
+      {
+        "year": 1982,
+        "stage": "Quarter-final",
+        "date": "1982-07-08",
+        "city": "Seville"
+      },
+      {
+        "year": 1982,
+        "stage": "Semi-final",
+        "date": "1982-07-08",
+        "city": "Barcelona"
+      },
+      {
+        "year": 1982,
+        "stage": "3rd Place",
+        "date": "1982-07-10",
+        "city": "Madrid"
+      },
+      {
+        "year": 1982,
+        "stage": "Final",
+        "date": "1982-07-11",
+        "city": "Madrid"
+      },
+      {
+        "year": 1986,
+        "stage": "Group Stage",
+        "date": "1986-06-08",
+        "city": "Nezahualcóyotl"
+      },
+      {
+        "year": 1986,
+        "stage": "Round of 16",
+        "date": "1986-06-15",
+        "city": "Guadalajara"
+      },
+      {
+        "year": 1986,
+        "stage": "Quarter-final",
+        "date": "1986-06-22",
+        "city": "Mexico City"
+      },
+      {
+        "year": 1986,
+        "stage": "Quarter-final",
+        "date": "1986-06-21",
+        "city": "Guadalajara"
+      },
+      {
+        "year": 1986,
+        "stage": "Semi-final",
+        "date": "1986-06-25",
+        "city": "Mexico City"
+      },
+      {
+        "year": 1986,
+        "stage": "3rd Place",
+        "date": "1986-06-28",
+        "city": "Puebla"
+      },
+      {
+        "year": 1986,
+        "stage": "Final",
+        "date": "1986-06-29",
+        "city": "Mexico City"
+      },
+      {
+        "year": 1990,
+        "stage": "Group Stage",
+        "date": "1990-06-08",
+        "city": "Milan"
+      },
+      {
+        "year": 1990,
+        "stage": "Group Stage",
+        "date": "1990-06-19",
+        "city": "Milan"
+      },
+      {
+        "year": 1990,
+        "stage": "Round of 16",
+        "date": "1990-06-25",
+        "city": "Genoa"
+      },
+      {
+        "year": 1990,
+        "stage": "Quarter-final",
+        "date": "1990-07-01",
+        "city": "Turin"
+      },
+      {
+        "year": 1990,
+        "stage": "Semi-final",
+        "date": "1990-07-04",
+        "city": "Turin"
+      },
+      {
+        "year": 1990,
+        "stage": "Semi-final",
+        "date": "1990-07-03",
+        "city": "Naples"
+      },
+      {
+        "year": 1990,
+        "stage": "3rd Place",
+        "date": "1990-07-07",
+        "city": "Bari"
+      },
+      {
+        "year": 1990,
+        "stage": "Final",
+        "date": "1990-07-08",
+        "city": "Rome"
+      },
+      {
+        "year": 1994,
+        "stage": "Group Stage",
+        "date": "1994-06-17",
+        "city": "Detroit"
+      },
+      {
+        "year": 1994,
+        "stage": "Group Stage",
+        "date": "1994-06-28",
+        "city": "Palo Alto"
+      },
+      {
+        "year": 1994,
+        "stage": "Quarter-final",
+        "date": "1994-07-09",
+        "city": "Dallas"
+      },
+      {
+        "year": 1994,
+        "stage": "Semi-final",
+        "date": "1994-07-13",
+        "city": "Pasadena"
+      },
+      {
+        "year": 1994,
+        "stage": "3rd Place",
+        "date": "1994-07-16",
+        "city": "Pasadena"
+      },
+      {
+        "year": 1994,
+        "stage": "Final",
+        "date": "1994-07-17",
+        "city": "Pasadena"
+      },
+      {
+        "year": 1998,
+        "stage": "Group Stage",
+        "date": "1998-06-10",
+        "city": "Saint-Denis"
+      },
+      {
+        "year": 1998,
+        "stage": "Group Stage",
+        "date": "1998-06-13",
+        "city": "Montpellier"
+      },
+      {
+        "year": 1998,
+        "stage": "Round of 16",
+        "date": "1998-06-30",
+        "city": "Saint-Étienne"
+      },
+      {
+        "year": 1998,
+        "stage": "Round of 16",
+        "date": "1998-06-28",
+        "city": "Lens"
+      },
+      {
+        "year": 1998,
+        "stage": "Quarter-final",
+        "date": "1998-07-04",
+        "city": "Marseille"
+      },
+      {
+        "year": 1998,
+        "stage": "Quarter-final",
+        "date": "1998-07-03",
+        "city": "Saint-Denis"
+      },
+      {
+        "year": 1998,
+        "stage": "Semi-final",
+        "date": "1998-07-08",
+        "city": "Saint-Denis"
+      },
+      {
+        "year": 1998,
+        "stage": "Semi-final",
+        "date": "1998-07-07",
+        "city": "Marseille"
+      },
+      {
+        "year": 1998,
+        "stage": "3rd Place",
+        "date": "1998-07-11",
+        "city": "Paris"
+      },
+      {
+        "year": 1998,
+        "stage": "Final",
+        "date": "1998-07-12",
+        "city": "Saint-Denis"
+      },
+      {
+        "year": 2002,
+        "stage": "Group Stage",
+        "date": "2002-05-31",
+        "city": "Seoul"
+      },
+      {
+        "year": 2002,
+        "stage": "Group Stage",
+        "date": "2002-06-14",
+        "city": "Suwon"
+      },
+      {
+        "year": 2002,
+        "stage": "Round of 16",
+        "date": "2002-06-18",
+        "city": "Daejeon"
+      },
+      {
+        "year": 2002,
+        "stage": "Quarter-final",
+        "date": "2002-06-22",
+        "city": "Gwangju"
+      },
+      {
+        "year": 2002,
+        "stage": "Quarter-final",
+        "date": "2002-06-21",
+        "city": "Shizuoka"
+      },
+      {
+        "year": 2002,
+        "stage": "Semi-final",
+        "date": "2002-06-26",
+        "city": "Saitama"
+      },
+      {
+        "year": 2002,
+        "stage": "Semi-final",
+        "date": "2002-06-25",
+        "city": "Seoul"
+      },
+      {
+        "year": 2002,
+        "stage": "3rd Place",
+        "date": "2002-06-29",
+        "city": "Daegu"
+      },
+      {
+        "year": 2002,
+        "stage": "Final",
+        "date": "2002-06-30",
+        "city": "Yokohama"
+      },
+      {
+        "year": 2006,
+        "stage": "Group Stage",
+        "date": "2006-06-09",
+        "city": "Munich"
+      },
+      {
+        "year": 2006,
+        "stage": "Group Stage",
+        "date": "2006-06-12",
+        "city": "Kaiserslautern"
+      },
+      {
+        "year": 2006,
+        "stage": "Round of 16",
+        "date": "2006-06-26",
+        "city": "Kaiserslautern"
+      },
+      {
+        "year": 2006,
+        "stage": "Round of 16",
+        "date": "2006-06-25",
+        "city": "Nuremberg"
+      },
+      {
+        "year": 2006,
+        "stage": "Quarter-final",
+        "date": "2006-06-30",
+        "city": "Hamburg"
+      },
+      {
+        "year": 2006,
+        "stage": "Semi-final",
+        "date": "2006-07-04",
+        "city": "Dortmund"
+      },
+      {
+        "year": 2006,
+        "stage": "Semi-final",
+        "date": "2006-07-05",
+        "city": "Munich"
+      },
+      {
+        "year": 2006,
+        "stage": "3rd Place",
+        "date": "2006-07-08",
+        "city": "Stuttgart"
+      },
+      {
+        "year": 2006,
+        "stage": "Final",
+        "date": "2006-07-09",
+        "city": "Berlin"
+      },
+      {
+        "year": 2010,
+        "stage": "Group Stage",
+        "date": "2010-06-11",
+        "city": "Johannesburg"
+      },
+      {
+        "year": 2010,
+        "stage": "Group Stage",
+        "date": "2010-06-12",
+        "city": "Rustenburg"
+      },
+      {
+        "year": 2010,
+        "stage": "Group Stage",
+        "date": "2010-06-13",
+        "city": "Durban"
+      },
+      {
+        "year": 2010,
+        "stage": "Round of 16",
+        "date": "2010-06-26",
+        "city": "Rustenburg"
+      },
+      {
+        "year": 2010,
+        "stage": "Round of 16",
+        "date": "2010-06-27",
+        "city": "Bloemfontein"
+      },
+      {
+        "year": 2010,
+        "stage": "Quarter-final",
+        "date": "2010-07-03",
+        "city": "Cape Town"
+      },
+      {
+        "year": 2010,
+        "stage": "Quarter-final",
+        "date": "2010-07-02",
+        "city": "Port Elizabeth"
+      },
+      {
+        "year": 2010,
+        "stage": "Semi-final",
+        "date": "2010-07-06",
+        "city": "Cape Town"
+      },
+      {
+        "year": 2010,
+        "stage": "Semi-final",
+        "date": "2010-07-07",
+        "city": "Durban"
+      },
+      {
+        "year": 2010,
+        "stage": "3rd Place",
+        "date": "2010-07-10",
+        "city": "Port Elizabeth"
+      },
+      {
+        "year": 2010,
+        "stage": "Final",
+        "date": "2010-07-11",
+        "city": "Johannesburg"
+      },
+      {
+        "year": 2014,
+        "stage": "Group Stage",
+        "date": "2014-06-12",
+        "city": "São Paulo"
+      },
+      {
+        "year": 2014,
+        "stage": "Group Stage",
+        "date": "2014-06-13",
+        "city": "Salvador"
+      },
+      {
+        "year": 2014,
+        "stage": "Group Stage",
+        "date": "2014-06-19",
+        "city": "São Paulo"
+      },
+      {
+        "year": 2014,
+        "stage": "Round of 16",
+        "date": "2014-06-28",
+        "city": "Rio de Janeiro"
+      },
+      {
+        "year": 2014,
+        "stage": "Round of 16",
+        "date": "2014-06-30",
+        "city": "Porto Alegre"
+      },
+      {
+        "year": 2014,
+        "stage": "Quarter-final",
+        "date": "2014-07-05",
+        "city": "Brasília"
+      },
+      {
+        "year": 2014,
+        "stage": "Quarter-final",
+        "date": "2014-07-04",
+        "city": "Rio de Janeiro"
+      },
+      {
+        "year": 2014,
+        "stage": "Semi-final",
+        "date": "2014-07-08",
+        "city": "Belo Horizonte"
+      },
+      {
+        "year": 2014,
+        "stage": "Semi-final",
+        "date": "2014-07-09",
+        "city": "São Paulo"
+      },
+      {
+        "year": 2014,
+        "stage": "3rd Place",
+        "date": "2014-07-12",
+        "city": "Brasília"
+      },
+      {
+        "year": 2014,
+        "stage": "Final",
+        "date": "2014-07-13",
+        "city": "Rio de Janeiro"
+      },
+      {
+        "year": 2018,
+        "stage": "Group Stage",
+        "date": "2018-06-14",
+        "city": "Moscow"
+      },
+      {
+        "year": 2018,
+        "stage": "Group Stage",
+        "date": "2018-06-17",
+        "city": "Moscow"
+      },
+      {
+        "year": 2018,
+        "stage": "Group Stage",
+        "date": "2018-06-15",
+        "city": "Sochi"
+      },
+      {
+        "year": 2018,
+        "stage": "Round of 16",
+        "date": "2018-06-30",
+        "city": "Kazan"
+      },
+      {
+        "year": 2018,
+        "stage": "Round of 16",
+        "date": "2018-07-01",
+        "city": "Moscow"
+      },
+      {
+        "year": 2018,
+        "stage": "Round of 16",
+        "date": "2018-07-02",
+        "city": "Samara"
+      },
+      {
+        "year": 2018,
+        "stage": "Quarter-final",
+        "date": "2018-07-07",
+        "city": "Sochi"
+      },
+      {
+        "year": 2018,
+        "stage": "Quarter-final",
+        "date": "2018-07-06",
+        "city": "Kazan"
+      },
+      {
+        "year": 2018,
+        "stage": "Semi-final",
+        "date": "2018-07-10",
+        "city": "St Petersburg"
+      },
+      {
+        "year": 2018,
+        "stage": "Semi-final",
+        "date": "2018-07-11",
+        "city": "Moscow"
+      },
+      {
+        "year": 2018,
+        "stage": "3rd Place",
+        "date": "2018-07-14",
+        "city": "St Petersburg"
+      },
+      {
+        "year": 2018,
+        "stage": "Final",
+        "date": "2018-07-15",
+        "city": "Moscow"
+      },
+      {
+        "year": 2022,
+        "stage": "Group Stage",
+        "date": "2022-11-20",
+        "city": "Al Khor"
+      },
+      {
+        "year": 2022,
+        "stage": "Group Stage",
+        "date": "2022-11-22",
+        "city": "Lusail"
+      },
+      {
+        "year": 2022,
+        "stage": "Group Stage",
+        "date": "2022-11-23",
+        "city": "Al Rayyan"
+      },
+      {
+        "year": 2022,
+        "stage": "Group Stage",
+        "date": "2022-12-01",
+        "city": "Al Rayyan"
+      },
+      {
+        "year": 2022,
+        "stage": "Round of 16",
+        "date": "2022-12-06",
+        "city": "Al Rayyan"
+      },
+      {
+        "year": 2022,
+        "stage": "Round of 16",
+        "date": "2022-12-04",
+        "city": "Doha"
+      },
+      {
+        "year": 2022,
+        "stage": "Round of 16",
+        "date": "2022-12-03",
+        "city": "Al Rayyan"
+      },
+      {
+        "year": 2022,
+        "stage": "Quarter-final",
+        "date": "2022-12-10",
+        "city": "Doha"
+      },
+      {
+        "year": 2022,
+        "stage": "Semi-final",
+        "date": "2022-12-13",
+        "city": "Lusail"
+      },
+      {
+        "year": 2022,
+        "stage": "Semi-final",
+        "date": "2022-12-14",
+        "city": "Al Khor"
+      },
+      {
+        "year": 2022,
+        "stage": "3rd Place",
+        "date": "2022-12-17",
+        "city": "Al Rayyan"
+      },
+      {
+        "year": 2022,
+        "stage": "Final",
+        "date": "2022-12-18",
+        "city": "Lusail"
+      }
+    ],
+    "predictions": {
+      "data_sources": {
+        "dataforagent_generated_at": "2026-07-08T13:41:00",
+        "datasets": [
+          "leagues",
+          "wc2026_squad",
+          "worldcup"
+        ],
+        "worldcup_matches": 163,
+        "league_matches": 1752,
+        "squad_stats": {
+          "groups": 12,
+          "teams": 48,
+          "total_players": 1199
+        },
+        "snapshot_time": "2026-07-04T18:08:38.525465"
+      },
+      "team_strengths": {
+        "Argentina": 0.9062,
+        "Spain": 0.4062,
+        "England": 0.4062,
+        "Brazil": 0.4062,
+        "Germany": 0.4062,
+        "Belgium": 0.4062,
+        "France": 0.4062,
+        "Uruguay": 0.4062,
+        "Colombia": 0.4062,
+        "Senegal": 0.4062,
+        "Poland": 0.4062,
+        "Nigeria": 0.4062,
+        "Mexico": 0.2521,
+        "Netherlands": 0.2521,
+        "USA": 0.2521,
+        "Portugal": 0.2521,
+        "Japan": 0.2521,
+        "Croatia": 0.2521,
+        "Denmark": 0.2521,
+        "Italy": 0.2521,
+        "Paraguay": 0.2521,
+        "Algeria": 0.2521,
+        "Sweden": 0.2521,
+        "Ivory Coast": 0.2521,
+        "Ecuador": 0.0979,
+        "Cameroon": 0.0979,
+        "Iran": 0.0979,
+        "Serbia": 0.0979,
+        "Costa Rica": 0.0979,
+        "Morocco": 0.0979,
+        "Tunisia": 0.0979,
+        "South Korea": 0.0979,
+        "Panama": 0.0979,
+        "South Africa": 0.0979,
+        "Austria": 0.0979,
+        "Greece": 0.0979,
+        "Jamaica": 0.0,
+        "Qatar": 0.0,
+        "Wales": 0.0,
+        "Ghana": 0.0,
+        "New Zealand": 0.0,
+        "Canada": 0.0,
+        "Peru": 0.0,
+        "Australia": 0.0,
+        "Bolivia": 0.0,
+        "Burkina Faso": 0.0,
+        "Egypt": 0.0,
+        "Zambia": 0.0
+      },
+      "tournament": {
+        "predicted_champion": "Argentina",
+        "champion_probability": 1.0,
+        "champion_probabilities": {
+          "Argentina": 1.0,
+          "Mexico": 0.0,
+          "Spain": 0.0,
+          "Netherlands": 0.0,
+          "England": 0.0,
+          "USA": 0.0,
+          "Brazil": 0.0,
+          "Portugal": 0.0,
+          "Germany": 0.0,
+          "Japan": 0.0,
+          "Belgium": 0.0,
+          "Croatia": 0.0,
+          "France": 0.0,
+          "Denmark": 0.0,
+          "Uruguay": 0.0,
+          "Italy": 0.0,
+          "Colombia": 0.0,
+          "Paraguay": 0.0,
+          "Senegal": 0.0,
+          "Algeria": 0.0,
+          "Poland": 0.0,
+          "Sweden": 0.0,
+          "Nigeria": 0.0,
+          "Ivory Coast": 0.0
+        },
+        "source_snapshot": "p20260704_1008"
+      },
+      "reflection_checks": {
+        "has_48_teams": true,
+        "has_historical_matches": true,
+        "has_simulation": true,
+        "has_dataforagent_sources": true
+      },
+      "explanation": "Argentina is the current champion pick at 100.0%. The run used DataForAgent processed coverage (163 historical World Cup matches, 1199 squad players) and the canonical prediction snapshot.",
+      "quality": {
+        "score": 1.0,
+        "checks": {
+          "teams_loaded": true,
+          "data_sources_loaded": true,
+          "tournament_prediction": true,
+          "explanation": true,
+          "no_errors": true
+        }
+      }
+    },
+    "simulation_results": {
+      "predicted_champion": "Argentina",
+      "champion_probability": 1.0,
+      "champion_probabilities": {
+        "Argentina": 1.0,
+        "Mexico": 0.0,
+        "Spain": 0.0,
+        "Netherlands": 0.0,
+        "England": 0.0,
+        "USA": 0.0,
+        "Brazil": 0.0,
+        "Portugal": 0.0,
+        "Germany": 0.0,
+        "Japan": 0.0,
+        "Belgium": 0.0,
+        "Croatia": 0.0,
+        "France": 0.0,
+        "Denmark": 0.0,
+        "Uruguay": 0.0,
+        "Italy": 0.0,
+        "Colombia": 0.0,
+        "Paraguay": 0.0,
+        "Senegal": 0.0,
+        "Algeria": 0.0,
+        "Poland": 0.0,
+        "Sweden": 0.0,
+        "Nigeria": 0.0,
+        "Ivory Coast": 0.0
+      },
+      "source_snapshot": "p20260704_1008"
+    },
+    "monte_carlo_runs": 10000,
+    "data_freshness": {
+      "elo": "2026-07-08T13:41:00",
+      "odds": "2026-07-04T18:08:38.525465",
+      "injury": null
+    },
+    "agent_traces": [
+      {
+        "trace_id": "7f663fd6",
+        "agent": "data_agent",
+        "task": "check_and_refresh_data",
+        "status": "success",
+        "steps": [
+          {
+            "step": "observe",
+            "thought": "",
+            "action": "",
+            "observation": "Observed 3 items",
+            "result": "{'teams_loaded': 0, 'has_results': False, 'snapshot_exists': True}",
+            "error": null,
+            "timestamp": "2026-07-08T13:51:13.708484+00:00"
+          },
+          {
+            "step": "think",
+            "thought": "Load DataForAgent processed datasets and the canonical prediction snapshot.",
+            "action": "",
+            "observation": "",
+            "result": null,
+            "error": null,
+            "timestamp": "2026-07-08T13:51:13.708484+00:00"
+          },
+          {
+            "step": "act",
+            "thought": "",
+            "action": "Load DataForAgent processed datasets and the canonical prediction snapshot.",
+            "observation": "Loaded 48 teams, 163 historical matches, 1199 squad players",
+            "result": "{'dataforagent_generated_at': '2026-07-08T13:41:00', 'datasets': ['leagues', 'wc2026_squad', 'worldcup'], 'worldcup_matches': 163, 'league_matches': 1752, 'squad_stats': {'groups': 12, 'teams': 48, 'total_players': 1199}, 'snapshot_time': '2026-07-04T18:08:38.525465'}",
+            "error": null,
+            "timestamp": "2026-07-08T13:51:13.823630+00:00"
+          },
+          {
+            "step": "evaluate",
+            "thought": "Evaluation: SUCCESS",
+            "action": "",
+            "observation": "Result quality: True",
+            "result": null,
+            "error": null,
+            "timestamp": "2026-07-08T13:51:13.823630+00:00"
+          }
+        ],
+        "final_result": "{'dataforagent_generated_at': '2026-07-08T13:41:00', 'datasets': ['leagues', 'wc2026_squad', 'worldcup'], 'worldcup_matches': 163, 'league_matches': 1752, 'squad_stats': {'groups': 12, 'teams': 48, 'total_players': 1199}, 'snapshot_time': '2026-07-04T18:08:38.525465'}",
+        "error": null,
+        "duration_ms": 115.15
+      },
+      {
+        "trace_id": "c0bebaad",
+        "agent": "analysis_agent",
+        "task": "analyze_team_strengths",
+        "status": "success",
+        "steps": [
+          {
+            "step": "observe",
+            "thought": "",
+            "action": "",
+            "observation": "Observed 2 items",
+            "result": "{'teams': 48, 'has_data_sources': True}",
+            "error": null,
+            "timestamp": "2026-07-08T13:51:13.824629+00:00"
+          },
+          {
+            "step": "think",
+            "thought": "Combine group results and champion probabilities into a normalized strength score.",
+            "action": "",
+            "observation": "",
+            "result": null,
+            "error": null,
+            "timestamp": "2026-07-08T13:51:13.824629+00:00"
+          },
+          {
+            "step": "act",
+            "thought": "",
+            "action": "Combine group results and champion probabilities into a normalized strength score.",
+            "observation": "Ranked 48 teams by strength",
+            "result": "[('Argentina', 0.9062), ('Spain', 0.4062), ('England', 0.4062), ('Brazil', 0.4062), ('Germany', 0.4062), ('Belgium', 0.4062), ('France', 0.4062), ('Uruguay', 0.4062), ('Colombia', 0.4062), ('Senegal', 0.4062)]",
+            "error": null,
+            "timestamp": "2026-07-08T13:51:13.825619+00:00"
+          },
+          {
+            "step": "evaluate",
+            "thought": "Evaluation: SUCCESS",
+            "action": "",
+            "observation": "Result quality: True",
+            "result": null,
+            "error": null,
+            "timestamp": "2026-07-08T13:51:13.825619+00:00"
+          }
+        ],
+        "final_result": "[('Argentina', 0.9062), ('Spain', 0.4062), ('England', 0.4062), ('Brazil', 0.4062), ('Germany', 0.4062), ('Belgium', 0.4062), ('France', 0.4062), ('Uruguay', 0.4062), ('Colombia', 0.4062), ('Senegal', 0.4062)]",
+        "error": null,
+        "duration_ms": 0.99
+      },
+      {
+        "trace_id": "740826d1",
+        "agent": "simulation_agent",
+        "task": "run_monte_carlo",
+        "status": "success",
+        "steps": [
+          {
+            "step": "observe",
+            "thought": "",
+            "action": "",
+            "observation": "Observed 1 items",
+            "result": "{'strengths': 48}",
+            "error": null,
+            "timestamp": "2026-07-08T13:51:13.826616+00:00"
+          },
+          {
+            "step": "think",
+            "thought": "Use canonical snapshot probabilities when present; otherwise derive a softmax fallback.",
+            "action": "",
+            "observation": "",
+            "result": null,
+            "error": null,
+            "timestamp": "2026-07-08T13:51:13.826616+00:00"
+          },
+          {
+            "step": "act",
+            "thought": "",
+            "action": "Use canonical snapshot probabilities when present; otherwise derive a softmax fallback.",
+            "observation": "Predicted champion: Argentina",
+            "result": "{'predicted_champion': 'Argentina', 'champion_probability': 1.0, 'champion_probabilities': {'Argentina': 1.0, 'Mexico': 0.0, 'Spain': 0.0, 'Netherlands': 0.0, 'England': 0.0, 'USA': 0.0, 'Brazil': 0.0, 'Portugal': 0.0, 'Germany': 0.0, 'Japan': 0.0, 'Belgium': 0.0, 'Croatia': 0.0, 'France': 0.0, 'Denmark': 0.0, 'Uruguay': 0.0, 'Italy': 0.0, 'Colombia': 0.0, 'Paraguay': 0.0, 'Senegal': 0.0, 'Algeria': 0.0, 'Poland': 0.0, 'Sweden': 0.0, 'Nigeria': 0.0, 'Ivory Coast': 0.0}, 'source_snapshot': 'p20260704_1008'}",
+            "error": null,
+            "timestamp": "2026-07-08T13:51:13.827616+00:00"
+          },
+          {
+            "step": "evaluate",
+            "thought": "Evaluation: SUCCESS",
+            "action": "",
+            "observation": "Result quality: True",
+            "result": null,
+            "error": null,
+            "timestamp": "2026-07-08T13:51:13.827616+00:00"
+          }
+        ],
+        "final_result": "{'predicted_champion': 'Argentina', 'champion_probability': 1.0, 'champion_probabilities': {'Argentina': 1.0, 'Mexico': 0.0, 'Spain': 0.0, 'Netherlands': 0.0, 'England': 0.0, 'USA': 0.0, 'Brazil': 0.0, 'Portugal': 0.0, 'Germany': 0.0, 'Japan': 0.0, 'Belgium': 0.0, 'Croatia': 0.0, 'France': 0.0, 'Denmark': 0.0, 'Uruguay': 0.0, 'Italy': 0.0, 'Colombia': 0.0, 'Paraguay': 0.0, 'Senegal': 0.0, 'Algeria': 0.0, 'Poland': 0.0, 'Sweden': 0.0, 'Nigeria': 0.0, 'Ivory Coast': 0.0}, 'source_snapshot': 'p20260704_1008'}",
+        "error": null,
+        "duration_ms": 1.0
+      },
+      {
+        "trace_id": "2e47fbde",
+        "agent": "reflection_agent",
+        "task": "validate_simulation",
+        "status": "success",
+        "steps": [
+          {
+            "step": "observe",
+            "thought": "",
+            "action": "",
+            "observation": "Observed 4 items",
+            "result": "{'teams': 48, 'warnings': 0, 'errors': 0, 'has_simulation': True}",
+            "error": null,
+            "timestamp": "2026-07-08T13:51:13.827616+00:00"
+          },
+          {
+            "step": "think",
+            "thought": "Check minimum viable tournament state before explanation and quality gates.",
+            "action": "",
+            "observation": "",
+            "result": null,
+            "error": null,
+            "timestamp": "2026-07-08T13:51:13.827616+00:00"
+          },
+          {
+            "step": "act",
+            "thought": "",
+            "action": "Check minimum viable tournament state before explanation and quality gates.",
+            "observation": "4/4 checks passed",
+            "result": "{'has_48_teams': True, 'has_historical_matches': True, 'has_simulation': True, 'has_dataforagent_sources': True}",
+            "error": null,
+            "timestamp": "2026-07-08T13:51:13.827616+00:00"
+          },
+          {
+            "step": "evaluate",
+            "thought": "Evaluation: SUCCESS",
+            "action": "",
+            "observation": "Result quality: True",
+            "result": null,
+            "error": null,
+            "timestamp": "2026-07-08T13:51:13.827616+00:00"
+          }
+        ],
+        "final_result": "{'has_48_teams': True, 'has_historical_matches': True, 'has_simulation': True, 'has_dataforagent_sources': True}",
+        "error": null,
+        "duration_ms": 0.0
+      },
+      {
+        "trace_id": "6c8663be",
+        "agent": "explainer_agent",
+        "task": "generate_narratives",
+        "status": "success",
+        "steps": [
+          {
+            "step": "observe",
+            "thought": "",
+            "action": "",
+            "observation": "Observed 1 items",
+            "result": "{'has_tournament_prediction': True}",
+            "error": null,
+            "timestamp": "2026-07-08T13:51:13.827616+00:00"
+          },
+          {
+            "step": "think",
+            "thought": "Summarize the champion pick and cite DataForAgent coverage.",
+            "action": "",
+            "observation": "",
+            "result": null,
+            "error": null,
+            "timestamp": "2026-07-08T13:51:13.827616+00:00"
+          },
+          {
+            "step": "act",
+            "thought": "",
+            "action": "Summarize the champion pick and cite DataForAgent coverage.",
+            "observation": "Generated tournament explanation",
+            "result": "Argentina is the current champion pick at 100.0%. The run used DataForAgent processed coverage (163 historical World Cup matches, 1199 squad players) and the canonical prediction snapshot.",
+            "error": null,
+            "timestamp": "2026-07-08T13:51:13.827616+00:00"
+          },
+          {
+            "step": "evaluate",
+            "thought": "Evaluation: SUCCESS",
+            "action": "",
+            "observation": "Result quality: True",
+            "result": null,
+            "error": null,
+            "timestamp": "2026-07-08T13:51:13.827616+00:00"
+          }
+        ],
+        "final_result": "Argentina is the current champion pick at 100.0%. The run used DataForAgent processed coverage (163 historical World Cup matches, 1199 squad players) and the canonical prediction snapshot.",
+        "error": null,
+        "duration_ms": 0.0
+      },
+      {
+        "trace_id": "7ab6fc69",
+        "agent": "quality_agent",
+        "task": "final_quality_check",
+        "status": "success",
+        "steps": [
+          {
+            "step": "observe",
+            "thought": "",
+            "action": "",
+            "observation": "Observed 4 items",
+            "result": "{'teams': 48, 'prediction_keys': ['data_sources', 'explanation', 'reflection_checks', 'team_strengths', 'tournament'], 'warnings': [], 'errors': []}",
+            "error": null,
+            "timestamp": "2026-07-08T13:51:13.827616+00:00"
+          },
+          {
+            "step": "think",
+            "thought": "Score the pipeline on data coverage, prediction availability, and explanation availability.",
+            "action": "",
+            "observation": "",
+            "result": null,
+            "error": null,
+            "timestamp": "2026-07-08T13:51:13.827616+00:00"
+          },
+          {
+            "step": "act",
+            "thought": "",
+            "action": "Score the pipeline on data coverage, prediction availability, and explanation availability.",
+            "observation": "Quality score: 100%",
+            "result": "{'score': 1.0, 'checks': {'teams_loaded': True, 'data_sources_loaded': True, 'tournament_prediction': True, 'explanation': True, 'no_errors': True}}",
+            "error": null,
+            "timestamp": "2026-07-08T13:51:13.827616+00:00"
+          },
+          {
+            "step": "evaluate",
+            "thought": "Evaluation: SUCCESS",
+            "action": "",
+            "observation": "Result quality: True",
+            "result": null,
+            "error": null,
+            "timestamp": "2026-07-08T13:51:13.827616+00:00"
+          }
+        ],
+        "final_result": "{'score': 1.0, 'checks': {'teams_loaded': True, 'data_sources_loaded': True, 'tournament_prediction': True, 'explanation': True, 'no_errors': True}}",
+        "error": null,
+        "duration_ms": 0.0
+      }
+    ],
+    "errors": [],
+    "warnings": [],
+    "current_task": "predict_tournament"
+  },
+  "agent_traces": [
+    {
+      "trace_id": "7f663fd6",
+      "agent": "data_agent",
+      "task": "check_and_refresh_data",
+      "status": "success",
+      "steps": [
+        {
+          "step": "observe",
+          "thought": "",
+          "action": "",
+          "observation": "Observed 3 items",
+          "result": "{'teams_loaded': 0, 'has_results': False, 'snapshot_exists': True}",
+          "error": null,
+          "timestamp": "2026-07-08T13:51:13.708484+00:00"
+        },
+        {
+          "step": "think",
+          "thought": "Load DataForAgent processed datasets and the canonical prediction snapshot.",
+          "action": "",
+          "observation": "",
+          "result": null,
+          "error": null,
+          "timestamp": "2026-07-08T13:51:13.708484+00:00"
+        },
+        {
+          "step": "act",
+          "thought": "",
+          "action": "Load DataForAgent processed datasets and the canonical prediction snapshot.",
+          "observation": "Loaded 48 teams, 163 historical matches, 1199 squad players",
+          "result": "{'dataforagent_generated_at': '2026-07-08T13:41:00', 'datasets': ['leagues', 'wc2026_squad', 'worldcup'], 'worldcup_matches': 163, 'league_matches': 1752, 'squad_stats': {'groups': 12, 'teams': 48, 'total_players': 1199}, 'snapshot_time': '2026-07-04T18:08:38.525465'}",
+          "error": null,
+          "timestamp": "2026-07-08T13:51:13.823630+00:00"
+        },
+        {
+          "step": "evaluate",
+          "thought": "Evaluation: SUCCESS",
+          "action": "",
+          "observation": "Result quality: True",
+          "result": null,
+          "error": null,
+          "timestamp": "2026-07-08T13:51:13.823630+00:00"
+        }
+      ],
+      "final_result": "{'dataforagent_generated_at': '2026-07-08T13:41:00', 'datasets': ['leagues', 'wc2026_squad', 'worldcup'], 'worldcup_matches': 163, 'league_matches': 1752, 'squad_stats': {'groups': 12, 'teams': 48, 'total_players': 1199}, 'snapshot_time': '2026-07-04T18:08:38.525465'}",
+      "error": null,
+      "duration_ms": 115.15
+    },
+    {
+      "trace_id": "c0bebaad",
+      "agent": "analysis_agent",
+      "task": "analyze_team_strengths",
+      "status": "success",
+      "steps": [
+        {
+          "step": "observe",
+          "thought": "",
+          "action": "",
+          "observation": "Observed 2 items",
+          "result": "{'teams': 48, 'has_data_sources': True}",
+          "error": null,
+          "timestamp": "2026-07-08T13:51:13.824629+00:00"
+        },
+        {
+          "step": "think",
+          "thought": "Combine group results and champion probabilities into a normalized strength score.",
+          "action": "",
+          "observation": "",
+          "result": null,
+          "error": null,
+          "timestamp": "2026-07-08T13:51:13.824629+00:00"
+        },
+        {
+          "step": "act",
+          "thought": "",
+          "action": "Combine group results and champion probabilities into a normalized strength score.",
+          "observation": "Ranked 48 teams by strength",
+          "result": "[('Argentina', 0.9062), ('Spain', 0.4062), ('England', 0.4062), ('Brazil', 0.4062), ('Germany', 0.4062), ('Belgium', 0.4062), ('France', 0.4062), ('Uruguay', 0.4062), ('Colombia', 0.4062), ('Senegal', 0.4062)]",
+          "error": null,
+          "timestamp": "2026-07-08T13:51:13.825619+00:00"
+        },
+        {
+          "step": "evaluate",
+          "thought": "Evaluation: SUCCESS",
+          "action": "",
+          "observation": "Result quality: True",
+          "result": null,
+          "error": null,
+          "timestamp": "2026-07-08T13:51:13.825619+00:00"
+        }
+      ],
+      "final_result": "[('Argentina', 0.9062), ('Spain', 0.4062), ('England', 0.4062), ('Brazil', 0.4062), ('Germany', 0.4062), ('Belgium', 0.4062), ('France', 0.4062), ('Uruguay', 0.4062), ('Colombia', 0.4062), ('Senegal', 0.4062)]",
+      "error": null,
+      "duration_ms": 0.99
+    },
+    {
+      "trace_id": "740826d1",
+      "agent": "simulation_agent",
+      "task": "run_monte_carlo",
+      "status": "success",
+      "steps": [
+        {
+          "step": "observe",
+          "thought": "",
+          "action": "",
+          "observation": "Observed 1 items",
+          "result": "{'strengths': 48}",
+          "error": null,
+          "timestamp": "2026-07-08T13:51:13.826616+00:00"
+        },
+        {
+          "step": "think",
+          "thought": "Use canonical snapshot probabilities when present; otherwise derive a softmax fallback.",
+          "action": "",
+          "observation": "",
+          "result": null,
+          "error": null,
+          "timestamp": "2026-07-08T13:51:13.826616+00:00"
+        },
+        {
+          "step": "act",
+          "thought": "",
+          "action": "Use canonical snapshot probabilities when present; otherwise derive a softmax fallback.",
+          "observation": "Predicted champion: Argentina",
+          "result": "{'predicted_champion': 'Argentina', 'champion_probability': 1.0, 'champion_probabilities': {'Argentina': 1.0, 'Mexico': 0.0, 'Spain': 0.0, 'Netherlands': 0.0, 'England': 0.0, 'USA': 0.0, 'Brazil': 0.0, 'Portugal': 0.0, 'Germany': 0.0, 'Japan': 0.0, 'Belgium': 0.0, 'Croatia': 0.0, 'France': 0.0, 'Denmark': 0.0, 'Uruguay': 0.0, 'Italy': 0.0, 'Colombia': 0.0, 'Paraguay': 0.0, 'Senegal': 0.0, 'Algeria': 0.0, 'Poland': 0.0, 'Sweden': 0.0, 'Nigeria': 0.0, 'Ivory Coast': 0.0}, 'source_snapshot': 'p20260704_1008'}",
+          "error": null,
+          "timestamp": "2026-07-08T13:51:13.827616+00:00"
+        },
+        {
+          "step": "evaluate",
+          "thought": "Evaluation: SUCCESS",
+          "action": "",
+          "observation": "Result quality: True",
+          "result": null,
+          "error": null,
+          "timestamp": "2026-07-08T13:51:13.827616+00:00"
+        }
+      ],
+      "final_result": "{'predicted_champion': 'Argentina', 'champion_probability': 1.0, 'champion_probabilities': {'Argentina': 1.0, 'Mexico': 0.0, 'Spain': 0.0, 'Netherlands': 0.0, 'England': 0.0, 'USA': 0.0, 'Brazil': 0.0, 'Portugal': 0.0, 'Germany': 0.0, 'Japan': 0.0, 'Belgium': 0.0, 'Croatia': 0.0, 'France': 0.0, 'Denmark': 0.0, 'Uruguay': 0.0, 'Italy': 0.0, 'Colombia': 0.0, 'Paraguay': 0.0, 'Senegal': 0.0, 'Algeria': 0.0, 'Poland': 0.0, 'Sweden': 0.0, 'Nigeria': 0.0, 'Ivory Coast': 0.0}, 'source_snapshot': 'p20260704_1008'}",
+      "error": null,
+      "duration_ms": 1.0
+    },
+    {
+      "trace_id": "2e47fbde",
+      "agent": "reflection_agent",
+      "task": "validate_simulation",
+      "status": "success",
+      "steps": [
+        {
+          "step": "observe",
+          "thought": "",
+          "action": "",
+          "observation": "Observed 4 items",
+          "result": "{'teams': 48, 'warnings': 0, 'errors': 0, 'has_simulation': True}",
+          "error": null,
+          "timestamp": "2026-07-08T13:51:13.827616+00:00"
+        },
+        {
+          "step": "think",
+          "thought": "Check minimum viable tournament state before explanation and quality gates.",
+          "action": "",
+          "observation": "",
+          "result": null,
+          "error": null,
+          "timestamp": "2026-07-08T13:51:13.827616+00:00"
+        },
+        {
+          "step": "act",
+          "thought": "",
+          "action": "Check minimum viable tournament state before explanation and quality gates.",
+          "observation": "4/4 checks passed",
+          "result": "{'has_48_teams': True, 'has_historical_matches': True, 'has_simulation': True, 'has_dataforagent_sources': True}",
+          "error": null,
+          "timestamp": "2026-07-08T13:51:13.827616+00:00"
+        },
+        {
+          "step": "evaluate",
+          "thought": "Evaluation: SUCCESS",
+          "action": "",
+          "observation": "Result quality: True",
+          "result": null,
+          "error": null,
+          "timestamp": "2026-07-08T13:51:13.827616+00:00"
+        }
+      ],
+      "final_result": "{'has_48_teams': True, 'has_historical_matches': True, 'has_simulation': True, 'has_dataforagent_sources': True}",
+      "error": null,
+      "duration_ms": 0.0
+    },
+    {
+      "trace_id": "6c8663be",
+      "agent": "explainer_agent",
+      "task": "generate_narratives",
+      "status": "success",
+      "steps": [
+        {
+          "step": "observe",
+          "thought": "",
+          "action": "",
+          "observation": "Observed 1 items",
+          "result": "{'has_tournament_prediction': True}",
+          "error": null,
+          "timestamp": "2026-07-08T13:51:13.827616+00:00"
+        },
+        {
+          "step": "think",
+          "thought": "Summarize the champion pick and cite DataForAgent coverage.",
+          "action": "",
+          "observation": "",
+          "result": null,
+          "error": null,
+          "timestamp": "2026-07-08T13:51:13.827616+00:00"
+        },
+        {
+          "step": "act",
+          "thought": "",
+          "action": "Summarize the champion pick and cite DataForAgent coverage.",
+          "observation": "Generated tournament explanation",
+          "result": "Argentina is the current champion pick at 100.0%. The run used DataForAgent processed coverage (163 historical World Cup matches, 1199 squad players) and the canonical prediction snapshot.",
+          "error": null,
+          "timestamp": "2026-07-08T13:51:13.827616+00:00"
+        },
+        {
+          "step": "evaluate",
+          "thought": "Evaluation: SUCCESS",
+          "action": "",
+          "observation": "Result quality: True",
+          "result": null,
+          "error": null,
+          "timestamp": "2026-07-08T13:51:13.827616+00:00"
+        }
+      ],
+      "final_result": "Argentina is the current champion pick at 100.0%. The run used DataForAgent processed coverage (163 historical World Cup matches, 1199 squad players) and the canonical prediction snapshot.",
+      "error": null,
+      "duration_ms": 0.0
+    },
+    {
+      "trace_id": "7ab6fc69",
+      "agent": "quality_agent",
+      "task": "final_quality_check",
+      "status": "success",
+      "steps": [
+        {
+          "step": "observe",
+          "thought": "",
+          "action": "",
+          "observation": "Observed 4 items",
+          "result": "{'teams': 48, 'prediction_keys': ['data_sources', 'explanation', 'reflection_checks', 'team_strengths', 'tournament'], 'warnings': [], 'errors': []}",
+          "error": null,
+          "timestamp": "2026-07-08T13:51:13.827616+00:00"
+        },
+        {
+          "step": "think",
+          "thought": "Score the pipeline on data coverage, prediction availability, and explanation availability.",
+          "action": "",
+          "observation": "",
+          "result": null,
+          "error": null,
+          "timestamp": "2026-07-08T13:51:13.827616+00:00"
+        },
+        {
+          "step": "act",
+          "thought": "",
+          "action": "Score the pipeline on data coverage, prediction availability, and explanation availability.",
+          "observation": "Quality score: 100%",
+          "result": "{'score': 1.0, 'checks': {'teams_loaded': True, 'data_sources_loaded': True, 'tournament_prediction': True, 'explanation': True, 'no_errors': True}}",
+          "error": null,
+          "timestamp": "2026-07-08T13:51:13.827616+00:00"
+        },
+        {
+          "step": "evaluate",
+          "thought": "Evaluation: SUCCESS",
+          "action": "",
+          "observation": "Result quality: True",
+          "result": null,
+          "error": null,
+          "timestamp": "2026-07-08T13:51:13.827616+00:00"
+        }
+      ],
+      "final_result": "{'score': 1.0, 'checks': {'teams_loaded': True, 'data_sources_loaded': True, 'tournament_prediction': True, 'explanation': True, 'no_errors': True}}",
+      "error": null,
+      "duration_ms": 0.0
+    }
+  ]
+}

@@ -1,0 +1,1283 @@
+{
+  "_metadata": {
+    "version": "1.0.0",
+    "generated_at": "2026-07-06T00:00:00Z",
+    "description": "Football Knowledge Layer - Coach Information for WC2026"
+  },
+  "coaches": {
+    "scaloni": {
+      "id": "scaloni",
+      "names": {
+        "zh": "利昂内尔·斯卡洛尼",
+        "en": "Lionel Scaloni"
+      },
+      "team_id": "argentina",
+      "nationality": {
+        "zh": "阿根廷",
+        "en": "Argentina"
+      },
+      "age": 46,
+      "tenure_since": "2018",
+      "coaching_tactical": {
+        "formation": "4-3-3 / 4-4-2",
+        "philosophy_zh": "攻守平衡，注重边路进攻，善于根据对手调整战术",
+        "philosophy_en": "Balanced attack-defense, wing-focused play, tactical flexibility"
+      },
+      "achievements_zh": [
+        "2022年世界杯冠军",
+        "2021年美洲杯冠军",
+        "2022年欧美超级杯冠军"
+      ],
+      "achievements_en": [
+        "2022 World Cup Champion",
+        "2021 Copa America Champion",
+        "2022 Finalissima Champion"
+      ],
+      "ai_tactical_score": 92
+    },
+    "deschamps": {
+      "id": "deschamps",
+      "names": {
+        "zh": "迪迪埃·德尚",
+        "en": "Didier Deschamps"
+      },
+      "team_id": "france",
+      "nationality": {
+        "zh": "法国",
+        "en": "France"
+      },
+      "age": 55,
+      "tenure_since": "2012",
+      "coaching_tactical": {
+        "formation": "4-3-3 / 4-2-3-1",
+        "philosophy_zh": "实用主义，防守优先，善于管理更衣室",
+        "philosophy_en": "Pragmatic, defense-first, excellent dressing room management"
+      },
+      "achievements_zh": [
+        "2018年世界杯冠军（球员+教练）",
+        "1998年世界杯冠军（球员）",
+        "2000年欧洲杯冠军（球员）"
+      ],
+      "achievements_en": [
+        "2018 World Cup Champion (as player & coach)",
+        "1998 World Cup Champion (as player)",
+        "2000 Euro Champion (as player)"
+      ],
+      "ai_tactical_score": 91
+    },
+    "ancelotti": {
+      "id": "ancelotti",
+      "names": {
+        "zh": "卡洛·安切洛蒂",
+        "en": "Carlo Ancelotti"
+      },
+      "team_id": "brazil",
+      "nationality": {
+        "zh": "意大利",
+        "en": "Italy"
+      },
+      "age": 65,
+      "tenure_since": "2023",
+      "coaching_tactical": {
+        "formation": "4-3-3",
+        "philosophy_zh": "灵活多变，善于管理巨星，注重进攻效率",
+        "philosophy_en": "Flexible tactics, excellent at managing superstars, attack-focused"
+      },
+      "achievements_zh": [
+        "5次欧冠冠军（教练）",
+        "4次欧冠冠军（球员）",
+        "史上首位集齐五大联赛冠军的教练"
+      ],
+      "achievements_en": [
+        "5x Champions League winner (as coach)",
+        "4x Champions League winner (as player)",
+        "First coach to win all top 5 European leagues"
+      ],
+      "ai_tactical_score": 95
+    },
+    "flick": {
+      "id": "flick",
+      "names": {
+        "zh": "汉斯-迪特·弗利克",
+        "en": "Hansi-Dieter Flick"
+      },
+      "team_id": "germany",
+      "nationality": {
+        "zh": "德国",
+        "en": "Germany"
+      },
+      "age": 59,
+      "tenure_since": "2023",
+      "coaching_tactical": {
+        "formation": "4-2-3-1 / 4-3-3",
+        "philosophy_zh": "高位逼抢，快速转换进攻，战术纪律强",
+        "philosophy_en": "High press, fast transition, strong tactical discipline"
+      },
+      "achievements_zh": [
+        "2020年六冠王（拜仁）",
+        "2014年世界杯冠军（助教）"
+      ],
+      "achievements_en": [
+        "2020 Sextuple winner (Bayern)",
+        "2014 World Cup Champion (as assistant)"
+      ],
+      "ai_tactical_score": 90
+    },
+    "nagelsmann": {
+      "id": "nagelsmann",
+      "names": {
+        "zh": "尤利安·纳格尔斯曼",
+        "en": "Julian Nagelsmann"
+      },
+      "team_id": "germany",
+      "nationality": {
+        "zh": "德国",
+        "en": "Germany"
+      },
+      "age": 37,
+      "tenure_since": "2023",
+      "coaching_tactical": {
+        "formation": "4-2-3-1 / 3-4-3",
+        "philosophy_zh": "战术创新，善于分析对手，数据驱动决策",
+        "philosophy_en": "Tactical innovation, opponent analysis, data-driven decisions"
+      },
+      "achievements_zh": [
+        "2020年欧冠亚军（拜仁）",
+        "德甲最年轻冠军教练"
+      ],
+      "achievements_en": [
+        "2020 Champions League runner-up (Bayern)",
+        "Youngest ever Bundesliga champion coach"
+      ],
+      "ai_tactical_score": 89
+    },
+    "southgate": {
+      "id": "southgate",
+      "names": {
+        "zh": "加雷斯·索斯盖特",
+        "en": "Gareth Southgate"
+      },
+      "team_id": "england",
+      "nationality": {
+        "zh": "英格兰",
+        "en": "England"
+      },
+      "age": 53,
+      "tenure_since": "2016",
+      "coaching_tactical": {
+        "formation": "4-3-3 / 3-4-3",
+        "philosophy_zh": "务实防守，定位球战术出色，心理建设强",
+        "philosophy_en": "Pragmatic defense, excellent set-piece tactics, strong mentality building"
+      },
+      "achievements_zh": [
+        "2022年世界杯四强",
+        "2018年世界杯四强",
+        "2021年欧洲杯亚军"
+      ],
+      "achievements_en": [
+        "2022 World Cup Semi-finals",
+        "2018 World Cup Semi-finals",
+        "2021 Euro Runner-up"
+      ],
+      "ai_tactical_score": 88
+    },
+    "koeman": {
+      "id": "koeman",
+      "names": {
+        "zh": "罗纳德·科曼",
+        "en": "Ronald Koeman"
+      },
+      "team_id": "netherlands",
+      "nationality": {
+        "zh": "荷兰",
+        "en": "Netherlands"
+      },
+      "age": 61,
+      "tenure_since": "2023",
+      "coaching_tactical": {
+        "formation": "4-3-3 / 3-4-3",
+        "philosophy_zh": "攻势足球，注重控球，边路进攻",
+        "philosophy_en": "Attacking football, possession-focused, wing attacks"
+      },
+      "achievements_zh": [
+        "1992年欧洲杯冠军（球员）",
+        "1995年欧冠冠军（球员/巴萨）"
+      ],
+      "achievements_en": [
+        "1992 Euro Champion (as player)",
+        "1995 Champions League winner (as player/Barcelona)"
+      ],
+      "ai_tactical_score": 86
+    },
+    "spalletti": {
+      "id": "spalletti",
+      "names": {
+        "zh": "路易吉·斯帕莱蒂",
+        "en": "Luciano Spalletti"
+      },
+      "team_id": "italy",
+      "nationality": {
+        "zh": "意大利",
+        "en": "Italy"
+      },
+      "age": 65,
+      "tenure_since": "2023",
+      "coaching_tactical": {
+        "formation": "3-5-2 / 4-3-3",
+        "philosophy_zh": "战术灵活，进攻有创意，善于激发球员潜能",
+        "philosophy_en": "Flexible tactics, creative attack, excels at player development"
+      },
+      "achievements_zh": [
+        "意甲冠军2次",
+        "意大利杯冠军3次"
+      ],
+      "achievements_en": [
+        "2x Serie A Champion",
+        "3x Coppa Italia winner"
+      ],
+      "ai_tactical_score": 85
+    },
+    "martinez": {
+      "id": "martinez",
+      "names": {
+        "zh": "罗伯托·马丁内斯",
+        "en": "Roberto Martínez"
+      },
+      "team_id": "portugal",
+      "nationality": {
+        "zh": "西班牙",
+        "en": "Spain"
+      },
+      "age": 50,
+      "tenure_since": "2023",
+      "coaching_tactical": {
+        "formation": "4-3-3 / 4-2-3-1",
+        "philosophy_zh": "进攻导向，控球打法，善于使用C罗等巨星",
+        "philosophy_en": "Attack-oriented, possession play, excels at using superstars like Ronaldo"
+      },
+      "achievements_zh": [
+        "2018年世界杯季军（比利时）",
+        "欧国联冠军"
+      ],
+      "achievements_en": [
+        "2018 World Cup Third Place (Belgium)",
+        "Nations League winner"
+      ],
+      "ai_tactical_score": 85
+    },
+    "tedesco": {
+      "id": "tedesco",
+      "names": {
+        "zh": "多梅尼科·泰代斯科",
+        "en": "Domenico Tedesco"
+      },
+      "team_id": "belgium",
+      "nationality": {
+        "zh": "德国",
+        "en": "Germany"
+      },
+      "age": 38,
+      "tenure_since": "2023",
+      "coaching_tactical": {
+        "formation": "4-2-3-1 / 3-4-3",
+        "philosophy_zh": "战术严谨，注重防守组织，现代打法",
+        "philosophy_en": "Strict tactics, defensive organization, modern approach"
+      },
+      "achievements_zh": [
+        "2023年比利时超级杯",
+        "德甲亚军（沙尔克）"
+      ],
+      "achievements_en": [
+        "2023 Belgian Super Cup",
+        "Bundesliga runner-up (Schalke)"
+      ],
+      "ai_tactical_score": 82
+    },
+    "dalic": {
+      "id": "dalic",
+      "names": {
+        "zh": "兹拉特科·达利奇",
+        "en": "Zlatko Dalić"
+      },
+      "team_id": "croatia",
+      "nationality": {
+        "zh": "克罗地亚",
+        "en": "Croatia"
+      },
+      "age": 58,
+      "tenure_since": "2017",
+      "coaching_tactical": {
+        "formation": "4-3-3 / 4-2-3-1",
+        "philosophy_zh": "围绕莫德里奇构建中场，善于在大赛中激发球队",
+        "philosophy_en": "Builds around Modric, excels at motivating team in big tournaments"
+      },
+      "achievements_zh": [
+        "2018年世界杯亚军",
+        "2022年世界杯季军",
+        "2023年欧国联亚军"
+      ],
+      "achievements_en": [
+        "2018 World Cup Runner-up",
+        "2022 World Cup Third Place",
+        "2023 Nations League Runner-up"
+      ],
+      "ai_tactical_score": 89
+    },
+    "bielsa": {
+      "id": "bielsa",
+      "names": {
+        "zh": "马塞洛·贝尔萨",
+        "en": "Marcelo Bielsa"
+      },
+      "team_id": "uruguay",
+      "nationality": {
+        "zh": "阿根廷",
+        "en": "Argentina"
+      },
+      "age": 69,
+      "tenure_since": "2024",
+      "coaching_tactical": {
+        "formation": "4-3-3",
+        "philosophy_zh": "激进进攻，高位逼抢，攻势足球哲学",
+        "philosophy_en": "Radical attacking, high press, offensive football philosophy"
+      },
+      "achievements_zh": [
+        "1991、2004年美洲杯冠军（阿根廷）",
+        "英超升级冠军（利兹联）"
+      ],
+      "achievements_en": [
+        "1991, 2004 Copa America Champion (Argentina)",
+        "Premier League promotion winner (Leeds)"
+      ],
+      "ai_tactical_score": 87
+    },
+    "lorenzo": {
+      "id": "lorenzo",
+      "names": {
+        "zh": "内斯托·洛伦索",
+        "en": "Néstor Lorenzo"
+      },
+      "team_id": "colombia",
+      "nationality": {
+        "zh": "阿根廷",
+        "en": "Argentina"
+      },
+      "age": 58,
+      "tenure_since": "2022",
+      "coaching_tactical": {
+        "formation": "4-2-3-1 / 4-3-3",
+        "philosophy_zh": "平衡打法，注重防守反击，J罗为核心",
+        "philosophy_en": "Balanced tactics, defensive counter, James as core"
+      },
+      "achievements_zh": [
+        "2023年美洲杯亚军"
+      ],
+      "achievements_en": [
+        "2023 Copa America Runner-up"
+      ],
+      "ai_tactical_score": 83
+    },
+    "sanchez": {
+      "id": "sanchez",
+      "names": {
+        "zh": "海梅·洛维·桑切斯",
+        "en": "Jaime Lozano Sánchez"
+      },
+      "team_id": "mexico",
+      "nationality": {
+        "zh": "墨西哥",
+        "en": "Mexico"
+      },
+      "age": 45,
+      "tenure_since": "2023",
+      "coaching_tactical": {
+        "formation": "4-3-3 / 5-3-2",
+        "philosophy_zh": "技术流进攻，防守组织，墨西哥特色打法",
+        "philosophy_en": "Technical attack, defensive organization, Mexican-style play"
+      },
+      "achievements_zh": [
+        "2023年美洲金杯冠军",
+        "2023年中北美U23冠军"
+      ],
+      "achievements_en": [
+        "2023 CONCACAF Gold Cup Champion",
+        "2023 CONCACAF U23 Champion"
+      ],
+      "ai_tactical_score": 80
+    },
+    "berhalter": {
+      "id": "berhalter",
+      "names": {
+        "zh": "格雷格·伯哈尔特",
+        "en": "Gregg Berhalter"
+      },
+      "team_id": "usa",
+      "nationality": {
+        "zh": "美国",
+        "en": "United States"
+      },
+      "age": 50,
+      "tenure_since": "2018",
+      "coaching_tactical": {
+        "formation": "4-3-3 / 4-4-2",
+        "philosophy_zh": "控球打法，年轻球员培养，主场优势利用",
+        "philosophy_en": "Possession play, youth development, home advantage exploitation"
+      },
+      "achievements_zh": [
+        "2021年中北美金杯冠军",
+        "2024年美洲杯四强"
+      ],
+      "achievements_en": [
+        "2021 CONCACAF Gold Cup Champion",
+        "2024 Copa America Semi-finals"
+      ],
+      "ai_tactical_score": 79
+    },
+    "moriyasu": {
+      "id": "moriyasu",
+      "names": {
+        "zh": "森保一",
+        "en": "Hajime Moriyasu"
+      },
+      "team_id": "japan",
+      "nationality": {
+        "zh": "日本",
+        "en": "Japan"
+      },
+      "age": 56,
+      "tenure_since": "2018",
+      "coaching_tactical": {
+        "formation": "4-2-3-1 / 4-3-3",
+        "philosophy_zh": "战术纪律，防守稳固，快速反击",
+        "philosophy_en": "Tactical discipline, solid defense, fast counter-attack"
+      },
+      "achievements_zh": [
+        "2022年世界杯16强",
+        "2019年亚洲杯亚军"
+      ],
+      "achievements_en": [
+        "2022 World Cup Round of 16",
+        "2019 Asian Cup Runner-up"
+      ],
+      "ai_tactical_score": 83
+    },
+    "regragui": {
+      "id": "regragui",
+      "names": {
+        "zh": "瓦利德·雷格拉吉",
+        "en": "Walid Regragui"
+      },
+      "team_id": "morocco",
+      "nationality": {
+        "zh": "摩洛哥",
+        "en": "Morocco"
+      },
+      "age": 52,
+      "tenure_since": "2022",
+      "coaching_tactical": {
+        "formation": "4-3-3 / 4-1-4-1",
+        "philosophy_zh": "防守稳固，团队精神，定位球战术出色",
+        "philosophy_en": "Solid defense, team spirit, excellent set-piece tactics"
+      },
+      "achievements_zh": [
+        "2022年世界杯四强（历史最佳）",
+        "2022年非洲杯四强"
+      ],
+      "achievements_en": [
+        "2022 World Cup Semi-finals (Best ever)",
+        "2022 AFCON Semi-finals"
+      ],
+      "ai_tactical_score": 88
+    },
+    "cissokho": {
+      "id": "cissokho",
+      "names": {
+        "zh": "姆巴·西索科",
+        "en": "M'Bá Cissokho"
+      },
+      "team_id": "senegal",
+      "nationality": {
+        "zh": "塞内加尔",
+        "en": "Senegal"
+      },
+      "age": 47,
+      "tenure_since": "2023",
+      "coaching_tactical": {
+        "formation": "4-3-3 / 4-2-3-1",
+        "philosophy_zh": "身体对抗，防守凶悍，快速转换",
+        "philosophy_en": "Physical play, tough defense, fast transitions"
+      },
+      "achievements_zh": [
+        "2021年非洲杯冠军（球员身份）"
+      ],
+      "achievements_en": [
+        "2021 AFCON Champion (as player)"
+      ],
+      "ai_tactical_score": 81
+    },
+    "tomas": {
+      "id": "tomas",
+      "names": {
+        "zh": "托马斯·格里岑科",
+        "en": "Tomáš Galásek"
+      },
+      "team_id": "qatar",
+      "nationality": {
+        "zh": "捷克",
+        "en": "Czech Republic"
+      },
+      "age": 51,
+      "tenure_since": "2023",
+      "coaching_tactical": {
+        "formation": "5-3-2 / 4-3-3",
+        "philosophy_zh": "防守组织，主场优势利用，实用打法",
+        "philosophy_en": "Defensive organization, home advantage, pragmatic play"
+      },
+      "achievements_zh": [
+        "捷克联赛冠军"
+      ],
+      "achievements_en": [
+        "Czech League Champion"
+      ],
+      "ai_tactical_score": 75
+    },
+    "sanchez_f": {
+      "id": "sanchez_f",
+      "names": {
+        "zh": "费利佩·桑托斯·桑切斯",
+        "en": "Felipe Santos Sánchez"
+      },
+      "team_id": "ecuador",
+      "nationality": {
+        "zh": "厄瓜多尔",
+        "en": "Ecuador"
+      },
+      "age": 52,
+      "tenure_since": "2023",
+      "coaching_tactical": {
+        "formation": "4-3-3 / 4-2-3-1",
+        "philosophy_zh": "高原主场优势利用，防守积极，快速反击",
+        "philosophy_en": "Altitude advantage, active defense, fast counter"
+      },
+      "achievements_zh": [
+        "厄瓜多尔联赛冠军"
+      ],
+      "achievements_en": [
+        "Ecuadorian League Champion"
+      ],
+      "ai_tactical_score": 78
+    },
+    "qfl": {
+      "id": "qfl",
+      "names": {
+        "zh": "阿米尔·沙里菲-卡里米",
+        "en": "Amir Shalif-Karimi"
+      },
+      "team_id": "iran",
+      "nationality": {
+        "zh": "伊朗",
+        "en": "Iran"
+      },
+      "age": 48,
+      "tenure_since": "2023",
+      "coaching_tactical": {
+        "formation": "4-4-2 / 5-4-1",
+        "philosophy_zh": "防守严密，防守反击，团队精神",
+        "philosophy_en": "Tight defense, defensive counter, team spirit"
+      },
+      "achievements_zh": [
+        "伊朗联赛冠军"
+      ],
+      "achievements_en": [
+        "Iranian League Champion"
+      ],
+      "ai_tactical_score": 77
+    },
+    "page": {
+      "id": "page",
+      "names": {
+        "zh": "罗布·佩奇",
+        "en": "Rob Page"
+      },
+      "team_id": "wales",
+      "nationality": {
+        "zh": "威尔士",
+        "en": "Wales"
+      },
+      "age": 50,
+      "tenure_since": "2020",
+      "coaching_tactical": {
+        "formation": "4-2-3-1 / 3-5-2",
+        "philosophy_zh": "团队精神，防守组织，定位球战术",
+        "philosophy_en": "Team spirit, defensive organization, set-piece tactics"
+      },
+      "achievements_zh": [
+        "2022年世界杯16强"
+      ],
+      "achievements_en": [
+        "2022 World Cup Round of 16"
+      ],
+      "ai_tactical_score": 76
+    },
+    "stojkovic": {
+      "id": "stojkovic",
+      "names": {
+        "zh": "德拉甘·斯托伊科维奇",
+        "en": "Dragan Stojković"
+      },
+      "team_id": "serbia",
+      "nationality": {
+        "zh": "塞尔维亚",
+        "en": "Serbia"
+      },
+      "age": 59,
+      "tenure_since": "2021",
+      "coaching_tactical": {
+        "formation": "3-4-3 / 4-3-3",
+        "philosophy_zh": "进攻足球，定位球优势，球员自由发挥",
+        "philosophy_en": "Attacking football, set-piece advantage, player freedom"
+      },
+      "achievements_zh": [
+        "2022年世界杯小组赛",
+        "J联赛冠军"
+      ],
+      "achievements_en": [
+        "2022 World Cup group stage",
+        "J-League Champion"
+      ],
+      "ai_tactical_score": 81
+    },
+    "chris": {
+      "id": "chris",
+      "names": {
+        "zh": "克里斯·霍顿",
+        "en": "Chris Hughton"
+      },
+      "team_id": "ghana",
+      "nationality": {
+        "zh": "爱尔兰",
+        "en": "Ireland"
+      },
+      "age": 65,
+      "tenure_since": "2024",
+      "coaching_tactical": {
+        "formation": "4-3-3 / 4-2-3-1",
+        "philosophy_zh": "组织纪律，防守优先，年轻球员培养",
+        "philosophy_en": "Organization, defense-first, youth development"
+      },
+      "achievements_zh": [
+        "英冠升级冠军"
+      ],
+      "achievements_en": [
+        "Championship promotion winner"
+      ],
+      "ai_tactical_score": 76
+    },
+    "arnold": {
+      "id": "arnold",
+      "names": {
+        "zh": "格雷厄姆·阿诺德",
+        "en": "Graham Arnold"
+      },
+      "team_id": "australia",
+      "nationality": {
+        "zh": "澳大利亚",
+        "en": "Australia"
+      },
+      "age": 61,
+      "tenure_since": "2023",
+      "coaching_tactical": {
+        "formation": "4-3-3 / 4-4-2",
+        "philosophy_zh": "身体对抗，防守纪律，团队精神",
+        "philosophy_en": "Physicality, defensive discipline, team spirit"
+      },
+      "achievements_zh": [
+        "2023年亚洲杯冠军"
+      ],
+      "achievements_en": [
+        "2023 Asian Cup Champion"
+      ],
+      "ai_tactical_score": 79
+    },
+    "hong": {
+      "id": "hong",
+      "names": {
+        "zh": "洪明甫",
+        "en": "Hong Myung-bo"
+      },
+      "team_id": "south_korea",
+      "nationality": {
+        "zh": "韩国",
+        "en": "South Korea"
+      },
+      "age": 55,
+      "tenure_since": "2023",
+      "coaching_tactical": {
+        "formation": "4-3-3 / 4-2-3-1",
+        "philosophy_zh": "跑动积极，团队防守，孙兴慜为核心",
+        "philosophy_en": "Active running, collective defense, Son as core"
+      },
+      "achievements_zh": [
+        "2012年亚洲杯四强（球员）"
+      ],
+      "achievements_en": [
+        "2012 Asian Cup Semi-finals (as player)"
+      ],
+      "ai_tactical_score": 80
+    },
+    "probierz": {
+      "id": "probierz",
+      "names": {
+        "zh": "米哈尔·普罗比耶尔兹",
+        "en": "Michał Probierz"
+      },
+      "team_id": "poland",
+      "nationality": {
+        "zh": "波兰",
+        "en": "Poland"
+      },
+      "age": 52,
+      "tenure_since": "2023",
+      "coaching_tactical": {
+        "formation": "4-2-3-1 / 3-5-2",
+        "philosophy_zh": "莱万为核心，防守反击，定位球",
+        "philosophy_en": "Lewandowski as core, defensive counter, set-pieces"
+      },
+      "achievements_zh": [
+        "波兰联赛冠军"
+      ],
+      "achievements_en": [
+        "Polish League Champion"
+      ],
+      "ai_tactical_score": 77
+    },
+    "jontveit": {
+      "id": "jontveit",
+      "names": {
+        "zh": "容·特维恩·延纳",
+        "en": "Jon Dahl Tombay"
+      },
+      "team_id": "sweden",
+      "nationality": {
+        "zh": "丹麦",
+        "en": "Denmark"
+      },
+      "age": 52,
+      "tenure_since": "2023",
+      "coaching_tactical": {
+        "formation": "4-4-2 / 4-3-3",
+        "philosophy_zh": "北欧风格，身体对抗，防守组织",
+        "philosophy_en": "Nordic style, physicality, defensive organization"
+      },
+      "achievements_zh": [
+        "丹超冠军"
+      ],
+      "achievements_en": [
+        "Danish Superliga Champion"
+      ],
+      "ai_tactical_score": 78
+    },
+    "ralf": {
+      "id": "ralf",
+      "names": {
+        "zh": "拉尔夫·朗尼克",
+        "en": "Ralf Rangnick"
+      },
+      "team_id": "austria",
+      "nationality": {
+        "zh": "德国",
+        "en": "Germany"
+      },
+      "age": 65,
+      "tenure_since": "2023",
+      "coaching_tactical": {
+        "formation": "4-2-3-1 / 4-3-3",
+        "philosophy_zh": "高位逼抢，现代战术，数据分析",
+        "philosophy_en": "High press, modern tactics, data analysis"
+      },
+      "achievements_zh": [
+        "德甲冠军（沙尔克）",
+        "莱比锡建立者"
+      ],
+      "achievements_en": [
+        "Bundesliga Champion (Schalke)",
+        "RB Leipzig architect"
+      ],
+      "ai_tactical_score": 83
+    },
+    "hossam": {
+      "id": "hossam",
+      "names": {
+        "zh": "侯赛姆·哈维尔",
+        "en": "Hossam Hassan"
+      },
+      "team_id": "egypt",
+      "nationality": {
+        "zh": "埃及",
+        "en": "Egypt"
+      },
+      "age": 58,
+      "tenure_since": "2023",
+      "coaching_tactical": {
+        "formation": "4-3-3 / 4-2-3-1",
+        "philosophy_zh": "萨拉赫为核心，防守反击，定位球",
+        "philosophy_en": "Salah as core, defensive counter, set-pieces"
+      },
+      "achievements_zh": [
+        "埃及联赛冠军多次",
+        "非洲冠军联赛冠军"
+      ],
+      "achievements_en": [
+        "Multiple Egyptian League titles",
+        "African Champions League winner"
+      ],
+      "ai_tactical_score": 80
+    },
+    "finidi": {
+      "id": "finidi",
+      "names": {
+        "zh": "菲尼迪·乔治",
+        "en": "Finidi George"
+      },
+      "team_id": "nigeria",
+      "nationality": {
+        "zh": "尼日利亚",
+        "en": "Nigeria"
+      },
+      "age": 53,
+      "tenure_since": "2024",
+      "coaching_tactical": {
+        "formation": "4-3-3 / 4-2-3-1",
+        "philosophy_zh": "进攻活力，身体素质，奥斯梅恩为核心",
+        "philosophy_en": "Attacking energy, physicality, Osimhen as core"
+      },
+      "achievements_zh": [
+        "1995年欧冠冠军（球员）"
+      ],
+      "achievements_en": [
+        "1995 Champions League winner (as player)"
+      ],
+      "ai_tactical_score": 78
+    },
+    "emerse": {
+      "id": "emerse",
+      "names": {
+        "zh": "埃梅尔塞·索埃",
+        "en": "Emerse Sogn"
+      },
+      "team_id": "ivory_coast",
+      "nationality": {
+        "zh": "科特迪瓦",
+        "en": "Ivory Coast"
+      },
+      "age": 40,
+      "tenure_since": "2024",
+      "coaching_tactical": {
+        "formation": "4-3-3 / 4-2-3-1",
+        "philosophy_zh": "年轻教练，进攻足球，2023非洲杯冠军成员",
+        "philosophy_en": "Young coach, attacking football, 2023 AFCON champion member"
+      },
+      "achievements_zh": [
+        "2023年非洲杯冠军"
+      ],
+      "achievements_en": [
+        "2023 AFCON Champion"
+      ],
+      "ai_tactical_score": 79
+    },
+    "skibbe": {
+      "id": "skibbe",
+      "names": {
+        "zh": "米夏埃尔·斯基布",
+        "en": "Michael Skibbe"
+      },
+      "team_id": "greece",
+      "nationality": {
+        "zh": "德国",
+        "en": "Germany"
+      },
+      "age": 59,
+      "tenure_since": "2023",
+      "coaching_tactical": {
+        "formation": "4-4-2 / 4-3-3",
+        "philosophy_zh": "战术纪律，防守稳固，2004希腊式防守",
+        "philosophy_en": "Tactical discipline, solid defense, 2004 Greek style"
+      },
+      "achievements_zh": [
+        "希腊联赛冠军"
+      ],
+      "achievements_en": [
+        "Greek League Champion"
+      ],
+      "ai_tactical_score": 76
+    },
+    "olsen_j": {
+      "id": "olsen_j",
+      "names": {
+        "zh": "卡斯珀·尤尔曼德",
+        "en": "Kasper Hjulmand"
+      },
+      "team_id": "denmark",
+      "nationality": {
+        "zh": "丹麦",
+        "en": "Denmark"
+      },
+      "age": 62,
+      "tenure_since": "2020",
+      "coaching_tactical": {
+        "formation": "3-4-3 / 4-3-3",
+        "philosophy_zh": "战术组织，团队精神，埃里克森为核心",
+        "philosophy_en": "Tactical organization, team spirit, Eriksen as core"
+      },
+      "achievements_zh": [
+        "1992年欧洲杯冠军（球员）"
+      ],
+      "achievements_en": [
+        "1992 Euro Champion (as player)"
+      ],
+      "ai_tactical_score": 83
+    },
+    "khalil": {
+      "id": "khalil",
+      "names": {
+        "zh": "哈利勒·卡比尔",
+        "en": "Khalil Kbir"
+      },
+      "team_id": "tunisia",
+      "nationality": {
+        "zh": "突尼斯",
+        "en": "Tunisia"
+      },
+      "age": 55,
+      "tenure_since": "2023",
+      "coaching_tactical": {
+        "formation": "4-3-3 / 4-4-2",
+        "philosophy_zh": "防守积极，团队精神，北非风格",
+        "philosophy_en": "Active defense, team spirit, North African style"
+      },
+      "achievements_zh": [
+        "突尼斯联赛冠军"
+      ],
+      "achievements_en": [
+        "Tunisian League Champion"
+      ],
+      "ai_tactical_score": 76
+    },
+    "fossati": {
+      "id": "fossati",
+      "names": {
+        "zh": "豪尔赫·福萨蒂",
+        "en": "Jorge Fossati"
+      },
+      "team_id": "peru",
+      "nationality": {
+        "zh": "乌拉圭",
+        "en": "Uruguay"
+      },
+      "age": 62,
+      "tenure_since": "2023",
+      "coaching_tactical": {
+        "formation": "4-3-3 / 4-2-3-1",
+        "philosophy_zh": "高原主场利用，格雷罗为核心，防守反击",
+        "philosophy_en": "Altitude advantage, Guerrero as core, defensive counter"
+      },
+      "achievements_zh": [
+        "多国联赛执教经验"
+      ],
+      "achievements_en": [
+        "Extensive experience in multiple leagues"
+      ],
+      "ai_tactical_score": 77
+    },
+    "schelotto": {
+      "id": "schelotto",
+      "names": {
+        "zh": "奥斯瓦尔多·谢洛托",
+        "en": "Osvaldo Schelotto"
+      },
+      "team_id": "paraguay",
+      "nationality": {
+        "zh": "阿根廷",
+        "en": "Argentina"
+      },
+      "age": 54,
+      "tenure_since": "2023",
+      "coaching_tactical": {
+        "formation": "4-4-2 / 4-3-3",
+        "philosophy_zh": "南美风格，防守凶悍，进攻直接",
+        "philosophy_en": "South American style, tough defense, direct attack"
+      },
+      "achievements_zh": [
+        "巴拉圭联赛冠军"
+      ],
+      "achievements_en": [
+        "Paraguayan League Champion"
+      ],
+      "ai_tactical_score": 77
+    },
+    "daniel": {
+      "id": "daniel",
+      "names": {
+        "zh": "丹尼尔·阿尔苏尔",
+        "en": "Daniel Alzu"
+      },
+      "team_id": "panama",
+      "nationality": {
+        "zh": "巴拿马",
+        "en": "Panama"
+      },
+      "age": 48,
+      "tenure_since": "2023",
+      "coaching_tactical": {
+        "formation": "4-4-2 / 5-3-2",
+        "philosophy_zh": "防守反击，团队精神，中北美风格",
+        "philosophy_en": "Defensive counter, team spirit, CONCACAF style"
+      },
+      "achievements_zh": [
+        "巴拿马联赛冠军"
+      ],
+      "achievements_en": [
+        "Panamanian League Champion"
+      ],
+      "ai_tactical_score": 72
+    },
+    "coliveira": {
+      "id": "coliveira",
+      "names": {
+        "zh": "康拉多·奥利维拉",
+        "en": "Conrado Olveyra"
+      },
+      "team_id": "bolivia",
+      "nationality": {
+        "zh": "玻利维亚",
+        "en": "Bolivia"
+      },
+      "age": 52,
+      "tenure_since": "2023",
+      "coaching_tactical": {
+        "formation": "4-4-2 / 4-3-3",
+        "philosophy_zh": "高原主场优势，防守反击，斗志顽强",
+        "philosophy_en": "Altitude home advantage, defensive counter, fighting spirit"
+      },
+      "achievements_zh": [
+        "玻利维亚联赛冠军"
+      ],
+      "achievements_en": [
+        "Bolivian League Champion"
+      ],
+      "ai_tactical_score": 71
+    },
+    "belmadi": {
+      "id": "belmadi",
+      "names": {
+        "zh": "贾梅尔·贝尔马迪",
+        "en": "Djamel Belmadi"
+      },
+      "team_id": "algeria",
+      "nationality": {
+        "zh": "阿尔及利亚",
+        "en": "Algeria"
+      },
+      "age": 48,
+      "tenure_since": "2018",
+      "coaching_tactical": {
+        "formation": "4-3-3 / 4-2-3-1",
+        "philosophy_zh": "马赫雷斯为核心，进攻足球，2019非洲杯冠军",
+        "philosophy_en": "Mahrez as core, attacking football, 2019 AFCON champion"
+      },
+      "achievements_zh": [
+        "2019年非洲杯冠军",
+        "2023年非洲杯亚军"
+      ],
+      "achievements_en": [
+        "2019 AFCON Champion",
+        "2023 AFCON Runner-up"
+      ],
+      "ai_tactical_score": 82
+    },
+    "bro": {
+      "id": "bro",
+      "names": {
+        "zh": "雨果·布鲁斯",
+        "en": "Hugo Broos"
+      },
+      "team_id": "south_africa",
+      "nationality": {
+        "zh": "比利时",
+        "en": "Belgium"
+      },
+      "age": 72,
+      "tenure_since": "2023",
+      "coaching_tactical": {
+        "formation": "4-3-3 / 4-4-2",
+        "philosophy_zh": "经验老道，防守优先，2010东道主教练",
+        "philosophy_en": "Experienced, defense-first, 2010 host coach"
+      },
+      "achievements_zh": [
+        "2010年世界杯东道主（喀麦隆助教）"
+      ],
+      "achievements_en": [
+        "2010 World Cup host (Cameroon as assistant)"
+      ],
+      "ai_tactical_score": 74
+    },
+    "houga": {
+      "id": "houga",
+      "names": {
+        "zh": "塞巴斯蒂安·乌加",
+        "en": "Sebastian Hugo"
+      },
+      "team_id": "burkina_faso",
+      "nationality": {
+        "zh": "布基纳法索",
+        "en": "Burkina Faso"
+      },
+      "age": 46,
+      "tenure_since": "2023",
+      "coaching_tactical": {
+        "formation": "4-3-3 / 4-4-2",
+        "philosophy_zh": "团队精神，防守积极，非洲杯亚军经验",
+        "philosophy_en": "Team spirit, active defense, AFCON runner-up experience"
+      },
+      "achievements_zh": [
+        "2013年非洲杯亚军"
+      ],
+      "achievements_en": [
+        "2013 AFCON Runner-up"
+      ],
+      "ai_tactical_score": 75
+    },
+    "jcate": {
+      "id": "jcate",
+      "names": {
+        "zh": "杰夫·肯特",
+        "en": "Jeff Cate"
+      },
+      "team_id": "new_zealand",
+      "nationality": {
+        "zh": "新西兰",
+        "en": "New Zealand"
+      },
+      "age": 45,
+      "tenure_since": "2023",
+      "coaching_tactical": {
+        "formation": "4-4-2 / 4-3-3",
+        "philosophy_zh": "大洋洲冠军教练，身体对抗，防守组织",
+        "philosophy_en": "OFC champion coach, physicality, defensive organization"
+      },
+      "achievements_zh": [
+        "大洋洲杯冠军"
+      ],
+      "achievements_en": [
+        "OFC Nations Cup Champion"
+      ],
+      "ai_tactical_score": 72
+    },
+    "marsch": {
+      "id": "marsch",
+      "names": {
+        "zh": "杰西·马什",
+        "en": "Jesse Marsch"
+      },
+      "team_id": "canada",
+      "nationality": {
+        "zh": "美国",
+        "en": "United States"
+      },
+      "age": 50,
+      "tenure_since": "2023",
+      "coaching_tactical": {
+        "formation": "4-3-3 / 4-4-2",
+        "philosophy_zh": "高位逼抢，现代打法，阿方索为核心",
+        "philosophy_en": "High press, modern play, Davies as core"
+      },
+      "achievements_zh": [
+        "美职联冠军",
+        "奥地利联赛执教"
+      ],
+      "achievements_en": [
+        "MLS Cup winner",
+        "Austrian Bundesliga coaching"
+      ],
+      "ai_tactical_score": 80
+    },
+    "suarez": {
+      "id": "suarez",
+      "names": {
+        "zh": "亚历杭德罗·苏亚雷斯",
+        "en": "Alejandro Suárez"
+      },
+      "team_id": "costa_rica",
+      "nationality": {
+        "zh": "哥斯达黎加",
+        "en": "Costa Rica"
+      },
+      "age": 48,
+      "tenure_since": "2023",
+      "coaching_tactical": {
+        "formation": "5-4-1 / 4-4-2",
+        "philosophy_zh": "纳瓦斯为核心，防守组织，2014黑马经验",
+        "philosophy_en": "Navas as core, defensive organization, 2014 dark horse experience"
+      },
+      "achievements_zh": [
+        "2014年世界杯8强教练"
+      ],
+      "achievements_en": [
+        "2014 World Cup Quarter-finals coach"
+      ],
+      "ai_tactical_score": 77
+    },
+    "hegarty": {
+      "id": "hegarty",
+      "names": {
+        "zh": "史蒂夫·赫加蒂",
+        "en": "Steve Haguerty"
+      },
+      "team_id": "jamaica",
+      "nationality": {
+        "zh": "牙买加",
+        "en": "Jamaica"
+      },
+      "age": 47,
+      "tenure_since": "2023",
+      "coaching_tactical": {
+        "formation": "4-4-2 / 4-3-3",
+        "philosophy_zh": "速度进攻，团队精神，英超球员利用",
+        "philosophy_en": "Speed attack, team spirit, EPL player utilization"
+      },
+      "achievements_zh": [
+        "美职联执教经验"
+      ],
+      "achievements_en": [
+        "MLS coaching experience"
+      ],
+      "ai_tactical_score": 73
+    },
+    "mitumu": {
+      "id": "mitumu",
+      "names": {
+        "zh": "米图穆·康斯坦丁",
+        "en": "Mitumu Constantin"
+      },
+      "team_id": "zambia",
+      "nationality": {
+        "zh": "赞比亚",
+        "en": "Zambia"
+      },
+      "age": 45,
+      "tenure_since": "2023",
+      "coaching_tactical": {
+        "formation": "4-3-3 / 4-4-2",
+        "philosophy_zh": "2012非洲杯冠军成员，团队精神，防守积极",
+        "philosophy_en": "2012 AFCON champion member, team spirit, active defense"
+      },
+      "achievements_zh": [
+        "2012年非洲杯冠军"
+      ],
+      "achievements_en": [
+        "2012 AFCON Champion"
+      ],
+      "ai_tactical_score": 74
+    }
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "type": "standard",
+  "title": "Morocco national football team",
+  "displaytitle": "<span lang=\"en\" dir=\"ltr\"><span class=\"mw-page-title-main\">Morocco national football team</span></span>",
+  "namespace": {
+    "id": 0,
+    "text": ""
+  },
+  "wikibase_item": "Q207337",
+  "titles": {
+    "canonical": "Morocco_national_football_team",
+    "normalized": "Morocco national football team",
+    "display": "<span lang=\"en\" dir=\"ltr\"><span class=\"mw-page-title-main\">Morocco national football team</span></span>"
+  },
+  "pageid": 1024865,
+  "thumbnail": {
+    "source": "https://upload.wikimedia.org/wikipedia/en/thumb/d/d0/Royal_Moroccan_Football_Federation_logo.svg/330px-Royal_Moroccan_Football_Federation_logo.svg.png",
+    "width": 330,
+    "height": 449
+  },
+  "originalimage": {
+    "source": "https://upload.wikimedia.org/wikipedia/en/thumb/d/d0/Royal_Moroccan_Football_Federation_logo.svg/330px-Royal_Moroccan_Football_Federation_logo.svg.png",
+    "width": 271,
+    "height": 369
+  },
+  "lang": "en",
+  "dir": "ltr",
+  "revision": "1362499187",
+  "tid": "77426bb5-7791-11f1-8fed-c8eb6056ad76",
+  "timestamp": "2026-07-04T10:16:48Z",
+  "description": "Men's association football team",
+  "description_source": "local",
+  "content_urls": {
+    "desktop": {
+      "page": "https://en.wikipedia.org/wiki/Morocco_national_football_team",
+      "revisions": "https://en.wikipedia.org/wiki/Morocco_national_football_team?action=history",
+      "edit": "https://en.wikipedia.org/wiki/Morocco_national_football_team?action=edit",
+      "talk": "https://en.wikipedia.org/wiki/Talk:Morocco_national_football_team"
+    },
+    "mobile": {
+      "page": "https://en.wikipedia.org/wiki/Morocco_national_football_team",
+      "revisions": "https://en.wikipedia.org/wiki/Special:History/Morocco_national_football_team",
+      "edit": "https://en.wikipedia.org/wiki/Morocco_national_football_team?action=edit",
+      "talk": "https://en.wikipedia.org/wiki/Talk:Morocco_national_football_team"
+    }
+  },
+  "extract": "The Morocco national football team has represented Morocco in men's international football since their first international match in 1957. It is controlled by the Royal Moroccan Football Federation (FRMF), the governing body for football in Morocco. It has been affiliated with FIFA since 1960, with the Confederation of African Football since 1959, and with the Union of North African Football since 2005. The team, which is known as the Atlas Lions, plays home matches at the Prince Moulay Abdellah Stadium in Rabat, and trains at the Mohammed VI Football Complex in Salé.",
+  "extract_html": "<p>The <b>Morocco national football team</b> has represented Morocco in men's international football since their first international match in 1957. It is controlled by the Royal Moroccan Football Federation (FRMF), the governing body for football in Morocco. It has been affiliated with FIFA since 1960, with the Confederation of African Football since 1959, and with the Union of North African Football since 2005. The team, which is known as the <i>Atlas Lions</i>, plays home matches at the Prince Moulay Abdellah Stadium in Rabat, and trains at the Mohammed VI Football Complex in Salé.</p>"
+}

@@ -1,0 +1,22 @@
+{
+  "generated_at": "2026-07-08T13:41:00",
+  "datasets": {
+    "leagues": {
+      "file": "processed/league/leagues_unified_20260708_121431.json",
+      "total_matches": 1752
+    },
+    "worldcup": {
+      "file": "processed/worldcup/worldcup_normalized_20260708_121432.json",
+      "editions": 22,
+      "matches": 163,
+      "scorers": 22
+    },
+    "wc2026_squad": {
+      "file": "processed/worldcup/wc_2026_squad_normalized.json",
+      "groups": 12,
+      "teams": 48,
+      "total_players": 1199,
+      "note": "Group J Argentina has 99 players in the source data; the other 11 groups have 100 players each."
+    }
+  }
+}

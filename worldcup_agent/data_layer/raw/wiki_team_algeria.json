@@ -1,0 +1,49 @@
+{
+  "type": "standard",
+  "title": "Algeria national football team",
+  "displaytitle": "<span lang=\"en\" dir=\"ltr\"><span class=\"mw-page-title-main\">Algeria national football team</span></span>",
+  "namespace": {
+    "id": 0,
+    "text": ""
+  },
+  "wikibase_item": "Q181903",
+  "titles": {
+    "canonical": "Algeria_national_football_team",
+    "normalized": "Algeria national football team",
+    "display": "<span lang=\"en\" dir=\"ltr\"><span class=\"mw-page-title-main\">Algeria national football team</span></span>"
+  },
+  "pageid": 1029528,
+  "thumbnail": {
+    "source": "https://upload.wikimedia.org/wikipedia/en/2/2d/Algerian_NT_%28logo%29.png",
+    "width": 275,
+    "height": 362
+  },
+  "originalimage": {
+    "source": "https://upload.wikimedia.org/wikipedia/en/2/2d/Algerian_NT_%28logo%29.png",
+    "width": 275,
+    "height": 362
+  },
+  "lang": "en",
+  "dir": "ltr",
+  "revision": "1362507437",
+  "tid": "fdb27b36-77a0-11f1-bae0-06751d714e31",
+  "timestamp": "2026-07-04T12:07:56Z",
+  "description": "Men's association football team",
+  "description_source": "local",
+  "content_urls": {
+    "desktop": {
+      "page": "https://en.wikipedia.org/wiki/Algeria_national_football_team",
+      "revisions": "https://en.wikipedia.org/wiki/Algeria_national_football_team?action=history",
+      "edit": "https://en.wikipedia.org/wiki/Algeria_national_football_team?action=edit",
+      "talk": "https://en.wikipedia.org/wiki/Talk:Algeria_national_football_team"
+    },
+    "mobile": {
+      "page": "https://en.wikipedia.org/wiki/Algeria_national_football_team",
+      "revisions": "https://en.wikipedia.org/wiki/Special:History/Algeria_national_football_team",
+      "edit": "https://en.wikipedia.org/wiki/Algeria_national_football_team?action=edit",
+      "talk": "https://en.wikipedia.org/wiki/Talk:Algeria_national_football_team"
+    }
+  },
+  "extract": "The Algeria national football team represents Algeria in men's international football, and is governed by the Algerian Football Federation. The team plays its home matches at Nelson Mandela Stadium in Algiers and Miloud Hadefi Stadium in Oran. Algeria joined FIFA on 1 January 1964, a year and a half after gaining independence.",
+  "extract_html": "<p>The <b>Algeria national football team</b> represents Algeria in men's international football, and is governed by the Algerian Football Federation. The team plays its home matches at Nelson Mandela Stadium in Algiers and Miloud Hadefi Stadium in Oran. Algeria joined FIFA on 1 January 1964, a year and a half after gaining independence.</p>"
+}

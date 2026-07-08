@@ -1,0 +1,39 @@
+{
+  "type": "standard",
+  "title": "Uruguay national football team",
+  "displaytitle": "<span lang=\"en\" dir=\"ltr\"><span class=\"mw-page-title-main\">Uruguay national football team</span></span>",
+  "namespace": {
+    "id": 0,
+    "text": ""
+  },
+  "wikibase_item": "Q134916",
+  "titles": {
+    "canonical": "Uruguay_national_football_team",
+    "normalized": "Uruguay national football team",
+    "display": "<span lang=\"en\" dir=\"ltr\"><span class=\"mw-page-title-main\">Uruguay national football team</span></span>"
+  },
+  "pageid": 679782,
+  "lang": "en",
+  "dir": "ltr",
+  "revision": "1362500611",
+  "tid": "149e9ea7-7794-11f1-8e85-5238c68c61b6",
+  "timestamp": "2026-07-04T10:35:31Z",
+  "description": "Men's association football team",
+  "description_source": "local",
+  "content_urls": {
+    "desktop": {
+      "page": "https://en.wikipedia.org/wiki/Uruguay_national_football_team",
+      "revisions": "https://en.wikipedia.org/wiki/Uruguay_national_football_team?action=history",
+      "edit": "https://en.wikipedia.org/wiki/Uruguay_national_football_team?action=edit",
+      "talk": "https://en.wikipedia.org/wiki/Talk:Uruguay_national_football_team"
+    },
+    "mobile": {
+      "page": "https://en.wikipedia.org/wiki/Uruguay_national_football_team",
+      "revisions": "https://en.wikipedia.org/wiki/Special:History/Uruguay_national_football_team",
+      "edit": "https://en.wikipedia.org/wiki/Uruguay_national_football_team?action=edit",
+      "talk": "https://en.wikipedia.org/wiki/Talk:Uruguay_national_football_team"
+    }
+  },
+  "extract": "The Uruguay national football team, nicknamed la Celeste and los Charrúas, have represented Uruguay in international men's football since their first international match in 1902 and is administered by the Asociación Uruguaya de Fútbol, the governing body of football in Uruguay, which is a founding member of CONMEBOL since 1916 and a member of FIFA since 1923. It was also a member of PFC, which was the attempt at a unified confederation of the Americas from 1946 to 1961.\nUruguay's home stadium is the Estadio Centenario, and they have been coached by Marcelo Bielsa since 2023.",
+  "extract_html": "<p>The <b>Uruguay national football team</b>, nicknamed <i><b>la Celeste</b></i> and <i><b>los Charrúas</b></i>, have represented Uruguay in international men's football since their first international match in 1902 and is administered by the Asociación Uruguaya de Fútbol, the governing body of football in Uruguay, which is a founding member of CONMEBOL since 1916 and a member of FIFA since 1923. It was also a member of PFC, which was the attempt at a unified confederation of the Americas from 1946 to 1961.\nUruguay's home stadium is the Estadio Centenario, and they have been coached by Marcelo Bielsa since 2023.</p>"
+}

@@ -1,0 +1,49 @@
+{
+  "type": "standard",
+  "title": "Ghana national football team",
+  "displaytitle": "<span lang=\"en\" dir=\"ltr\"><span class=\"mw-page-title-main\">Ghana national football team</span></span>",
+  "namespace": {
+    "id": 0,
+    "text": ""
+  },
+  "wikibase_item": "Q172014",
+  "titles": {
+    "canonical": "Ghana_national_football_team",
+    "normalized": "Ghana national football team",
+    "display": "<span lang=\"en\" dir=\"ltr\"><span class=\"mw-page-title-main\">Ghana national football team</span></span>"
+  },
+  "pageid": 1029620,
+  "thumbnail": {
+    "source": "https://upload.wikimedia.org/wikipedia/en/thumb/9/9c/Ghana_Football_Association_logo_%282001%29.svg/330px-Ghana_Football_Association_logo_%282001%29.svg.png",
+    "width": 330,
+    "height": 433
+  },
+  "originalimage": {
+    "source": "https://upload.wikimedia.org/wikipedia/en/thumb/9/9c/Ghana_Football_Association_logo_%282001%29.svg/500px-Ghana_Football_Association_logo_%282001%29.svg.png",
+    "width": 380,
+    "height": 499
+  },
+  "lang": "en",
+  "dir": "ltr",
+  "revision": "1362503668",
+  "tid": "b07ed7d3-7799-11f1-ae72-e11e4ca20b83",
+  "timestamp": "2026-07-04T11:15:40Z",
+  "description": "",
+  "description_source": "local",
+  "content_urls": {
+    "desktop": {
+      "page": "https://en.wikipedia.org/wiki/Ghana_national_football_team",
+      "revisions": "https://en.wikipedia.org/wiki/Ghana_national_football_team?action=history",
+      "edit": "https://en.wikipedia.org/wiki/Ghana_national_football_team?action=edit",
+      "talk": "https://en.wikipedia.org/wiki/Talk:Ghana_national_football_team"
+    },
+    "mobile": {
+      "page": "https://en.wikipedia.org/wiki/Ghana_national_football_team",
+      "revisions": "https://en.wikipedia.org/wiki/Special:History/Ghana_national_football_team",
+      "edit": "https://en.wikipedia.org/wiki/Ghana_national_football_team?action=edit",
+      "talk": "https://en.wikipedia.org/wiki/Talk:Ghana_national_football_team"
+    }
+  },
+  "extract": "The Ghana men's national association football team represents Ghana in men's international association football. It is nicknamed the Black Stars after the Black Star of Africa in the flag of Ghana. The team is governed by the Ghana Football Association. Prior to 1957, it played as the Gold Coast.",
+  "extract_html": "<p>The <b>Ghana men's national association football team</b> represents Ghana in men's international association football. It is nicknamed the <b>Black Stars</b> after the Black Star of Africa in the flag of Ghana. The team is governed by the Ghana Football Association. Prior to 1957, it played as the Gold Coast.</p>"
+}

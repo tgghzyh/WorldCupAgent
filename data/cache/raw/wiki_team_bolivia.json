@@ -1,0 +1,49 @@
+{
+  "type": "standard",
+  "title": "Bolivia national football team",
+  "displaytitle": "<span lang=\"en\" dir=\"ltr\"><span class=\"mw-page-title-main\">Bolivia national football team</span></span>",
+  "namespace": {
+    "id": 0,
+    "text": ""
+  },
+  "wikibase_item": "Q193386",
+  "titles": {
+    "canonical": "Bolivia_national_football_team",
+    "normalized": "Bolivia national football team",
+    "display": "<span lang=\"en\" dir=\"ltr\"><span class=\"mw-page-title-main\">Bolivia national football team</span></span>"
+  },
+  "pageid": 1014785,
+  "thumbnail": {
+    "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Flag_of_Bolivia.svg/330px-Flag_of_Bolivia.svg.png",
+    "width": 330,
+    "height": 225
+  },
+  "originalimage": {
+    "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Flag_of_Bolivia.svg/1280px-Flag_of_Bolivia.svg.png",
+    "width": 1100,
+    "height": 750
+  },
+  "lang": "en",
+  "dir": "ltr",
+  "revision": "1362185513",
+  "tid": "a928c51d-7609-11f1-9dcb-46353538b8f7",
+  "timestamp": "2026-07-02T11:32:09Z",
+  "description": "Men's association football team",
+  "description_source": "local",
+  "content_urls": {
+    "desktop": {
+      "page": "https://en.wikipedia.org/wiki/Bolivia_national_football_team",
+      "revisions": "https://en.wikipedia.org/wiki/Bolivia_national_football_team?action=history",
+      "edit": "https://en.wikipedia.org/wiki/Bolivia_national_football_team?action=edit",
+      "talk": "https://en.wikipedia.org/wiki/Talk:Bolivia_national_football_team"
+    },
+    "mobile": {
+      "page": "https://en.wikipedia.org/wiki/Bolivia_national_football_team",
+      "revisions": "https://en.wikipedia.org/wiki/Special:History/Bolivia_national_football_team",
+      "edit": "https://en.wikipedia.org/wiki/Bolivia_national_football_team?action=edit",
+      "talk": "https://en.wikipedia.org/wiki/Talk:Bolivia_national_football_team"
+    }
+  },
+  "extract": "The Bolivia national football team, nicknamed La Verde, has represented Bolivia in men's international football since 1926. Organized by the Federación Boliviana de Fútbol, it is one of the ten members of FIFA's South American Football Confederation (CONMEBOL).",
+  "extract_html": "<p>The <b>Bolivia national football team</b>, nicknamed <i><b>La Verde</b></i>, has represented Bolivia in men's international football since 1926. Organized by the Federación Boliviana de Fútbol, it is one of the ten members of FIFA's South American Football Confederation (CONMEBOL).</p>"
+}

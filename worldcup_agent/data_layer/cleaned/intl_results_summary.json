@@ -1,0 +1,27 @@
+{
+  "generated_at": "2026-07-04T11:48:50.855021+00:00",
+  "total_rows": 49501,
+  "date_min": "1872-11-30T00:00:00",
+  "date_max": "2026-07-06T00:00:00",
+  "unique_teams": 336,
+  "unique_tournaments": 200,
+  "world_cup_rows": 1060,
+  "top_tournaments": {
+    "Friendly": 18388,
+    "FIFA World Cup qualification": 8771,
+    "UEFA Euro qualification": 2824,
+    "African Cup of Nations qualification": 2327,
+    "FIFA World Cup": 1060,
+    "Copa América": 869,
+    "African Cup of Nations": 845,
+    "AFC Asian Cup qualification": 829,
+    "UEFA Nations League": 658,
+    "CECAFA Cup": 620,
+    "CFU Caribbean Cup qualification": 606,
+    "Merdeka Tournament": 599,
+    "British Home Championship": 523,
+    "CONCACAF Nations League": 422,
+    "AFC Asian Cup": 421
+  },
+  "team_count_2026_present": 48
+}

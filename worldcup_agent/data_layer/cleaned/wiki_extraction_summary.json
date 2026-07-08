@@ -1,0 +1,9 @@
+{
+  "generated_at": "2026-07-04T12:53:16.393485+00:00",
+  "team_summaries_fetched": 48,
+  "fifa_ranks_parsed_from_wikitext": 0,
+  "wc_2026_groups_detected": 12,
+  "wc_2026_venues_detected": 11,
+  "wc_2026_date_mentions": 5,
+  "enriched_path": "C:\\Users\\43021\\Desktop\\ART\\WorldCupAgent\\worldcup_agent\\data_layer\\cleaned\\teams_2026_enriched.json"
+}

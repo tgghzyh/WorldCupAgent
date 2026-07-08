@@ -1,0 +1,49 @@
+{
+  "type": "standard",
+  "title": "Wales national football team",
+  "displaytitle": "<span lang=\"en\" dir=\"ltr\"><span class=\"mw-page-title-main\">Wales national football team</span></span>",
+  "namespace": {
+    "id": 0,
+    "text": ""
+  },
+  "wikibase_item": "Q180857",
+  "titles": {
+    "canonical": "Wales_national_football_team",
+    "normalized": "Wales national football team",
+    "display": "<span lang=\"en\" dir=\"ltr\"><span class=\"mw-page-title-main\">Wales national football team</span></span>"
+  },
+  "pageid": 580291,
+  "thumbnail": {
+    "source": "https://upload.wikimedia.org/wikipedia/en/thumb/d/dc/Wales_national_football_team_logo.svg/330px-Wales_national_football_team_logo.svg.png",
+    "width": 330,
+    "height": 370
+  },
+  "originalimage": {
+    "source": "https://upload.wikimedia.org/wikipedia/en/thumb/d/dc/Wales_national_football_team_logo.svg/330px-Wales_national_football_team_logo.svg.png",
+    "width": 299,
+    "height": 335
+  },
+  "lang": "en",
+  "dir": "ltr",
+  "revision": "1362127322",
+  "tid": "98069409-75be-11f1-b502-3899e863955e",
+  "timestamp": "2026-07-02T02:34:48Z",
+  "description": "Men's association football team representing Wales",
+  "description_source": "local",
+  "content_urls": {
+    "desktop": {
+      "page": "https://en.wikipedia.org/wiki/Wales_national_football_team",
+      "revisions": "https://en.wikipedia.org/wiki/Wales_national_football_team?action=history",
+      "edit": "https://en.wikipedia.org/wiki/Wales_national_football_team?action=edit",
+      "talk": "https://en.wikipedia.org/wiki/Talk:Wales_national_football_team"
+    },
+    "mobile": {
+      "page": "https://en.wikipedia.org/wiki/Wales_national_football_team",
+      "revisions": "https://en.wikipedia.org/wiki/Special:History/Wales_national_football_team",
+      "edit": "https://en.wikipedia.org/wiki/Wales_national_football_team?action=edit",
+      "talk": "https://en.wikipedia.org/wiki/Talk:Wales_national_football_team"
+    }
+  },
+  "extract": "The Wales national football team represents Wales in men's international football. It is controlled by the Football Association of Wales (FAW), the governing body for football in Wales. They have been a member of FIFA since 1946 and a member of UEFA since 1954.",
+  "extract_html": "<p>The <b>Wales national football team</b> represents Wales in men's international football. It is controlled by the Football Association of Wales (FAW), the governing body for football in Wales. They have been a member of FIFA since 1946 and a member of UEFA since 1954.</p>"
+}

@@ -1,0 +1,49 @@
+{
+  "type": "standard",
+  "title": "Argentina national football team",
+  "displaytitle": "<span lang=\"en\" dir=\"ltr\"><span class=\"mw-page-title-main\">Argentina national football team</span></span>",
+  "namespace": {
+    "id": 0,
+    "text": ""
+  },
+  "wikibase_item": "Q79800",
+  "titles": {
+    "canonical": "Argentina_national_football_team",
+    "normalized": "Argentina national football team",
+    "display": "<span lang=\"en\" dir=\"ltr\"><span class=\"mw-page-title-main\">Argentina national football team</span></span>"
+  },
+  "pageid": 454699,
+  "thumbnail": {
+    "source": "https://upload.wikimedia.org/wikipedia/en/thumb/c/c1/Argentina_national_football_team_logo.svg/330px-Argentina_national_football_team_logo.svg.png",
+    "width": 330,
+    "height": 523
+  },
+  "originalimage": {
+    "source": "https://upload.wikimedia.org/wikipedia/en/thumb/c/c1/Argentina_national_football_team_logo.svg/330px-Argentina_national_football_team_logo.svg.png",
+    "width": 251,
+    "height": 398
+  },
+  "lang": "en",
+  "dir": "ltr",
+  "revision": "1362501659",
+  "tid": "f76acce4-7795-11f1-a455-95b5233bb1a4",
+  "timestamp": "2026-07-04T10:49:01Z",
+  "description": "Men's association football team",
+  "description_source": "local",
+  "content_urls": {
+    "desktop": {
+      "page": "https://en.wikipedia.org/wiki/Argentina_national_football_team",
+      "revisions": "https://en.wikipedia.org/wiki/Argentina_national_football_team?action=history",
+      "edit": "https://en.wikipedia.org/wiki/Argentina_national_football_team?action=edit",
+      "talk": "https://en.wikipedia.org/wiki/Talk:Argentina_national_football_team"
+    },
+    "mobile": {
+      "page": "https://en.wikipedia.org/wiki/Argentina_national_football_team",
+      "revisions": "https://en.wikipedia.org/wiki/Special:History/Argentina_national_football_team",
+      "edit": "https://en.wikipedia.org/wiki/Argentina_national_football_team?action=edit",
+      "talk": "https://en.wikipedia.org/wiki/Talk:Argentina_national_football_team"
+    }
+  },
+  "extract": "The Argentina national football team, nicknamed la Albiceleste,  represents Argentina in men's international football and is administered by the Argentine Football Association, the governing body of football in Argentina. It has been a member of FIFA since 1912 and was a founding member of CONMEBOL in 1916. It was also a member of PFC, the unified confederation of the Americas, from 1946 to 1961. Argentina is the current FIFA World Cup champion, having won the most recent World Cup in 2022. The team previously won the World Cup in 1978 and 1986, and has appeared in the World Cup final a total of six times.",
+  "extract_html": "<p>The <b>Argentina national football team</b>, nicknamed <i><b>la Albiceleste</b></i>,  represents Argentina in men's international football and is administered by the Argentine Football Association, the governing body of football in Argentina. It has been a member of FIFA since 1912 and was a founding member of CONMEBOL in 1916. It was also a member of PFC, the unified confederation of the Americas, from 1946 to 1961. Argentina is the current FIFA World Cup champion, having won the most recent World Cup in 2022. The team previously won the World Cup in 1978 and 1986, and has appeared in the World Cup final a total of six times.</p>"
+}
