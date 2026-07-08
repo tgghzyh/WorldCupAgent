@@ -1,0 +1,17 @@
+# 密钥
+.env
+
+# 日志
+logs/
+
+# Python
+__pycache__/
+*.pyc
+*.egg-info/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Large processed data (keep source + scripts)
+# data/processed/  # uncomment if you want to exclude processed data

@@ -1,0 +1,1259 @@
+{
+  "metadata": {
+    "source": "Kaggle FIFA World Cup",
+    "normalized_at": "2026-07-08T12:14:32.461088",
+    "totals": {
+      "editions": 22,
+      "matches": 163,
+      "scorers": 22
+    }
+  },
+  "editions": [
+    {
+      "year": 1930,
+      "host_country": "Uruguay",
+      "runner_up": "Argentina",
+      "attendance": 590549,
+      "teams_count": 13
+    },
+    {
+      "year": 1934,
+      "host_country": "Italy",
+      "runner_up": "Czechoslovakia",
+      "attendance": 363000,
+      "teams_count": 16
+    },
+    {
+      "year": 1938,
+      "host_country": "France",
+      "runner_up": "Hungary",
+      "attendance": 375700,
+      "teams_count": 15
+    },
+    {
+      "year": 1950,
+      "host_country": "Brazil",
+      "runner_up": "Brazil",
+      "attendance": 1045246,
+      "teams_count": 13
+    },
+    {
+      "year": 1954,
+      "host_country": "Switzerland",
+      "runner_up": "Hungary",
+      "attendance": 768607,
+      "teams_count": 16
+    },
+    {
+      "year": 1958,
+      "host_country": "Sweden",
+      "runner_up": "Sweden",
+      "attendance": 819810,
+      "teams_count": 16
+    },
+    {
+      "year": 1962,
+      "host_country": "Chile",
+      "runner_up": "Czechoslovakia",
+      "attendance": 893172,
+      "teams_count": 16
+    },
+    {
+      "year": 1966,
+      "host_country": "England",
+      "runner_up": "West Germany",
+      "attendance": 1563135,
+      "teams_count": 16
+    },
+    {
+      "year": 1970,
+      "host_country": "Mexico",
+      "runner_up": "Italy",
+      "attendance": 1603975,
+      "teams_count": 16
+    },
+    {
+      "year": 1974,
+      "host_country": "West Germany",
+      "runner_up": "Netherlands",
+      "attendance": 1865753,
+      "teams_count": 16
+    },
+    {
+      "year": 1978,
+      "host_country": "Argentina",
+      "runner_up": "Netherlands",
+      "attendance": 1545791,
+      "teams_count": 16
+    },
+    {
+      "year": 1982,
+      "host_country": "Spain",
+      "runner_up": "West Germany",
+      "attendance": 1766277,
+      "teams_count": 24
+    },
+    {
+      "year": 1986,
+      "host_country": "Mexico",
+      "runner_up": "West Germany",
+      "attendance": 2394031,
+      "teams_count": 24
+    },
+    {
+      "year": 1990,
+      "host_country": "Italy",
+      "runner_up": "Argentina",
+      "attendance": 2516215,
+      "teams_count": 24
+    },
+    {
+      "year": 1994,
+      "host_country": "United States",
+      "runner_up": "Italy",
+      "attendance": 3587538,
+      "teams_count": 24
+    },
+    {
+      "year": 1998,
+      "host_country": "France",
+      "runner_up": "Brazil",
+      "attendance": 2785100,
+      "teams_count": 32
+    },
+    {
+      "year": 2002,
+      "host_country": "South Korea / Japan",
+      "runner_up": "Germany",
+      "attendance": 2705197,
+      "teams_count": 32
+    },
+    {
+      "year": 2006,
+      "host_country": "Germany",
+      "runner_up": "France",
+      "attendance": 3359439,
+      "teams_count": 32
+    },
+    {
+      "year": 2010,
+      "host_country": "South Africa",
+      "runner_up": "Netherlands",
+      "attendance": 3178856,
+      "teams_count": 32
+    },
+    {
+      "year": 2014,
+      "host_country": "Brazil",
+      "runner_up": "Argentina",
+      "attendance": 3429873,
+      "teams_count": 32
+    },
+    {
+      "year": 2018,
+      "host_country": "Russia",
+      "runner_up": "Croatia",
+      "attendance": 3031768,
+      "teams_count": 32
+    },
+    {
+      "year": 2022,
+      "host_country": "Qatar",
+      "runner_up": "France",
+      "attendance": 3404252,
+      "teams_count": 32
+    }
+  ],
+  "matches": [
+    {
+      "year": 1930,
+      "stage": "Group Stage",
+      "date": "1930-07-13",
+      "city": "Montevideo"
+    },
+    {
+      "year": 1930,
+      "stage": "Group Stage",
+      "date": "1930-07-14",
+      "city": "Montevideo"
+    },
+    {
+      "year": 1930,
+      "stage": "Group Stage",
+      "date": "1930-07-18",
+      "city": "Montevideo"
+    },
+    {
+      "year": 1930,
+      "stage": "Group Stage",
+      "date": "1930-07-26",
+      "city": "Montevideo"
+    },
+    {
+      "year": 1930,
+      "stage": "Semi-final",
+      "date": "1930-07-27",
+      "city": "Montevideo"
+    },
+    {
+      "year": 1930,
+      "stage": "Semi-final",
+      "date": "1930-07-26",
+      "city": "Montevideo"
+    },
+    {
+      "year": 1930,
+      "stage": "Final",
+      "date": "1930-07-30",
+      "city": "Montevideo"
+    },
+    {
+      "year": 1934,
+      "stage": "Round of 16",
+      "date": "1934-05-27",
+      "city": "Rome"
+    },
+    {
+      "year": 1934,
+      "stage": "Quarter-final",
+      "date": "1934-05-31",
+      "city": "Florence"
+    },
+    {
+      "year": 1934,
+      "stage": "Semi-final",
+      "date": "1934-06-03",
+      "city": "Milan"
+    },
+    {
+      "year": 1934,
+      "stage": "3rd Place",
+      "date": "1934-06-07",
+      "city": "Naples"
+    },
+    {
+      "year": 1934,
+      "stage": "Final",
+      "date": "1934-06-10",
+      "city": "Rome"
+    },
+    {
+      "year": 1938,
+      "stage": "Round of 16",
+      "date": "1938-06-05",
+      "city": "Strasbourg"
+    },
+    {
+      "year": 1938,
+      "stage": "Quarter-final",
+      "date": "1938-06-12",
+      "city": "Bordeaux"
+    },
+    {
+      "year": 1938,
+      "stage": "Semi-final",
+      "date": "1938-06-16",
+      "city": "Paris"
+    },
+    {
+      "year": 1938,
+      "stage": "3rd Place",
+      "date": "1938-06-19",
+      "city": "Bordeaux"
+    },
+    {
+      "year": 1938,
+      "stage": "Final",
+      "date": "1938-06-19",
+      "city": "Paris"
+    },
+    {
+      "year": 1950,
+      "stage": "Group Stage",
+      "date": "1950-06-24",
+      "city": "Rio de Janeiro"
+    },
+    {
+      "year": 1950,
+      "stage": "Group Stage",
+      "date": "1950-06-29",
+      "city": "Belo Horizonte"
+    },
+    {
+      "year": 1950,
+      "stage": "Final Round",
+      "date": "1950-07-09",
+      "city": "Rio de Janeiro"
+    },
+    {
+      "year": 1950,
+      "stage": "Final Round",
+      "date": "1950-07-16",
+      "city": "Rio de Janeiro"
+    },
+    {
+      "year": 1954,
+      "stage": "Group Stage",
+      "date": "1954-06-17",
+      "city": "Zürich"
+    },
+    {
+      "year": 1954,
+      "stage": "Group Stage",
+      "date": "1954-06-20",
+      "city": "Bern"
+    },
+    {
+      "year": 1954,
+      "stage": "Quarter-final",
+      "date": "1954-06-26",
+      "city": "Lausanne"
+    },
+    {
+      "year": 1954,
+      "stage": "Semi-final",
+      "date": "1954-06-30",
+      "city": "Basel"
+    },
+    {
+      "year": 1954,
+      "stage": "3rd Place",
+      "date": "1954-07-03",
+      "city": "Zürich"
+    },
+    {
+      "year": 1954,
+      "stage": "Final",
+      "date": "1954-07-04",
+      "city": "Bern"
+    },
+    {
+      "year": 1958,
+      "stage": "Group Stage",
+      "date": "1958-06-08",
+      "city": "Borås"
+    },
+    {
+      "year": 1958,
+      "stage": "Quarter-final",
+      "date": "1958-06-19",
+      "city": "Gothenburg"
+    },
+    {
+      "year": 1958,
+      "stage": "Semi-final",
+      "date": "1958-06-24",
+      "city": "Gothenburg"
+    },
+    {
+      "year": 1958,
+      "stage": "3rd Place",
+      "date": "1958-06-28",
+      "city": "Gothenburg"
+    },
+    {
+      "year": 1958,
+      "stage": "Final",
+      "date": "1958-06-29",
+      "city": "Stockholm"
+    },
+    {
+      "year": 1962,
+      "stage": "Group Stage",
+      "date": "1962-05-31",
+      "city": "Rancagua"
+    },
+    {
+      "year": 1962,
+      "stage": "Group Stage",
+      "date": "1962-06-02",
+      "city": "Santiago"
+    },
+    {
+      "year": 1962,
+      "stage": "Quarter-final",
+      "date": "1962-06-10",
+      "city": "Viña del Mar"
+    },
+    {
+      "year": 1962,
+      "stage": "Semi-final",
+      "date": "1962-06-13",
+      "city": "Santiago"
+    },
+    {
+      "year": 1962,
+      "stage": "3rd Place",
+      "date": "1962-06-16",
+      "city": "Santiago"
+    },
+    {
+      "year": 1962,
+      "stage": "Final",
+      "date": "1962-06-17",
+      "city": "Santiago"
+    },
+    {
+      "year": 1966,
+      "stage": "Group Stage",
+      "date": "1966-07-11",
+      "city": "London"
+    },
+    {
+      "year": 1966,
+      "stage": "Group Stage",
+      "date": "1966-07-19",
+      "city": "Middlesbrough"
+    },
+    {
+      "year": 1966,
+      "stage": "Quarter-final",
+      "date": "1966-07-23",
+      "city": "Liverpool"
+    },
+    {
+      "year": 1966,
+      "stage": "Semi-final",
+      "date": "1966-07-26",
+      "city": "London"
+    },
+    {
+      "year": 1966,
+      "stage": "Semi-final",
+      "date": "1966-07-25",
+      "city": "Liverpool"
+    },
+    {
+      "year": 1966,
+      "stage": "3rd Place",
+      "date": "1966-07-28",
+      "city": "London"
+    },
+    {
+      "year": 1966,
+      "stage": "Final",
+      "date": "1966-07-30",
+      "city": "London"
+    },
+    {
+      "year": 1970,
+      "stage": "Group Stage",
+      "date": "1970-06-03",
+      "city": "Guadalajara"
+    },
+    {
+      "year": 1970,
+      "stage": "Group Stage",
+      "date": "1970-06-02",
+      "city": "León"
+    },
+    {
+      "year": 1970,
+      "stage": "Quarter-final",
+      "date": "1970-06-14",
+      "city": "Guadalajara"
+    },
+    {
+      "year": 1970,
+      "stage": "Semi-final",
+      "date": "1970-06-17",
+      "city": "Mexico City"
+    },
+    {
+      "year": 1970,
+      "stage": "3rd Place",
+      "date": "1970-06-20",
+      "city": "Mexico City"
+    },
+    {
+      "year": 1970,
+      "stage": "Final",
+      "date": "1970-06-21",
+      "city": "Mexico City"
+    },
+    {
+      "year": 1974,
+      "stage": "Group Stage",
+      "date": "1974-06-22",
+      "city": "Hamburg"
+    },
+    {
+      "year": 1974,
+      "stage": "Group Stage",
+      "date": "1974-06-18",
+      "city": "Berlin"
+    },
+    {
+      "year": 1974,
+      "stage": "Semi-final Round",
+      "date": "1974-07-03",
+      "city": "Dortmund"
+    },
+    {
+      "year": 1974,
+      "stage": "3rd Place",
+      "date": "1974-07-06",
+      "city": "Munich"
+    },
+    {
+      "year": 1974,
+      "stage": "Final",
+      "date": "1974-07-07",
+      "city": "Munich"
+    },
+    {
+      "year": 1978,
+      "stage": "Group Stage",
+      "date": "1978-06-02",
+      "city": "Buenos Aires"
+    },
+    {
+      "year": 1978,
+      "stage": "Group Stage",
+      "date": "1978-06-10",
+      "city": "Buenos Aires"
+    },
+    {
+      "year": 1978,
+      "stage": "Group Stage",
+      "date": "1978-06-21",
+      "city": "Buenos Aires"
+    },
+    {
+      "year": 1978,
+      "stage": "3rd Place",
+      "date": "1978-06-24",
+      "city": "Buenos Aires"
+    },
+    {
+      "year": 1978,
+      "stage": "Final",
+      "date": "1978-06-25",
+      "city": "Buenos Aires"
+    },
+    {
+      "year": 1982,
+      "stage": "Group Stage",
+      "date": "1982-06-16",
+      "city": "Gijón"
+    },
+    {
+      "year": 1982,
+      "stage": "Group Stage",
+      "date": "1982-06-25",
+      "city": "Gijón"
+    },
+    {
+      "year": 1982,
+      "stage": "Group Stage",
+      "date": "1982-06-02",
+      "city": "Barcelona"
+    },
+    {
+      "year": 1982,
+      "stage": "Quarter-final",
+      "date": "1982-07-08",
+      "city": "Seville"
+    },
+    {
+      "year": 1982,
+      "stage": "Semi-final",
+      "date": "1982-07-08",
+      "city": "Barcelona"
+    },
+    {
+      "year": 1982,
+      "stage": "3rd Place",
+      "date": "1982-07-10",
+      "city": "Madrid"
+    },
+    {
+      "year": 1982,
+      "stage": "Final",
+      "date": "1982-07-11",
+      "city": "Madrid"
+    },
+    {
+      "year": 1986,
+      "stage": "Group Stage",
+      "date": "1986-06-08",
+      "city": "Nezahualcóyotl"
+    },
+    {
+      "year": 1986,
+      "stage": "Round of 16",
+      "date": "1986-06-15",
+      "city": "Guadalajara"
+    },
+    {
+      "year": 1986,
+      "stage": "Quarter-final",
+      "date": "1986-06-22",
+      "city": "Mexico City"
+    },
+    {
+      "year": 1986,
+      "stage": "Quarter-final",
+      "date": "1986-06-21",
+      "city": "Guadalajara"
+    },
+    {
+      "year": 1986,
+      "stage": "Semi-final",
+      "date": "1986-06-25",
+      "city": "Mexico City"
+    },
+    {
+      "year": 1986,
+      "stage": "3rd Place",
+      "date": "1986-06-28",
+      "city": "Puebla"
+    },
+    {
+      "year": 1986,
+      "stage": "Final",
+      "date": "1986-06-29",
+      "city": "Mexico City"
+    },
+    {
+      "year": 1990,
+      "stage": "Group Stage",
+      "date": "1990-06-08",
+      "city": "Milan"
+    },
+    {
+      "year": 1990,
+      "stage": "Group Stage",
+      "date": "1990-06-19",
+      "city": "Milan"
+    },
+    {
+      "year": 1990,
+      "stage": "Round of 16",
+      "date": "1990-06-25",
+      "city": "Genoa"
+    },
+    {
+      "year": 1990,
+      "stage": "Quarter-final",
+      "date": "1990-07-01",
+      "city": "Turin"
+    },
+    {
+      "year": 1990,
+      "stage": "Semi-final",
+      "date": "1990-07-04",
+      "city": "Turin"
+    },
+    {
+      "year": 1990,
+      "stage": "Semi-final",
+      "date": "1990-07-03",
+      "city": "Naples"
+    },
+    {
+      "year": 1990,
+      "stage": "3rd Place",
+      "date": "1990-07-07",
+      "city": "Bari"
+    },
+    {
+      "year": 1990,
+      "stage": "Final",
+      "date": "1990-07-08",
+      "city": "Rome"
+    },
+    {
+      "year": 1994,
+      "stage": "Group Stage",
+      "date": "1994-06-17",
+      "city": "Detroit"
+    },
+    {
+      "year": 1994,
+      "stage": "Group Stage",
+      "date": "1994-06-28",
+      "city": "Palo Alto"
+    },
+    {
+      "year": 1994,
+      "stage": "Quarter-final",
+      "date": "1994-07-09",
+      "city": "Dallas"
+    },
+    {
+      "year": 1994,
+      "stage": "Semi-final",
+      "date": "1994-07-13",
+      "city": "Pasadena"
+    },
+    {
+      "year": 1994,
+      "stage": "3rd Place",
+      "date": "1994-07-16",
+      "city": "Pasadena"
+    },
+    {
+      "year": 1994,
+      "stage": "Final",
+      "date": "1994-07-17",
+      "city": "Pasadena"
+    },
+    {
+      "year": 1998,
+      "stage": "Group Stage",
+      "date": "1998-06-10",
+      "city": "Saint-Denis"
+    },
+    {
+      "year": 1998,
+      "stage": "Group Stage",
+      "date": "1998-06-13",
+      "city": "Montpellier"
+    },
+    {
+      "year": 1998,
+      "stage": "Round of 16",
+      "date": "1998-06-30",
+      "city": "Saint-Étienne"
+    },
+    {
+      "year": 1998,
+      "stage": "Round of 16",
+      "date": "1998-06-28",
+      "city": "Lens"
+    },
+    {
+      "year": 1998,
+      "stage": "Quarter-final",
+      "date": "1998-07-04",
+      "city": "Marseille"
+    },
+    {
+      "year": 1998,
+      "stage": "Quarter-final",
+      "date": "1998-07-03",
+      "city": "Saint-Denis"
+    },
+    {
+      "year": 1998,
+      "stage": "Semi-final",
+      "date": "1998-07-08",
+      "city": "Saint-Denis"
+    },
+    {
+      "year": 1998,
+      "stage": "Semi-final",
+      "date": "1998-07-07",
+      "city": "Marseille"
+    },
+    {
+      "year": 1998,
+      "stage": "3rd Place",
+      "date": "1998-07-11",
+      "city": "Paris"
+    },
+    {
+      "year": 1998,
+      "stage": "Final",
+      "date": "1998-07-12",
+      "city": "Saint-Denis"
+    },
+    {
+      "year": 2002,
+      "stage": "Group Stage",
+      "date": "2002-05-31",
+      "city": "Seoul"
+    },
+    {
+      "year": 2002,
+      "stage": "Group Stage",
+      "date": "2002-06-14",
+      "city": "Suwon"
+    },
+    {
+      "year": 2002,
+      "stage": "Round of 16",
+      "date": "2002-06-18",
+      "city": "Daejeon"
+    },
+    {
+      "year": 2002,
+      "stage": "Quarter-final",
+      "date": "2002-06-22",
+      "city": "Gwangju"
+    },
+    {
+      "year": 2002,
+      "stage": "Quarter-final",
+      "date": "2002-06-21",
+      "city": "Shizuoka"
+    },
+    {
+      "year": 2002,
+      "stage": "Semi-final",
+      "date": "2002-06-26",
+      "city": "Saitama"
+    },
+    {
+      "year": 2002,
+      "stage": "Semi-final",
+      "date": "2002-06-25",
+      "city": "Seoul"
+    },
+    {
+      "year": 2002,
+      "stage": "3rd Place",
+      "date": "2002-06-29",
+      "city": "Daegu"
+    },
+    {
+      "year": 2002,
+      "stage": "Final",
+      "date": "2002-06-30",
+      "city": "Yokohama"
+    },
+    {
+      "year": 2006,
+      "stage": "Group Stage",
+      "date": "2006-06-09",
+      "city": "Munich"
+    },
+    {
+      "year": 2006,
+      "stage": "Group Stage",
+      "date": "2006-06-12",
+      "city": "Kaiserslautern"
+    },
+    {
+      "year": 2006,
+      "stage": "Round of 16",
+      "date": "2006-06-26",
+      "city": "Kaiserslautern"
+    },
+    {
+      "year": 2006,
+      "stage": "Round of 16",
+      "date": "2006-06-25",
+      "city": "Nuremberg"
+    },
+    {
+      "year": 2006,
+      "stage": "Quarter-final",
+      "date": "2006-06-30",
+      "city": "Hamburg"
+    },
+    {
+      "year": 2006,
+      "stage": "Semi-final",
+      "date": "2006-07-04",
+      "city": "Dortmund"
+    },
+    {
+      "year": 2006,
+      "stage": "Semi-final",
+      "date": "2006-07-05",
+      "city": "Munich"
+    },
+    {
+      "year": 2006,
+      "stage": "3rd Place",
+      "date": "2006-07-08",
+      "city": "Stuttgart"
+    },
+    {
+      "year": 2006,
+      "stage": "Final",
+      "date": "2006-07-09",
+      "city": "Berlin"
+    },
+    {
+      "year": 2010,
+      "stage": "Group Stage",
+      "date": "2010-06-11",
+      "city": "Johannesburg"
+    },
+    {
+      "year": 2010,
+      "stage": "Group Stage",
+      "date": "2010-06-12",
+      "city": "Rustenburg"
+    },
+    {
+      "year": 2010,
+      "stage": "Group Stage",
+      "date": "2010-06-13",
+      "city": "Durban"
+    },
+    {
+      "year": 2010,
+      "stage": "Round of 16",
+      "date": "2010-06-26",
+      "city": "Rustenburg"
+    },
+    {
+      "year": 2010,
+      "stage": "Round of 16",
+      "date": "2010-06-27",
+      "city": "Bloemfontein"
+    },
+    {
+      "year": 2010,
+      "stage": "Quarter-final",
+      "date": "2010-07-03",
+      "city": "Cape Town"
+    },
+    {
+      "year": 2010,
+      "stage": "Quarter-final",
+      "date": "2010-07-02",
+      "city": "Port Elizabeth"
+    },
+    {
+      "year": 2010,
+      "stage": "Semi-final",
+      "date": "2010-07-06",
+      "city": "Cape Town"
+    },
+    {
+      "year": 2010,
+      "stage": "Semi-final",
+      "date": "2010-07-07",
+      "city": "Durban"
+    },
+    {
+      "year": 2010,
+      "stage": "3rd Place",
+      "date": "2010-07-10",
+      "city": "Port Elizabeth"
+    },
+    {
+      "year": 2010,
+      "stage": "Final",
+      "date": "2010-07-11",
+      "city": "Johannesburg"
+    },
+    {
+      "year": 2014,
+      "stage": "Group Stage",
+      "date": "2014-06-12",
+      "city": "São Paulo"
+    },
+    {
+      "year": 2014,
+      "stage": "Group Stage",
+      "date": "2014-06-13",
+      "city": "Salvador"
+    },
+    {
+      "year": 2014,
+      "stage": "Group Stage",
+      "date": "2014-06-19",
+      "city": "São Paulo"
+    },
+    {
+      "year": 2014,
+      "stage": "Round of 16",
+      "date": "2014-06-28",
+      "city": "Rio de Janeiro"
+    },
+    {
+      "year": 2014,
+      "stage": "Round of 16",
+      "date": "2014-06-30",
+      "city": "Porto Alegre"
+    },
+    {
+      "year": 2014,
+      "stage": "Quarter-final",
+      "date": "2014-07-05",
+      "city": "Brasília"
+    },
+    {
+      "year": 2014,
+      "stage": "Quarter-final",
+      "date": "2014-07-04",
+      "city": "Rio de Janeiro"
+    },
+    {
+      "year": 2014,
+      "stage": "Semi-final",
+      "date": "2014-07-08",
+      "city": "Belo Horizonte"
+    },
+    {
+      "year": 2014,
+      "stage": "Semi-final",
+      "date": "2014-07-09",
+      "city": "São Paulo"
+    },
+    {
+      "year": 2014,
+      "stage": "3rd Place",
+      "date": "2014-07-12",
+      "city": "Brasília"
+    },
+    {
+      "year": 2014,
+      "stage": "Final",
+      "date": "2014-07-13",
+      "city": "Rio de Janeiro"
+    },
+    {
+      "year": 2018,
+      "stage": "Group Stage",
+      "date": "2018-06-14",
+      "city": "Moscow"
+    },
+    {
+      "year": 2018,
+      "stage": "Group Stage",
+      "date": "2018-06-17",
+      "city": "Moscow"
+    },
+    {
+      "year": 2018,
+      "stage": "Group Stage",
+      "date": "2018-06-15",
+      "city": "Sochi"
+    },
+    {
+      "year": 2018,
+      "stage": "Round of 16",
+      "date": "2018-06-30",
+      "city": "Kazan"
+    },
+    {
+      "year": 2018,
+      "stage": "Round of 16",
+      "date": "2018-07-01",
+      "city": "Moscow"
+    },
+    {
+      "year": 2018,
+      "stage": "Round of 16",
+      "date": "2018-07-02",
+      "city": "Samara"
+    },
+    {
+      "year": 2018,
+      "stage": "Quarter-final",
+      "date": "2018-07-07",
+      "city": "Sochi"
+    },
+    {
+      "year": 2018,
+      "stage": "Quarter-final",
+      "date": "2018-07-06",
+      "city": "Kazan"
+    },
+    {
+      "year": 2018,
+      "stage": "Semi-final",
+      "date": "2018-07-10",
+      "city": "St Petersburg"
+    },
+    {
+      "year": 2018,
+      "stage": "Semi-final",
+      "date": "2018-07-11",
+      "city": "Moscow"
+    },
+    {
+      "year": 2018,
+      "stage": "3rd Place",
+      "date": "2018-07-14",
+      "city": "St Petersburg"
+    },
+    {
+      "year": 2018,
+      "stage": "Final",
+      "date": "2018-07-15",
+      "city": "Moscow"
+    },
+    {
+      "year": 2022,
+      "stage": "Group Stage",
+      "date": "2022-11-20",
+      "city": "Al Khor"
+    },
+    {
+      "year": 2022,
+      "stage": "Group Stage",
+      "date": "2022-11-22",
+      "city": "Lusail"
+    },
+    {
+      "year": 2022,
+      "stage": "Group Stage",
+      "date": "2022-11-23",
+      "city": "Al Rayyan"
+    },
+    {
+      "year": 2022,
+      "stage": "Group Stage",
+      "date": "2022-12-01",
+      "city": "Al Rayyan"
+    },
+    {
+      "year": 2022,
+      "stage": "Round of 16",
+      "date": "2022-12-06",
+      "city": "Al Rayyan"
+    },
+    {
+      "year": 2022,
+      "stage": "Round of 16",
+      "date": "2022-12-04",
+      "city": "Doha"
+    },
+    {
+      "year": 2022,
+      "stage": "Round of 16",
+      "date": "2022-12-03",
+      "city": "Al Rayyan"
+    },
+    {
+      "year": 2022,
+      "stage": "Quarter-final",
+      "date": "2022-12-10",
+      "city": "Doha"
+    },
+    {
+      "year": 2022,
+      "stage": "Semi-final",
+      "date": "2022-12-13",
+      "city": "Lusail"
+    },
+    {
+      "year": 2022,
+      "stage": "Semi-final",
+      "date": "2022-12-14",
+      "city": "Al Khor"
+    },
+    {
+      "year": 2022,
+      "stage": "3rd Place",
+      "date": "2022-12-17",
+      "city": "Al Rayyan"
+    },
+    {
+      "year": 2022,
+      "stage": "Final",
+      "date": "2022-12-18",
+      "city": "Lusail"
+    }
+  ],
+  "scorers": [
+    {
+      "year": 1930,
+      "player": "Guillermo Stábile",
+      "goals": 8
+    },
+    {
+      "year": 1934,
+      "player": "Oldřich Nejedlý",
+      "goals": 5
+    },
+    {
+      "year": 1938,
+      "player": "Leônidas",
+      "goals": 7
+    },
+    {
+      "year": 1950,
+      "player": "Ademir",
+      "goals": 8
+    },
+    {
+      "year": 1954,
+      "player": "Sándor Kocsis",
+      "goals": 11
+    },
+    {
+      "year": 1958,
+      "player": "Just Fontaine",
+      "goals": 13
+    },
+    {
+      "year": 1962,
+      "player": "Multiple Winners",
+      "goals": 4
+    },
+    {
+      "year": 1966,
+      "player": "Eusébio",
+      "goals": 9
+    },
+    {
+      "year": 1970,
+      "player": "Gerd Müller",
+      "goals": 10
+    },
+    {
+      "year": 1974,
+      "player": "Grzegorz Lato",
+      "goals": 7
+    },
+    {
+      "year": 1978,
+      "player": "Mario Kempes",
+      "goals": 6
+    },
+    {
+      "year": 1982,
+      "player": "Paolo Rossi",
+      "goals": 6
+    },
+    {
+      "year": 1986,
+      "player": "Gary Lineker",
+      "goals": 6
+    },
+    {
+      "year": 1990,
+      "player": "Salvatore Schillaci",
+      "goals": 6
+    },
+    {
+      "year": 1994,
+      "player": "Hristo Stoichkov",
+      "goals": 6
+    },
+    {
+      "year": 1998,
+      "player": "Davor Šuker",
+      "goals": 6
+    },
+    {
+      "year": 2002,
+      "player": "Ronaldo",
+      "goals": 8
+    },
+    {
+      "year": 2006,
+      "player": "Miroslav Klose",
+      "goals": 5
+    },
+    {
+      "year": 2010,
+      "player": "Thomas Müller",
+      "goals": 5
+    },
+    {
+      "year": 2014,
+      "player": "James Rodríguez",
+      "goals": 6
+    },
+    {
+      "year": 2018,
+      "player": "Harry Kane",
+      "goals": 6
+    },
+    {
+      "year": 2022,
+      "player": "Kylian Mbappé",
+      "goals": 8
+    }
+  ]
+}
