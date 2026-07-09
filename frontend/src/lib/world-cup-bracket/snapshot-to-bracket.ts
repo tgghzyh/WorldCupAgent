@@ -14,53 +14,113 @@ import type {
 
 type SnapshotKnockoutMatch =
   Snapshot["knockout_predictions"]["rounds"]["round_of_16"][number];
+type SnapshotGroupMatch = Snapshot["group_predictions"][string]["matches"][number];
+type SnapshotAnyMatch = SnapshotKnockoutMatch | SnapshotGroupMatch;
 
 const TEAM_CODES: Record<string, string> = {
   Argentina: "ARG",
+  "阿根廷": "ARG",
+  "阿尔及利亚": "ALG",
   Australia: "AUS",
+  "澳大利亚": "AUS",
   Austria: "AUT",
+  "奥地利": "AUT",
   Belgium: "BEL",
+  "比利时": "BEL",
   Bolivia: "BOL",
+  "波黑": "BIH",
   Brazil: "BRA",
+  "巴西": "BRA",
   "Burkina Faso": "BFA",
+  "加拿大": "CAN",
   Cameroon: "CMR",
   Canada: "CAN",
   Colombia: "COL",
+  "哥伦比亚": "COL",
   "Costa Rica": "CRC",
   Croatia: "CRO",
+  "克罗地亚": "CRO",
+  "捷克": "CZE",
   Denmark: "DEN",
+  "民主刚果": "COD",
   Ecuador: "ECU",
+  "厄瓜多尔": "ECU",
+  "埃及": "EGY",
   England: "ENG",
+  "英格兰": "ENG",
   France: "FRA",
+  "法国": "FRA",
   Germany: "GER",
+  "德国": "GER",
   Ghana: "GHA",
+  "加纳": "GHA",
   Greece: "GRE",
+  "海地": "HAI",
   Iran: "IRN",
+  "伊朗": "IRN",
+  "伊拉克": "IRQ",
   Italy: "ITA",
   Jamaica: "JAM",
   Japan: "JPN",
+  "日本": "JPN",
+  "约旦": "JOR",
+  "韩国": "KOR",
   Mexico: "MEX",
+  "墨西哥": "MEX",
   Morocco: "MAR",
+  "摩洛哥": "MAR",
   Netherlands: "NED",
+  "荷兰": "NED",
+  "新西兰": "NZL",
   Nigeria: "NGA",
+  "挪威": "NOR",
   Panama: "PAN",
+  "巴拿马": "PAN",
   Paraguay: "PAR",
+  "巴拉圭": "PAR",
   Peru: "PER",
   Portugal: "POR",
+  "葡萄牙": "POR",
   Qatar: "QAT",
+  "卡塔尔": "QAT",
+  "沙特阿拉伯": "KSA",
+  "苏格兰": "SCO",
   Senegal: "SEN",
+  "塞内加尔": "SEN",
   Serbia: "SRB",
+  "南非": "RSA",
   Spain: "ESP",
+  "西班牙": "ESP",
   Sweden: "SWE",
+  "瑞典": "SWE",
+  "瑞士": "SUI",
   Tunisia: "TUN",
+  "突尼斯": "TUN",
+  "土耳其": "TUR",
+  "乌拉圭": "URU",
   Uruguay: "URU",
   USA: "USA",
+  "美国": "USA",
+  "乌兹别克斯坦": "UZB",
   Wales: "WAL",
   Zambia: "ZAM",
+  "佛得角": "CPV",
+  "科特迪瓦": "CIV",
+  "库拉索": "CUW",
 };
 
 function teamId(name: string): string {
-  return name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+  const normalizedName = name.trim();
+  const asciiId = normalizedName.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+  if (asciiId) {
+    return asciiId;
+  }
+
+  const unicodeId = Array.from(normalizedName)
+    .map((char) => char.codePointAt(0)?.toString(16))
+    .filter(Boolean)
+    .join("-");
+  return unicodeId ? `team-${unicodeId}` : "team-unknown";
 }
 
 function teamCode(name: string): string {
@@ -115,6 +175,18 @@ function confidenceFromMatch(homeProbability: number, awayProbability: number): 
   return "low";
 }
 
+function confidenceFromRaw(
+  rawConfidence: string | undefined,
+  homeProbability: number,
+  awayProbability: number
+): ConfidenceLevel {
+  const normalized = rawConfidence?.toLowerCase();
+  if (normalized === "high") return "high";
+  if (normalized === "medium") return "medium";
+  if (normalized === "low") return "low";
+  return confidenceFromMatch(homeProbability, awayProbability);
+}
+
 function parseScore(score: string | undefined, index: 0 | 1): number | undefined {
   if (!score) return undefined;
   const parts = score.split("-").map((part) => Number.parseInt(part.trim(), 10));
@@ -127,14 +199,23 @@ function buildDetail(params: {
   away: BracketTeamSlot;
   reasoning: string;
   snapshotTime: string;
+  rawMatch?: SnapshotAnyMatch;
 }): MatchDetail {
-  const { id, home, away, reasoning, snapshotTime } = params;
+  const { id, home, away, reasoning, snapshotTime, rawMatch } = params;
   const homeEdge = Math.max(0.08, Math.min(0.92, home.probability));
   const awayEdge = Math.max(0.08, Math.min(0.92, away.probability));
+  const llmFactors = rawMatch?.llm_reasoning_factors?.map((factor, index) => ({
+    id: factor.id ?? `${id}-llm-${index}`,
+    type: factor.type,
+    label: factor.label,
+    description: factor.description,
+    weight: Math.max(0.05, Math.min(0.95, factor.weight)),
+  }));
 
   return {
-    confidence: confidenceFromMatch(home.probability, away.probability),
-    reasoningFactors: [
+    confidence: confidenceFromRaw(rawMatch?.confidence, home.probability, away.probability),
+    summary: reasoning || `${home.team.name} vs ${away.team.name} projected from the latest Agent snapshot.`,
+    reasoningFactors: llmFactors?.length ? llmFactors : [
       {
         id: `${id}-model`,
         type: "form",
@@ -185,6 +266,7 @@ function buildDetail(params: {
     dataSources: [
       { label: "Agent snapshot", href: "/data/snapshots/latest.json" },
       { label: "Prediction data", href: "/data" },
+      ...(rawMatch?.llm_provider ? [{ label: `LLM: ${rawMatch.llm_provider}`, href: "/agent" }] : []),
     ],
     agentTimestamp: snapshotTime,
   };
@@ -251,7 +333,63 @@ function convertGroups(snapshot: Snapshot, bestThirdTeams: Set<string>): GroupSt
     standings: group.standings.map((row, index) =>
       convertStanding(row, index + 1, group.qualifiers, bestThirdTeams)
     ),
+    matches: group.matches.map((match) =>
+      convertGroupMatch(match, "group", `Group ${letter}`, snapshot.snapshot_time)
+    ),
   }));
+}
+
+function convertGroupMatch(
+  match: SnapshotGroupMatch,
+  stage: BracketMatch["stage"],
+  title: string,
+  snapshotTime: string
+): BracketMatch {
+  const homeProbability = parseProbability(match.home_win_prob);
+  const awayProbability = parseProbability(match.away_win_prob);
+  const home = makeSlot(
+    match.home_team,
+    homeProbability,
+    "LLM projection",
+    parseScore(match.predicted_score, 0)
+  );
+  const away = makeSlot(
+    match.away_team,
+    awayProbability,
+    "LLM projection",
+    parseScore(match.predicted_score, 1)
+  );
+  const winnerName =
+    match.winner && match.winner !== "Draw"
+      ? match.winner
+      : home.score === away.score
+        ? ""
+        : (home.score ?? 0) > (away.score ?? 0)
+          ? match.home_team
+          : match.away_team;
+
+  return {
+    id: match.id,
+    stage,
+    label: `${title} / Match ${match.round_number}`,
+    status: "upcoming",
+    kickoffLabel: "Projected",
+    home,
+    away,
+    predictedScore: match.predicted_score,
+    winnerTeamId: winnerName ? teamId(winnerName) : undefined,
+    advancementRule: winnerName
+      ? `${winnerName} takes the group-stage edge.`
+      : "Projected draw; table impact comes from goal difference.",
+    detail: buildDetail({
+      id: match.id,
+      home,
+      away,
+      reasoning: match.reasoning,
+      snapshotTime,
+      rawMatch: match,
+    }),
+  };
 }
 
 function convertKnockoutMatch(
@@ -294,6 +432,7 @@ function convertKnockoutMatch(
       away,
       reasoning: match.reasoning,
       snapshotTime,
+      rawMatch: match,
     }),
   };
 }
@@ -301,6 +440,17 @@ function convertKnockoutMatch(
 function convertRounds(snapshot: Snapshot): BracketRound[] {
   const rounds = snapshot.knockout_predictions.rounds;
   return [
+    ...(rounds.round_of_32
+      ? [
+          {
+            id: "round_of_32" as const,
+            title: "Round of 32",
+            matches: rounds.round_of_32.map((match) =>
+              convertKnockoutMatch(match, "round_of_32", "Round of 32", snapshot.snapshot_time)
+            ),
+          },
+        ]
+      : []),
     {
       id: "round_of_16",
       title: "Round of 16",

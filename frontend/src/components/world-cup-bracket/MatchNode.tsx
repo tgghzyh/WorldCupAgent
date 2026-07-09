@@ -54,6 +54,7 @@ export function MatchNode({ match, compact = false, onSelect }: MatchNodeProps) 
     >
       <button
         type="button"
+        data-pan-ignore="true"
         data-testid={`match-node-${match.id}`}
         aria-label={`Open details for ${match.home.team.name} vs ${match.away.team.name}`}
         className="absolute inset-0 z-10 cursor-pointer rounded-lg focus-visible:ring-2 focus-visible:ring-[color:var(--brand-blue)]"

@@ -35,6 +35,10 @@ export function ZoomPanCanvas({ children }: ZoomPanCanvasProps) {
   }
 
   function onPointerDown(event: React.PointerEvent<HTMLDivElement>) {
+    const target = event.target as HTMLElement | null;
+    if (target?.closest("[data-pan-ignore='true'],button,a,input,textarea,select")) {
+      return;
+    }
     event.currentTarget.setPointerCapture(event.pointerId);
     dragStart.current = {
       x: event.clientX,

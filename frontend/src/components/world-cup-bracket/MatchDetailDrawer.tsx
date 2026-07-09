@@ -51,11 +51,16 @@ const confidenceTone = {
 };
 
 function formatTimestamp(value: string) {
-  return new Intl.DateTimeFormat("en", {
-    dateStyle: "medium",
-    timeStyle: "short",
-    timeZone: "UTC",
-  }).format(new Date(value));
+  const date = new Date(value);
+  if (Number.isNaN(date.getTime())) {
+    return value;
+  }
+  const year = date.getUTCFullYear();
+  const month = String(date.getUTCMonth() + 1).padStart(2, "0");
+  const day = String(date.getUTCDate()).padStart(2, "0");
+  const hours = String(date.getUTCHours()).padStart(2, "0");
+  const minutes = String(date.getUTCMinutes()).padStart(2, "0");
+  return `${year}-${month}-${day} ${hours}:${minutes} UTC`;
 }
 
 function FactorCard({
@@ -209,6 +214,18 @@ export function MatchDetailDrawer({ match, open, onOpenChange }: MatchDetailDraw
         </header>
 
         <div className="min-h-0 flex-1 overflow-y-auto p-4 md:p-5">
+          {detail.summary && (
+            <section className="mb-6">
+              <div className="mb-3 flex items-center gap-2">
+                <ShieldAlert className="h-4 w-4 text-[color:var(--accent)]" />
+                <h3 className="text-base font-semibold">{t("drawer.reasoningSummary")}</h3>
+              </div>
+              <Card className="bg-[rgba(255,251,244,0.82)] p-4">
+                <p className="text-sm leading-6 text-[color:var(--muted)]">{detail.summary}</p>
+              </Card>
+            </section>
+          )}
+
           <section>
             <div className="mb-3 flex items-center gap-2">
               <ShieldAlert className="h-4 w-4 text-[color:var(--accent)]" />

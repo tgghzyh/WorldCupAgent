@@ -18,6 +18,11 @@ export interface GroupMatch {
   away_win_prob: string;
   confidence: string;
   reasoning: string;
+  winner?: string;
+  llm_provider?: string;
+  llm_model?: string;
+  llm_prompt_version?: string;
+  llm_reasoning_factors?: LLMReasoningFactor[];
 }
 
 export interface Standing {
@@ -53,9 +58,22 @@ export interface KnockoutMatch {
   loser: string;
   reasoning: string;
   confidence: string;
+  llm_provider?: string;
+  llm_model?: string;
+  llm_prompt_version?: string;
+  llm_reasoning_factors?: LLMReasoningFactor[];
+}
+
+export interface LLMReasoningFactor {
+  id?: string;
+  type: "fitness" | "tactical" | "injury" | "home" | "form" | "transition";
+  label: string;
+  description: string;
+  weight: number;
 }
 
 export interface KnockoutRounds {
+  round_of_32?: KnockoutMatch[];
   round_of_16: KnockoutMatch[];
   quarter_finals: KnockoutMatch[];
   semi_finals: KnockoutMatch[];
@@ -106,6 +124,7 @@ export type GroupLetter = "A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | 
 export type ConfidenceLevel = "High" | "Medium" | "Low";
 
 export type KnockoutStage =
+  | "round_of_32"
   | "round_of_16"
   | "quarter_finals"
   | "semi_finals"

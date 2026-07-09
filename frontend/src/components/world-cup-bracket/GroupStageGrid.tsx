@@ -1,9 +1,11 @@
 "use client";
 
+import * as React from "react";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { useI18n } from "@/i18n";
-import type { GroupStageGroup, QualificationRule } from "@/lib/world-cup-bracket/types";
+import type { BracketMatch, GroupStageGroup, QualificationRule } from "@/lib/world-cup-bracket/types";
+import { MatchDetailDrawer } from "./MatchDetailDrawer";
 
 type GroupStageGridProps = {
   groups: GroupStageGroup[];
@@ -19,6 +21,7 @@ function qualificationLabel(value?: string) {
 
 export function GroupStageGrid({ groups, qualificationRules }: GroupStageGridProps) {
   const { t } = useI18n();
+  const [selectedMatch, setSelectedMatch] = React.useState<BracketMatch | null>(null);
 
   return (
     <section className="space-y-5">
@@ -70,10 +73,43 @@ export function GroupStageGrid({ groups, qualificationRules }: GroupStageGridPro
                   </span>
                 </div>
               ))}
+              <div className="border-t border-[color:var(--border)] p-3">
+                <p className="mb-2 text-xs font-medium uppercase tracking-normal text-[color:var(--muted)]">
+                  Match predictions
+                </p>
+                <div className="grid gap-2">
+                  {(group.matches ?? []).map((match) => (
+                    <button
+                      key={match.id}
+                      type="button"
+                      className="grid grid-cols-[1fr_auto] items-center gap-3 rounded-md border border-[rgba(226,212,193,0.75)] bg-[rgba(255,251,244,0.62)] px-3 py-2 text-left transition hover:border-[color:var(--accent)] hover:bg-[rgba(255,251,244,0.92)]"
+                      onClick={() => setSelectedMatch(match)}
+                    >
+                      <span className="min-w-0 truncate text-xs">
+                        {match.home.team.flag} {match.home.team.name}
+                        <span className="px-1 text-[color:var(--muted)]">vs</span>
+                        {match.away.team.flag} {match.away.team.name}
+                      </span>
+                      <span className="font-mono text-xs font-semibold">
+                        {match.predictedScore ?? "TBD"}
+                      </span>
+                    </button>
+                  ))}
+                </div>
+              </div>
             </CardContent>
           </Card>
         ))}
       </div>
+      <MatchDetailDrawer
+        match={selectedMatch}
+        open={selectedMatch !== null}
+        onOpenChange={(nextOpen) => {
+          if (!nextOpen) {
+            setSelectedMatch(null);
+          }
+        }}
+      />
     </section>
   );
 }

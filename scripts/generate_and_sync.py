@@ -44,6 +44,20 @@ def validate_inputs() -> None:
     )
 
 
+def run_llm_prediction_layer(require_llm: bool = False, match_limit: int | None = None) -> None:
+    from worldcup_agent.llm_agent import update_snapshot_with_llm_predictions
+
+    result = update_snapshot_with_llm_predictions(
+        require_llm=require_llm,
+        match_limit=match_limit,
+    )
+    print(
+        "LLM prediction layer: "
+        f"{result.matches_updated} matches updated "
+        f"via {result.provider}/{result.model}"
+    )
+
+
 def _is_degenerate_probability_set(probabilities: dict) -> bool:
     if len(probabilities) < 2:
         return True
@@ -169,6 +183,22 @@ def main() -> None:
         help="Only validate and sync the existing canonical snapshot.",
     )
     parser.add_argument(
+        "--skip-llm",
+        action="store_true",
+        help="Skip the LLM-first match prediction layer.",
+    )
+    parser.add_argument(
+        "--require-llm",
+        action="store_true",
+        help="Fail if no LLM_API_KEY, OPENAI_API_KEY, or DASHSCOPE_API_KEY is configured.",
+    )
+    parser.add_argument(
+        "--llm-match-limit",
+        type=int,
+        default=None,
+        help="Only update the first N matches through the LLM layer.",
+    )
+    parser.add_argument(
         "--build",
         action="store_true",
         help="Run frontend production build after syncing.",
@@ -176,6 +206,11 @@ def main() -> None:
     args = parser.parse_args()
 
     validate_inputs()
+    if not args.skip_llm:
+        run_llm_prediction_layer(
+            require_llm=args.require_llm,
+            match_limit=args.llm_match_limit,
+        )
     output_path = None
     if not args.skip_agent:
         output_path = run_multi_agent()

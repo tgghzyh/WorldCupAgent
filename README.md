@@ -1,258 +1,139 @@
-# WC2026 AI Prediction Agent
+# WorldCupAgent
 
-> Current runnable project guide: [docs/CURRENT_PROJECT_GUIDE.md](./docs/CURRENT_PROJECT_GUIDE.md)
->
-> Note: parts of this README are older and may contain encoding artifacts. For current directory responsibilities, data flow, and run commands, use the guide above as the source of truth.
+世界杯冠军预测 Agent。项目以 `DataForAgent` 的赛前球队、教练、球员、历史比赛等数据为基础，通过 LLM 逐场预测小组赛和淘汰赛结果，最终输出冠军预测，并在 Next.js 前端中展示完整赛程树、比分、胜负概率和每场比赛的推理原因。
 
-**Not only predicts the World Cup champion — explains every prediction.**
+当前项目说明以以下文档为准：
 
-An AI agent that generates daily predictions for all 104 matches in the 2026 FIFA World Cup, with full explainability. Every prediction includes factor attribution showing exactly why the AI believes one team will win.
+- [当前项目指南](./docs/CURRENT_PROJECT_GUIDE.md)
+- [Agent 架构与工具链](./docs/AGENT_ARCHITECTURE_AND_TOOLCHAIN.md)
 
-## Live Demo
+## 当前能力
 
-> **Frontend**: Streamlit app at `http://localhost:8502`
->
-> **Agent**: Run `python -m worldcup_agent.prediction.agent` for daily predictions
->
-> **Latest Snapshot**: `data/snapshots/latest.json`
+- 从 `DataForAgent/data/processed/worldcup/wc_2026_squad_normalized.json` 重建 48 队、12 个小组、小组赛和 32 强淘汰赛结构。
+- LLM 根据每场比赛的上下文逐场输出固定 JSON，包含胜负、比分、概率、置信度、中文原因和结构化原因因子。
+- 后端按真实赛事推进方式重算小组积分榜，并逐轮生成下一轮淘汰赛对阵。
+- 前端展示首页冠军预测、Top 5 争冠队、分组积分、完整淘汰赛树。
+- 点击任意小组赛或淘汰赛节点，可查看 LLM 对该场比赛的推理依据。
+- 保留 multi-agent 辅助层，用于数据加载、强度摘要、反思检查、解释文本和质量检查。
 
-## Features
+## 架构总览
 
-### Core Capabilities
-
-- **Daily Predictions**: 72 group-stage matches with win/draw/lose probabilities
-- **Factor Attribution**: Each prediction includes ranked factors (ELO, FIFA Ranking, Recent Form) with percentage contributions
-- **LLM-Powered Reasoning**: Uses Qwen LLM to generate natural language explanations
-- **Versioned Snapshots**: Every prediction snapshot records version history for comparison
-
-### Multi-Agent Architecture
-
-```
-┌─────────────────────────────────────────────────────────────┐
-│                    WC2026 Agent System                      │
-├─────────────────────────────────────────────────────────────┤
-│  ┌─────────────┐  ┌─────────────┐  ┌─────────────────┐   │
-│  │ Data Agent  │→ │Analysis Agent│→│Simulation Agent│   │
-│  │ (Elo, Odds)│  │ (Strength)   │  │ (Monte Carlo)   │   │
-│  └─────────────┘  └─────────────┘  └─────────────────┘   │
-│         ↓                ↓                  ↓              │
-│  ┌─────────────────────────────────────────────────────┐   │
-│  │           Cognitive World Model (NEW)                │   │
-│  │  • Belief-Uncertainty-Evidence cognitive model       │   │
-│  │  • Goal-driven autonomous agents                     │   │
-│  │  • Adversarial debate between agents                 │   │
-│  └─────────────────────────────────────────────────────┘   │
-│         ↓                                                 │
-│  ┌─────────────┐  ┌─────────────┐  ┌─────────────────┐   │
-│  │ReflectionAgent│→│ExplainerAgent│→│  Quality Agent  │   │
-│  │ (Self-check) │  │ (Narratives) │  │ (QA checks)    │   │
-│  └─────────────┘  └─────────────┘  └─────────────────┘   │
-└─────────────────────────────────────────────────────────────┘
+```mermaid
+flowchart TD
+  A["DataForAgent processed datasets"] --> B["snapshot_builder 重建赛事结构"]
+  B --> C["context_builder 组装单场比赛上下文"]
+  C --> D["LLMMatchPredictor 调用 LLM"]
+  D --> E["snapshot_writer 写入赛果/概率/原因"]
+  E --> F["重算小组积分榜"]
+  F --> G["生成下一轮淘汰赛"]
+  G --> C
+  E --> H["data/snapshots/latest.json"]
+  H --> I["scripts/sync_snapshot_to_frontend.py"]
+  I --> J["frontend/public/data/snapshots/latest.json"]
+  J --> K["Next.js 可视化页面"]
 ```
 
-### Explainability Example
+核心实现位于：
 
-```
-Argentina vs Mexico
-─────────────────
-  H: 80%   D: 7%   A: 13%
+```text
+worldcup_agent/llm_agent/
+  llm_client.py        LLM API 客户端，兼容 OpenAI chat completions 协议
+  predictor.py         单场比赛 LLM 预测器和输出校验
+  context_builder.py   DataForAgent 到 LLM prompt payload 的上下文构造
+  snapshot_builder.py  从赛前名单重建小组赛和淘汰赛结构
+  snapshot_writer.py   逐场预测、逐轮推进、写入 latest.json
 
-Top Factors:
-  ↑ 42%  ELO Rating Advantage
-          Home Elo 2129 vs Away Elo 1912 (diff +217)
+worldcup_agent/multi_agent/
+  agents.py            Data/Analysis/Simulation/Reflection/Explainer/Quality 辅助 agents
+  main.py              multi-agent 辅助管线入口
 
-  ↑ 26%  FIFA World Ranking
-          Home rank #3 vs Away rank #28
-```
-
-## Quick Start
-
-### 1. Generate Predictions
-
-```bash
-# Single run
-python -m worldcup_agent.prediction.agent
-
-# Force refresh data
-python -m worldcup_agent.prediction.agent --force-refresh
-
-# Continuous loop (production mode)
-python -m worldcup_agent.prediction.agent --loop --interval 3600
+frontend/
+  src/app/             Next.js 页面路由
+  src/components/      Dashboard、赛程树、比赛详情弹窗
+  src/lib/             snapshot 读取、转换和前端类型
 ```
 
-### 2. View Frontend
+## 运行方式
 
-```bash
-# Start Streamlit app
-python -m streamlit run explainable_page.py --server.port 8502
+先根据 [.env.example](./.env.example) 创建项目根目录下的 `.env.local`，其中配置 LLM 服务。不要提交真实密钥。
+
+```text
+LLM_PROVIDER=xfyun-maas
+LLM_API_KEY=your_api_key
+LLM_BASE_URL=https://maas-api.cn-huabei-1.xf-yun.com/v2
+LLM_MODEL=xop35qwen2b
+LLM_MAX_RETRIES=5
+LLM_RETRY_BASE_SECONDS=3
+LLM_REQUEST_DELAY_SECONDS=1.2
+LLM_TIMEOUT_SECONDS=120
 ```
 
-### 3. Access Data
+完整生成并同步前端数据：
 
-```python
-from worldcup_agent.prediction import get_latest_snapshot, PredictionSnapshot
-
-# Load latest predictions
-snap = get_latest_snapshot()
-for match in snap.match_predictions[:3]:
-    print(f"{match.home_team} vs {match.away_team}")
-    print(f"  H: {match.outcome.home_win:.0%}  D: {match.outcome.draw:.0%}  A: {match.outcome.away_win:.0%}")
+```powershell
+python scripts\generate_and_sync.py --require-llm
 ```
 
-## Project Structure
+先小批量测试 LLM 连通性：
 
-```
-WorldCupAgent/
-├── worldcup_agent/
-│   ├── prediction/          # Prediction pipeline
-│   │   ├── agent.py       # Main agent orchestrator
-│   │   ├── world_state.py # Tournament state tracking
-│   │   ├── observer.py    # Data observation system
-│   │   ├── elo_system.py  # Elo probability model
-│   │   └── prediction_schema.py  # Versioned data schemas
-│   ├── multi_agent/       # Multi-agent system (NEW)
-│   │   ├── core.py       # WorldState, BaseAgent, Orchestrator
-│   │   ├── cognitive_model.py   # Belief-Uncertainty-Evidence
-│   │   ├── goal_agent.py        # Goal-driven autonomy
-│   │   ├── debate_mechanism.py  # Adversarial collaboration
-│   │   └── agents/       # 6 specialized agents
-│   └── tournament/         # Tournament rules engine
-│       ├── rule.py        # FIFA 2026 rules (Tiebreakers, R32)
-│       └── knockout_simulator.py  # Bracket simulation
-├── data/
-│   ├── snapshots/         # Prediction snapshots
-│   └── cache/             # Cached data (Elo, Odds)
-├── frontend/              # Frontend application
-├── explainable_page.py  # Streamlit visualization
-└── elo_ratings.py      # Elo data scraper
+```powershell
+python scripts\generate_and_sync.py --require-llm --llm-match-limit 10 --skip-agent
 ```
 
-## Architecture Highlights
+只用本地 fallback 快速重建数据，不调用 LLM：
 
-### 1. Belief-Uncertainty-Evidence Model
-
-Every prediction is stored as a `Belief` with:
-- **Confidence Score**: 0-1 probability
-- **Evidence Chain**: Sources that support the prediction
-- **Uncertainty Type**: Epistemic (lack of knowledge) vs Aleatoric (inherent randomness)
-
-```python
-from worldcup_agent.multi_agent import CognitiveWorldModel, Evidence, EvidenceSource
-
-model = CognitiveWorldModel()
-model.assert_belief(
-    subject="argentina_vs_mexico",
-    predicate="home_win_prob",
-    value=0.80,
-    confidence=0.75,
-    evidence=[
-        Evidence(source=EvidenceSource.ELO_RATING, weight=0.45, quality="high"),
-        Evidence(source=EvidenceSource.SIMULATION, weight=0.35, quality="medium"),
-    ]
-)
+```powershell
+$env:LLM_DISABLE="1"
+python scripts\generate_and_sync.py --skip-agent
+Remove-Item Env:\LLM_DISABLE
 ```
 
-### 2. Goal-Driven Agents
+启动前端：
 
-Agents declare goals and autonomously decide next steps:
-
-```python
-from worldcup_agent.multi_agent import GoalDrivenAgent, GoalType
-
-agent = SimulationAgent()
-goal = agent.declare_goal(
-    goal_type=GoalType.SIMULATE,
-    description="Predict tournament winner",
-    success_criteria=["confidence_above_0.7", "has_evidence"]
-)
-# Agent autonomously decides: CONTINUE / RETRY / REQUEST_HELP / ESCALATE
+```powershell
+cd frontend
+npm run dev -- -p 3000
 ```
 
-### 3. Adversarial Debate
+访问：
 
-When agents disagree, structured debates resolve conflicts:
-
-```python
-from worldcup_agent.multi_agent import DebateManager, PositionSide
-
-manager = DebateManager(cognitive_model)
-debate = manager.debate_prediction(
-    subject="argentina_champion",
-    proponent="simulation_agent",
-    opponent="analysis_agent",
-    pro_value=0.25,
-    con_value=0.30,
-)
-manager.judge_debate(debate.id)
-# Returns verdict with reasoning
+```text
+http://localhost:3000
+http://localhost:3000/schedule
+http://localhost:3000/teams
+http://localhost:3000/data
+http://localhost:3000/agent
 ```
 
-## Data Schema
+## 校验命令
 
-### Prediction Snapshot
+```powershell
+python -m compileall worldcup_agent\llm_agent scripts\generate_and_sync.py
+python -m json.tool data\snapshots\latest.json
 
-```json
-{
-  "snapshot_id": "snap_2026_07_05_0921",
-  "tournament": "FIFA World Cup 2026",
-  "generated_at": "2026-07-05T09:21:42Z",
-  "versions": {
-    "prediction_version": "0.2.0",
-    "knowledge_version": "abc12345"
-  },
-  "headline": "Upset watch: Spain has a 92% chance...",
-  "matches": [
-    {
-      "match_id": "wc2026_ARG_MEX",
-      "home_team": "Argentina",
-      "away_team": "Mexico",
-      "prediction": {
-        "outcome": {"home_win": 0.80, "draw": 0.07, "away_win": 0.13},
-        "confidence": "high"
-      },
-      "factors": [
-        {
-          "name": "ELO Rating Advantage",
-          "contribution_pct": 0.42,
-          "evidence": "Home Elo 2129 vs Away Elo 1912 (diff +217)"
-        }
-      ]
-    }
-  ]
-}
+cd frontend
+npm run lint
+npm run build
 ```
 
-## Configuration
+## 关键数据文件
 
-### Environment Variables
+```text
+DataForAgent/data/processed/index.json
+DataForAgent/data/processed/worldcup/wc_2026_squad_normalized.json
+data/snapshots/latest.json
+frontend/public/data/snapshots/latest.json
+data/multi_agent/multi_agent_output_*.json
+```
 
-| Variable | Default | Description |
-|----------|---------|-------------|
-| `DASHSCOPE_API_KEY` | - | Alibaba Cloud API key for LLM |
-| `ELO_CACHE_TTL_HOURS` | 168 | Elo cache TTL (7 days) |
+## 当前复盘结论
 
-### Dependencies
+项目主线已经符合目标：它能采集并读取世界杯相关数据，使用 LLM 逐场分析胜负和比分，生成从小组赛到决赛的完整推演，并用前端页面展示冠军预测、赛程树和单场推理原因。
 
-See `requirements.txt` for full list. Key packages:
-- `httpx` - HTTP client
-- `pandas` - Data processing
-- `streamlit` - Frontend
-- `dashscope` - LLM integration
+仍建议继续完善：
 
-## Version History
-
-| Version | Date | Changes |
-|---------|------|---------|
-| 0.2.0 | 2026-07-05 | Elo ratings (S9) integrated; FactorAttribution schema; versioned snapshots |
-| 0.1.0 | 2026-06-01 | Initial release: sequential pipeline, Monte Carlo simulation |
-
-## Documentation
-
-- [PRODUCT_SPEC.md](./PRODUCT_SPEC.md) - Product specification
-- [TOURNAMENT_RULE_SPEC.md](./TOURNAMENT_RULE_SPEC.md) - FIFA 2026 rules
-- [TOURNAMENT_TRACE_SPEC.md](./TOURNAMENT_TRACE_SPEC.md) - Explainability trace format
-- [ENGINEERING_GUIDELINES.md](./ENGINEERING_GUIDELINES.md) - Engineering standards
-
-## License
-
-MIT License
+- 为 LLM 输出增加更严格的 JSON Schema 校验和自动重试修复。
+- 为 `snapshot_builder`、中文球队 id、淘汰赛晋级逻辑补充自动化测试。
+- 增加断点续跑能力，减少 104 场完整 LLM 调用中断后的重复成本。
+- 将旧 `prediction/` 和旧文档进一步归档，减少与当前 LLM-first 架构的混淆。
+- 扩展数据来源，接入更稳定的 FIFA 排名、ELO、伤病、赛程场地和旅途距离数据。

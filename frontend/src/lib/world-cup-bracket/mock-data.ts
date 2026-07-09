@@ -95,6 +95,7 @@ function detail(home: ReturnType<typeof slot>, away: ReturnType<typeof slot>, id
 
   return {
     confidence,
+    summary: `${home.team.name} has a narrow projected edge over ${away.team.name} based on the mock Agent baseline, matchup profile, and route strength.`,
     reasoningFactors: [
       {
         id: `${id}-fitness`,

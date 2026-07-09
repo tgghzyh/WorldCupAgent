@@ -81,6 +81,7 @@ export default function DataPage() {
   );
   const knockoutRounds = snapshot.knockout_predictions.rounds;
   const knockoutMatchCount =
+    (knockoutRounds.round_of_32?.length ?? 0) +
     knockoutRounds.round_of_16.length +
     knockoutRounds.quarter_finals.length +
     knockoutRounds.semi_finals.length +

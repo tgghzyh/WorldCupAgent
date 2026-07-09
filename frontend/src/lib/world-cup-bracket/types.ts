@@ -30,6 +30,7 @@ export type GroupStageGroup = {
   id: string;
   name: string;
   standings: GroupStanding[];
+  matches?: BracketMatch[];
 };
 
 export type BracketTeamSlot = {
@@ -64,6 +65,7 @@ export type MatchDataSource = {
 
 export type MatchDetail = {
   confidence: ConfidenceLevel;
+  summary: string;
   reasoningFactors: ReasoningFactor[];
   metricComparison: TeamMetricComparison[];
   dataSources: MatchDataSource[];
@@ -73,6 +75,7 @@ export type MatchDetail = {
 export type BracketMatch = {
   id: string;
   stage:
+    | "group"
     | "round_of_32"
     | "round_of_16"
     | "quarter_final"
