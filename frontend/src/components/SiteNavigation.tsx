@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { BarChart3, Braces, BrainCircuit, CalendarDays, DatabaseZap, Home, Search, Trophy } from "lucide-react";
+import { Braces, BrainCircuit, CalendarDays, DatabaseZap, Home, Search, Trophy } from "lucide-react";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { useI18n } from "@/i18n";
 import { cn } from "@/lib/utils";
@@ -15,7 +15,6 @@ const navItems = [
   { href: "/teams", key: "nav.teams", icon: Search, fallback: "Teams" },
   { href: "/data", key: "nav.data", icon: DatabaseZap, fallback: "Data" },
   { href: "/agent", key: "nav.agent", icon: BrainCircuit, fallback: "Agent Run" },
-  { href: "/compare", key: "nav.compare", icon: BarChart3, fallback: "Compare" },
 ];
 
 export function SiteNavigation() {

@@ -109,6 +109,17 @@ const TEAM_CODES: Record<string, string> = {
   "库拉索": "CUW",
 };
 
+const FLAG_CODES: Record<string, string> = {
+  ALG: "dz", ARG: "ar", AUS: "au", AUT: "at", BEL: "be", BIH: "ba", BOL: "bo", BRA: "br",
+  BFA: "bf", CAN: "ca", CIV: "ci", CMR: "cm", COD: "cd", COL: "co", CPV: "cv", CRC: "cr",
+  CRO: "hr", CUW: "cw", CZE: "cz", DEN: "dk", ECU: "ec", EGY: "eg", ENG: "gb-eng", ESP: "es",
+  FRA: "fr", GER: "de", GHA: "gh", HAI: "ht", IRN: "ir", IRQ: "iq", ITA: "it", JAM: "jm",
+  JOR: "jo", JPN: "jp", KOR: "kr", KSA: "sa", MAR: "ma", MEX: "mx", NED: "nl", NGA: "ng",
+  NOR: "no", NZL: "nz", PAN: "pa", PAR: "py", PER: "pe", POR: "pt", QAT: "qa", RSA: "za",
+  SCO: "gb-sct", SEN: "sn", SRB: "rs", SUI: "ch", SWE: "se", TUN: "tn", TUR: "tr", URU: "uy",
+  USA: "us", UZB: "uz", WAL: "gb-wls", ZAM: "zm",
+};
+
 function teamId(name: string): string {
   const normalizedName = name.trim();
   const asciiId = normalizedName.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
@@ -133,7 +144,7 @@ function makeTeam(name: string): Team {
     id: teamId(name),
     name,
     code,
-    flag: code,
+    flagCode: FLAG_CODES[code] ?? "",
   };
 }
 
@@ -269,6 +280,21 @@ function buildDetail(params: {
       ...(rawMatch?.llm_provider ? [{ label: `LLM: ${rawMatch.llm_provider}`, href: "/agent" }] : []),
     ],
     agentTimestamp: snapshotTime,
+    probabilityModel: rawMatch?.probability_model
+      ? {
+          homeWinProbability: rawMatch.probability_model.home_win_prob,
+          drawProbability: rawMatch.probability_model.draw_prob,
+          awayWinProbability: rawMatch.probability_model.away_win_prob,
+          method: rawMatch.probability_model.method,
+        }
+      : undefined,
+    reflection: rawMatch?.llm_reflection
+      ? {
+          verdict: rawMatch.llm_reflection.verdict,
+          logicScore: rawMatch.llm_reflection.logic_score,
+          summary: rawMatch.llm_reflection.summary,
+        }
+      : undefined,
   };
 }
 
@@ -489,6 +515,7 @@ function convertRounds(snapshot: Snapshot): BracketRound[] {
 
 function convertTitleContenders(snapshot: Snapshot): TitleContender[] {
   const rawProbabilities =
+    snapshot.simulation?.champion_probabilities ??
     snapshot.knockout_predictions.champion_probabilities ??
     snapshot.champion_probabilities ??
     {};
@@ -503,11 +530,11 @@ function convertTitleContenders(snapshot: Snapshot): TitleContender[] {
   if (!contenders.some((entry) => entry.team.name === snapshot.champion)) {
     contenders.push({
       team: makeTeam(snapshot.champion),
-      probability: snapshot.champion_probability,
+      probability: 0,
     });
   }
 
-  return contenders.sort((a, b) => b.probability - a.probability).slice(0, 5);
+  return contenders.sort((a, b) => b.probability - a.probability);
 }
 
 export function snapshotToWorldCupBracketData(snapshot: Snapshot): WorldCupBracketData {

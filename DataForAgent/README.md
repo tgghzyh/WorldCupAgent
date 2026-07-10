@@ -1,244 +1,104 @@
 # DataForAgent
 
-足球比赛数据采集与规则化归一化系统。用于为 2026 世界杯赛事预测建模提供高质量数据集。
+`DataForAgent` 是 WorldCupAgent 的数据采集和归一化子项目。它负责把公开足球数据整理为可被预测 Agent 稳定读取的 JSON 数据集；它本身不调用 LLM，也不直接给出比赛预测。
 
-## 项目目标
+## 在整体架构中的位置
 
-通过采集五大联赛（俱乐部球员表现）和往届世界杯（国家队历史战绩）数据，构建可关联的数据集：
-
+```text
+公开数据源 -> collectors -> raw/ -> normalizer -> processed/ -> index.json
+                                                        |
+                                                        v
+                         worldcup_agent.data_layer / LLM 预测上下文
 ```
-俱乐部表现（五大联赛）
-    ↓ 球员归属
-国家队实力 ← 历史战绩（往届世界杯）
-```
 
-## 数据来源
+主预测链通过 `worldcup_agent.data_layer.load_dataset()` 读取 `processed/index.json`。因此新增或替换数据集时，应先更新索引，而不是在 Agent 内硬编码文件名。
 
-| 来源 | 说明 | 网址 |
-|---|---|---|
-| football-data.co.uk | 五大联赛比赛数据 | https://www.football-data.co.uk |
-| Kaggle FIFA World Cup | 往届世界杯数据集 | https://www.kaggle.com/datasets |
+## 当前数据集
 
-## 当前可用数据集（可直接用于建模）
+| 索引键 | 文件 | 当前索引规模 | 在预测中的作用 |
+| --- | --- | --- | --- |
+| `leagues` | `processed/league/leagues_unified_*.json` | 1,752 场 | 俱乐部表现的可扩展数据资产 |
+| `worldcup` | `processed/worldcup/worldcup_normalized_*.json` | 22 届、163 场 | 历史世界杯覆盖度与赛前上下文 |
+| `wc2026_squad` | `processed/worldcup/wc_2026_squad_normalized.json` | 12 组、48 队、1,199 名球员 | 当前预测赛事结构、名单、教练与球员信息的直接来源 |
 
-当前 `data/processed/` 下已清理完毕，仅保留最新有效结果，共 3 个文件：
+`wc2026_squad` 当前有 47 支 25 人名单和阿根廷 24 人名单，共 1,199 名球员。这是源数据现状，不能自动视为 FIFA 最终报名名单。
 
-| 文件 | 说明 | 规模 |
-|---|---|---|
-| `data/processed/index.json` | 数据入口，记录最新结果路径 | - |
-| `data/processed/league/leagues_unified_20260708_121431.json` | 五大联赛归一化统一文件 | 1752 场比赛 |
-| `data/processed/worldcup/worldcup_normalized_20260708_121432.json` | 世界杯归一化结果 | 22 届、163 场、22 名射手 |
+## 数据来源与采集能力
 
-**下一步**：直接读取上述 JSON 文件，交给预测模型使用。无需再处理历史版本或单联赛文件。
+| 来源 | 采集模块 | 内容 |
+| --- | --- | --- |
+| football-data.co.uk | `collectors/fifa_collector.py` | 五大联赛比赛结果与基础技术统计 |
+| Kaggle FIFA World Cup 数据集 | `collectors/kaggle_collector.py` | 往届世界杯赛事、届次与射手信息 |
+| URL / Wikipedia 资料 | `collectors/url_scraper.py` 与现有原始资料 | 2026 分组、球队、教练和名单补充信息 |
 
----
+数据采集能力满足预测项目对历史战绩、球队分组与球员资料的输入需求，但当前并非实时数据服务。排名、伤病、最终名单和官方赛程仍需要独立的刷新策略与来源审计。
 
-## 历史说明
+## 目录
 
-- **历史版本**：每次 pipeline 重跑会生成带不同时间戳的文件（如 `_115927`、`_120736`），内容与最新结果重复，已清理
-- **单联赛文件**：各联赛单独归一化文件（如 `Bundesliga_normalized_*.json`）已汇总到统一文件 `leagues_unified_*.json`，属于冗余中间产物，已清理
-
----
-
-## 目录结构
-
-```
+```text
 DataForAgent/
-├── data/
-│   ├── raw/                    # 原始数据（CSV / JSON）
-│   │   ├── fifa/               # 五大联赛 CSV（from football-data.co.uk）
-│   │   └── worldcup/           # 世界杯 CSV + JSON
-│   └── processed/               # 归一化后的数据（已清理，仅保留最新有效文件）
-│       ├── index.json          # 数据集索引（入口）
-│       ├── league/             # 五大联赛归一化结果
-│       │   └── leagues_unified_*.json    # 五大联赛合并文件（当前有效）
-│       └── worldcup/           # 世界杯归一化结果
-│           └── worldcup_normalized_*.json  # 当前有效
-├── src/
-│   ├── main.py                 # CLI 入口
-│   ├── pipeline.py             # 数据管道编排
-│   ├── config.py               # 配置（从 .env 读取）
-│   ├── collectors/             # 数据采集器
-│   │   ├── fifa_collector.py   # 五大联赛下载（football-data.co.uk）
-│   │   ├── kaggle_collector.py # Kaggle 数据集下载
-│   │   └── url_scraper.py      # URL 抓取（纯 HTTP，无 LLM）
-│   ├── normalizer/             # 规则化归一化
-│   │   ├── fifa_normalizer.py  # 五大联赛归一化
-│   │   └── worldcup_normalizer.py  # 世界杯归一化
-│   └── storage/
-│       └── json_storage.py     # JSON 持久化工具
-├── scripts/                    # 辅助脚本
-├── logs/                      # 日志文件
-├── .env                       # 环境变量（API 凭证）
-└── requirements.txt
-```
-
-## 当前数据规模
-
-### 五大联赛（2025/26 赛季）
-
-| 联赛 | 代码 | 比赛数 |
-|---|---|---|
-| Premier League | E0 | 380 |
-| La Liga | SP1 | 380 |
-| Serie A | I1 | 380 |
-| Bundesliga | D1 | 306 |
-| Ligue 1 | F1 | 306 |
-| **合计** | | **1752** |
-
-来源：`data/processed/league/leagues_unified_*.json`
-
-### 世界杯（1930 — 2022）
-
-| 维度 | 数量 |
-|---|---|
-| 届（editions） | 22 |
-| 比赛（matches） | 163 |
-| 射手（scorers） | 22 |
-
-来源：`data/processed/worldcup/worldcup_normalized_*.json`
-
-### 2026 世界杯参赛名单（维基百科）
-
-| 维度 | 数量 |
-|---|---|
-| 小组 | 12（A — L） |
-| 球队 | 48 |
-| 球员 | 1199（47队各25人，阿根廷24人） |
-
-来源：`data/processed/worldcup/wc_2026_squad_normalized.json`
-
-## 归一化数据格式
-
-### 五大联赛比赛（league match）
-
-```json
-{
-  "match_id": "D1_Bayern_Munich_RB_Leipzig_2025-08-22",
-  "league": "Bundesliga",
-  "league_code": "D1",
-  "season": "2025/2026",
-  "date": "2025-08-22",
-  "time": "19:30",
-  "home_team": "Bayern Munich",
-  "away_team": "RB Leipzig",
-  "home_score": 6,
-  "away_score": 0,
-  "result": "H",              // H=主队胜, D=平, A=客队胜
-  "half_home_score": 3,
-  "half_away_score": 0,
-  "half_result": "H",
-  "home_shots": 19,
-  "away_shots": 12,
-  "home_shots_on_target": 10,
-  "away_shots_on_target": 1,
-  "home_fouls": 13,
-  "away_fouls": 13,
-  "home_corners": 5,
-  "away_corners": 5,
-  "home_yellow_cards": 4,
-  "away_yellow_cards": 1,
-  "home_red_cards": 0,
-  "away_red_cards": 0,
-  "source": "football-data.co.uk",
-  "raw_data": { ... }
-}
-```
-
-### 世界杯比赛（worldcup match）
-
-```json
-{
-  "year": 2022,
-  "stage": "Final",
-  "date": "2022-12-18",
-  "home_team": "Argentina",
-  "away_team": "France",
-  "home_score": 3,
-  "away_score": 3,
-  "attendance": 88966,
-  "stadium": "Lusail Stadium",
-  "city": "Lusail",
-  "referee": "S. Polling"
-}
-```
-
-### 世界杯历届（worldcup edition）
-
-```json
-{
-  "year": 2022,
-  "host_country": "Qatar",
-  "winner": "Argentina",
-  "runner_up": "France",
-  "third": "Croatia",
-  "fourth": "Morocco",
-  "goals_scored": 172,
-  "matches_played": 64,
-  "attendance": 3400000,
-  "teams_count": 32
-}
+  data/
+    raw/                 下载或抓取的原始文件
+    processed/
+      index.json         规范数据入口
+      league/            五大联赛归一化结果
+      worldcup/          历史世界杯与 2026 名单/分组
+  src/
+    collectors/          采集器
+    normalizer/          规则化归一化器
+    storage/             JSON 持久化工具
+    pipeline.py          数据管道编排
+    main.py              CLI 入口
 ```
 
 ## 使用
 
-### 安装依赖
+在 `DataForAgent` 目录运行：
 
-```bash
+```powershell
 pip install -r requirements.txt
+python -m src.main --mode all
 ```
 
-### 配置
+`--mode all` 会重新拉取五大联赛数据、搜索 Kaggle 数据集并执行归一化。当前 Kaggle 步骤只负责发现候选数据集，不会自动将任意搜索结果映射成项目所需的三份世界杯历史原始文件；`wc2026_squad` 也由专用 HTML 解析器维护。因此，若要刷新 2026 分组与名单，请先更新 `data/raw/worldcup/wc_2026_squad_full.html`，再运行：
 
-编辑 `.env`：
+```powershell
+python scripts/wc_2026_squad_normalizer.py
+python -m src.main --mode pipeline
+```
 
-```env
-# Kaggle credentials（从 https://kaggle.com/account 下载）
-KAGGLE_USERNAME=你的用户名
-KAGGLE_KEY=你的key
+每次 `pipeline` 重建索引时会保留并重新登记 `wc2026_squad`，确保下游 Agent 仍能读取该数据集。
 
-# 数据路径（可选，默认如下）
+已有原始文件时，仅执行归一化：
+
+```powershell
+python -m src.main --mode pipeline
+```
+
+其他常用模式：
+
+```powershell
+python -m src.main --mode collect-fifa
+python -m src.main --mode collect-kaggle --keyword "worldcup football"
+python -m src.main --mode scrape --url https://example.com
+```
+
+Kaggle 凭证配置在 `DataForAgent/.env`，不要提交真实凭证：
+
+```text
+KAGGLE_USERNAME=your_username
+KAGGLE_KEY=your_key
 DATA_RAW_PATH=data/raw
 DATA_PROCESSED_PATH=data/processed
 ```
 
-### 运行
+## 数据契约
 
-```bash
-# 完整 pipeline（采集 + 归一化）
-python -m src.main --mode all
-
-# 仅归一化（已有原始数据）
-python -m src.main --mode pipeline
-
-# 仅采集五大联赛
-python -m src.main --mode collect-fifa
-
-# 仅采集 Kaggle 数据
-python -m src.main --mode collect-kaggle --keyword "worldcup football"
-
-# URL 抓取（返回纯文本，不调用 LLM）
-python -m src.main --mode scrape --url https://example.com
-```
-
-### 数据索引
-
-每次 pipeline 运行后，`data/processed/index.json` 记录了最新数据集路径：
+`processed/index.json` 必须包含 `datasets` 对象，每个数据集至少提供相对于 `DataForAgent/data/` 的 `file`。例如：
 
 ```json
 {
-  "generated_at": "2026-07-08T12:14:32",
   "datasets": {
-    "leagues": {
-      "file": "processed/league/leagues_unified_20260708_121431.json",
-      "total_matches": 1752
-    },
-    "worldcup": {
-      "file": "processed/worldcup/worldcup_normalized_20260708_121432.json",
-      "editions": 22,
-      "matches": 163,
-      "scorers": 22
-    },
     "wc2026_squad": {
       "file": "processed/worldcup/wc_2026_squad_normalized.json",
       "groups": 12,
@@ -249,10 +109,11 @@ python -m src.main --mode scrape --url https://example.com
 }
 ```
 
-## 技术说明
+修改 schema、球队名称或分组字段时，必须同步验证 `worldcup_agent/llm_agent/context_builder.py` 和 `snapshot_builder.py` 的读取逻辑。当前 Agent 使用中文队名作为规范展示名，并将其映射到英文 enrichment；对于 enrichment 中没有的最新参赛队，`context_builder.py` 会回退到本地缓存的 `elo_live_ratings.json`，保证 48 支球队都有排名/Elo 证据。
 
-- **归一化策略**：纯规则映射，无 LLM 依赖，速度快且结果可复现
-- **编码处理**：自动处理 CSV 的 UTF-8 BOM 问题
-- **SSL 容错**：下载时自动降级 SSL 验证，适配企业网络环境
-- **去重**：世界杯数据按关键字段自动去重
-- **持久化**：所有输出以时间戳命名，支持幂等重跑
+## 质量与边界
+
+- 归一化是确定性的规则处理，适合复现和审计。
+- `raw/` 保留来源资料，`processed/` 才是下游读取入口。
+- 数据规模不等同于数据实时性或预测准确率。
+- 每次更新后应检查 JSON 可解析、索引路径存在、12 组 48 队和名单数量是否符合预期。

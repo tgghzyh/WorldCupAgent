@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import { Badge } from "@/components/ui/badge";
+import { CountryFlag } from "@/components/world-cup-bracket/CountryFlag";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { useI18n } from "@/i18n";
 import type { BracketMatch, GroupStageGroup, QualificationRule } from "@/lib/world-cup-bracket/types";
@@ -12,15 +13,28 @@ type GroupStageGridProps = {
   qualificationRules: QualificationRule[];
 };
 
-function qualificationLabel(value?: string) {
-  if (value === "winner") return "1st";
-  if (value === "runner_up") return "2nd";
-  if (value === "best_third") return "Best 3rd";
+function qualificationLabel(value: string | undefined, locale: "zh" | "en") {
+  if (value === "winner") return locale === "zh" ? "小组第一" : "1st";
+  if (value === "runner_up") return locale === "zh" ? "小组第二" : "2nd";
+  if (value === "best_third") return locale === "zh" ? "最佳第三" : "Best 3rd";
   return "";
 }
 
+function groupName(value: string, locale: "zh" | "en") {
+  const match = /^Group\s+(.+)$/i.exec(value);
+  return locale === "zh" && match ? `${match[1]}组` : value;
+}
+
+function qualificationRuleDescription(slot: string, description: string, locale: "zh" | "en") {
+  if (locale !== "zh") return description;
+  if (slot === "1st") return "12 个小组第一直接晋级。";
+  if (slot === "2nd") return "12 个小组第二直接晋级。";
+  if (slot === "3rd") return "成绩最好的 8 支小组第三进入淘汰赛。";
+  return description;
+}
+
 export function GroupStageGrid({ groups, qualificationRules }: GroupStageGridProps) {
-  const { t } = useI18n();
+  const { locale, t } = useI18n();
   const [selectedMatch, setSelectedMatch] = React.useState<BracketMatch | null>(null);
 
   return (
@@ -35,7 +49,7 @@ export function GroupStageGrid({ groups, qualificationRules }: GroupStageGridPro
         <div className="flex flex-wrap gap-2">
           {qualificationRules.map((rule) => (
             <Badge key={rule.slot} className="bg-[color:var(--surface)]">
-              {rule.slot}: {rule.description}
+              {rule.slot}: {qualificationRuleDescription(rule.slot, rule.description, locale)}
             </Badge>
           ))}
         </div>
@@ -45,15 +59,15 @@ export function GroupStageGrid({ groups, qualificationRules }: GroupStageGridPro
         {groups.map((group) => (
           <Card key={group.id} className="overflow-hidden bg-[rgba(255,251,244,0.86)]">
             <CardHeader className="flex flex-row items-center justify-between border-b border-[color:var(--border)]">
-              <h3 className="text-base font-semibold">{group.name}</h3>
+              <h3 className="text-base font-semibold">{groupName(group.name, locale)}</h3>
               <Badge>{group.standings.filter((row) => row.qualifiedAs).length} {t("schedule.through")}</Badge>
             </CardHeader>
             <CardContent className="p-0">
               <div className="grid grid-cols-[2rem_1fr_2.5rem_2.5rem_2.5rem] px-3 py-2 text-xs font-medium text-[color:var(--muted)]">
                 <span>#</span>
                 <span>{t("schedule.team")}</span>
-                <span className="text-right">Pts</span>
-                <span className="text-right">GD</span>
+                <span className="text-right">{t("schedule.points")}</span>
+                <span className="text-right">{t("schedule.goalDifference")}</span>
                 <span className="text-right">{t("schedule.seed")}</span>
               </div>
               {group.standings.map((row) => (
@@ -63,19 +77,19 @@ export function GroupStageGrid({ groups, qualificationRules }: GroupStageGridPro
                 >
                   <span className="text-[color:var(--muted)]">{row.rank}</span>
                   <span className="flex min-w-0 items-center gap-2">
-                    <span className="text-lg leading-none">{row.team.flag}</span>
+                    <CountryFlag team={row.team} />
                     <span className="truncate font-medium">{row.team.name}</span>
                   </span>
                   <span className="text-right font-semibold">{row.points}</span>
                   <span className="text-right text-[color:var(--muted)]">{row.goalDiff > 0 ? `+${row.goalDiff}` : row.goalDiff}</span>
                   <span className="text-right text-[10px] font-medium text-[color:var(--accent)]">
-                    {qualificationLabel(row.qualifiedAs)}
+                    {qualificationLabel(row.qualifiedAs, locale)}
                   </span>
                 </div>
               ))}
               <div className="border-t border-[color:var(--border)] p-3">
                 <p className="mb-2 text-xs font-medium uppercase tracking-normal text-[color:var(--muted)]">
-                  Match predictions
+                  {t("schedule.matchPredictions")}
                 </p>
                 <div className="grid gap-2">
                   {(group.matches ?? []).map((match) => (
@@ -85,13 +99,15 @@ export function GroupStageGrid({ groups, qualificationRules }: GroupStageGridPro
                       className="grid grid-cols-[1fr_auto] items-center gap-3 rounded-md border border-[rgba(226,212,193,0.75)] bg-[rgba(255,251,244,0.62)] px-3 py-2 text-left transition hover:border-[color:var(--accent)] hover:bg-[rgba(255,251,244,0.92)]"
                       onClick={() => setSelectedMatch(match)}
                     >
-                      <span className="min-w-0 truncate text-xs">
-                        {match.home.team.flag} {match.home.team.name}
-                        <span className="px-1 text-[color:var(--muted)]">vs</span>
-                        {match.away.team.flag} {match.away.team.name}
+                      <span className="flex min-w-0 items-center gap-1 text-xs">
+                        <CountryFlag team={match.home.team} className="h-3 w-[18px]" />
+                        <span className="min-w-0 truncate">{match.home.team.name}</span>
+                        <span className="text-[color:var(--muted)]">{t("drawer.vs")}</span>
+                        <CountryFlag team={match.away.team} className="h-3 w-[18px]" />
+                        <span className="min-w-0 truncate">{match.away.team.name}</span>
                       </span>
                       <span className="font-mono text-xs font-semibold">
-                        {match.predictedScore ?? "TBD"}
+                        {match.predictedScore ?? t("schedule.tbd")}
                       </span>
                     </button>
                   ))}

@@ -5,6 +5,10 @@ from __future__ import annotations
 from datetime import datetime, timedelta
 from typing import Any
 
+from worldcup_agent.llm_agent.fifa_2026_rules import (
+    OFFICIAL_NEXT_ROUND_SPECS,
+    build_round_of_32_pairings,
+)
 
 GROUP_PAIRINGS = [(0, 1), (2, 3), (0, 2), (1, 3), (0, 3), (1, 2)]
 
@@ -34,37 +38,21 @@ def rebuild_snapshot_from_squad(snapshot: dict[str, Any], squad: dict[str, Any])
     snapshot["third_place"] = ""
     snapshot["champion_probability"] = 0.0
     snapshot["champion_probabilities"] = {}
+    snapshot["team_intelligence"] = {}
 
 
 def build_knockout_from_group_tables(snapshot: dict[str, Any]) -> None:
-    """Build a 32-team knockout bracket from current group standings."""
+    """Build the official FIFA 2026 Round-of-32 bracket from group standings."""
 
     groups = snapshot.get("group_predictions", {})
-    group_keys = sorted(groups)
-    winners = [groups[key]["standings"][0]["team"] for key in group_keys if groups[key].get("standings")]
-    runners = [groups[key]["standings"][1]["team"] for key in group_keys if len(groups[key].get("standings", [])) > 1]
-    thirds = [
-        groups[key]["standings"][2]
-        for key in group_keys
-        if len(groups[key].get("standings", [])) > 2
+    group_tables = {
+        group: data.get("standings", [])
+        for group, data in groups.items()
+    }
+    matches = [
+        _make_knockout_match(match_id, "Round of 32", "round_of_32", home, away, match_number)
+        for match_id, match_number, home, away in build_round_of_32_pairings(group_tables)
     ]
-    best_thirds = [
-        row["team"]
-        for row in sorted(
-            thirds,
-            key=lambda row: (row["points"], row["goal_diff"], row["goals_for"], row["team"]),
-            reverse=True,
-        )[:8]
-    ]
-
-    top_seeds = winners + runners[:4]
-    lower_seeds = best_thirds + runners[4:]
-    lower_seeds = list(reversed(lower_seeds))
-    matches = []
-    for index in range(16):
-        home = top_seeds[index] if index < len(top_seeds) else "TBD"
-        away = lower_seeds[index] if index < len(lower_seeds) else "TBD"
-        matches.append(_make_knockout_match(f"r32_{index + 1:02d}", "Round of 32", "round_of_32", home, away, index + 1))
 
     rounds = snapshot["knockout_predictions"]["rounds"]
     rounds["round_of_32"] = matches
@@ -77,31 +65,40 @@ def build_knockout_from_group_tables(snapshot: dict[str, Any]) -> None:
 
 def build_next_round(snapshot: dict[str, Any], previous_key: str, next_key: str) -> None:
     rounds = snapshot["knockout_predictions"]["rounds"]
-    previous = rounds.get(previous_key, [])
     stage_label = {
         "round_of_16": "Round of 16",
         "quarter_finals": "Quarter-finals",
         "semi_finals": "Semi-finals",
     }[next_key]
-    prefix = {
-        "round_of_16": "r16",
-        "quarter_finals": "qf",
-        "semi_finals": "sf",
+    expected_previous = {
+        "round_of_16": "round_of_32",
+        "quarter_finals": "round_of_16",
+        "semi_finals": "quarter_finals",
     }[next_key]
+    if previous_key != expected_previous:
+        raise ValueError(f"{next_key} must be built from {expected_previous}, not {previous_key}")
 
+    source_matches = {
+        match["id"]: match
+        for matches in rounds.values()
+        if isinstance(matches, list)
+        for match in matches
+    }
     matches = []
-    winners = [_winner(match) for match in previous]
-    for index in range(0, len(winners), 2):
-        if index + 1 >= len(winners):
-            break
+    for match_id, match_number, home_source, away_source in OFFICIAL_NEXT_ROUND_SPECS[next_key]:
+        try:
+            home = _winner(source_matches[home_source])
+            away = _winner(source_matches[away_source])
+        except KeyError as exc:
+            raise ValueError(f"Missing official knockout dependency {exc.args[0]!r}") from exc
         matches.append(
             _make_knockout_match(
-                f"{prefix}_{len(matches) + 1:02d}",
+                match_id,
                 stage_label,
                 next_key,
-                winners[index],
-                winners[index + 1],
-                len(matches) + 1,
+                home,
+                away,
+                match_number,
             )
         )
     rounds[next_key] = matches

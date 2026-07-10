@@ -4,7 +4,7 @@ export type Team = {
   id: string;
   name: string;
   code: string;
-  flag: string;
+  flagCode: string;
 };
 
 export type TitleContender = {
@@ -70,6 +70,17 @@ export type MatchDetail = {
   metricComparison: TeamMetricComparison[];
   dataSources: MatchDataSource[];
   agentTimestamp: string;
+  probabilityModel?: {
+    homeWinProbability: number;
+    drawProbability: number;
+    awayWinProbability: number;
+    method: string;
+  };
+  reflection?: {
+    verdict: "pass" | "caution" | "inconsistent";
+    logicScore: number;
+    summary: string;
+  };
 };
 
 export type BracketMatch = {

@@ -14,7 +14,7 @@
 当前实现方式：
 
 - 数据来源以 `DataForAgent` 为核心，尤其是 `wc_2026_squad_normalized.json`。
-- 核心预测由 `worldcup_agent/llm_agent` 完成，LLM 接收单场比赛上下文并输出结构化 JSON。
+- 核心预测由 `worldcup_agent/llm_agent` 完成：球队画像 LLM 提炼特征，概率模型给出可复算基线，预测 LLM 输出单场结果，反思 LLM 复核结果逻辑，Monte Carlo 引擎抽样完整赛事得到概率分布。
 - `snapshot_writer` 按赛事顺序推进，逐场预测并逐轮生成后续对阵。
 - 前端读取同步后的 `latest.json`，展示首页、赛程树、分组、数据来源和 Agent trace。
 
@@ -25,20 +25,22 @@ flowchart TD
   A["DataForAgent processed/index.json"] --> B["load_dataset"]
   B --> C["wc2026_squad / worldcup / leagues"]
   C --> D["snapshot_builder"]
-  D --> E["group_predictions + empty knockout bracket"]
-  E --> F["context_builder"]
-  F --> G["LLM prompt payload"]
-  G --> H["llm_client"]
-  H --> I["LLM provider"]
+  D --> E["team_intelligence LLM feature extraction"]
+  E --> F["probability_model baseline"]
+  F --> G["context_builder"]
+  G --> H["LLM prediction prompt"]
+  H --> I["llm_client / MaaS"]
   I --> J["predictor JSON validation"]
   J --> K["snapshot_writer apply prediction"]
   K --> L["group table recalculation"]
   L --> M["next knockout round builder"]
-  M --> F
-  K --> N["data/snapshots/latest.json"]
-  N --> O["sync_snapshot_to_frontend.py"]
-  O --> P["frontend public snapshot"]
-  P --> Q["Next.js dashboard / schedule / detail drawer"]
+  M --> G
+  K --> N["reflection LLM consistency review"]
+  N --> O["Monte Carlo full tournament samples"]
+  O --> P["data/snapshots/latest.json"]
+  P --> Q["sync_snapshot_to_frontend.py"]
+  Q --> R["frontend public snapshot"]
+  R --> S["Next.js dashboard / teams / detail drawer"]
 ```
 
 ## Agent 分层
@@ -152,7 +154,29 @@ worldcup_agent/llm_agent/predictor.py
 - 环境变量 `.env.local`
 - 重试、超时、请求间隔控制
 
-### 5. 快照写入与赛事推进层
+### 5. Monte Carlo 模拟层
+
+位置：
+
+```text
+worldcup_agent/llm_agent/monte_carlo.py
+```
+
+职责：
+
+- 使用固定随机种子，重复模拟完整小组赛和 32 强到决赛的淘汰赛路径。
+- 小组赛采用球队画像概率基线与 LLM 单场概率的加权分布，采样胜平负和比分后重算积分榜。
+- 淘汰赛基于当次模拟的真实出线队伍动态配对，统计小组出线、各轮晋级、冠亚季军和冠军概率。
+- 将 `simulation` 明细、冠军计数和 `monte_carlo_tool` trace 写入 canonical snapshot。
+
+运行参数：
+
+- `MONTE_CARLO_RUNS`：默认 `10000`。
+- `MONTE_CARLO_SEED`：默认 `20260710`，同一输入和种子可复现相同结果。
+- `--simulation-runs N`：本次命令临时覆盖样本数。
+- `--skip-simulation`：仅用于快速调试，不执行模拟。
+
+### 6. 快照写入与赛事推进层
 
 位置：
 
@@ -177,7 +201,7 @@ worldcup_agent/llm_agent/snapshot_writer.py
 - LLM predictor
 - 赛事推进函数
 
-### 6. multi-agent 辅助层
+### 7. multi-agent 辅助层
 
 位置：
 
@@ -202,7 +226,7 @@ worldcup_agent/multi_agent/
 - 共享 `WorldState`
 - ReAct 风格 observe/think/act/evaluate 执行记录
 
-### 7. 前端可视化层
+### 8. 前端可视化层
 
 位置：
 
@@ -306,7 +330,6 @@ npm run dev -- -p 3000
 
 ### 中优先级
 
-- 将冠军概率从单一路径推演升级为多样本模拟，例如多次 LLM 采样或 LLM + Elo Monte Carlo 融合。
 - 扩展数据源：伤病、近期国家队比赛、球员出场时间、赛程城市和旅行距离。
 - 将旧 `worldcup_agent/prediction` 和过期文档标注 legacy 或归档。
 - 为 `.env.local` 增加更细的配置说明，例如不同 provider 的 endpoint 示例和故障排查表。

@@ -68,7 +68,6 @@ TP-1: Frontend Foundation has been completed. A production-ready Next.js 15 proj
 - [x] `app/page.tsx` - Home page (skeleton)
 - [x] `app/tournament/page.tsx` - Tournament page (skeleton)
 - [x] `app/match/page.tsx` - Match page (skeleton)
-- [x] `app/compare/page.tsx` - Compare page (skeleton)
 
 ### Theme
 - [x] `styles/globals.css` - CSS variables for colors, typography, spacing
@@ -92,7 +91,6 @@ frontend/src/
 │   ├── page.tsx
 │   ├── tournament/page.tsx
 │   ├── match/page.tsx
-│   └── compare/page.tsx
 ├── components/
 │   ├── business/
 │   │   ├── MatchCard.tsx
@@ -197,7 +195,7 @@ feat(frontend): initialize frontend foundation
 - Establish UI Adapter pattern with Loader/Adapter/ViewModel layers
 - Create TypeScript type definitions for latest.json and UI models
 - Build component skeleton (Business + Presentation layers)
-- Set up routes (Home, Tournament, Match, Compare)
+- Set up routes (Home, Tournament, Match)
 - Configure CSS variables and design tokens
 - Add Snapshot Contract Test
 - No backend modifications (Backend Freeze verified)

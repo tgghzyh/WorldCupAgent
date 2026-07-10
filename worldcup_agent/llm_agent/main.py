@@ -18,16 +18,27 @@ def main() -> None:
         help="Fail if no LLM_API_KEY, OPENAI_API_KEY, or DASHSCOPE_API_KEY is set",
     )
     parser.add_argument("--limit", type=int, default=None, help="Only update the first N matches")
+    parser.add_argument("--skip-reflection", action="store_true", help="Skip the final LLM reflection pass")
+    parser.add_argument("--skip-simulation", action="store_true", help="Skip Monte Carlo tournament simulation")
+    parser.add_argument("--simulation-runs", type=int, default=None, help="Monte Carlo tournament samples")
     args = parser.parse_args()
 
-    kwargs = {"require_llm": args.require_llm, "match_limit": args.limit}
+    kwargs = {
+        "require_llm": args.require_llm,
+        "match_limit": args.limit,
+        "skip_reflection": args.skip_reflection,
+        "skip_simulation": args.skip_simulation,
+        "simulation_runs": args.simulation_runs,
+    }
     if args.snapshot:
         kwargs["snapshot_path"] = args.snapshot
 
     result = update_snapshot_with_llm_predictions(**kwargs)
     print(
         "LLM snapshot update complete: "
-        f"{result.matches_updated} matches, provider={result.provider}, model={result.model}, "
+        f"{result.teams_profiled} teams profiled, {result.matches_updated} matches predicted, "
+        f"{result.matches_reflected} matches reflected, {result.simulation_iterations} simulations, "
+        f"provider={result.provider}, model={result.model}, "
         f"duration={result.duration_ms}ms"
     )
 

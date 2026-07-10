@@ -1,22 +1,25 @@
 # WorldCupAgent Frontend
 
-这是世界杯冠军预测 Agent 的 Next.js 展示层。前端不直接调用 LLM，也不重新计算赛果，而是读取后端生成并同步过来的 prediction snapshot。
+Next.js 展示层。前端不调用 LLM、不重新计算赛果；它读取由后端 Agent 生成的规范快照，并把冠军预测、球队画像、赛程树、比分和推理依据展示给用户。
 
-## 数据来源
-
-前端读取：
+## 数据流
 
 ```text
-frontend/public/data/snapshots/latest.json
+data/snapshots/latest.json
+  -> scripts/sync_snapshot_to_frontend.py
+  -> public/data/snapshots/latest.json
+  -> snapshot.loader.ts
+  -> snapshot-to-bracket.ts
+  -> Dashboard / Schedule / MatchDetailDrawer
 ```
 
-该文件由项目根目录脚本同步：
+完整后端流程会自动同步前端快照：
 
 ```powershell
 python scripts\generate_and_sync.py --require-llm
 ```
 
-或仅同步已有后端快照：
+只同步已有快照：
 
 ```powershell
 python scripts\sync_snapshot_to_frontend.py
@@ -24,72 +27,74 @@ python scripts\sync_snapshot_to_frontend.py
 
 ## 页面
 
-- `/`: 冠军预测总览、Top 5 争冠队、更新时间、快捷入口
-- `/schedule`: 小组积分、完整淘汰赛树、比赛详情弹窗
-- `/teams`: 球队浏览和搜索入口
-- `/data`: 数据来源、快照状态、比赛数量统计
-- `/agent`: 最近一次 multi-agent 辅助运行结果和质量检查
-- `/real-schedule`: 真实世界杯赛程信息说明
-- `/compare`, `/match`, `/demo`, `/tournament`: 保留展示页面
+| 路由 | 用途 |
+| --- | --- |
+| `/` | 冠军预测总览、争冠队、更新时间和快捷入口 |
+| `/schedule` | 小组积分、32 强淘汰赛树，以及可点击的比赛节点 |
+| `/teams` | 48 支球队的 LLM 实力画像、优势风险和关键球员 |
+| `/data` | DataForAgent、预测快照和同步状态 |
+| `/agent` | multi-agent 辅助运行记录、数据覆盖与质量检查 |
+| `/real-schedule` | 与预测树分离的真实赛事日历说明 |
+| `/match` | 单场预测展示页 |
+| `/tournament` | 冠军晋级路径展示页 |
+| `/demo` | 项目演示引导页 |
 
-## 核心文件
+赛程页点击小组赛或淘汰赛比赛后，`MatchDetailDrawer` 展示：预测比分、双方胜率、LLM 推理摘要、结构化原因因素、概率模型基线、LLM 反思、数据对比和推理时间。
+
+## 核心实现
 
 ```text
-src/app/page.tsx
-src/app/schedule/page.tsx
-src/app/data/page.tsx
-src/app/agent/page.tsx
-
 src/lib/tournament/loader/snapshot.loader.ts
+  读取 public 快照
+
 src/lib/tournament/types/latest-json.types.ts
+  后端快照 TypeScript 类型
+
 src/lib/world-cup-bracket/snapshot-to-bracket.ts
-src/lib/world-cup-bracket/types.ts
+  将快照转换为前端赛程树 UI 模型
+
+src/components/world-cup-bracket/
+  WorldCupBracketView.tsx  赛程主视图
+  GroupStageGrid.tsx       分组、积分与小组赛详情入口
+  KnockoutBracket.tsx      淘汰赛树
+  MatchNode.tsx            可点击比赛节点
+  MatchDetailDrawer.tsx    推理详情弹窗
+  CountryFlag.tsx          国家旗帜展示
 
 src/components/dashboard/PredictionDashboard.tsx
-src/components/world-cup-bracket/WorldCupBracketView.tsx
-src/components/world-cup-bracket/GroupStageGrid.tsx
-src/components/world-cup-bracket/KnockoutBracket.tsx
-src/components/world-cup-bracket/MatchDetailDrawer.tsx
+  首页冠军与争冠队概览
 ```
 
-## 数据转换
+## 快照字段
 
-后端 snapshot 与前端 UI 类型之间的转换集中在：
+前端依赖以下后端字段：
 
-```text
-src/lib/world-cup-bracket/snapshot-to-bracket.ts
-```
+- 基础赛果：`predicted_score`、`winner`、`home_win_prob`、`draw_prob`、`away_win_prob`、`confidence`
+- 解释：`reasoning`、`llm_reasoning_factors`、`llm_reflection`
+- 概率基线：`probability_model`
+- 球队画像：`team_intelligence`
+- 模拟结果：`simulation`、`monte_carlo_simulations`、`monte_carlo_modal_champion`
 
-该转换层负责：
+其中 `champion` 是确定性赛程树的决赛胜者；首页的“蒙特卡洛夺冠概率 Top 5”读取 `simulation.champion_probabilities`，用于表达不确定性分布，不能替代冠军路径页的单一路径结论。
 
-- 将小组赛 match 转成可点击的 `BracketMatch`
-- 将 `round_of_32`、16 强、8 强、半决赛、决赛转成赛程树
-- 将 LLM 输出的 `llm_reasoning_factors` 映射到比赛详情弹窗
-- 为中文球队名生成稳定 id，避免 React key 重复
-- 将冠军概率转成首页 Top 5 展示数据
+新增后端字段时，应同步更新 `latest-json.types.ts` 与 `snapshot-to-bracket.ts`，并为缺失字段保留明确的降级显示。
 
-## 技术栈
+## 国际化与视觉约定
 
-- Next.js App Router
-- React 19
-- TypeScript
-- Tailwind CSS
-- lucide-react
-- Recharts
-- 自定义 i18n
+- UI 使用自定义 i18n，翻译资源在 `src/i18n/zh.json` 与 `src/i18n/en.json`。
+- 语言选择写入 `localStorage`，首屏以确定性默认语言渲染，避免 hydration mismatch。
+- 中文模式会翻译静态界面、轮次、小组标签、晋级规则与比赛详情控件；LLM 原始推理文本按快照内容展示，不由前端改写。
+- 球队以国旗替代英文三字母缩写；FlagCDN 已在 `next.config.ts` 配置为远程图片来源。
 
 ## 本地运行
 
 ```powershell
 cd frontend
+npm install
 npm run dev -- -p 3000
 ```
 
-访问：
-
-```text
-http://localhost:3000
-```
+访问 `http://localhost:3000`。
 
 ## 校验
 
@@ -99,9 +104,6 @@ npm run lint
 npm run build
 ```
 
-## 维护约定
+## 展示边界
 
-- 前端只展示 `latest.json` 中的预测结果，不在组件内重新预测或修正赛果。
-- 新增 snapshot 字段时，同步更新 `latest-json.types.ts` 和 `snapshot-to-bracket.ts`。
-- 新增可点击比赛信息时，确保 `MatchDetailDrawer` 可以展示对应 reasoning。
-- 涉及时间格式时使用确定性格式，避免 SSR hydration mismatch。
+前端忠实展示后端快照，不在组件中修正预测。赛制、比分或胜者规则变更后，必须通过根目录的完整生成流程重新生成并同步快照；不要在前端掩盖数据问题。`/real-schedule` 也不应与 Agent 预测赛程混为一谈。

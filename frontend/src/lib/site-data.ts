@@ -3,7 +3,6 @@ import {
   BarChart3,
   Brain,
   CalendarClock,
-  GitCompare,
   Home,
   LineChart,
   Medal,
@@ -35,7 +34,6 @@ export const navItems: NavItem[] = [
   { label: "Home", href: "/", icon: Home },
   { label: "Match", href: "/match", icon: Activity },
   { label: "Tournament", href: "/tournament", icon: Trophy },
-  { label: "Compare", href: "/compare", icon: GitCompare },
   { label: "Demo", href: "/demo", icon: Sparkles },
 ];
 
@@ -99,18 +97,35 @@ export const trustSignals = [
   { label: "Explainability", value: "Factor-based", icon: ShieldCheck },
 ];
 
-export const compareChanges = [
-  { subject: "Argentina champion probability", before: "39%", after: "42%", delta: "+3.0pp", direction: "up" },
-  { subject: "Spain finalist probability", before: "31%", after: "34%", delta: "+3.0pp", direction: "up" },
-  { subject: "Brazil semi-final probability", before: "48%", after: "45%", delta: "-3.0pp", direction: "down" },
-  { subject: "Mexico upset chance vs Argentina", before: "17%", after: "20%", delta: "+3.0pp", direction: "up" },
-];
-
 export const demoSteps = [
-  { title: "Champion answer", text: "Open with the projected champion and the probability range.", icon: Trophy },
-  { title: "Match reasoning", text: "Show one match and explain the model factors in plain language.", icon: LineChart },
-  { title: "Tournament path", text: "Walk through the bracket route and identify unstable rounds.", icon: Medal },
-  { title: "Trust layer", text: "Close with freshness, simulations, and explainability signals.", icon: ShieldCheck },
+  {
+    title: "Champion answer",
+    titleZh: "冠军结论",
+    text: "Open with the projected champion and the probability range.",
+    textZh: "从预测冠军及其夺冠概率区间开始展示。",
+    icon: Trophy,
+  },
+  {
+    title: "Match reasoning",
+    titleZh: "单场推理",
+    text: "Show one match and explain the model factors in plain language.",
+    textZh: "选取一场比赛，用清晰语言说明模型判断因素。",
+    icon: LineChart,
+  },
+  {
+    title: "Tournament path",
+    titleZh: "晋级路径",
+    text: "Walk through the bracket route and identify unstable rounds.",
+    textZh: "沿赛程树查看晋级路线，并定位不确定性较高的轮次。",
+    icon: Medal,
+  },
+  {
+    title: "Trust layer",
+    titleZh: "可信依据",
+    text: "Close with freshness, simulations, and explainability signals.",
+    textZh: "最后展示数据新鲜度、模拟结果与可解释性依据。",
+    icon: ShieldCheck,
+  },
 ];
 
 export function formatPercent(value: number): string {

@@ -44,16 +44,26 @@ def validate_inputs() -> None:
     )
 
 
-def run_llm_prediction_layer(require_llm: bool = False, match_limit: int | None = None) -> None:
+def run_llm_prediction_layer(
+    require_llm: bool = False,
+    match_limit: int | None = None,
+    skip_reflection: bool = False,
+    skip_simulation: bool = False,
+    simulation_runs: int | None = None,
+) -> None:
     from worldcup_agent.llm_agent import update_snapshot_with_llm_predictions
 
     result = update_snapshot_with_llm_predictions(
         require_llm=require_llm,
         match_limit=match_limit,
+        skip_reflection=skip_reflection,
+        skip_simulation=skip_simulation,
+        simulation_runs=simulation_runs,
     )
     print(
         "LLM prediction layer: "
-        f"{result.matches_updated} matches updated "
+        f"{result.teams_profiled} teams profiled, {result.matches_updated} matches updated, "
+        f"{result.matches_reflected} matches reflected, {result.simulation_iterations} tournament simulations "
         f"via {result.provider}/{result.model}"
     )
 
@@ -91,6 +101,8 @@ def _allocate_counts(probabilities: dict[str, float], iterations: int) -> dict[s
 
 
 def calibrate_snapshot_from_agent_output(output_path: Path | None) -> None:
+    """Keep the multi-agent summary observational; it must not overwrite the bracket champion."""
+
     if not output_path:
         return
 
@@ -105,39 +117,13 @@ def calibrate_snapshot_from_agent_output(output_path: Path | None) -> None:
     if not calibrated:
         return
 
-    iterations = int(snapshot.get("monte_carlo_simulations") or 10_000)
-    numeric_probabilities: dict[str, float] = {}
-    for team, probability in calibrated.items():
-        if not isinstance(probability, (int, float)):
-            continue
-        numeric_probabilities[team] = float(probability)
-
-    if not numeric_probabilities:
-        return
-
-    probability_total = sum(numeric_probabilities.values()) or 1.0
-    numeric_probabilities = {
-        team: probability / probability_total
-        for team, probability in numeric_probabilities.items()
-    }
-    counts = _allocate_counts(numeric_probabilities, iterations)
-    formatted = {
-        team: f"{count}/{iterations} ({count / iterations * 100:.1f}%)"
-        for team, count in counts.items()
-    }
-    champion, champion_count = max(counts.items(), key=lambda item: item[1])
-    snapshot["champion"] = champion
-    snapshot["champion_probability"] = round(champion_count / iterations, 4)
-    snapshot["champion_probabilities"] = counts
-    snapshot["knockout_predictions"]["predicted_champion"] = champion
-    snapshot["knockout_predictions"]["champion_probability"] = f"{champion_count / iterations * 100:.1f}%"
-    snapshot["knockout_predictions"]["champion_probabilities"] = formatted
-
-    with SNAPSHOT.open("w", encoding="utf-8") as f:
-        json.dump(snapshot, f, ensure_ascii=False, indent=2)
-        f.write("\n")
-
-    print("Calibrated degenerate champion probabilities from multi-agent output")
+    modal_champion = max(calibrated, key=calibrated.get)
+    bracket_champion = snapshot.get("champion")
+    if modal_champion != bracket_champion:
+        print(
+            "Multi-agent Monte Carlo modal champion differs from the deterministic bracket projection: "
+            f"simulation={modal_champion}, bracket={bracket_champion}. Snapshot left unchanged."
+        )
 
 
 def run_multi_agent() -> Path:
@@ -199,6 +185,22 @@ def main() -> None:
         help="Only update the first N matches through the LLM layer.",
     )
     parser.add_argument(
+        "--skip-reflection",
+        action="store_true",
+        help="Skip the final LLM consistency review; useful for a faster partial run.",
+    )
+    parser.add_argument(
+        "--skip-simulation",
+        action="store_true",
+        help="Skip Monte Carlo tournament simulation; useful for a faster partial run.",
+    )
+    parser.add_argument(
+        "--simulation-runs",
+        type=int,
+        default=None,
+        help="Number of complete tournament samples; defaults to MONTE_CARLO_RUNS or 10000.",
+    )
+    parser.add_argument(
         "--build",
         action="store_true",
         help="Run frontend production build after syncing.",
@@ -210,6 +212,9 @@ def main() -> None:
         run_llm_prediction_layer(
             require_llm=args.require_llm,
             match_limit=args.llm_match_limit,
+            skip_reflection=args.skip_reflection,
+            skip_simulation=args.skip_simulation,
+            simulation_runs=args.simulation_runs,
         )
     output_path = None
     if not args.skip_agent:

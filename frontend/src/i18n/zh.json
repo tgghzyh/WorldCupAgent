@@ -13,8 +13,7 @@
     "champion": "冠军路径",
     "teams": "球队",
     "data": "数据",
-    "agent": "Agent 运行",
-    "compare": "对比"
+    "agent": "Agent 运行"
   },
   "dashboard": {
     "championForecast": "冠军预测",
@@ -26,11 +25,13 @@
     "viewReasoning": "查看完整推理链路",
     "toWin": "夺冠",
     "finalBranch": "来自当前预测赛程树的决赛分支概率",
+    "overallTitleProbability": "来自完整世界杯蒙特卡洛模拟的整体夺冠概率",
     "lastUpdated": "最后更新于 {time}",
     "refresh": "刷新",
     "refreshing": "刷新中",
-    "top5Eyebrow": "夺冠概率 Top 5",
-    "titleContenders": "冠军竞争者",
+    "top5Eyebrow": "蒙特卡洛夺冠概率 Top 5",
+    "titleContenders": "模拟概率竞争者",
+    "monteCarloProbability": "蒙特卡洛夺冠概率",
     "rank": "第 {rank} 名",
     "scheduleTree": "赛程树",
     "scheduleTreeText": "查看完整小组赛与淘汰赛预测，并打开每场比赛的推理详情。",
@@ -56,6 +57,20 @@
     "knockoutSubtitle": "包含最佳第三名交叉逻辑的 32 强赛程树",
     "wheelHelp": "滚轮缩放，拖拽平移",
     "mockGenerated": "预测生成于 {time}。已结束节点置灰，进行中节点高亮，未开赛节点保持清晰。"
+    ,"agentBadge": "冠军预测 Agent"
+    ,"uiBadge": "数据驱动界面"
+    ,"teamsCount": "球队"
+    ,"groupsCount": "小组"
+    ,"knockoutCount": "淘汰赛"
+    ,"matchPredictions": "比赛预测"
+    ,"points": "积分"
+    ,"goalDifference": "净胜球"
+    ,"actualScore": "实际比分"
+    ,"predictedScore": "预测比分"
+    ,"tbd": "待定"
+    ,"zoomIn": "放大"
+    ,"zoomOut": "缩小"
+    ,"resetView": "重置视图"
   },
   "realSchedule": {
     "eyebrow": "官方真实赛程",
@@ -80,6 +95,8 @@
   "drawer": {
     "home": "主队",
     "away": "客队",
+    "vs": "对阵",
+    "draw": "平局",
     "winProbability": "获胜概率 {value}%",
     "actualScore": "实际比分",
       "predictedScore": "预测比分",
@@ -88,6 +105,12 @@
       "low": "低置信度",
       "reasoningSummary": "Agent 分析结论",
       "reasoningFactors": "Agent 推理因素",
+      "probabilityBaseline": "实力模型基准概率",
+      "reflection": "预测反思复核",
+      "reflection_pass": "逻辑通过",
+      "reflection_caution": "需要关注",
+      "reflection_inconsistent": "发现不一致",
+      "logicScore": "逻辑评分 {value}/100",
     "contributionWeight": "贡献权重",
     "dataComparison": "数据对比",
     "agentReasoning": "Agent 推理时间：{time}",

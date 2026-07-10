@@ -82,6 +82,31 @@ def write_index() -> None:
                 **data.get("metadata", {}).get("totals", {}),
             }
 
+        # The 2026 roster is produced by its dedicated normalizer rather than
+        # ``worldcup_normalizer``. Keep it in the public data contract whenever
+        # the general pipeline refreshes the index.
+        squad_path = wc_dir / "wc_2026_squad_normalized.json"
+        if squad_path.exists():
+            with open(squad_path, "r", encoding="utf-8") as f:
+                squad_data = json.load(f)
+            stats = squad_data.get("stats", {})
+            squads = squad_data.get("squads", {})
+            index["datasets"]["wc2026_squad"] = {
+                "file": str(squad_path.relative_to(DATA_PROCESSED_PATH.parent)),
+                "groups": stats.get("groups", len(squads)),
+                "teams": stats.get(
+                    "teams", sum(len(teams) for teams in squads.values())
+                ),
+                "total_players": stats.get(
+                    "total_players",
+                    sum(
+                        len(team.get("players", []))
+                        for teams in squads.values()
+                        for team in teams.values()
+                    ),
+                ),
+            }
+
     index_path = DATA_PROCESSED_PATH / "index.json"
     with open(index_path, "w", encoding="utf-8") as f:
         json.dump(index, f, ensure_ascii=False, indent=2)

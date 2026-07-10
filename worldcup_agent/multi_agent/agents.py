@@ -65,7 +65,11 @@ def _is_degenerate_distribution(probabilities: dict[str, float]) -> bool:
 def _snapshot_champion_probabilities(snapshot: dict[str, Any]) -> dict[str, float]:
     probabilities: dict[str, float] = {}
     simulations = int(snapshot.get("monte_carlo_simulations") or 0)
-    for team, raw in snapshot.get("champion_probabilities", {}).items():
+    raw_probabilities = (
+        snapshot.get("simulation", {}).get("champion_probabilities")
+        or snapshot.get("champion_probabilities", {})
+    )
+    for team, raw in raw_probabilities.items():
         value = _parse_snapshot_probability(raw, simulations)
         if value is None:
             continue
@@ -196,7 +200,7 @@ class AnalysisAgent(BaseAgent):
 
 
 class SimulationAgent(BaseAgent):
-    """Builds a tournament-level prediction summary."""
+    """Summarizes the true tournament Monte Carlo result stored in the snapshot."""
 
     def __init__(self, default_runs: int = 10_000) -> None:
         super().__init__("simulation_agent", "Runs tournament simulation summary")
@@ -204,18 +208,25 @@ class SimulationAgent(BaseAgent):
 
     @property
     def system_prompt(self) -> str:
-        return "Estimate tournament outcomes from analyzed team strengths."
+        return "Summarize the canonical Monte Carlo tournament distribution and its modal champion."
 
     def observe(self, state: WorldState) -> dict:
         return {"strengths": len(state.predictions.get("team_strengths", {}))}
 
     def think(self, observation: dict, state: WorldState) -> str:
-        return "Use canonical snapshot probabilities when present; otherwise derive a softmax fallback."
+        return "Use canonical Monte Carlo probabilities; only use a softmax fallback for legacy snapshots without a simulation result."
 
     def act(self, thought: str, state: WorldState) -> tuple[Any, str]:
         snapshot = _load_latest_snapshot()
         champion_probabilities = _snapshot_champion_probabilities(snapshot)
-        if not champion_probabilities or _is_degenerate_distribution(champion_probabilities):
+        simulation = snapshot.get("simulation", {})
+        has_monte_carlo = bool(
+            simulation.get("model_version")
+            and simulation.get("iterations")
+            and champion_probabilities
+            and not _is_degenerate_distribution(champion_probabilities)
+        )
+        if not has_monte_carlo:
             strengths = state.predictions.get("team_strengths", {})
             champion_probabilities = _calibrated_probabilities_from_strengths(
                 strengths,
@@ -235,12 +246,14 @@ class SimulationAgent(BaseAgent):
                 )
             },
             "source_snapshot": snapshot.get("prediction_version"),
+            "simulation_model": simulation.get("model_version") if has_monte_carlo else "legacy_strength_softmax_fallback",
+            "simulation_mode": "monte_carlo" if has_monte_carlo else "fallback",
         }
 
         state.simulation_results = result
         state.monte_carlo_runs = int(snapshot.get("monte_carlo_simulations") or self.default_runs)
         state.predictions["tournament"] = result
-        return result, f"Predicted champion: {champion}"
+        return result, f"Monte Carlo champion: {champion}" if has_monte_carlo else f"Fallback champion: {champion}"
 
     def evaluate(self, result: Any, state: WorldState) -> bool:
         return isinstance(result, dict) and bool(result.get("predicted_champion"))

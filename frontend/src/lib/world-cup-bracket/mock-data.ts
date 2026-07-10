@@ -9,6 +9,15 @@ import type {
   WorldCupBracketData,
 } from "./types";
 
+const FLAG_CODES: Record<string, string> = {
+  ALG: "dz", ARG: "ar", AUS: "au", AUT: "at", BEL: "be", BFA: "bf", BOL: "bo", BRA: "br",
+  CAN: "ca", CIV: "ci", CMR: "cm", COL: "co", CRC: "cr", CRO: "hr", DEN: "dk", ECU: "ec",
+  EGY: "eg", ENG: "gb-eng", ESP: "es", FRA: "fr", GER: "de", GHA: "gh", GRE: "gr", IRN: "ir",
+  ITA: "it", JAM: "jm", JPN: "jp", KOR: "kr", MAR: "ma", MEX: "mx", NED: "nl", NGA: "ng",
+  NZL: "nz", PAN: "pa", PAR: "py", PER: "pe", POR: "pt", QAT: "qa", RSA: "za", SCO: "gb-sct",
+  SEN: "sn", SRB: "rs", SWE: "se", TUN: "tn", URU: "uy", USA: "us", WAL: "gb-wls", ZAM: "zm",
+};
+
 const teams: Team[] = [
   ["arg", "Argentina", "ARG", "🇦🇷"], ["mex", "Mexico", "MEX", "🇲🇽"], ["ecu", "Ecuador", "ECU", "🇪🇨"], ["jam", "Jamaica", "JAM", "🇯🇲"],
   ["usa", "United States", "USA", "🇺🇸"], ["uru", "Uruguay", "URU", "🇺🇾"], ["kor", "South Korea", "KOR", "🇰🇷"], ["gha", "Ghana", "GHA", "🇬🇭"],
@@ -22,7 +31,7 @@ const teams: Team[] = [
   ["ita", "Italy", "ITA", "🇮🇹"], ["den", "Denmark", "DEN", "🇩🇰"], ["cmr", "Cameroon", "CMR", "🇨🇲"], ["par", "Paraguay", "PAR", "🇵🇾"],
   ["bel", "Belgium", "BEL", "🇧🇪"], ["swe", "Sweden", "SWE", "🇸🇪"], ["nga", "Nigeria", "NGA", "🇳🇬"], ["bf", "Burkina Faso", "BFA", "🇧🇫"],
   ["aut", "Austria", "AUT", "🇦🇹"], ["irn", "Iran", "IRN", "🇮🇷"], ["gre", "Greece", "GRE", "🇬🇷"], ["zam", "Zambia", "ZAM", "🇿🇲"],
-].map(([id, name, code, flag]) => ({ id, name, code, flag }));
+].map(([id, name, code]) => ({ id, name, code, flagCode: FLAG_CODES[code] ?? "" }));
 
 const teamById = Object.fromEntries(teams.map((team) => [team.id, team]));
 

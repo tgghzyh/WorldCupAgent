@@ -172,6 +172,7 @@ export function getStageName(stage: string, locale: Locale): string {
     "Semi-finals": "stages.semi_finals",
     "Final": "stages.final",
     "Third Place": "stages.third_place",
+    "Third place": "stages.third_place",
   };
 
   const key = stageKeyMap[stage];

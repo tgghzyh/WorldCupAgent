@@ -23,10 +23,10 @@ export function WorldCupBracketView({ data, showIntro = true }: WorldCupBracketV
               <div>
                 <div className="flex flex-wrap gap-2">
                   <Badge className="border-[color:var(--brand-red)] bg-[rgba(197,48,48,0.08)] text-[color:var(--brand-red)]">
-                    Champion Agent
+                    {t("schedule.agentBadge")}
                   </Badge>
                   <Badge className="border-[color:var(--brand-blue)] bg-[rgba(10,102,194,0.08)] text-[color:var(--brand-blue)]">
-                    Props-driven UI
+                    {t("schedule.uiBadge")}
                   </Badge>
                 </div>
                 <h1 className="mt-5 max-w-4xl text-4xl font-semibold tracking-normal md:text-6xl">
@@ -39,15 +39,15 @@ export function WorldCupBracketView({ data, showIntro = true }: WorldCupBracketV
               <div className="grid grid-cols-3 gap-2 rounded-lg border border-[color:var(--border)] bg-[rgba(255,251,244,0.72)] p-3 text-center">
                 <div>
                   <p className="text-2xl font-semibold">48</p>
-                  <p className="text-xs text-[color:var(--muted)]">Teams</p>
+                  <p className="text-xs text-[color:var(--muted)]">{t("schedule.teamsCount")}</p>
                 </div>
                 <div>
                   <p className="text-2xl font-semibold">12</p>
-                  <p className="text-xs text-[color:var(--muted)]">Groups</p>
+                  <p className="text-xs text-[color:var(--muted)]">{t("schedule.groupsCount")}</p>
                 </div>
                 <div>
                   <p className="text-2xl font-semibold">32</p>
-                  <p className="text-xs text-[color:var(--muted)]">Knockout</p>
+                  <p className="text-xs text-[color:var(--muted)]">{t("schedule.knockoutCount")}</p>
                 </div>
               </div>
             </div>

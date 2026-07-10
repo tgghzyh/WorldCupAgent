@@ -1,5 +1,8 @@
 import { Activity, Clock, Lock, Trophy } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+import { CountryFlag } from "@/components/world-cup-bracket/CountryFlag";
+import { LocalizedText } from "@/components/LocalizedText";
+import { useI18n } from "@/i18n";
 import { cn } from "@/lib/utils";
 import type { BracketMatch, BracketTeamSlot } from "@/lib/world-cup-bracket/types";
 
@@ -25,7 +28,7 @@ function TeamRow({
         isWinner && "bg-[rgba(4,120,87,0.10)] text-[color:var(--green)]"
       )}
     >
-      <span className={cn("text-lg leading-none", muted && "grayscale")}>{slot.team.flag}</span>
+      <CountryFlag team={slot.team} className={cn(muted && "grayscale")} />
       <span className="min-w-0 truncate text-sm font-medium">{slot.team.name}</span>
       <span className="text-right text-xs tabular-nums text-[color:var(--muted)]">
         {Math.round(slot.probability * 100)}%
@@ -38,9 +41,10 @@ function TeamRow({
 }
 
 export function MatchNode({ match, compact = false, onSelect }: MatchNodeProps) {
+  const { t } = useI18n();
   const isCompleted = match.status === "completed";
   const isLive = match.status === "live";
-  const score = match.actualScore ?? match.predictedScore ?? "TBD";
+  const score = match.actualScore ?? match.predictedScore ?? t("schedule.tbd");
 
   return (
     <article
@@ -56,7 +60,7 @@ export function MatchNode({ match, compact = false, onSelect }: MatchNodeProps) 
         type="button"
         data-pan-ignore="true"
         data-testid={`match-node-${match.id}`}
-        aria-label={`Open details for ${match.home.team.name} vs ${match.away.team.name}`}
+        aria-label={`${match.home.team.name} ${t("drawer.vs")} ${match.away.team.name}`}
         className="absolute inset-0 z-10 cursor-pointer rounded-lg focus-visible:ring-2 focus-visible:ring-[color:var(--brand-blue)]"
         onClick={() => onSelect?.(match)}
       />
@@ -93,7 +97,7 @@ export function MatchNode({ match, compact = false, onSelect }: MatchNodeProps) 
 
       <div className="mt-3 flex items-center justify-between border-t border-[rgba(226,212,193,0.7)] pt-2">
         <span className="text-xs text-[color:var(--muted)]">
-          {match.actualScore ? "Actual score" : "Predicted score"}
+          {match.actualScore ? <LocalizedText en="Actual score" zh="实际比分" /> : <LocalizedText en="Predicted score" zh="预测比分" />}
         </span>
         <span className="flex items-center gap-1 font-mono text-sm font-semibold text-[color:var(--text)]">
           {match.stage === "final" && <Trophy className="h-3.5 w-3.5 text-[color:var(--gold)]" />}

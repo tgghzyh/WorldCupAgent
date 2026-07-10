@@ -23,6 +23,8 @@ export interface GroupMatch {
   llm_model?: string;
   llm_prompt_version?: string;
   llm_reasoning_factors?: LLMReasoningFactor[];
+  probability_model?: MatchProbabilityModel;
+  llm_reflection?: PredictionReflection;
 }
 
 export interface Standing {
@@ -62,6 +64,8 @@ export interface KnockoutMatch {
   llm_model?: string;
   llm_prompt_version?: string;
   llm_reasoning_factors?: LLMReasoningFactor[];
+  probability_model?: MatchProbabilityModel;
+  llm_reflection?: PredictionReflection;
 }
 
 export interface LLMReasoningFactor {
@@ -70,6 +74,67 @@ export interface LLMReasoningFactor {
   label: string;
   description: string;
   weight: number;
+}
+
+export interface TeamIntelligence {
+  team: string;
+  group?: string;
+  ranking?: {
+    fifa_rank?: number | null;
+    elo?: number | null;
+  };
+  overall_strength: number;
+  components: Record<"attack" | "defense" | "midfield" | "squad_depth" | "coach_tactics" | "tournament_experience" | "form", number>;
+  tactical_profile: string;
+  strengths: string[];
+  risks: string[];
+  key_players: string[];
+  summary: string;
+  evidence: string[];
+  data_confidence: "High" | "Medium" | "Low";
+  source: string;
+  llm_provider?: string;
+  llm_model?: string;
+  llm_prompt_version?: string;
+}
+
+export interface MatchProbabilityModel {
+  model_version: string;
+  method: string;
+  home_win_prob: number;
+  draw_prob: number;
+  away_win_prob: number;
+  home_rating?: number;
+  away_rating?: number;
+  home_advantage?: number;
+}
+
+export interface PredictionReflection {
+  verdict: "pass" | "caution" | "inconsistent";
+  logic_score: number;
+  summary: string;
+  checks: Array<{
+    dimension: "probability" | "score" | "evidence" | "bracket";
+    verdict: "pass" | "caution" | "inconsistent";
+    note: string;
+  }>;
+  llm_provider?: string;
+  llm_model?: string;
+  llm_prompt_version?: string;
+}
+
+export interface MonteCarloSimulation {
+  model_version: string;
+  iterations: number;
+  seed: number;
+  modal_champion?: string;
+  modal_champion_probability?: number;
+  champion_counts: Record<string, number>;
+  champion_probabilities: Record<string, number>;
+  runner_up_probabilities: Record<string, number>;
+  third_place_probabilities: Record<string, number>;
+  group_qualification_probabilities: Record<string, number>;
+  advancement_probabilities: Record<string, Record<string, number>>;
 }
 
 export interface KnockoutRounds {
@@ -112,6 +177,8 @@ export interface Snapshot {
   group_predictions: Record<string, GroupData>;
   knockout_predictions: KnockoutPredictions;
   champion_probabilities: Record<string, string>;
+  team_intelligence?: Record<string, TeamIntelligence>;
+  simulation?: MonteCarloSimulation;
   reasoning_chain: ReasoningChainEntry[];
   llm_analysis: string;
   created_by: string;

@@ -11,6 +11,7 @@ import {
   ShieldCheck,
   Trophy,
 } from "lucide-react";
+import { LocalizedText } from "@/components/LocalizedText";
 
 type AgentTrace = {
   agent?: string;
@@ -93,7 +94,7 @@ function Stat({
   value,
   icon: Icon,
 }: {
-  label: string;
+  label: React.ReactNode;
   value: string | number;
   icon: React.ElementType;
 }) {
@@ -117,7 +118,7 @@ function StatusPill({ ok }: { ok: boolean }) {
           : "rounded-full bg-[rgba(248,81,73,0.14)] px-2.5 py-1 text-xs font-medium text-red"
       }
     >
-      {ok ? "pass" : "check"}
+      {ok ? <LocalizedText en="Pass" zh="通过" /> : <LocalizedText en="Check" zh="待检查" />}
     </span>
   );
 }
@@ -130,7 +131,7 @@ export default function AgentPage() {
       <main className="page-shell min-h-screen px-4 py-12 md:px-6">
         <section className="mx-auto max-w-5xl rounded-lg border border-[color:var(--border)] bg-[color:var(--surface)] p-8">
           <BrainCircuit className="h-8 w-8 text-red" />
-          <h1 className="mt-6 text-3xl font-semibold">Agent run unavailable</h1>
+          <h1 className="mt-6 text-3xl font-semibold"><LocalizedText en="Agent run unavailable" zh="Agent 运行记录不可用" /></h1>
           <p className="mt-3 text-sm leading-6 text-[color:var(--muted)]">{error}</p>
         </section>
       </main>
@@ -161,51 +162,49 @@ export default function AgentPage() {
                   {filename}
                 </span>
               </div>
-              <h1 className="mt-6 text-4xl font-semibold">Multi-agent run</h1>
+              <h1 className="mt-6 text-4xl font-semibold"><LocalizedText en="Multi-agent run" zh="多 Agent 运行" /></h1>
               <p className="mt-4 max-w-3xl text-base leading-7 text-[color:var(--muted)]">
-                Latest pipeline execution from DataForAgent inputs through shared agent state, tournament
-                summary, explanation, and quality checks.
+                <LocalizedText en="Latest pipeline execution from DataForAgent inputs through shared agent state, tournament summary, explanation, and quality checks." zh="展示从 DataForAgent 输入、共享 Agent 状态到赛事摘要、解释与质量检查的最近一次管线运行。" />
               </p>
             </div>
             <div className="rounded-lg border border-[color:var(--border)] bg-[color:var(--surface2)] p-4 md:min-w-64">
-              <p className="text-xs text-[color:var(--muted)]">Generated</p>
-              <p className="mt-2 text-sm font-medium">{run.generated_at ?? "unknown"}</p>
+              <p className="text-xs text-[color:var(--muted)]"><LocalizedText en="Generated" zh="生成时间" /></p>
+              <p className="mt-2 text-sm font-medium">{run.generated_at ?? <LocalizedText en="Unknown" zh="未知" />}</p>
             </div>
           </div>
         </div>
 
         <section className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          <Stat icon={ShieldCheck} label="Quality score" value={pct(run.quality_score)} />
-          <Stat icon={DatabaseZap} label="Teams loaded" value={Object.keys(teams).length} />
-          <Stat icon={Activity} label="Agent steps" value={traces.length} />
-          <Stat icon={Trophy} label="Champion pick" value={tournament.predicted_champion ?? "unknown"} />
+          <Stat icon={ShieldCheck} label={<LocalizedText en="Quality score" zh="质量评分" />} value={pct(run.quality_score)} />
+          <Stat icon={DatabaseZap} label={<LocalizedText en="Teams loaded" zh="已加载球队" />} value={Object.keys(teams).length} />
+          <Stat icon={Activity} label={<LocalizedText en="Agent steps" zh="Agent 步骤" />} value={traces.length} />
+          <Stat icon={Trophy} label={<LocalizedText en="Champion pick" zh="冠军预测" />} value={tournament.predicted_champion ?? "-"} />
         </section>
 
         <section className="mt-6 grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
           <div className="rounded-lg border border-[color:var(--border)] bg-[color:var(--surface)] p-6">
             <div className="flex items-center gap-3">
               <Trophy className="h-5 w-5 text-gold" />
-              <h2 className="text-xl font-semibold">Tournament summary</h2>
+              <h2 className="text-xl font-semibold"><LocalizedText en="Tournament summary" zh="赛事模拟摘要" /></h2>
             </div>
-            <p className="mt-4 text-5xl font-semibold">{tournament.predicted_champion ?? "Unknown"}</p>
+            <p className="mt-4 text-5xl font-semibold">{tournament.predicted_champion ?? <LocalizedText en="Unknown" zh="未知" />}</p>
             <p className="mt-2 text-sm text-[color:var(--muted)]">
-              Champion probability {pct(tournament.champion_probability)} from {state.monte_carlo_runs ?? 0} simulation
-              runs.
+              <LocalizedText en={`Champion probability ${pct(tournament.champion_probability)} from ${state.monte_carlo_runs ?? 0} simulation runs.`} zh={`冠军概率 ${pct(tournament.champion_probability)}，基于 ${state.monte_carlo_runs ?? 0} 次模拟。`} />
             </p>
             <p className="mt-5 rounded-lg border border-[color:var(--border)] bg-[color:var(--surface2)] p-4 text-sm leading-6 text-[color:var(--muted)]">
-              {predictions.explanation ?? "No explanation generated."}
+              {predictions.explanation ?? <LocalizedText en="No explanation generated." zh="尚未生成解释。" />}
             </p>
           </div>
 
           <div className="rounded-lg border border-[color:var(--border)] bg-[color:var(--surface)] p-6">
             <div className="flex items-center gap-3">
               <DatabaseZap className="h-5 w-5 text-green" />
-              <h2 className="text-xl font-semibold">Data coverage</h2>
+              <h2 className="text-xl font-semibold"><LocalizedText en="Data coverage" zh="数据覆盖情况" /></h2>
             </div>
             <div className="mt-5 grid gap-3">
-              <Stat icon={FileClock} label="World Cup historical matches" value={dataSources.worldcup_matches ?? 0} />
-              <Stat icon={FileClock} label="League matches" value={dataSources.league_matches ?? 0} />
-              <Stat icon={DatabaseZap} label="Squad players" value={dataSources.squad_stats?.total_players ?? 0} />
+              <Stat icon={FileClock} label={<LocalizedText en="World Cup historical matches" zh="世界杯历史比赛" />} value={dataSources.worldcup_matches ?? 0} />
+              <Stat icon={FileClock} label={<LocalizedText en="League matches" zh="联赛比赛" />} value={dataSources.league_matches ?? 0} />
+              <Stat icon={DatabaseZap} label={<LocalizedText en="Squad players" zh="名单球员" />} value={dataSources.squad_stats?.total_players ?? 0} />
             </div>
             <div className="mt-4 flex flex-wrap gap-2">
               {(dataSources.datasets ?? []).map((dataset) => (
@@ -221,7 +220,7 @@ export default function AgentPage() {
           <div className="rounded-lg border border-[color:var(--border)] bg-[color:var(--surface)] p-6">
             <div className="flex items-center gap-3">
               <Route className="h-5 w-5 text-[color:var(--accent)]" />
-              <h2 className="text-xl font-semibold">Agent trace</h2>
+              <h2 className="text-xl font-semibold"><LocalizedText en="Agent trace" zh="Agent 运行轨迹" /></h2>
             </div>
             <div className="mt-5 space-y-3">
               {traces.map((trace, index) => (
@@ -234,7 +233,7 @@ export default function AgentPage() {
                     <StatusPill ok={trace.status === "success"} />
                   </div>
                   <p className="mt-3 text-xs text-[color:var(--muted)]">
-                    {trace.steps?.length ?? 0} ReAct steps / {Math.round(trace.duration_ms ?? 0)}ms
+                    <LocalizedText en={`${trace.steps?.length ?? 0} ReAct steps / ${Math.round(trace.duration_ms ?? 0)}ms`} zh={`${trace.steps?.length ?? 0} 个 ReAct 步骤 / ${Math.round(trace.duration_ms ?? 0)} 毫秒`} />
                   </p>
                 </article>
               ))}
@@ -244,7 +243,7 @@ export default function AgentPage() {
           <div className="rounded-lg border border-[color:var(--border)] bg-[color:var(--surface)] p-6">
             <div className="flex items-center gap-3">
               <CheckCircle2 className="h-5 w-5 text-green" />
-              <h2 className="text-xl font-semibold">Quality checks</h2>
+              <h2 className="text-xl font-semibold"><LocalizedText en="Quality checks" zh="质量检查" /></h2>
             </div>
             <div className="mt-5 space-y-3">
               {checks.map(([name, ok]) => (
@@ -256,7 +255,7 @@ export default function AgentPage() {
             </div>
 
             <div className="mt-6">
-              <h3 className="text-sm font-semibold text-[color:var(--muted)]">Top strength scores</h3>
+              <h3 className="text-sm font-semibold text-[color:var(--muted)]"><LocalizedText en="Top strength scores" zh="最高实力评分" /></h3>
               <div className="mt-3 space-y-2">
                 {topTeams.map(([team, data]) => (
                   <div key={team} className="grid grid-cols-[1fr_auto] items-center gap-3 text-sm">

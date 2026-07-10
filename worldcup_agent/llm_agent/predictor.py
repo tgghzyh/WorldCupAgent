@@ -3,7 +3,6 @@
 from __future__ import annotations
 
 import json
-import math
 from dataclasses import dataclass
 from typing import Any
 
@@ -15,11 +14,12 @@ from worldcup_agent.llm_agent.llm_client import (
 )
 
 
-PROMPT_VERSION = "llm_match_prediction_v1"
+PROMPT_VERSION = "llm_match_prediction_v3_monte_carlo_weighted"
 ALLOWED_FACTOR_TYPES = {"fitness", "tactical", "injury", "home", "form", "transition"}
 
 SYSTEM_PROMPT = """你是世界杯冠军预测 Agent 中的比赛分析专家。
 你必须根据输入的 DataForAgent 赛前数据、球队资料、教练资料、关键球员和主客场/赛程因素，预测单场比赛。
+输入中的 probability_model_baseline 由球队画像分项、Elo、排名和主队调整构成，必须作为概率起点；如需明显偏离，必须在 reasoning 中说明数据依据。
 不要输出思维链，只输出可解析 JSON。
 原因必须覆盖这些因素中的至少三类：执教教练/战术、关键球员、主客场或旅行、近期/历史状态、伤病或阵容不确定性。
 JSON schema:
@@ -35,7 +35,8 @@ JSON schema:
     {"type": "tactical|form|home|fitness|injury|transition", "label": "中文短标题", "description": "中文原因", "weight": 0.25}
   ]
 }
-概率必须是 0-1 小数，三项合计约等于 1。"""
+概率必须是 0-1 小数，三项合计约等于 1。
+若 match.match_type 为 knockout，winner 只能是 home 或 away，且 predicted_score 必须体现同一支胜队；不要输出平局或未说明的点球结果。"""
 
 
 @dataclass
@@ -48,6 +49,8 @@ class MatchPrediction:
     confidence: str
     reasoning: str
     reasoning_factors: list[dict[str, Any]]
+    probability_model: dict[str, Any]
+    monte_carlo_prior: dict[str, Any]
     model: str
     provider: str
     prompt_version: str = PROMPT_VERSION
@@ -61,6 +64,8 @@ class MatchPrediction:
             "confidence": self.confidence,
             "reasoning": self.reasoning,
             "llm_reasoning_factors": self.reasoning_factors,
+            "probability_model": self.probability_model,
+            "monte_carlo_prior": self.monte_carlo_prior,
             "llm_model": self.model,
             "llm_provider": self.provider,
             "llm_prompt_version": self.prompt_version,
@@ -99,24 +104,45 @@ class LLMMatchPredictor:
         model: str,
         provider: str,
     ) -> MatchPrediction:
-        home, draw, away = _normalize_probs(
+        raw_home, raw_draw, raw_away = _normalize_probs(
             _to_probability(raw.get("home_win_prob")),
             _to_probability(raw.get("draw_prob")),
             _to_probability(raw.get("away_win_prob")),
         )
-        winner = str(raw.get("winner") or "").lower()
-        if winner not in {"home", "away", "draw"}:
-            winner = "home" if home >= max(draw, away) else "away" if away >= max(home, draw) else "draw"
+        home, draw, away = _blend_with_monte_carlo(
+            raw_home,
+            raw_draw,
+            raw_away,
+            context.monte_carlo_prior,
+        )
+        winner = _winner_from_probabilities(
+            home,
+            draw,
+            away,
+            is_knockout=context.match_type == "knockout",
+        )
 
         confidence = str(raw.get("confidence") or _confidence_from_probs(home, draw, away)).title()
         if confidence not in {"High", "Medium", "Low"}:
             confidence = _confidence_from_probs(home, draw, away)
 
         factors = _clean_factors(raw.get("reasoning_factors"), context)
-        score = str(raw.get("predicted_score") or _score_from_winner(winner))
+        score, winner = _normalize_result(
+            str(raw.get("predicted_score") or _score_from_winner(winner)),
+            winner,
+            home,
+            draw,
+            away,
+            is_knockout=context.match_type == "knockout",
+        )
         reasoning = str(raw.get("reasoning") or "").strip()
         if len(reasoning) < 20:
             reasoning = _fallback_reasoning(context, winner)
+        elif (raw_home, raw_draw, raw_away) != (home, draw, away):
+            reasoning = (
+                f"{reasoning} 蒙特卡洛赛程先验按 "
+                f"{context.monte_carlo_prior.get('llm_prediction_weight', 0) * 100:.0f}% 权重校准最终概率。"
+            )
 
         return MatchPrediction(
             winner=winner,
@@ -127,25 +153,30 @@ class LLMMatchPredictor:
             confidence=confidence,
             reasoning=reasoning,
             reasoning_factors=factors,
+            probability_model=context.probability_baseline,
+            monte_carlo_prior=context.monte_carlo_prior,
             model=model,
             provider=provider,
         )
 
     def _fallback_prediction(self, context: MatchContext, provider: str) -> MatchPrediction:
-        home_elo = _num(context.home_profile.get("elo"), 1500)
-        away_elo = _num(context.away_profile.get("elo"), 1500)
-        rank_home = _num(context.home_profile.get("fifa_rank"), 80)
-        rank_away = _num(context.away_profile.get("fifa_rank"), 80)
-        elo_edge = (home_elo - away_elo) / 420
-        rank_edge = (rank_away - rank_home) / 65
-        home_bonus = 0.10
-        edge = max(-1.8, min(1.8, elo_edge + rank_edge + home_bonus))
-        home_raw = 1 / (1 + math.exp(-edge))
-        draw = max(0.16, min(0.28, 0.25 - abs(edge) * 0.025))
-        home = home_raw * (1 - draw)
-        away = 1 - home - draw
+        baseline = context.probability_baseline
+        home = _to_probability(baseline.get("home_win_prob"))
+        draw = _to_probability(baseline.get("draw_prob"))
+        away = _to_probability(baseline.get("away_win_prob"))
         home, draw, away = _normalize_probs(home, draw, away)
-        winner = "home" if home >= max(draw, away) else "away" if away >= max(home, draw) else "draw"
+        home, draw, away = _blend_with_monte_carlo(
+            home,
+            draw,
+            away,
+            context.monte_carlo_prior,
+        )
+        winner = _winner_from_probabilities(
+            home,
+            draw,
+            away,
+            is_knockout=context.match_type == "knockout",
+        )
 
         factors = _clean_factors(
             [
@@ -186,6 +217,8 @@ class LLMMatchPredictor:
             confidence=_confidence_from_probs(home, draw, away),
             reasoning=_fallback_reasoning(context, winner),
             reasoning_factors=factors,
+            probability_model=baseline,
+            monte_carlo_prior=context.monte_carlo_prior,
             model="deterministic_context_fallback",
             provider=provider,
         )
@@ -208,6 +241,39 @@ def _normalize_probs(home: float, draw: float, away: float) -> tuple[float, floa
     return tuple(round(v / total, 4) for v in values)  # type: ignore[return-value]
 
 
+def _blend_with_monte_carlo(
+    home: float,
+    draw: float,
+    away: float,
+    prior: dict[str, Any],
+) -> tuple[float, float, float]:
+    if not isinstance(prior, dict) or not prior.get("available"):
+        return _normalize_probs(home, draw, away)
+    weight = max(0.0, min(1.0, _to_probability(prior.get("llm_prediction_weight"))))
+    prior_home = _to_probability(prior.get("home_win_prob"))
+    prior_draw = _to_probability(prior.get("draw_prob"))
+    prior_away = _to_probability(prior.get("away_win_prob"))
+    if weight <= 0 or prior_home + prior_draw + prior_away <= 0:
+        return _normalize_probs(home, draw, away)
+    return _normalize_probs(
+        home * (1 - weight) + prior_home * weight,
+        draw * (1 - weight) + prior_draw * weight,
+        away * (1 - weight) + prior_away * weight,
+    )
+
+
+def _winner_from_probabilities(
+    home: float,
+    draw: float,
+    away: float,
+    *,
+    is_knockout: bool,
+) -> str:
+    if is_knockout:
+        return "home" if home >= away else "away"
+    return "home" if home >= max(draw, away) else "away" if away >= max(home, draw) else "draw"
+
+
 def _format_prob(value: float) -> str:
     return f"{value * 100:.1f}%"
 
@@ -227,6 +293,48 @@ def _score_from_winner(winner: str) -> str:
     if winner == "away":
         return "1-2"
     return "1-1"
+
+
+def _normalize_result(
+    score: str,
+    winner: str,
+    home_probability: float,
+    draw_probability: float,
+    away_probability: float,
+    *,
+    is_knockout: bool,
+) -> tuple[str, str]:
+    """Make the displayed score and the advancement winner a single coherent result."""
+
+    try:
+        home_goals, away_goals = (int(part.strip()) for part in score.split("-", 1))
+        if home_goals < 0 or away_goals < 0:
+            raise ValueError
+    except (TypeError, ValueError):
+        home_goals, away_goals = (2, 1) if winner == "home" else (1, 2) if winner == "away" else (1, 1)
+
+    if is_knockout and winner == "draw":
+        winner = "home" if home_probability >= away_probability else "away"
+
+    if winner == "home" and home_goals <= away_goals:
+        home_goals = away_goals + 1
+    elif winner == "away" and away_goals <= home_goals:
+        away_goals = home_goals + 1
+    elif winner == "draw" and home_goals != away_goals:
+        goals = min(home_goals, away_goals)
+        home_goals = goals
+        away_goals = goals
+
+    score_winner = "home" if home_goals > away_goals else "away" if away_goals > home_goals else "draw"
+    if is_knockout and score_winner == "draw":
+        winner = "home" if home_probability >= away_probability else "away"
+        if winner == "home":
+            home_goals += 1
+        else:
+            away_goals += 1
+        score_winner = winner
+
+    return f"{home_goals}-{away_goals}", score_winner
 
 
 def _num(value: Any, default: float) -> float:

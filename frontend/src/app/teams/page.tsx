@@ -1,7 +1,9 @@
 import fs from "node:fs";
 import path from "node:path";
 import { Activity, DatabaseZap, Search, ShieldCheck, Trophy, UsersRound } from "lucide-react";
+import { LocalizedText } from "@/components/LocalizedText";
 import { loadSnapshotSync } from "@/lib/tournament/loader/snapshot.loader";
+import type { TeamIntelligence } from "@/lib/tournament/types";
 
 type AgentTeam = {
   name?: string;
@@ -38,7 +40,7 @@ type TeamRow = {
   rank: number;
   qualified: boolean;
   strength: number;
-  titleProbability: number;
+  intelligence?: TeamIntelligence;
 };
 
 function readLatestAgentRun(): AgentRun | null {
@@ -60,29 +62,25 @@ function readLatestAgentRun(): AgentRun | null {
   }
 }
 
-function parseProbability(raw: unknown): number {
-  if (typeof raw === "number") return raw;
-  if (typeof raw !== "string") return 0;
-  const match = raw.match(/\(([\d.]+)%\)/);
-  if (match) return Number(match[1]) / 100;
-  if (raw.endsWith("%")) return Number(raw.replace("%", "")) / 100;
-  return 0;
+function clampProbability(value: number) {
+  return Math.max(0, Math.min(1, value));
 }
 
 function formatPercent(value: number) {
-  return `${Math.round(value * 100)}%`;
+  return `${Math.round(clampProbability(value) * 100)}%`;
 }
 
 function buildTeamRows(): { rows: TeamRow[]; agentRun: AgentRun | null } {
   const snapshot = loadSnapshotSync();
   const agentRun = readLatestAgentRun();
   const agentTeams = agentRun?.state?.teams ?? {};
-  const titleProbabilities = snapshot.champion_probabilities ?? {};
+  const intelligenceByTeam = snapshot.team_intelligence ?? {};
   const rows: TeamRow[] = [];
 
   for (const [groupName, group] of Object.entries(snapshot.group_predictions)) {
     group.standings.forEach((standing, index) => {
       const agentTeam = agentTeams[standing.team] ?? {};
+      const intelligence = intelligenceByTeam[standing.team];
       rows.push({
         name: standing.team,
         group: groupName,
@@ -90,8 +88,8 @@ function buildTeamRows(): { rows: TeamRow[]; agentRun: AgentRun | null } {
         goalDiff: standing.goal_diff,
         rank: index + 1,
         qualified: group.qualifiers.includes(standing.team),
-        strength: agentTeam.strength_score ?? 0,
-        titleProbability: parseProbability(titleProbabilities[standing.team]),
+        strength: intelligence ? intelligence.overall_strength / 100 : agentTeam.strength_score ?? 0,
+        intelligence,
       });
     });
   }
@@ -110,7 +108,7 @@ function Metric({
   value,
   icon: Icon,
 }: {
-  label: string;
+  label: React.ReactNode;
   value: string | number;
   icon: React.ElementType;
 }) {
@@ -139,81 +137,59 @@ function StrengthBar({ value }: { value: number }) {
 export default function TeamsPage() {
   const { rows, agentRun } = buildTeamRows();
   const squadStats = agentRun?.state?.predictions?.data_sources?.squad_stats;
-  const champion = agentRun?.state?.predictions?.tournament?.predicted_champion ?? rows[0]?.name ?? "Unknown";
   const groups = Array.from(new Set(rows.map((row) => row.group))).sort();
   const qualifiedCount = rows.filter((row) => row.qualified).length;
+  const profiledTeams = rows.filter((row) => row.intelligence).length;
 
   return (
     <main className="page-shell min-h-screen px-4 py-12 md:px-6">
-      <section className="mx-auto max-w-7xl">
+      <section className="mx-auto w-full max-w-[1600px] min-w-0">
         <div className="rounded-lg border border-[color:var(--border)] bg-[color:var(--surface)] p-8 shadow-sm">
           <div className="flex flex-col gap-5 md:flex-row md:items-end md:justify-between">
             <div>
               <Search className="h-8 w-8 text-[color:var(--accent)]" />
-              <h1 className="mt-6 text-4xl font-semibold">Team intelligence</h1>
+              <h1 className="mt-6 text-4xl font-semibold"><LocalizedText en="Team intelligence" zh="球队实力画像" /></h1>
               <p className="mt-4 max-w-3xl text-base leading-7 text-[color:var(--muted)]">
-                Explore all 48 projected teams by group, qualification status, Agent strength score, and title
-                probability from the current prediction snapshot.
+                <LocalizedText
+                  en="Explore the 48 projected teams through DataForAgent evidence, LLM-extracted tactical profiles, structured strengths and risks, plus the current tournament projection."
+                  zh="基于 DataForAgent 赛前资料、LLM 提炼的战术画像、优势与风险，查看全部 48 支球队及当前赛事预测。"
+                />
               </p>
             </div>
             <div className="rounded-lg border border-[color:var(--border)] bg-[color:var(--surface2)] p-4 md:min-w-64">
-              <p className="text-xs text-[color:var(--muted)]">Latest agent run</p>
-              <p className="mt-2 text-sm font-medium">{agentRun?.generated_at ?? "No run artifact found"}</p>
+              <p className="text-xs text-[color:var(--muted)]"><LocalizedText en="Latest agent run" zh="最近一次 Agent 运行" /></p>
+              <p className="mt-2 text-sm font-medium">{agentRun?.generated_at ?? <LocalizedText en="No run artifact found" zh="未找到运行记录" />}</p>
             </div>
           </div>
         </div>
 
         <section className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
-          <Metric icon={UsersRound} label="Teams" value={rows.length} />
-          <Metric icon={DatabaseZap} label="Groups" value={groups.length} />
-          <Metric icon={ShieldCheck} label="Projected qualifiers" value={qualifiedCount} />
-          <Metric icon={Activity} label="Squad players" value={squadStats?.total_players ?? 0} />
-          <Metric icon={Trophy} label="Champion pick" value={champion} />
+          <Metric icon={UsersRound} label={<LocalizedText en="Teams" zh="球队" />} value={rows.length} />
+          <Metric icon={DatabaseZap} label={<LocalizedText en="Groups" zh="小组" />} value={groups.length} />
+          <Metric icon={ShieldCheck} label={<LocalizedText en="Projected qualifiers" zh="预测晋级球队" />} value={qualifiedCount} />
+          <Metric icon={Activity} label={<LocalizedText en="Squad players" zh="名单球员" />} value={squadStats?.total_players ?? 0} />
+          <Metric icon={Trophy} label={<LocalizedText en="LLM profiles" zh="LLM 球队画像" />} value={`${profiledTeams}/48`} />
         </section>
 
-        <section className="mt-6 grid gap-6 lg:grid-cols-[0.85fr_1.15fr]">
-          <div className="rounded-lg border border-[color:var(--border)] bg-[color:var(--surface)] p-6">
-            <div className="flex items-center gap-3">
-              <Trophy className="h-5 w-5 text-gold" />
-              <h2 className="text-xl font-semibold">Top contenders</h2>
-            </div>
-            <div className="mt-5 space-y-3">
-              {rows.slice(0, 10).map((team, index) => (
-                <article key={team.name} className="rounded-lg border border-[color:var(--border)] bg-[color:var(--surface2)] p-4">
-                  <div className="flex items-start justify-between gap-3">
-                    <div>
-                      <p className="text-xs text-[color:var(--muted)]">#{index + 1} / Group {team.group}</p>
-                      <h3 className="mt-1 text-lg font-semibold">{team.name}</h3>
-                    </div>
-                    <span className="rounded-full bg-[rgba(88,166,255,0.14)] px-3 py-1 text-xs font-medium text-[color:var(--accent)]">
-                      {formatPercent(team.titleProbability)}
-                    </span>
-                  </div>
-                  <div className="mt-4 flex items-center justify-between gap-4 text-sm">
-                    <span className="text-[color:var(--muted)]">Strength</span>
-                    <StrengthBar value={team.strength} />
-                  </div>
-                </article>
-              ))}
-            </div>
-          </div>
-
-          <div className="rounded-lg border border-[color:var(--border)] bg-[color:var(--surface)] p-6">
+        <section className="mt-6 min-w-0">
+          <div className="min-w-0 rounded-lg border border-[color:var(--border)] bg-[color:var(--surface)] p-5 md:p-6">
             <div className="flex items-center gap-3">
               <UsersRound className="h-5 w-5 text-[color:var(--accent)]" />
-              <h2 className="text-xl font-semibold">All teams</h2>
+              <h2 className="text-xl font-semibold"><LocalizedText en="All teams" zh="全部球队" /></h2>
             </div>
-            <div className="mt-5 overflow-x-auto">
-              <table className="w-full min-w-[780px] border-collapse text-sm">
+            <div className="mt-5 max-w-full overflow-x-auto overscroll-contain">
+              <table className="w-full min-w-[1120px] border-collapse text-sm">
                 <thead>
                   <tr className="border-b border-[color:var(--border)] text-left text-xs text-[color:var(--muted)]">
-                    <th className="py-3 pr-4 font-medium">Team</th>
-                    <th className="py-3 pr-4 font-medium">Group</th>
-                    <th className="py-3 pr-4 font-medium">Rank</th>
-                    <th className="py-3 pr-4 font-medium">Points</th>
-                    <th className="py-3 pr-4 font-medium">GD</th>
-                    <th className="py-3 pr-4 font-medium">Strength</th>
-                    <th className="py-3 pr-4 font-medium">Status</th>
+                    <th className="py-3 pr-4 font-medium"><LocalizedText en="Team" zh="球队" /></th>
+                    <th className="py-3 pr-4 font-medium"><LocalizedText en="Group" zh="小组" /></th>
+                    <th className="py-3 pr-4 font-medium"><LocalizedText en="Rank" zh="排名" /></th>
+                    <th className="py-3 pr-4 font-medium"><LocalizedText en="Points" zh="积分" /></th>
+                    <th className="py-3 pr-4 font-medium"><LocalizedText en="GD" zh="净胜球" /></th>
+                    <th className="py-3 pr-4 font-medium"><LocalizedText en="Strength" zh="实力" /></th>
+                    <th className="py-3 pr-4 font-medium"><LocalizedText en="LLM team profile" zh="LLM 球队画像" /></th>
+                    <th className="py-3 pr-4 font-medium"><LocalizedText en="Key players" zh="关键球员" /></th>
+                    <th className="py-3 pr-4 font-medium"><LocalizedText en="Status" zh="预测结果" /></th>
                   </tr>
                 </thead>
                 <tbody>
@@ -227,6 +203,19 @@ export default function TeamsPage() {
                       <td className="py-3 pr-4">
                         <StrengthBar value={team.strength} />
                       </td>
+                      <td className="max-w-xs py-3 pr-4">
+                        {team.intelligence ? (
+                          <div>
+                            <p className="font-medium">{team.intelligence.tactical_profile}</p>
+                            <p className="mt-1 text-xs leading-5 text-[color:var(--muted)]">{team.intelligence.summary}</p>
+                          </div>
+                        ) : (
+                          <span className="text-[color:var(--muted)]"><LocalizedText en="Awaiting profile generation" zh="等待生成球队画像" /></span>
+                        )}
+                      </td>
+                      <td className="max-w-[180px] py-3 pr-4 text-xs leading-5 text-[color:var(--muted)]">
+                        {team.intelligence?.key_players.join(" · ") ?? "-"}
+                      </td>
                       <td className="py-3 pr-4">
                         <span
                           className={
@@ -235,7 +224,7 @@ export default function TeamsPage() {
                               : "rounded-full bg-[rgba(118,131,144,0.18)] px-2.5 py-1 text-xs font-medium text-[color:var(--muted)]"
                           }
                         >
-                          {team.qualified ? "Projected through" : "Group exit"}
+                          {team.qualified ? <LocalizedText en="Projected through" zh="预测晋级" /> : <LocalizedText en="Group exit" zh="小组出局" />}
                         </span>
                       </td>
                     </tr>

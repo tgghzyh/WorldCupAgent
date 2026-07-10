@@ -1,61 +1,84 @@
 # WorldCupAgent
 
-世界杯冠军预测 Agent。项目以 `DataForAgent` 的赛前球队、教练、球员、历史比赛等数据为基础，通过 LLM 逐场预测小组赛和淘汰赛结果，最终输出冠军预测，并在 Next.js 前端中展示完整赛程树、比分、胜负概率和每场比赛的推理原因。
+面向 2026 世界杯的冠军预测 Agent。项目从 `DataForAgent` 的赛前资料出发，生成小组赛到决赛的逐场胜平负、比分、概率与可解释原因；前端以赛程树、球队画像和比赛详情弹窗展示结果。
 
-当前项目说明以以下文档为准：
+> 当前定位：这是一个可运行、可解释的赛前预测原型，不是官方赛程或实时赛事系统。预测结果只用于分析展示，不构成投注或决策建议。
 
-- [当前项目指南](./docs/CURRENT_PROJECT_GUIDE.md)
-- [Agent 架构与工具链](./docs/AGENT_ARCHITECTURE_AND_TOOLCHAIN.md)
+## 目标验收
 
-## 当前能力
+| 目标 | 当前状态 | 实现位置 |
+| --- | --- | --- |
+| 获取历史战绩、名单、分组、球员与球队资料 | 已具备 | `DataForAgent/`、`worldcup_agent/data_layer/` |
+| 分析并逐轮推演赛事 | 已具备 | `worldcup_agent/llm_agent/` |
+| 输出冠军、比分、概率和推理依据 | 已具备 | `data/snapshots/latest.json` |
+| 展示赛程树和比赛详情 | 已具备 | `frontend/` |
 
-- 从 `DataForAgent/data/processed/worldcup/wc_2026_squad_normalized.json` 重建 48 队、12 个小组、小组赛和 32 强淘汰赛结构。
-- LLM 根据每场比赛的上下文逐场输出固定 JSON，包含胜负、比分、概率、置信度、中文原因和结构化原因因子。
-- 后端按真实赛事推进方式重算小组积分榜，并逐轮生成下一轮淘汰赛对阵。
-- 前端展示首页冠军预测、Top 5 争冠队、分组积分、完整淘汰赛树。
-- 点击任意小组赛或淘汰赛节点，可查看 LLM 对该场比赛的推理依据。
-- 保留 multi-agent 辅助层，用于数据加载、强度摘要、反思检查、解释文本和质量检查。
+当前快照可验证为 12 个小组、72 场小组赛、32 场淘汰赛、48 支球队画像和 10,000 次完整赛事抽样。比赛详情包含 LLM 推理因素、概率模型基线和反思结果。
 
-## 架构总览
+## 端到端架构
 
 ```mermaid
-flowchart TD
-  A["DataForAgent processed datasets"] --> B["snapshot_builder 重建赛事结构"]
-  B --> C["context_builder 组装单场比赛上下文"]
-  C --> D["LLMMatchPredictor 调用 LLM"]
-  D --> E["snapshot_writer 写入赛果/概率/原因"]
-  E --> F["重算小组积分榜"]
-  F --> G["生成下一轮淘汰赛"]
-  G --> C
-  E --> H["data/snapshots/latest.json"]
-  H --> I["scripts/sync_snapshot_to_frontend.py"]
-  I --> J["frontend/public/data/snapshots/latest.json"]
-  J --> K["Next.js 可视化页面"]
+flowchart LR
+  A["DataForAgent 原始/归一化数据"] --> B["processed/index.json 数据索引"]
+  B --> C["DataForAgentContextBuilder\n组装球队与比赛证据"]
+  C --> D["TeamIntelligenceExtractor\nLLM 球队画像"]
+  D --> E["ProbabilityModel\n可复算胜平负基线"]
+  E --> F["LLMMatchPredictor\n逐场比分、概率与理由"]
+  F --> G["小组积分重算 / 淘汰赛逐轮生成"]
+  G --> H["LLMPredictionReflector\n预测一致性复核"]
+  H --> I["MonteCarloSimulator\n完整赛事重复抽样"]
+  I --> J["data/snapshots/latest.json"]
+  J --> K["sync_snapshot_to_frontend.py"]
+  K --> L["Next.js 赛程树与详情弹窗"]
+  J --> M["multi_agent 辅助层\n数据摘要、质量检查、运行记录"]
 ```
 
-核心实现位于：
+`multi_agent` 是快照的辅助审阅与说明层：它读取既有预测和蒙特卡洛结果，不替代 LLM-first 主预测链路。
+
+## Agent 与工具链
+
+| 环节 | 工具/模块 | 输出 |
+| --- | --- | --- |
+| 数据采集与归一化 | `DataForAgent/src/collectors`、`normalizer` | 五大联赛、历史世界杯、2026 名单与分组数据 |
+| 数据访问 | `worldcup_agent.data_layer` | 基于 `processed/index.json` 的稳定数据加载 |
+| 特征提炼 | `TeamIntelligenceExtractor` | 进攻、防守、中场、深度、教练、经验、状态等球队画像 |
+| 概率建模 | `ProbabilityModel` | Elo、排名、画像与赛程主队修正后的胜平负基线 |
+| 单场决策 | `LLMMatchPredictor` | 胜者、比分、概率、置信度、结构化原因因素 |
+| 反思复核 | `LLMPredictionReflector` | 逻辑评分、风险和不一致提示 |
+| 不确定性分析 | `MonteCarloSimulator` | 小组出线、各轮晋级、冠亚季军与夺冠概率分布 |
+| 展示 | Next.js、React、Tailwind、Recharts、Lucide | 总览、赛程树、国旗、球队画像和比赛详情 |
+
+主预测模块位于 `worldcup_agent/llm_agent/`：
 
 ```text
-worldcup_agent/llm_agent/
-  llm_client.py        LLM API 客户端，兼容 OpenAI chat completions 协议
-  predictor.py         单场比赛 LLM 预测器和输出校验
-  context_builder.py   DataForAgent 到 LLM prompt payload 的上下文构造
-  snapshot_builder.py  从赛前名单重建小组赛和淘汰赛结构
-  snapshot_writer.py   逐场预测、逐轮推进、写入 latest.json
-
-worldcup_agent/multi_agent/
-  agents.py            Data/Analysis/Simulation/Reflection/Explainer/Quality 辅助 agents
-  main.py              multi-agent 辅助管线入口
-
-frontend/
-  src/app/             Next.js 页面路由
-  src/components/      Dashboard、赛程树、比赛详情弹窗
-  src/lib/             snapshot 读取、转换和前端类型
+llm_client.py          OpenAI-compatible Chat Completions 客户端
+context_builder.py     DataForAgent 到比赛证据包
+team_intelligence.py   LLM 球队特征提炼
+probability_model.py   可复算概率基线
+predictor.py           单场 LLM 预测与 JSON 清洗
+reflection.py          LLM 反思复核
+monte_carlo.py         完整赛事蒙特卡洛抽样
+snapshot_builder.py    分组、积分榜与淘汰赛结构
+snapshot_writer.py     主编排与 latest.json 写入
 ```
 
-## 运行方式
+## 数据与产物
 
-先根据 [.env.example](./.env.example) 创建项目根目录下的 `.env.local`，其中配置 LLM 服务。不要提交真实密钥。
+| 路径 | 用途 |
+| --- | --- |
+| `DataForAgent/data/processed/index.json` | 数据集入口与版本定位 |
+| `DataForAgent/data/processed/worldcup/wc_2026_squad_normalized.json` | 2026 分组、球队、教练与球员名单 |
+| `data/snapshots/latest.json` | 后端规范预测快照 |
+| `frontend/public/data/snapshots/latest.json` | 前端静态渲染读取的同步副本 |
+| `data/multi_agent/multi_agent_output_*.json` | 辅助 Agent 的运行记录 |
+
+快照中的核心扩展字段包括：`team_intelligence`、每场 `probability_model`、`monte_carlo_prior`、`llm_reasoning_factors`、`llm_reflection` 和 `simulation`。在逐场预测前，系统会先进行一轮仅依赖球队画像与概率基线的蒙特卡洛模拟，并把球队夺冠/晋级分布作为 LLM 先验；LLM 原始胜平负概率再按 `MONTE_CARLO_LLM_WEIGHT`（默认 `0.70`）与该先验融合。预测结束后会再次模拟，生成前端展示的最终概率分布。
+
+冠军字段有两种明确区分的口径：`champion` / `knockout_predictions.predicted_champion` 是单一路径赛程投影的决赛胜者，供首页主结论、冠军路径和赛程树使用；`simulation.modal_champion` 与 `simulation.champion_probabilities` 是蒙特卡洛分布，供概率竞争者榜使用。模拟分布不会覆盖确定性赛程冠军。
+
+## 配置
+
+从 [.env.example](./.env.example) 创建项目根目录 `.env.local`，仅在本机保存真实密钥：
 
 ```text
 LLM_PROVIDER=xfyun-maas
@@ -66,49 +89,48 @@ LLM_MAX_RETRIES=5
 LLM_RETRY_BASE_SECONDS=3
 LLM_REQUEST_DELAY_SECONDS=1.2
 LLM_TIMEOUT_SECONDS=120
+MONTE_CARLO_RUNS=10000
+MONTE_CARLO_SEED=20260710
+MONTE_CARLO_LLM_WEIGHT=0.70
 ```
 
-完整生成并同步前端数据：
+不要将 `.env.local`、真实 API Key 或临时运行产物提交到仓库。
+
+## 运行
+
+完整生成、反思、模拟、辅助审阅并同步前端：
 
 ```powershell
 python scripts\generate_and_sync.py --require-llm
 ```
 
-先小批量测试 LLM 连通性：
+仅对现有快照重新执行蒙特卡洛模拟：
+
+```powershell
+python scripts\run_monte_carlo.py --runs 10000 --sync-frontend
+```
+
+小批量验证 LLM 连通性。该命令生成的是**部分预测快照**，不应用作最终演示结果：
 
 ```powershell
 python scripts\generate_and_sync.py --require-llm --llm-match-limit 10 --skip-agent
-```
-
-只用本地 fallback 快速重建数据，不调用 LLM：
-
-```powershell
-$env:LLM_DISABLE="1"
-python scripts\generate_and_sync.py --skip-agent
-Remove-Item Env:\LLM_DISABLE
 ```
 
 启动前端：
 
 ```powershell
 cd frontend
+npm install
 npm run dev -- -p 3000
 ```
 
-访问：
+打开 `http://localhost:3000`。常用页面包括 `/schedule`、`/teams`、`/data`、`/agent` 与 `/real-schedule`。
 
-```text
-http://localhost:3000
-http://localhost:3000/schedule
-http://localhost:3000/teams
-http://localhost:3000/data
-http://localhost:3000/agent
-```
-
-## 校验命令
+## 校验
 
 ```powershell
-python -m compileall worldcup_agent\llm_agent scripts\generate_and_sync.py
+python -m compileall worldcup_agent scripts
+python -m unittest discover -s worldcup_agent\llm_agent\tests -v
 python -m json.tool data\snapshots\latest.json
 
 cd frontend
@@ -116,24 +138,14 @@ npm run lint
 npm run build
 ```
 
-## 关键数据文件
+## 当前限制与后续优先级
 
-```text
-DataForAgent/data/processed/index.json
-DataForAgent/data/processed/worldcup/wc_2026_squad_normalized.json
-data/snapshots/latest.json
-frontend/public/data/snapshots/latest.json
-data/multi_agent/multi_agent_output_*.json
-```
+当前实现满足课程目标的功能闭环，但以下问题会影响赛事结果的严谨性，需在展示为“高可信预测”前修复：
 
-## 当前复盘结论
+1. 当前仓库中的 `latest.json` 生成于本次赛制修复之前；必须重新运行完整生成流程，才能让前端展示官方 32 强路径与修正后的比分结果。
+2. 组内配对日期按赛前结构顺序生成，不能替代官方精确 fixture、场地、旅行距离和开球时间。
+3. LLM 调用尚无断点续跑、响应缓存和 JSON Schema 修复重试；长流程中断时会产生重复成本。
+4. 实时 FIFA 排名、伤病、最终名单和官方 fixtures 尚未作为自动刷新数据源接入。
+5. 已增加 FIFA 2026 规则和比分归一化的后端回归测试，但前端尚未提供可执行的 `npm test` 脚本，覆盖面仍需扩展。
 
-项目主线已经符合目标：它能采集并读取世界杯相关数据，使用 LLM 逐场分析胜负和比分，生成从小组赛到决赛的完整推演，并用前端页面展示冠军预测、赛程树和单场推理原因。
-
-仍建议继续完善：
-
-- 为 LLM 输出增加更严格的 JSON Schema 校验和自动重试修复。
-- 为 `snapshot_builder`、中文球队 id、淘汰赛晋级逻辑补充自动化测试。
-- 增加断点续跑能力，减少 104 场完整 LLM 调用中断后的重复成本。
-- 将旧 `prediction/` 和旧文档进一步归档，减少与当前 LLM-first 架构的混淆。
-- 扩展数据来源，接入更稳定的 FIFA 排名、ELO、伤病、赛程场地和旅途距离数据。
+更详细的设计和运行说明见 [当前项目指南](./docs/CURRENT_PROJECT_GUIDE.md) 与 [Agent 架构与工具链](./docs/AGENT_ARCHITECTURE_AND_TOOLCHAIN.md)。

@@ -25,6 +25,7 @@ import {
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import { CountryFlag } from "@/components/world-cup-bracket/CountryFlag";
 import { useI18n } from "@/i18n";
 import { cn } from "@/lib/utils";
 import type { BracketMatch, ReasoningFactor } from "@/lib/world-cup-bracket/types";
@@ -50,6 +51,12 @@ const confidenceTone = {
   low: "border-[color:var(--brand-red)] bg-[rgba(197,48,48,0.10)] text-[color:var(--brand-red)]",
 };
 
+const reflectionTone = {
+  pass: "border-[color:var(--brand-green)] bg-[rgba(7,132,95,0.10)] text-[color:var(--brand-green)]",
+  caution: "border-[color:var(--brand-gold)] bg-[rgba(214,162,30,0.12)] text-[color:var(--brand-gold)]",
+  inconsistent: "border-[color:var(--brand-red)] bg-[rgba(197,48,48,0.10)] text-[color:var(--brand-red)]",
+};
+
 function formatTimestamp(value: string) {
   const date = new Date(value);
   if (Number.isNaN(date.getTime())) {
@@ -61,6 +68,13 @@ function formatTimestamp(value: string) {
   const hours = String(date.getUTCHours()).padStart(2, "0");
   const minutes = String(date.getUTCMinutes()).padStart(2, "0");
   return `${year}-${month}-${day} ${hours}:${minutes} UTC`;
+}
+
+function formatMatchLabel(value: string, locale: "zh" | "en") {
+  if (locale !== "zh") return value;
+  const groupMatch = /^Group\s+(.+)\s*\/\s*Match\s+(\d+)$/i.exec(value);
+  if (groupMatch) return `${groupMatch[1]}组 / 第 ${groupMatch[2]} 场`;
+  return value;
 }
 
 function FactorCard({
@@ -103,7 +117,7 @@ function FactorCard({
 }
 
 export function MatchDetailDrawer({ match, open, onOpenChange }: MatchDetailDrawerProps) {
-  const { t } = useI18n();
+  const { locale, t } = useI18n();
   const closeButtonRef = React.useRef<HTMLButtonElement>(null);
   const titleId = React.useId();
   const descriptionId = React.useId();
@@ -133,12 +147,12 @@ export function MatchDetailDrawer({ match, open, onOpenChange }: MatchDetailDraw
     return null;
   }
 
-  const score = match.actualScore ?? match.predictedScore ?? "TBD";
+  const score = match.actualScore ?? match.predictedScore ?? t("schedule.tbd");
   const detail = match.detail;
   const chartData = detail.metricComparison.map((metric) => ({
     name: metric.label,
-    [match.home.team.code]: metric.homeValue,
-    [match.away.team.code]: metric.awayValue,
+    [match.home.team.name]: metric.homeValue,
+    [match.away.team.name]: metric.awayValue,
     unit: metric.unit,
   }));
 
@@ -146,8 +160,8 @@ export function MatchDetailDrawer({ match, open, onOpenChange }: MatchDetailDraw
     <div className="fixed inset-0 z-50">
       <button
         type="button"
-        aria-label="Close match detail overlay"
-              className="absolute inset-0 cursor-default bg-[rgba(39,35,31,0.34)] backdrop-blur-sm"
+        aria-label={t("drawer.close")}
+        className="absolute inset-0 cursor-default bg-[rgba(39,35,31,0.34)] backdrop-blur-sm"
         onClick={() => onOpenChange(false)}
       />
       <aside
@@ -162,12 +176,12 @@ export function MatchDetailDrawer({ match, open, onOpenChange }: MatchDetailDraw
           <div className="flex items-start justify-between gap-4">
             <div>
               <p id={descriptionId} className="text-sm text-[color:var(--muted)]">
-                {match.label} · {match.kickoffLabel}
+                {formatMatchLabel(match.label, locale)} · {match.kickoffLabel}
               </p>
               <h2 id={titleId} className="mt-2 text-2xl font-semibold text-[color:var(--text)]">
-                {match.home.team.flag} {match.home.team.name}
-                <span className="px-2 text-[color:var(--muted)]">vs</span>
-                {match.away.team.flag} {match.away.team.name}
+                <span className="inline-flex items-center gap-2"><CountryFlag team={match.home.team} className="h-5 w-[30px]" />{match.home.team.name}</span>
+                <span className="px-2 text-[color:var(--muted)]">{t("drawer.vs")}</span>
+                <span className="inline-flex items-center gap-2"><CountryFlag team={match.away.team} className="h-5 w-[30px]" />{match.away.team.name}</span>
               </h2>
             </div>
             <Button
@@ -183,8 +197,8 @@ export function MatchDetailDrawer({ match, open, onOpenChange }: MatchDetailDraw
           <div className="mt-5 grid gap-3 sm:grid-cols-[1fr_auto_1fr] sm:items-center">
             <div className="rounded-lg border border-[color:var(--border)] bg-[rgba(255,251,244,0.78)] p-3">
               <p className="text-xs text-[color:var(--muted)]">{t("drawer.home")}</p>
-              <p className="mt-1 text-lg font-semibold">
-                {match.home.team.flag} {match.home.team.name}
+              <p className="mt-1 flex items-center gap-2 text-lg font-semibold">
+                <CountryFlag team={match.home.team} /> {match.home.team.name}
               </p>
               <p className="mt-1 text-sm text-[color:var(--muted)]">
                 {t("drawer.winProbability", { value: Math.round(match.home.probability * 100) })}
@@ -203,8 +217,8 @@ export function MatchDetailDrawer({ match, open, onOpenChange }: MatchDetailDraw
             </div>
             <div className="rounded-lg border border-[color:var(--border)] bg-[rgba(255,251,244,0.78)] p-3 sm:text-right">
               <p className="text-xs text-[color:var(--muted)]">{t("drawer.away")}</p>
-              <p className="mt-1 text-lg font-semibold">
-                {match.away.team.flag} {match.away.team.name}
+              <p className="mt-1 flex items-center justify-end gap-2 text-lg font-semibold">
+                <CountryFlag team={match.away.team} /> {match.away.team.name}
               </p>
               <p className="mt-1 text-sm text-[color:var(--muted)]">
                 {t("drawer.winProbability", { value: Math.round(match.away.probability * 100) })}
@@ -222,6 +236,52 @@ export function MatchDetailDrawer({ match, open, onOpenChange }: MatchDetailDraw
               </div>
               <Card className="bg-[rgba(255,251,244,0.82)] p-4">
                 <p className="text-sm leading-6 text-[color:var(--muted)]">{detail.summary}</p>
+              </Card>
+            </section>
+          )}
+
+          {detail.probabilityModel && (
+            <section className="mb-6">
+              <div className="mb-3 flex items-center gap-2">
+                <Activity className="h-4 w-4 text-[color:var(--accent)]" />
+                <h3 className="text-base font-semibold">{t("drawer.probabilityBaseline")}</h3>
+              </div>
+              <Card className="bg-[rgba(255,251,244,0.82)] p-4">
+                <div className="grid grid-cols-3 gap-3 text-center">
+                  <div>
+                    <p className="text-xs text-[color:var(--muted)]">{match.home.team.name}</p>
+                    <p className="mt-1 text-lg font-semibold">{Math.round(detail.probabilityModel.homeWinProbability * 100)}%</p>
+                  </div>
+                  <div>
+                    <p className="text-xs text-[color:var(--muted)]">{t("drawer.draw")}</p>
+                    <p className="mt-1 text-lg font-semibold">{Math.round(detail.probabilityModel.drawProbability * 100)}%</p>
+                  </div>
+                  <div>
+                    <p className="text-xs text-[color:var(--muted)]">{match.away.team.name}</p>
+                    <p className="mt-1 text-lg font-semibold">{Math.round(detail.probabilityModel.awayWinProbability * 100)}%</p>
+                  </div>
+                </div>
+                <p className="mt-4 text-xs leading-5 text-[color:var(--muted)]">{detail.probabilityModel.method}</p>
+              </Card>
+            </section>
+          )}
+
+          {detail.reflection && (
+            <section className="mb-6">
+              <div className="mb-3 flex items-center gap-2">
+                <ShieldAlert className="h-4 w-4 text-[color:var(--accent)]" />
+                <h3 className="text-base font-semibold">{t("drawer.reflection")}</h3>
+              </div>
+              <Card className="bg-[rgba(255,251,244,0.82)] p-4">
+                <div className="flex flex-wrap items-center justify-between gap-3">
+                  <Badge className={cn(reflectionTone[detail.reflection.verdict])}>
+                    {t(`drawer.reflection_${detail.reflection.verdict}`)}
+                  </Badge>
+                  <span className="text-sm text-[color:var(--muted)]">
+                    {t("drawer.logicScore", { value: Math.round(detail.reflection.logicScore) })}
+                  </span>
+                </div>
+                <p className="mt-3 text-sm leading-6 text-[color:var(--muted)]">{detail.reflection.summary}</p>
               </Card>
             </section>
           )}
@@ -262,8 +322,8 @@ export function MatchDetailDrawer({ match, open, onOpenChange }: MatchDetailDraw
                       color: "var(--text)",
                     }}
                   />
-                  <Bar dataKey={match.home.team.code} fill="var(--brand-blue)" radius={[6, 6, 0, 0]} />
-                  <Bar dataKey={match.away.team.code} fill="var(--brand-red)" radius={[6, 6, 0, 0]} />
+                  <Bar dataKey={match.home.team.name} fill="var(--brand-blue)" radius={[6, 6, 0, 0]} />
+                  <Bar dataKey={match.away.team.name} fill="var(--brand-red)" radius={[6, 6, 0, 0]} />
                 </BarChart>
               </ResponsiveContainer>
             </Card>

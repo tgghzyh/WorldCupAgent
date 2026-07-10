@@ -7,9 +7,9 @@ export function PageIntro({
   title,
   description,
 }: {
-  eyebrow: string;
-  title: string;
-  description: string;
+  eyebrow: React.ReactNode;
+  title: React.ReactNode;
+  description: React.ReactNode;
 }) {
   return (
     <section className="mx-auto max-w-7xl px-5 pb-8 pt-14">

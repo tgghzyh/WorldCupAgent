@@ -13,8 +13,7 @@
     "champion": "Champion",
     "teams": "Teams",
     "data": "Data",
-    "agent": "Agent Run",
-    "compare": "Compare"
+    "agent": "Agent Run"
   },
   "dashboard": {
     "championForecast": "Champion forecast",
@@ -26,11 +25,13 @@
     "viewReasoning": "View full reasoning chain",
     "toWin": "to win",
     "finalBranch": "Final branch probability from the current mock prediction tree",
+    "overallTitleProbability": "Overall title probability across Monte Carlo tournament simulations",
     "lastUpdated": "Last updated {time}",
     "refresh": "Refresh",
     "refreshing": "Refreshing",
-    "top5Eyebrow": "Top 5 probability ranking",
-    "titleContenders": "Title contenders",
+    "top5Eyebrow": "Monte Carlo title probability Top 5",
+    "titleContenders": "Simulation contenders",
+    "monteCarloProbability": "Monte Carlo title probability",
     "rank": "Rank {rank}",
     "scheduleTree": "Schedule tree",
     "scheduleTreeText": "Jump to the full group stage and knockout bracket with match-level reasoning.",
@@ -56,6 +57,20 @@
     "knockoutSubtitle": "32-team tree with third-place crossover slots",
     "wheelHelp": "Wheel to zoom, drag to pan",
     "mockGenerated": "Mock generated at {time}. Completed nodes are greyed, live nodes pulse, upcoming nodes remain clean."
+    ,"agentBadge": "Champion Agent"
+    ,"uiBadge": "Data-driven UI"
+    ,"teamsCount": "Teams"
+    ,"groupsCount": "Groups"
+    ,"knockoutCount": "Knockout"
+    ,"matchPredictions": "Match predictions"
+    ,"points": "Points"
+    ,"goalDifference": "GD"
+    ,"actualScore": "Actual score"
+    ,"predictedScore": "Predicted score"
+    ,"tbd": "TBD"
+    ,"zoomIn": "Zoom in"
+    ,"zoomOut": "Zoom out"
+    ,"resetView": "Reset view"
   },
   "realSchedule": {
     "eyebrow": "Official real-world schedule",
@@ -80,6 +95,8 @@
   "drawer": {
     "home": "Home",
     "away": "Away",
+    "vs": "vs",
+    "draw": "Draw",
     "winProbability": "Win probability {value}%",
     "actualScore": "Actual score",
       "predictedScore": "Predicted score",
@@ -88,6 +105,12 @@
       "low": "Low confidence",
       "reasoningSummary": "Agent analysis",
       "reasoningFactors": "Agent reasoning factors",
+      "probabilityBaseline": "Team-model probability baseline",
+      "reflection": "Prediction reflection",
+      "reflection_pass": "Logic passed",
+      "reflection_caution": "Needs attention",
+      "reflection_inconsistent": "Inconsistency found",
+      "logicScore": "Logic score {value}/100",
     "contributionWeight": "Contribution weight",
     "dataComparison": "Data comparison",
     "agentReasoning": "Agent reasoning: {time}",

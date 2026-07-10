@@ -8,23 +8,17 @@ import {
   RefreshCw,
   Search,
   Sparkles,
-  Trophy,
 } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import { CountryFlag } from "@/components/world-cup-bracket/CountryFlag";
 import { useI18n } from "@/i18n";
 import { cn } from "@/lib/utils";
 import type { BracketMatch, Team, WorldCupBracketData } from "@/lib/world-cup-bracket/types";
 
 type PredictionDashboardProps = {
   data: WorldCupBracketData;
-};
-
-type RankedTeam = {
-  team: Team;
-  probability: number;
-  advantages: string[];
 };
 
 function formatUpdateTime(value: string) {
@@ -35,53 +29,6 @@ function formatUpdateTime(value: string) {
   const hours = String(date.getUTCHours()).padStart(2, "0");
   const minutes = String(date.getUTCMinutes()).padStart(2, "0");
   return `${hours}:${minutes}`;
-}
-
-function collectRankings(data: WorldCupBracketData): RankedTeam[] {
-  if (data.titleContenders.length > 0) {
-    return data.titleContenders.map((entry, index) => ({
-      team: entry.team,
-      probability: entry.probability,
-      advantages: [
-        "Champion probability",
-        index < 2 ? "stablePath" : "upsideRoute",
-        entry.probability > 0.55 ? "highControl" : "knockoutResilience",
-      ],
-    }));
-  }
-
-  const map = new Map<string, RankedTeam>();
-
-  function add(team: Team, probability: number, label: string) {
-    const current = map.get(team.id);
-    if (!current) {
-      map.set(team.id, { team, probability, advantages: [label] });
-      return;
-    }
-    current.probability = Math.max(current.probability, probability);
-    if (!current.advantages.includes(label) && current.advantages.length < 3) {
-      current.advantages.push(label);
-    }
-  }
-
-  for (const round of data.rounds) {
-    for (const match of round.matches) {
-      add(match.home.team, match.home.probability, match.home.sourceSeed ?? round.title);
-      add(match.away.team, match.away.probability, match.away.sourceSeed ?? round.title);
-    }
-  }
-
-  return [...map.values()]
-    .sort((a, b) => b.probability - a.probability)
-    .slice(0, 5)
-    .map((entry, index) => ({
-      ...entry,
-      advantages: [
-        entry.advantages[0] ?? "Model edge",
-        index < 2 ? "stablePath" : "upsideRoute",
-        entry.probability > 0.55 ? "highControl" : "knockoutResilience",
-      ],
-    }));
 }
 
 function getFinalMatch(data: WorldCupBracketData): BracketMatch {
@@ -134,47 +81,6 @@ function ChampionProgress({ probability, label }: { probability: number; label: 
   );
 }
 
-function TopRankCard({
-  item,
-  rankLabel,
-  translatedName,
-}: {
-  item: RankedTeam;
-  index: number;
-  rankLabel: string;
-  translatedName: string;
-}) {
-  return (
-    <Card className="min-w-[240px] bg-[rgba(255,251,244,0.86)] p-4">
-      <div className="flex items-start justify-between gap-3">
-        <div className="min-w-0">
-          <p className="text-xs text-[color:var(--muted)]">{rankLabel}</p>
-          <h3 className="mt-2 truncate text-lg font-semibold">
-            <span className="mr-2 text-xl">{item.team.flag}</span>
-            {translatedName}
-          </h3>
-        </div>
-        <p className="rounded-full bg-[rgba(10,102,194,0.10)] px-3 py-1 text-sm font-semibold text-[color:var(--brand-blue)]">
-          {Math.round(item.probability * 100)}%
-        </p>
-      </div>
-      <div className="mt-4 h-2 overflow-hidden rounded-full bg-[color:var(--surface2)]">
-        <div
-          className="h-full rounded-full bg-[linear-gradient(90deg,var(--brand-blue),var(--brand-green))]"
-          style={{ width: `${Math.round(item.probability * 100)}%` }}
-        />
-      </div>
-      <div className="mt-4 flex flex-wrap gap-2">
-        {item.advantages.map((advantage) => (
-          <Badge key={advantage} className="border-transparent bg-[rgba(82,108,90,0.10)] text-[color:var(--accent)]">
-            {advantage}
-          </Badge>
-        ))}
-      </div>
-    </Card>
-  );
-}
-
 function QuickNavCard({
   href,
   icon: Icon,
@@ -210,7 +116,9 @@ export function PredictionDashboard({ data }: PredictionDashboardProps) {
   const finalMatch = getFinalMatch(data);
   const championSlot =
     finalMatch.winnerTeamId === finalMatch.away.team.id ? finalMatch.away : finalMatch.home;
-  const rankings = collectRankings(data);
+  const championTournamentProbability =
+    data.titleContenders.find((entry) => entry.team.id === championSlot.team.id)?.probability ??
+    championSlot.probability;
   const championName =
     (translations.teams as Record<string, string>)[championSlot.team.name] ??
     championSlot.team.name;
@@ -239,7 +147,7 @@ export function PredictionDashboard({ data }: PredictionDashboardProps) {
             className="h-8 px-3"
             disabled={isRefreshing}
             onClick={refresh}
-            aria-label="Refresh prediction data"
+            aria-label={t("dashboard.refresh")}
           >
             <RefreshCw className={cn("h-4 w-4", isRefreshing && "animate-spin")} />
             {isRefreshing ? t("dashboard.refreshing") : t("dashboard.refresh")}
@@ -259,7 +167,7 @@ export function PredictionDashboard({ data }: PredictionDashboardProps) {
               </Badge>
             </div>
             <h1 className="mt-6 max-w-4xl text-4xl font-semibold tracking-normal md:text-6xl">
-              <span className="mr-3">{championSlot.team.flag}</span>
+              <CountryFlag team={championSlot.team} className="mr-3 h-7 w-10" />
               {t("dashboard.heroTitle", { team: championName })}
             </h1>
             <div className="mt-6 grid gap-3">
@@ -279,38 +187,10 @@ export function PredictionDashboard({ data }: PredictionDashboardProps) {
             </a>
           </div>
           <div className="grid place-items-center rounded-lg border border-[color:var(--border)] bg-[rgba(255,251,244,0.72)] p-6">
-            <ChampionProgress probability={championSlot.probability} label={t("dashboard.toWin")} />
+            <ChampionProgress probability={championTournamentProbability} label={t("dashboard.toWin")} />
             <p className="mt-3 text-center text-sm text-[color:var(--muted)]">
-              {t("dashboard.finalBranch")}
+              {t("dashboard.overallTitleProbability")}
             </p>
-          </div>
-        </Card>
-
-        <Card className="p-5 lg:col-span-2">
-          <div className="mb-5 flex items-center justify-between gap-4">
-            <div>
-              <p className="text-sm font-medium text-[color:var(--accent)]">{t("dashboard.top5Eyebrow")}</p>
-              <h2 className="mt-1 text-2xl font-semibold">{t("dashboard.titleContenders")}</h2>
-            </div>
-            <Trophy className="h-6 w-6 text-[color:var(--gold)]" />
-          </div>
-          <div className="flex gap-4 overflow-x-auto pb-2">
-            {rankings.map((item, index) => (
-              <TopRankCard
-                key={item.team.id}
-                item={{
-                  ...item,
-                  advantages: item.advantages.map((advantage) =>
-                    advantage in translations.dashboard
-                      ? t(`dashboard.${advantage}`)
-                      : advantage
-                  ),
-                }}
-                index={index}
-                rankLabel={t("dashboard.rank", { rank: index + 1 })}
-                translatedName={(translations.teams as Record<string, string>)[item.team.name] ?? item.team.name}
-              />
-            ))}
           </div>
         </Card>
 
