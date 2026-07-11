@@ -180,7 +180,12 @@ export function PredictionDashboard({ data }: PredictionDashboardProps) {
             </div>
             <a
               href="/schedule"
+<<<<<<< HEAD
 className="mt-7 inline-flex items-center gap-2 rounded-full border border-[rgba(82,108,90,0.38)] bg-[color:var(--accent)] px-5 py-3 text-sm font-medium text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-[rgba(82,108,90,0.90)] hover:shadow-md"            >
+=======
+              className="mt-7 inline-flex items-center gap-2 rounded-full border border-[rgba(82,108,90,0.38)] bg-[color:var(--accent)] px-5 py-3 text-sm font-medium text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-[rgba(82,108,90,0.90)] hover:shadow-md"
+            >
+>>>>>>> 39a9eea (Update frontend)
               {t("dashboard.viewReasoning")}
               <ArrowRight className="h-4 w-4" />
             </a>
