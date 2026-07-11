@@ -25,7 +25,7 @@
     "viewReasoning": "View full reasoning chain",
     "toWin": "to win",
     "finalBranch": "Final branch probability from the current mock prediction tree",
-    "overallTitleProbability": "Overall title probability across Monte Carlo tournament simulations",
+    "overallTitleProbability": "From the World Cup Champion Prediction Agent",
     "lastUpdated": "Last updated {time}",
     "refresh": "Refresh",
     "refreshing": "Refreshing",
