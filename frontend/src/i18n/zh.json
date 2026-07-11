@@ -25,7 +25,7 @@
     "viewReasoning": "查看完整推理链路",
     "toWin": "夺冠",
     "finalBranch": "来自当前预测赛程树的决赛分支概率",
-    "overallTitleProbability": "来自完整世界杯蒙特卡洛模拟的整体夺冠概率",
+    "overallTitleProbability": "来自世界杯冠军预测Agent系统",
     "lastUpdated": "最后更新于 {time}",
     "refresh": "刷新",
     "refreshing": "刷新中",
