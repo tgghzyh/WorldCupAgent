@@ -25,8 +25,11 @@ export function SiteNavigation() {
     <header className="sticky top-0 z-40 border-b border-[color:var(--border)] bg-[rgba(247,241,232,0.88)] backdrop-blur-xl">
       <div className="mx-auto flex max-w-7xl flex-col gap-3 px-4 py-3 md:flex-row md:items-center md:justify-between md:px-6">
         <Link href="/" className="flex items-center gap-3">
-          <span className="grid h-10 w-10 place-items-center rounded-full bg-[color:var(--brand-blue)] text-sm font-semibold text-white">
-            26
+          <span
+            aria-hidden="true"
+            className="grid h-10 w-10 shrink-0 place-items-center text-[2rem] leading-none drop-shadow-[0_2px_3px_rgba(39,35,31,0.14)]"
+          >
+            ⚽
           </span>
           <div>
             <p className="text-sm font-semibold leading-none">{t("brand.title")}</p>
