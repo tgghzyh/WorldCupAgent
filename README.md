@@ -13,27 +13,61 @@
 | 输出冠军、比分、概率和推理依据 | 已具备 | `data/snapshots/latest.json` |
 | 展示赛程树和比赛详情 | 已具备 | `frontend/` |
 
-当前快照可验证为 12 个小组、72 场小组赛、32 场淘汰赛、48 支球队画像和 10,000 次完整赛事抽样。比赛详情包含 LLM 推理因素、概率模型基线和反思结果。
+当前快照可验证为 12 个小组、72 场小组赛、32 场淘汰赛、48 支球队画像和 10,000 次完整赛事抽样；这仅验证快照的结构完整性，不代表其中的赛制结果已是最新演示版本。比赛详情包含 LLM 推理因素、概率模型基线和反思结果。
 
 ## 端到端架构
 
 ```mermaid
-flowchart LR
-  A["DataForAgent 原始/归一化数据"] --> B["processed/index.json 数据索引"]
-  B --> C["DataForAgentContextBuilder\n组装球队与比赛证据"]
-  C --> D["TeamIntelligenceExtractor\nLLM 球队画像"]
-  D --> E["ProbabilityModel\n可复算胜平负基线"]
-  E --> F["LLMMatchPredictor\n逐场比分、概率与理由"]
-  F --> G["小组积分重算 / 淘汰赛逐轮生成"]
-  G --> H["LLMPredictionReflector\n预测一致性复核"]
-  H --> I["MonteCarloSimulator\n完整赛事重复抽样"]
-  I --> J["data/snapshots/latest.json"]
-  J --> K["sync_snapshot_to_frontend.py"]
-  K --> L["Next.js 赛程树与详情弹窗"]
-  J --> M["multi_agent 辅助层\n数据摘要、质量检查、运行记录"]
+flowchart TB
+  classDef data fill:#E8F1FF,stroke:#4C78A8,color:#17365D
+  classDef llm fill:#FFF0D9,stroke:#E07A1F,color:#6B3200
+  classDef compute fill:#E5F6EE,stroke:#3B8F6A,color:#164A35
+  classDef output fill:#F1E9FF,stroke:#8A5BC2,color:#422260
+  classDef support fill:#F7F7F7,stroke:#7C7C7C,color:#333,stroke-dasharray: 4 3
+
+  subgraph source["1 · 数据准备"]
+    raw["DataForAgent<br/>原始与归一化数据"]:::data
+    index["processed/index.json<br/>数据索引"]:::data
+    context["DataForAgentContextBuilder<br/>球队与对阵证据包"]:::data
+    raw --> index --> context
+  end
+
+  subgraph inference["2 · 实力建模与概率先验"]
+    profile["TeamIntelligenceExtractor<br/>LLM 球队画像"]:::llm
+    baseline["ProbabilityModel<br/>可复算胜平负基线"]:::compute
+    prior["MonteCarloSimulator（先验）<br/>全赛事抽样，生成概率先验"]:::compute
+    profile --> baseline --> prior
+  end
+
+  subgraph prediction["3 · 逐场预测与赛事推演"]
+    predict["LLMMatchPredictor<br/>比分、概率、置信度与理由"]:::llm
+    bracket["赛制编排器<br/>小组积分重算 → 淘汰赛逐轮生成"]:::compute
+    review["LLMPredictionReflector<br/>一致性与风险复核"]:::llm
+    posterior["MonteCarloSimulator（后验）<br/>晋级与夺冠概率分布"]:::compute
+    predict --> bracket --> review --> posterior
+  end
+
+  context --> profile
+  context --> predict
+  baseline --> predict
+  prior --> predict
+
+  subgraph artifact["4 · 规范化产物"]
+    snapshot["data/snapshots/latest.json<br/>规范化预测快照"]:::output
+  end
+  posterior --> snapshot
+
+  subgraph delivery["5 · 前端交付与辅助审阅"]
+    sync["sync_snapshot_to_frontend.py"]:::output
+    ui["Next.js 前端<br/>总览、赛程树、球队画像、比赛详情"]:::output
+    agent["multi_agent 辅助层<br/>数据摘要、质量检查、运行记录"]:::support
+    sync --> ui
+  end
+  snapshot --> sync
+  snapshot -. "只读审阅，不改写主预测链路" .-> agent
 ```
 
-`multi_agent` 是快照的辅助审阅与说明层：它读取既有预测和蒙特卡洛结果，不替代 LLM-first 主预测链路。
+图例：蓝色为数据层，橙色为 LLM 推理，绿色为可复算计算，紫色为交付产物；虚线表示只读的辅助审阅路径。`multi_agent` 不参与或改写 LLM-first 主预测链路。
 
 ## Agent 与工具链
 
@@ -72,7 +106,7 @@ snapshot_writer.py     主编排与 latest.json 写入
 | `frontend/public/data/snapshots/latest.json` | 前端静态渲染读取的同步副本 |
 | `data/multi_agent/multi_agent_output_*.json` | 辅助 Agent 的运行记录 |
 
-快照中的核心扩展字段包括：`team_intelligence`、每场 `probability_model`、`monte_carlo_prior`、`llm_reasoning_factors`、`llm_reflection` 和 `simulation`。在逐场预测前，系统会先进行一轮仅依赖球队画像与概率基线的蒙特卡洛模拟，并把球队夺冠/晋级分布作为 LLM 先验；LLM 原始胜平负概率再按 `MONTE_CARLO_LLM_WEIGHT`（默认 `0.70`）与该先验融合。预测结束后会再次模拟，生成前端展示的最终概率分布。
+快照中的核心扩展字段包括：顶层 `team_intelligence`、`monte_carlo_llm_prior` 与 `simulation`；每场比赛的 `probability_model`、`monte_carlo_prior`、`llm_reasoning_factors` 和 `llm_reflection`。在逐场预测前，系统会先进行一轮仅依赖球队画像与概率基线的蒙特卡洛模拟，并把球队夺冠/晋级分布作为 LLM 先验；`LLMMatchPredictor` 再按 `MONTE_CARLO_LLM_WEIGHT`（默认 `0.70`）将 LLM 原始胜平负概率与该先验融合。预测结束后会再次模拟，生成前端展示的最终概率分布。
 
 冠军字段有两种明确区分的口径：`champion` / `knockout_predictions.predicted_champion` 是单一路径赛程投影的决赛胜者，供首页主结论、冠军路径和赛程树使用；`simulation.modal_champion` 与 `simulation.champion_probabilities` 是蒙特卡洛分布，供概率竞争者榜使用。模拟分布不会覆盖确定性赛程冠军。
 
